@@ -16,7 +16,10 @@ namespace AGGtH.Runtime.Card
         public DebuffType debuffType;
 
         public int damageAmt;
+        public int healAmt;
         public int blockAmt;
+        public int drawCardAmt;
+        public int energyGainAmt;
 
         //add more variables later for more card types
 
