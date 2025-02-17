@@ -1,0 +1,4 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:Label text="Card Editor" style="-unity-font-style: bold;" />
+    <ui:TextField label="Name" placeholder-text="Enter name" binding-path="m_cardName" />
+</ui:UXML>

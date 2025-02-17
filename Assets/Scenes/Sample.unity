@@ -200,9 +200,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cardName: 
-  cardActionType: 0
-  actionTargetType: 0
   cardLoveLanguageType: 0
+  cardActionType: -1
+  actionTargetType: 0
+  buffType: 0
+  debuffType: 0
+  damageAmt: 0
+  healAmt: 0
+  blockAmt: 0
+  drawCardAmt: 0
+  energyGainAmt: 0
 --- !u!4 &1450788798
 Transform:
   m_ObjectHideFlags: 0
