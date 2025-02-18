@@ -179,7 +179,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1450788798}
-  - component: {fileID: 1450788797}
   m_Layer: 0
   m_Name: Card
   m_TagString: Untagged
@@ -187,29 +186,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1450788797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1450788796}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 680ed4e7f7d607e468d98bca038f1478, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cardName: 
-  cardLoveLanguageType: 0
-  cardActionType: -1
-  actionTargetType: 0
-  buffType: 0
-  debuffType: 0
-  damageAmt: 0
-  healAmt: 0
-  blockAmt: 0
-  drawCardAmt: 0
-  energyGainAmt: 0
 --- !u!4 &1450788798
 Transform:
   m_ObjectHideFlags: 0
@@ -261,7 +237,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.17358482, g: 0.047817692, b: 0.122594595, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
