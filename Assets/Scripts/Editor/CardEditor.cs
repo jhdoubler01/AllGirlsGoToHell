@@ -13,6 +13,7 @@ namespace AGGtH.Editor
 
     public class CardEditor : UnityEditor.Editor
     {
+        private static CardEditor currentWindow { get; set; }
         private static VisualTreeAsset m_customCardInspector;
         private SerializedObject m_serializedObject;
         
@@ -28,10 +29,33 @@ namespace AGGtH.Editor
         private Sprite cardSprite { get; set; }
         private bool usableWithoutTarget { get; set; }
         private bool exhaustAfterPlay { get; set; }
+        private List<CardActionData> cardActionDataList { get; set; }
+
+        private void CacheCardDate()
+        {
+            cardID = selectedCardData.Id;
+            cardName = selectedCardData.CardName;
+            energyCost = selectedCardData.EnergyCost;
+            cardSprite = selectedCardData.CardSprite;
+            usableWithoutTarget = selectedCardData.UsableWithoutTarget;
+            exhaustAfterPlay = selectedCardData.ExhaustAfterPlay;
+            cardActionDataList = selectedCardData.CardActionDataList;
+        }
+        private void ClearCachedCardData()
+        {
+            cardID = string.Empty;
+            cardName = string.Empty;
+            energyCost = 0;
+            cardSprite = null;
+            usableWithoutTarget = false;
+            exhaustAfterPlay = false;
+            cardActionDataList?.Clear();
+
+        }
 
         #endregion
 
-
+        #region Setup
         public override VisualElement CreateInspectorGUI()
         {
             // Create a new VisualElement to be the root of our Inspector UI.
@@ -47,6 +71,9 @@ namespace AGGtH.Editor
             // Return the finished Inspector UI.
             return myInspector;
         }
+        #endregion
+
+
 
         //private void OnEnable()
         //{
