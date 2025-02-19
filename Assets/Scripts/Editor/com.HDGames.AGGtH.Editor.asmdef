@@ -1,0 +1,18 @@
+{
+    "name": "com.HDGames.AGGtH.Editor",
+    "rootNamespace": "AGGtH.Editor",
+    "references": [
+        "GUID:588ba71bf913a804da83ea4f7a33e176"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
