@@ -6,10 +6,9 @@ namespace AGGtH.Runtime.Enums
     public enum CardLoveLanguageType
     {
         Neutral,
-        Verbal,
+        Suggestive,
+        Funny,
+        Cutesy,
         Physical,
-        Quality,
-        Gifts,
-        Service
     }
 }

@@ -1,0 +1,6 @@
+<engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <engine:VisualElement style="flex-grow: 1; color: rgb(82, 42, 112); background-color: rgb(167, 153, 183); border-left-color: rgb(82, 42, 112); border-right-color: rgb(82, 42, 112); border-top-color: rgb(82, 42, 112); border-bottom-color: rgb(82, 42, 112); border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; margin-top: 5px; margin-right: 5px; margin-bottom: 5px; margin-left: 5px; padding-top: 5px; padding-right: 10px; padding-bottom: 5px; padding-left: 10px;">
+        <engine:Label text="Card Name" name="CardName" style="-unity-text-align: upper-left; color: rgb(82, 42, 112); -unity-font-style: bold; font-size: 16px;" />
+        <engine:Label text="Description" name="CardDescription" style="color: rgb(82, 42, 112);" />
+    </engine:VisualElement>
+</engine:UXML>
