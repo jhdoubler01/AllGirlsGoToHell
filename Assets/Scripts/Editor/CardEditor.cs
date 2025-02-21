@@ -12,7 +12,7 @@ using System.Text;
 namespace AGGtH.Editor
 {
     [CanEditMultipleObjects]
-    [CustomEditor(typeof(CardBase))]
+    [CustomEditor(typeof(CardData))]
 
     public class CardEditor : UnityEditor.Editor
     {
