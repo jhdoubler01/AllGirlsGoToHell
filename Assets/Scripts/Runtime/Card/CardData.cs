@@ -16,7 +16,7 @@ namespace AGGtH.Runtime.Card
         [SerializeField] private int energyCost;
         [SerializeField] private Sprite cardSprite;
         [SerializeField] private CardLoveLanguageType cardLoveLanguageType;
-        //[SerializeField] private RarityType rarity;
+        [SerializeField] private RarityType rarity;
 
         [Header("Action Settings")]
         [SerializeField] private bool usableWithoutTarget;
@@ -31,6 +31,7 @@ namespace AGGtH.Runtime.Card
         public bool UsableWithoutTarget => usableWithoutTarget;
         public bool ExhaustAfterPlay => exhaustAfterPlay;
         public List<CardActionData> CardActionDataList => cardActionDataList;
+        public RarityType Rarity => rarity;
         #endregion
 
         #region Editor Methods
@@ -41,6 +42,7 @@ namespace AGGtH.Runtime.Card
         public void EditUsableWithoutTarget(bool newStat) => usableWithoutTarget = newStat;
         public void EditExhaustAfterPlay(bool newStat) => exhaustAfterPlay = newStat;
         public void EditCardActionDataList(List<CardActionData> newList) => cardActionDataList = newList;
+        public void EditCardRarity(RarityType newRarity) => rarity = newRarity;
         #endregion
     }
 

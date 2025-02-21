@@ -1,7 +1,10 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
-    <ui:Label text="Card Editor" style="-unity-font-style: bold;" />
-    <ui:TextField label="Name" placeholder-text="Enter name" binding-path="m_cardName" name="CardName" class="unity-base-field__aligned" />
-    <uie:EnumFlagsField label="Action Type" value="MaskContainer" type="AGGtH.Runtime.Enums.CardActionType, com.HDGames.AGGtH.Runtime" binding-path="m_cardActionType" enabled="true" name="CardActionType" class="unity-base-field__aligned" />
-    <uie:PropertyField binding-path="m_cardName" label="Name" class="unity-base-field__aligned" />
-    <uie:PropertyField binding-path="m_cardActionType" label="Action Type" class="unity-base-field__aligned" />
+    <ui:VisualElement data-source-type="AGGtH.Runtime.Card.CardData, com.HDGames.AGGtH.Runtime" style="flex-grow: 1;">
+        <ui:Label text="Card Editor" style="-unity-font-style: bold;" />
+        <ui:TextField label="Name" placeholder-text="Enter name" binding-path="CardName" name="CardName" class="unity-base-field__aligned" />
+        <uie:EnumFlagsField label="Action Type" value="MaskContainer" type="AGGtH.Runtime.Enums.CardActionType, com.HDGames.AGGtH.Runtime" binding-path="CardData.CardActionType" enabled="true" name="CardActionType" class="unity-base-field__aligned" />
+        <uie:PropertyField binding-path="CardData.CardName" label="Name" class="unity-base-field__aligned" />
+        <uie:PropertyField binding-path="CardData.CardActionType" label="Action Type" class="unity-base-field__aligned" />
+        <uie:ToolbarButton text="Save Card Data" name="SaveCard" data-source-type="AGGtH.Editor.CardEditor, com.HDGames.AGGtH.Editor" selectable="false" binding-path="SaveCardData" style="height: 54px;" />
+    </ui:VisualElement>
 </ui:UXML>
