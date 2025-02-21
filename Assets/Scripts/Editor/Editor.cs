@@ -15,7 +15,7 @@ namespace AGGtH.Editor
         private bool exhaustAfterPlay;
         private CardActionType cardActionType;
 
-        [MenuItem("Tools/Card Creator")]
+        [MenuItem("Window/Card Creator")]
         public static void ShowWindow()
         {
             GetWindow<Editor>("Card Creator");
