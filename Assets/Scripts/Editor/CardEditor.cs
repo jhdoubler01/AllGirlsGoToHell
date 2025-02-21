@@ -5,14 +5,18 @@ using UnityEditor.UIElements;
 using UnityEngine.UIElements;
 using AGGtH.Runtime.Card;
 using AGGtH.Runtime.Enums;
+using AGGtH.Editor.Extensions;
+using System.Linq;
+using System.Text;
 
 namespace AGGtH.Editor
 {
     [CanEditMultipleObjects]
-    [CustomEditor(typeof(CardData))]
+    [CustomEditor(typeof(CardBase))]
 
     public class CardEditor : UnityEditor.Editor
     {
+#if UNITY_EDITOR
         private static CardEditor currentWindow { get; set; }
         private static VisualTreeAsset m_customCardInspector;
         private SerializedObject m_serializedObject;
@@ -21,7 +25,7 @@ namespace AGGtH.Editor
 
         #region Cache Card Data
         private static CardData cachedCardData { get; set; }
-        private List<CardData> allCardList { get; set; }
+        private List<CardData> allCardDataList { get; set; }
         private CardData selectedCardData { get; set; }
         private string cardID { get; set; }
         private string cardName { get; set; }
@@ -31,7 +35,7 @@ namespace AGGtH.Editor
         private bool exhaustAfterPlay { get; set; }
         private List<CardActionData> cardActionDataList { get; set; }
 
-        private void CacheCardDate()
+        private void CacheCardData()
         {
             cardID = selectedCardData.Id;
             cardName = selectedCardData.CardName;
@@ -71,53 +75,86 @@ namespace AGGtH.Editor
             // Return the finished Inspector UI.
             return myInspector;
         }
+        private void OnEnable()
+        {
+            allCardDataList?.Clear();
+            allCardDataList = ListExtensions.GetAllInstances<CardData>().ToList();
+            if (cachedCardData)
+            {
+                selectedCardData = cachedCardData;
+                m_serializedObject = new SerializedObject(selectedCardData);
+                CacheCardData();
+            }
+            Selection.selectionChanged += Repaint;
+        }
+        private void OnDisable()
+        {
+            Selection.selectionChanged -= Repaint;
+            cachedCardData = null;
+            selectedCardData = null;
+        }
         #endregion
+#region Layout Methods
+        private void CreateNewCard()
+        {
+            var clone = CreateInstance<CardData>();
+            var str = new StringBuilder();
+            var count = allCardDataList.Count;
 
+            str.Append(count + 1).Append("_").Append("new_card_name");
+            clone.EditId(str.ToString());
+            clone.EditCardName(str.ToString());
+            //clone.EditCardActionDataList(new List<CardActionData>());
+            //clone.EditCardDescriptionDataList(new List<CardDescriptionData>());
+            //clone.EditSpecialKeywordsList(new List<SpecialKeywords>());
+            //clone.EditRarity(RarityType.Common);
+            var path = str.Insert(0, CardDataDefaultPath).Append(".asset").ToString();
+            var uniquePath = AssetDatabase.GenerateUniqueAssetPath(path);
+            AssetDatabase.CreateAsset(clone, uniquePath);
+            AssetDatabase.SaveAssets();
+            RefreshCardData();
+            selectedCardData = allCardDataList.Find(x => x.Id == clone.Id);
+            CacheCardData();
+        }
+        #endregion
+        #region Card Data Methods
+        private void ChangeId()
+        {
+            cardID = EditorGUILayout.TextField(cardID);
+        }
+        private void ChangeCardName()
+        {
+            cardName = EditorGUILayout.TextField(cardName);
+        }
+        private void ChangeCardLoveLanguageType()
+        {
+            
+        }
+        #endregion
+        private void SaveCardData()
+        {
+            if (!selectedCardData) return;
 
-
-        //private void OnEnable()
-        //{
-        //    card = target as Card;
-        //    m_cardName = serializedObject.FindProperty("cardName");
-
-        //    m_cardLoveLanguageType = serializedObject.FindProperty("cardLoveLanguageType");
-        //    m_cardActionType = serializedObject.FindProperty("cardActionType");
-        //    m_actionTargetType = serializedObject.FindProperty("actionTargetType");
-        //    m_buffType = serializedObject.FindProperty("buffType");
-        //    m_debuffType = serializedObject.FindProperty("debuffType");
-
-        //    m_damageAmt = serializedObject.FindProperty("damageAmt");
-        //    m_healAmt = serializedObject.FindProperty("healAmt");
-        //    m_blockAmt = serializedObject.FindProperty("blockAmt");
-        //    m_drawCardAmt = serializedObject.FindProperty("drawCardAmt");
-        //    m_energyGainAmt = serializedObject.FindProperty("energyGainAmt");
-
-        //}
-        //public override void OnInspectorGUI()
-        //{
-        //    //base.OnInspectorGUI();
-        //    serializedObject.Update();
-        //    EditorGUI.BeginChangeCheck();
-
-        //    m_cardName.stringValue = (string)EditorGUILayout.TextField("Card Name", m_cardName.stringValue);
-
-        //    m_cardActionType.enumValueFlag = (int)(CardActionType)EditorGUILayout.EnumFlagsField("Action Type", (CardActionType)m_cardActionType.enumValueIndex);
-
-        //    m_cardLoveLanguageType.enumValueIndex = (int)(CardLoveLanguageType)EditorGUILayout.EnumPopup("Love Language Type", (CardLoveLanguageType)m_cardLoveLanguageType.enumValueIndex);
-        //    m_actionTargetType.enumValueIndex = (int)(ActionTargetType)EditorGUILayout.EnumPopup("Target Type", (ActionTargetType)m_actionTargetType.enumValueIndex);
-        //    m_buffType.enumValueIndex = (int)(BuffType)EditorGUILayout.EnumPopup("Buff Type", (BuffType)m_buffType.enumValueIndex);
-        //    m_debuffType.enumValueIndex = (int)(DebuffType)EditorGUILayout.EnumPopup("Debuff Type", (DebuffType)m_debuffType.enumValueIndex);
-
-
-        //    //if (m_cardActionType.enumValueIndex is (int)CardActionType.Attack)
-        //    //{
-        //    //    m_damageAmt.intValue = EditorGUILayout.IntField("Damage Amount", m_damageAmt.intValue);
-
-        //    //}
-        //    EditorGUI.EndChangeCheck();
-        //    serializedObject.ApplyModifiedProperties();
-
-        //}
+            selectedCardData.EditId(cardID);
+            selectedCardData.EditCardName(cardName);
+            //SelectedCardData.EditManaCost(ManaCost);
+            //SelectedCardData.EditCardSprite(CardSprite);
+            //SelectedCardData.EditUsableWithoutTarget(UsableWithoutTarget);
+            //SelectedCardData.EditExhaustAfterPlay(ExhaustAfterPlay);
+            //SelectedCardData.EditCardActionDataList(CardActionDataList);
+            //SelectedCardData.EditCardDescriptionDataList(CardDescriptionDataList);
+            //SelectedCardData.EditSpecialKeywordsList(SpecialKeywordsList);
+            //SelectedCardData.EditAudioType(AudioType);
+            EditorUtility.SetDirty(selectedCardData);
+            AssetDatabase.SaveAssets();
+        }
+        private void RefreshCardData(){
+            selectedCardData = null;
+            ClearCachedCardData();
+            allCardDataList?.Clear();
+            allCardDataList = ListExtensions.GetAllInstances<CardData>().ToList();
+        }
+#endif
     }
 }
 

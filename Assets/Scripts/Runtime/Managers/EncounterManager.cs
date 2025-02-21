@@ -3,9 +3,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using AGGtH.Runtime.Enums;
+using AGGtH.Runtime.Card;
 using AGGtH.Runtime.Characters;
 
-namespace AGGtH.Scripts.Managers
+namespace AGGtH.Runtime.Managers
 {
     public class EncounterManager : MonoBehaviour
     {
