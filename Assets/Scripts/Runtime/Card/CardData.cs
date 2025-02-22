@@ -25,7 +25,7 @@ namespace AGGtH.Runtime.Card
         [SerializeField] private List<CardActionData> cardActionDataList = new List<CardActionData>();
 
         #region Cache
-        public string Id => { get => id; set => id = value; };
+        public string Id => { get => id; set => id = value; }
         public string CardName => { get => cardName; set => cardName = value; }
         public int EnergyCost => { get => energyCost; set => energyCost = value; }
         public Sprite CardSprite => { get => cardSprite; set => cardSprite = value; }
