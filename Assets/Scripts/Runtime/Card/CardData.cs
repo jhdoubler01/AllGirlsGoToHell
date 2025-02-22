@@ -25,14 +25,14 @@ namespace AGGtH.Runtime.Card
         [SerializeField] private List<CardActionData> cardActionDataList = new List<CardActionData>();
 
         #region Cache
-        public string Id => { get => id; set => id = value; }
-        public string CardName => { get => cardName; set => cardName = value; }
-        public int EnergyCost => { get => energyCost; set => energyCost = value; }
-        public Sprite CardSprite => { get => cardSprite; set => cardSprite = value; }
-        public bool UsableWithoutTarget => { get => usableWithoutTarget; set => usableWithoutTarget = value; }
-        public bool ExhaustAfterPlay => { get => exhaustAfterPlay; set => exhaustAfterPlay = value; }
-        public List<CardActionData> CardActionDataList => { get => cardActionDataList; set => cardActionDataList = value; }
-        public RarityType Rarity => { get => rarity; set => rarity = value; }
+        public string Id { get => id; set => id = value; }
+        public string CardName { get => cardName; set => cardName = value; }
+        public int EnergyCost { get => energyCost; set => energyCost = value; }
+        public Sprite CardSprite { get => cardSprite; set => cardSprite = value; }
+        public bool UsableWithoutTarget { get => usableWithoutTarget; set => usableWithoutTarget = value; }
+        public bool ExhaustAfterPlay { get => exhaustAfterPlay; set => exhaustAfterPlay = value; }
+        public List<CardActionData> CardActionDataList { get => cardActionDataList; set => cardActionDataList = value; }
+        public RarityType Rarity { get => rarity; set => rarity = value; }
         #endregion
 
        /*  #region Editor Methods
@@ -61,15 +61,15 @@ namespace AGGtH.Runtime.Card
         [SerializeField] private int drawCardAmt;
         [SerializeField] private int energyGainAmt;
 
-        public ActionTargetType ActionTargetType => { get => actionTargetType; set => actionTargetType = value; }
-        public CardActionType CardActionType => { get => cardActionType; set => cardActionType = value; }
-        public BuffType BuffType => { get => buffType; set => buffType = value; }
-        public DebuffType DebuffType => { get => debuffType; set => debuffType = value; }
-        public int DamageAmt => { get => damageAmt; set => damageAmt = value; }
-        public int HealAmt => { get => healAmt; set => healAmt = value; }
-        public int BlockAmt => { get => blockAmt; set => blockAmt = value; }
-        public int DrawCardAmt => { get => drawCardAmt; set => drawCardAmt = value; }
-        public int EnergyGainAmt => { get => energyGainAmt; set => energyGainAmt = value;}
+        public ActionTargetType ActionTargetType { get => actionTargetType; set => actionTargetType = value; }
+        public CardActionType CardActionType { get => cardActionType; set => cardActionType = value; }
+        public BuffType BuffType { get => buffType; set => buffType = value; }
+        public DebuffType DebuffType { get => debuffType; set => debuffType = value; }
+        public int DamageAmt { get => damageAmt; set => damageAmt = value; }
+        public int HealAmt { get => healAmt; set => healAmt = value; }
+        public int BlockAmt { get => blockAmt; set => blockAmt = value; }
+        public int DrawCardAmt { get => drawCardAmt; set => drawCardAmt = value; }
+        public int EnergyGainAmt { get => energyGainAmt; set => energyGainAmt = value;}
     }
 }
 
