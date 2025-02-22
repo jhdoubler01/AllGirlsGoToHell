@@ -52,7 +52,6 @@ namespace AGGtH.Runtime.Card
     {
         [SerializeField] private ActionTargetType actionTargetType;
         [SerializeField] private CardActionType cardActionType;
-        
         [SerializeField] private BuffType buffType;
         [SerializeField] private DebuffType debuffType;
         [SerializeField] private int damageAmt;
@@ -70,8 +69,6 @@ namespace AGGtH.Runtime.Card
         public int BlockAmt { get => blockAmt; set => blockAmt = value; }
         public int DrawCardAmt { get => drawCardAmt; set => drawCardAmt = value; }
         public int EnergyGainAmt { get => energyGainAmt; set => energyGainAmt = value;}
-        public RarityType RarityType { get => rarity; set => rarity = value; }
-        public CardLoveLanguageType CardLoveLanguageType { get => cardLoveLanguageType; set => cardLoveLanguageType = value; }
     }
 }
 
