@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
 using AGGtH.Runtime.Card;
+using AGGtH.Runtime.Enums;
 
 namespace AGGtH.Editor
 {
