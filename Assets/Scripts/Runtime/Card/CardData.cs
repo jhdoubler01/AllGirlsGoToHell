@@ -16,8 +16,8 @@ namespace AGGtH.Runtime.Card
         [SerializeField] private string cardName;
         [SerializeField] private int energyCost;
         [SerializeField] private Sprite cardSprite;
-        [SerializeField] private CardLoveLanguageType cardLoveLanguageType;
         [SerializeField] private RarityType rarity;
+        [SerializeField] private CardLoveLanguageType cardLoveLanguageType;
 
         [Header("Action Settings")]
         [SerializeField] private bool usableWithoutTarget;
