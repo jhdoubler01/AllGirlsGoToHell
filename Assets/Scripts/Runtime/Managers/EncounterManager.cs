@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using AGGtH.Runtime.Enums;
 using AGGtH.Runtime.Card;
 using AGGtH.Runtime.Characters;
+using AGGtH.Runtime.Encounter;
 
 namespace AGGtH.Runtime.Managers
 {
@@ -14,7 +15,6 @@ namespace AGGtH.Runtime.Managers
         public static EncounterManager Instance { get; private set; }
 
         [Header("References")]
-        //[SerializeField] private BackgroundContainer backgroundContainer;
         [SerializeField] private List<Transform> enemyPosList;
 
         #region Cache
