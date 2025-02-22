@@ -38,8 +38,7 @@ namespace AGGtH.Editor
             rarityType = (RarityType)EditorGUILayout.EnumPopup("Rarity Type", rarityType);
             usableWithoutTarget = EditorGUILayout.Toggle("Usable Without Target", usableWithoutTarget);
             exhaustAfterPlay = EditorGUILayout.Toggle("Exhaust After Play", exhaustAfterPlay);
-
-            //cardActionType = (CardActionType)EditorGUILayout.EnumPopup("Card Action Type", cardActionType);
+            cardActionType = (CardActionType)EditorGUILayout.EnumPopup("Card Action Type", cardActionType);
 
             GUILayout.Label("Card Action Type", EditorStyles.boldLabel);
 
@@ -50,15 +49,20 @@ namespace AGGtH.Editor
 
             for (int i = 0; i < cardActionDataList.Count; i++)
             {
+                if (cardActionDataList[i] == null)
+                {
+                    cardActionDataList[i] = new CardActionData();
+                }
+                
                 GUILayout.BeginHorizontal();
                 cardActionDataList[i] = new CardActionData()
                 {
-                    cardActionType = (CardActionType)EditorGUILayout.EnumPopup("Action Type", cardActionType),
-                    damageAmt = EditorGUILayout.IntField("Damage Amount", cardActionDataList[i].damageAmt),
-                    healAmt = EditorGUILayout.IntField("Heal Amount", cardActionDataList[i].healAmt),
-                    blockAmt = EditorGUILayout.IntField("Block", cardActionDataList[i].blockAmt),
-
+                    CardActionType = (CardActionType)EditorGUILayout.EnumPopup("Action Type", cardActionDataList[i].CardActionType),
+                    DamageAmt = EditorGUILayout.IntField("Damage Amount", cardActionDataList[i].DamageAmt),
+                    HealAmt = EditorGUILayout.IntField("Heal Amount", cardActionDataList[i].HealAmt),
+                    BlockAmt = EditorGUILayout.IntField("Block", cardActionDataList[i].BlockAmt),
                 };
+
                 if (GUILayout.Button("Remove"))
                 {
                     cardActionDataList.RemoveAt(i);

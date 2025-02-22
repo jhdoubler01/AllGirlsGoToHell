@@ -34,7 +34,7 @@ namespace AGGtH.Runtime.Card
         public List<CardActionData> CardActionDataList { get => cardActionDataList; set => cardActionDataList = value; }
         public RarityType Rarity { get => rarity; set => rarity = value; }
         public CardLoveLanguageType CardLoveLanguageType { get => cardLoveLanguageType; set => cardLoveLanguageType = value; }
-        //public CardActionType CardActionType { get; set; }
+        public CardActionType CardActionType { get; set; }
 
         #endregion
 
