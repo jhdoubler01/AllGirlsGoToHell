@@ -1,5 +1,7 @@
 using UnityEngine;
 using UnityEditor;
+using System.Collections.Generic;
+using AGGtH.Runtime.Card;
 
 namespace AGGtH.Editor
 {
@@ -18,7 +20,7 @@ namespace AGGtH.Editor
         [MenuItem("Window/Card Creator")]
         public static void ShowWindow()
         {
-            GetWindow<Editor>("Card Creator");
+            GetWindow<CardEditorWindow>("Card Creator");
         }
 
         private void OnGUI()
@@ -33,7 +35,34 @@ namespace AGGtH.Editor
             rarityType = (RarityType)EditorGUILayout.EnumPopup("Rarity Type", rarityType);
             usableWithoutTarget = EditorGUILayout.Toggle("Usable Without Target", usableWithoutTarget);
             exhaustAfterPlay = EditorGUILayout.Toggle("Exhaust After Play", exhaustAfterPlay);
-            cardActionType = (CardActionType)EditorGUILayout.EnumPopup("Card Action Type", cardActionType);
+
+            //cardActionType = (CardActionType)EditorGUILayout.EnumPopup("Card Action Type", cardActionType);
+
+            GUILayout.Label("Card Action Type", EditorStyles.boldLabel);
+
+            if (GUILayout.Button("Add Action"))
+            {
+                cardActionDataList.Add(new CardActionData());
+            }
+
+            for (int i = 0; i < cardActionDataList.Count; i++)
+            {
+                GUILayout.BeginHorizontal();
+                cardActionDataList[i] = new CardActionData()
+                {
+                    cardActionType = (CardActionType)EditorGUILayout.EnumPopup("Action Type", cardActionType),
+                    damageAmt = EditorGUILayout.IntField("Damage Amount", cardActionDataList[i].damageAmt),
+                    healAmt = EditorGUILayout.IntField("Heal Amount", cardActionDataList[i].healAmt),
+                    blockAmt = EditorGUILayout.IntField("Block", cardActionDataList[i].blockAmt),
+
+                };
+                if (GUILayout.Button("Remove"))
+                {
+                    cardActionDataList.RemoveAt(i);
+                }
+                GUILayout.EndHorizontal();
+            }
+
             if (GUILayout.Button("Create Card"))
             {
                 CreateCard();
@@ -42,6 +71,20 @@ namespace AGGtH.Editor
 
         private void CreateCard()
         {
+            if (string.IsNullOrWhiteSpace(id))
+            {
+                Debug.LogError("Card ID cannot be empty.");
+                return;
+            }
+
+            string path = "Assets/Data/CardData/" + id + ".asset";
+
+            if (AssetDatabase.LoadAssetAtPath<CardData>(path) != null)
+            {
+                Debug.LogError("Card with this ID already exists.");
+                return;
+            }
+
             CardData newCard = ScriptableObject.CreateInstance<CardData>();
             newCard.Id = id;
             newCard.CardName = cardName;
@@ -53,7 +96,6 @@ namespace AGGtH.Editor
             newCard.ExhaustAfterPlay = exhaustAfterPlay;
             newCard.CardActionType = cardActionType;
 
-            string path = "Assets/Data/CardData/" + id + ".asset";
             AssetDatabase.CreateAsset(newCard, path);
             AssetDatabase.SaveAssets();
             AssetDatabase.Refresh();
