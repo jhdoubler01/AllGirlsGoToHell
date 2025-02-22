@@ -53,7 +53,7 @@ namespace AGGtH.Editor
                 {
                     cardActionDataList[i] = new CardActionData();
                 }
-                
+
                 GUILayout.BeginHorizontal();
                 cardActionDataList[i] = new CardActionData()
                 {
@@ -98,7 +98,7 @@ namespace AGGtH.Editor
             newCard.EnergyCost = energyCost;
             newCard.CardSprite = cardSprite;
             newCard.CardLoveLanguageType = cardLoveLanguageType;
-            newCard.RarityType = rarityType;
+            newCard.Rarity = rarityType;
             newCard.UsableWithoutTarget = usableWithoutTarget;
             newCard.ExhaustAfterPlay = exhaustAfterPlay;
             newCard.CardActionType = cardActionType;

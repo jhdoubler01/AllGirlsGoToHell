@@ -37,17 +37,6 @@ namespace AGGtH.Runtime.Card
         public CardActionType CardActionType { get; set; }
 
         #endregion
-
-       /*  #region Editor Methods
-        public void EditCardName(string newName) => cardName = newName;
-        public void EditId(string newId) => id = newId;
-        public void EditEnergyCost(int newEnergyCost) => energyCost = newEnergyCost;
-        public void EditCardSprite(Sprite newSprite) => cardSprite = newSprite;
-        public void EditUsableWithoutTarget(bool newStat) => usableWithoutTarget = newStat;
-        public void EditExhaustAfterPlay(bool newStat) => exhaustAfterPlay = newStat;
-        public void EditCardActionDataList(List<CardActionData> newList) => cardActionDataList = newList;
-        public void EditCardRarity(RarityType newRarity) => rarity = newRarity;
-        #endregion */
     }
 
     [Serializable]
