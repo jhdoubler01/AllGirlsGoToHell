@@ -33,6 +33,9 @@ namespace AGGtH.Runtime.Card
         public bool ExhaustAfterPlay { get => exhaustAfterPlay; set => exhaustAfterPlay = value; }
         public List<CardActionData> CardActionDataList { get => cardActionDataList; set => cardActionDataList = value; }
         public RarityType Rarity { get => rarity; set => rarity = value; }
+        public CardLoveLanguageType CardLoveLanguageType { get => cardLoveLanguageType; set => cardLoveLanguageType = value; }
+        //public CardActionType CardActionType { get; set; }
+
         #endregion
 
        /*  #region Editor Methods
@@ -68,7 +71,7 @@ namespace AGGtH.Runtime.Card
         public int HealAmt { get => healAmt; set => healAmt = value; }
         public int BlockAmt { get => blockAmt; set => blockAmt = value; }
         public int DrawCardAmt { get => drawCardAmt; set => drawCardAmt = value; }
-        public int EnergyGainAmt { get => energyGainAmt; set => energyGainAmt = value;}
+        public int EnergyGainAmt { get => energyGainAmt; set => energyGainAmt = value; }
     }
 }
 
