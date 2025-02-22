@@ -72,7 +72,6 @@ namespace AGGtH.Runtime.Card
         public int EnergyGainAmt { get => energyGainAmt; set => energyGainAmt = value;}
         public RarityType RarityType { get => rarity; set => rarity = value; }
         public CardLoveLanguageType CardLoveLanguageType { get => cardLoveLanguageType; set => cardLoveLanguageType = value; }
-        public CardActionType CardActionType { get => cardActionType; set => cardActionType = value; }
     }
 }
 
