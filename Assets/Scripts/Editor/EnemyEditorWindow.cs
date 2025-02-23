@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
-using AGGtH.Runtime.Card;
+using AGGtH.Runtime.Characters.Enemy;
 using AGGtH.Runtime.Enums;
 
 namespace AGGtH.Editor
@@ -9,7 +9,7 @@ namespace AGGtH.Editor
     public class EnemyEditorWindow : EditorWindow
     {
         private string id;
-        private string cardName;
+        private string enemyName;
         private int healthAmt;
         private Sprite enemySprite;
         private EnemyLoveLanguageType enemyLoveLanguageType;
@@ -29,7 +29,7 @@ namespace AGGtH.Editor
             enemyName = EditorGUILayout.TextField("Enemy Name", enemyName);
             healthAmt = EditorGUILayout.IntField("Health", healthAmt);
             enemySprite = (Sprite)EditorGUILayout.ObjectField("Enemy Sprite", enemySprite, typeof(Sprite), false);
-            enemyLoveLanguageType = (EnemuLoveLanguageType)EditorGUILayout.EnumPopup("Enemy Love Language Type", enemyLoveLanguageType);
+            enemyLoveLanguageType = (EnemyLoveLanguageType)EditorGUILayout.EnumPopup("Enemy Love Language Type", enemyLoveLanguageType);
  
 /*             GUILayout.Label("Card Action Type", EditorStyles.boldLabel);
 
