@@ -30,3 +30,5 @@ MonoBehaviour:
     blockAmt: 0
     drawCardAmt: 0
     energyGainAmt: 0
+  dialogueOptions:
+  - You stare deeply into her eyes.

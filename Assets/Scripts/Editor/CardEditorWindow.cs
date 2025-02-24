@@ -20,6 +20,7 @@ namespace AGGtH.Editor.CardEditor
         private List<CardActionData> cardActionDataList = new List<CardActionData>();
 
 
+
         [MenuItem("Window/Card Creator")]
         public static void ShowWindow()
         {

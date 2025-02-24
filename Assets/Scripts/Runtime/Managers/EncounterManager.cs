@@ -64,9 +64,15 @@ namespace AGGtH.Runtime.Managers
                 CurrentCombatStateType = CombatStateType.PrepareCombat;
             }
         }
+
+        //all of these card methods and stuff should be in cardCollectionManager im just being lazy rn
         private void SetUpDrawPile()
         {
-            drawPile = GameManager.GameplayData.StarterDeck.CardList;
+            //drawPile = GameManager.GameplayData.StarterDeck.CardList;
+            foreach(CardData card in GameManager.GameplayData.StarterDeck.CardList)
+            {
+                drawPile.Add(card);
+            }
         }
         private void RefillDrawPile()
         {
@@ -87,6 +93,14 @@ namespace AGGtH.Runtime.Managers
             }
             playerHand = GameManager.InitializePlayerHand(playerHandData);
         }
+        public void MoveCardToDiscardPile(CardBase card)
+        {
+            CardData cardData = card.CardData;
+            discardPile.Add(cardData);
+            playerHand.Remove(card);
+            Destroy(card.gameObject);
+        }
+
         private void Start()
         {
             StartCombat();

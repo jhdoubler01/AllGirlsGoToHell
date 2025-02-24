@@ -30,3 +30,5 @@ MonoBehaviour:
     blockAmt: 0
     drawCardAmt: 0
     energyGainAmt: 0
+  dialogueOptions:
+  - --"Did you fall from heaven? Because you look like an angel. Wait did you actually?"

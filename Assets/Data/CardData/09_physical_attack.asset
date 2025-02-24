@@ -21,3 +21,5 @@ MonoBehaviour:
   usableWithoutTarget: 0
   exhaustAfterPlay: 0
   cardActionDataList: []
+  dialogueOptions:
+  - hey

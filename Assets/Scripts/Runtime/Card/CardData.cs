@@ -38,6 +38,7 @@ namespace AGGtH.Runtime.Card
         public RarityType Rarity { get => rarity; set => rarity = value; }
         public CardLoveLanguageType CardLoveLanguageType { get => cardLoveLanguageType; set => cardLoveLanguageType = value; }
         public CardActionType CardActionType { get; set; }
+        public List<string> DialogueOptions { get => dialogueOptions; set => dialogueOptions = value; }
 
         #endregion
     }

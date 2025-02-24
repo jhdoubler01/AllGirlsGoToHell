@@ -30,3 +30,5 @@ MonoBehaviour:
     blockAmt: 3
     drawCardAmt: 0
     energyGainAmt: 0
+  dialogueOptions:
+  - You think about the state of the world, temporarily taking you out of the moment.

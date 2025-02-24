@@ -16,6 +16,11 @@ namespace AGGtH.Runtime.Managers
         [SerializeField] private CardCollectionManager cardCollectionManager;
         [SerializeField] private GameplayData gameplayData;
 
+        protected UIManager UIManager => UIManager.Instance;
+
+        private int playerCurrentEnergy;
+        public int PlayerCurrentEnergy => playerCurrentEnergy;
+
         public GameplayData GameplayData => gameplayData;
 
         public CardBase BuildAndGetCard(CardData targetData, Transform parent)
@@ -33,7 +38,25 @@ namespace AGGtH.Runtime.Managers
             }
             return deck;
         }
+        void Setup()
+        {
+            playerCurrentEnergy = GameplayData.MaxEnergy;
+            UIManager.SetEnergyBoxText(playerCurrentEnergy);
+        }
 
+        public bool IsEnoughEnergyToPlayCard(int energyToPlayCard)
+        {
+            if(energyToPlayCard <= playerCurrentEnergy) { return true; }
+            return false;
+        }
+        public void SubtractFromCurrentEnergy(int amtToSubtract)
+        {
+            playerCurrentEnergy -= amtToSubtract;
+            Debug.Log("Current Energy: " + playerCurrentEnergy);
+            if(playerCurrentEnergy < 0) { Debug.LogError("Player energy cannot be negative"); }
+            UIManager.SetEnergyBoxText(playerCurrentEnergy);
+
+        }
         private void Awake()
         {
             if (Instance)
@@ -45,6 +68,10 @@ namespace AGGtH.Runtime.Managers
             {
                 Instance = this;
             }
+        }
+        void Start()
+        {
+            Setup();
         }
 
     }

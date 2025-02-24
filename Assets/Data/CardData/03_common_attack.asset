@@ -30,3 +30,5 @@ MonoBehaviour:
     blockAmt: 2
     drawCardAmt: 0
     energyGainAmt: 0
+  dialogueOptions:
+  - hey
