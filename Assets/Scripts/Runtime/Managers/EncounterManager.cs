@@ -13,6 +13,11 @@ namespace AGGtH.Runtime.Managers
         private EncounterManager() { }
         public static EncounterManager Instance { get; private set; }
 
+        protected GameManager GameManager => GameManager.Instance;
+
+        //redo this part later just for now
+        public List<CardBase> playerDeck;
+
         [Header("References")]
         [SerializeField] private List<Transform> enemyPosList;
 
@@ -58,7 +63,7 @@ namespace AGGtH.Runtime.Managers
         }
         public void StartCombat()
         {
-
+            playerDeck = GameManager.InitializePlayerDeck();
         }
         #endregion
     }

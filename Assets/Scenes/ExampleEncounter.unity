@@ -2113,6 +2113,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardPrefab: {fileID: 0}
   cardParentTransform: {fileID: 981488140}
+  cardCollectionManager: {fileID: 0}
+  gameplayData: {fileID: 11400000, guid: 96af78c6937dd8247b9de40fa08ceff5, type: 2}
 --- !u!1 &1863103005
 GameObject:
   m_ObjectHideFlags: 0

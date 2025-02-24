@@ -41,7 +41,7 @@ namespace AGGtH.Runtime.Card
             IsPlayable = isPlayable;
             cardNameText.text = CardData.CardName;
             //cardDescText.text = CardData.MyDescription;
-            energyCostText.text = CardData.EnergyCost.ToString();
+            //energyCostText.text = CardData.EnergyCost.ToString();
             //cardTypeIcon.sprite = CardData.CardSprite;
 
         }

@@ -32,7 +32,7 @@ namespace AGGtH.Runtime.Settings
         public int DrawCount => drawCount;
         public int MaxMana => maxMana;
         //public bool IsRandomHand => isRandomHand;
-        public DeckData InitalDeck => initalDeck;
+        public DeckData StarterDeck => initalDeck;
         //public int RandomCardCount => randomCardCount;
         public int MaxCardOnHand => maxCardOnHand;
         public List<CardData> AllCardsList => allCardsList;
