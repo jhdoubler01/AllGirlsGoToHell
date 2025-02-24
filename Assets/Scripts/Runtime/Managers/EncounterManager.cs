@@ -94,7 +94,7 @@ namespace AGGtH.Runtime.Managers
         public void StartCombat()
         {
             SetUpDrawPile();
-            //DrawCards(GameManager.GameplayData.DrawCount);
+            DrawCards(GameManager.GameplayData.DrawCount);
         }
         #endregion
     }
