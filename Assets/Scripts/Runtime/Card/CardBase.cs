@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using System.Collections.Generic;
 using AGGtH.Runtime.Enums;
 using AGGtH.Runtime.Managers;
-using TMPro;
+using TMPro; //textmesh pro
 
 namespace AGGtH.Runtime.Card
 {
