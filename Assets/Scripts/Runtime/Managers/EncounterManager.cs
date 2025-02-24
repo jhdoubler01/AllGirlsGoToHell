@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using AGGtH.Runtime.Enums;
 using AGGtH.Runtime.Card;
 using AGGtH.Runtime.Characters;
-using AGGtH.Runtime.Encounter;
 
 namespace AGGtH.Runtime.Managers
 {

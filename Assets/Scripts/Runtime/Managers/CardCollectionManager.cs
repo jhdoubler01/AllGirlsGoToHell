@@ -1,8 +1,8 @@
 using UnityEngine;
 
-namespace AGGtH.Runtime.Encounter
+namespace AGGtH.Runtime.Managers
 {
-    public class DiscardPile : MonoBehaviour
+    public class CardCollectionManager : MonoBehaviour
     {
         // Start is called once before the first execution of Update after the MonoBehaviour is created
         void Start()
