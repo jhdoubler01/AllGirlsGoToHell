@@ -24,10 +24,10 @@ namespace AGGtH.Runtime.Managers
             clone.SetCard(targetData);
             return clone;
         }
-        public List<CardBase> InitializePlayerDeck()
+        public List<CardBase> InitializePlayerHand(List<CardData> handData)
         {
             List<CardBase> deck = new List<CardBase>();
-            foreach(CardData cardData in GameplayData.StarterDeck.CardList)
+            foreach(CardData cardData in handData)
             {
                 deck.Add(BuildAndGetCard(cardData, cardParentTransform));
             }

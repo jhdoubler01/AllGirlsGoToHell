@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using AGGtH.Runtime.Card;
 using AGGtH.Runtime.Enums;
 
-namespace AGGtH.Editor
+namespace AGGtH.Editor.CardEditor
 {
     public class CardEditorWindow : EditorWindow
     {

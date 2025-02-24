@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using AGGtH.Runtime.Enums;
 using AGGtH.Runtime.Card;
 using AGGtH.Runtime.Characters;
+using TMPro;
 
 namespace AGGtH.Runtime.Managers
 {
@@ -15,8 +16,14 @@ namespace AGGtH.Runtime.Managers
 
         protected GameManager GameManager => GameManager.Instance;
 
-        //redo this part later just for now
-        public List<CardBase> playerDeck;
+        //redo this part later,, its just for now -- these should be in collectionmanager and ui manager
+        public List<CardData> drawPile;
+        public List<CardData> playerHandData;
+        public List<CardBase> playerHand;
+        public List<CardData> discardPile;
+        [SerializeField] private TMP_Text drawPileText;
+        [SerializeField] private TMP_Text discardPileText;
+
 
         [Header("References")]
         [SerializeField] private List<Transform> enemyPosList;
@@ -57,13 +64,37 @@ namespace AGGtH.Runtime.Managers
                 CurrentCombatStateType = CombatStateType.PrepareCombat;
             }
         }
+        private void SetUpDrawPile()
+        {
+            drawPile = GameManager.GameplayData.StarterDeck.CardList;
+        }
+        private void RefillDrawPile()
+        {
+            if(drawPile.Count != 0) { return; }
+            drawPile = discardPile;
+            discardPile.Clear();
+        }
+        private void DrawCards(int numCards)
+        {
+            int rand = 0;
+            for(var i = 0; i < numCards; i++)
+            {
+                if (drawPile.Count == 0) { RefillDrawPile(); }
+                rand = UnityEngine.Random.Range(0,drawPile.Count-1);
+                Debug.Log(rand);
+                playerHandData.Add(drawPile[rand]);
+                drawPile.RemoveAt(rand);
+            }
+            playerHand = GameManager.InitializePlayerHand(playerHandData);
+        }
         private void Start()
         {
             StartCombat();
         }
         public void StartCombat()
         {
-            playerDeck = GameManager.InitializePlayerDeck();
+            SetUpDrawPile();
+            //DrawCards(GameManager.GameplayData.DrawCount);
         }
         #endregion
     }
