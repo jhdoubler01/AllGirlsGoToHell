@@ -31,4 +31,4 @@ MonoBehaviour:
     drawCardAmt: 0
     energyGainAmt: 0
   dialogueOptions:
-  - hey
+  - You flash a quick smile. Fake it till you make it!

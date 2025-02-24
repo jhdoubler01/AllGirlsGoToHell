@@ -20,6 +20,15 @@ MonoBehaviour:
   cardLoveLanguageType: 1
   usableWithoutTarget: 1
   exhaustAfterPlay: 0
-  cardActionDataList: []
+  cardActionDataList:
+  - actionTargetType: 0
+    cardActionType: 1
+    buffType: 0
+    debuffType: 0
+    damageAmt: 3
+    healAmt: 0
+    blockAmt: 0
+    drawCardAmt: 0
+    energyGainAmt: 0
   dialogueOptions:
-  - hey
+  - You try your best to raise one eyebrow seductively.

@@ -31,4 +31,5 @@ MonoBehaviour:
     drawCardAmt: 0
     energyGainAmt: 0
   dialogueOptions:
-  - hey
+  - You blow a little kiss and hope you didn't spray any spit on her. Unless she'd
+    like that, then maybe you do.

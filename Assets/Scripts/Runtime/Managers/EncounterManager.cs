@@ -104,11 +104,39 @@ namespace AGGtH.Runtime.Managers
         private void Start()
         {
             StartCombat();
+            StartPlayerTurn();
         }
         public void StartCombat()
         {
             SetUpDrawPile();
+        }
+        private void StartPlayerTurn()
+        {
             DrawCards(GameManager.GameplayData.DrawCount);
+            GameManager.ResetPlayerEnergy();
+        }
+        public void EndPlayerTurn()
+        {
+            if(playerHand.Count > 0)
+            {
+                int num = playerHand.Count;
+                for(var i=num-1; i>=0;i--)
+                {
+                    MoveCardToDiscardPile(playerHand[i]);
+                }
+            }
+            StartCoroutine(EnemyTurnDelay());
+        }
+        private void EndEnemyTurn()
+        {
+
+        }
+
+        private IEnumerator EnemyTurnDelay()
+        {
+            Debug.Log("enemy turn- pretend smth happens here");
+            yield return new WaitForSeconds(3);
+            StartPlayerTurn();
         }
         #endregion
     }

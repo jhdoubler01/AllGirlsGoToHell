@@ -38,7 +38,7 @@ namespace AGGtH.Runtime.Managers
             }
             return deck;
         }
-        void Setup()
+        public void ResetPlayerEnergy()
         {
             playerCurrentEnergy = GameplayData.MaxEnergy;
             UIManager.SetEnergyBoxText(playerCurrentEnergy);
@@ -71,7 +71,7 @@ namespace AGGtH.Runtime.Managers
         }
         void Start()
         {
-            Setup();
+            ResetPlayerEnergy();
         }
 
     }

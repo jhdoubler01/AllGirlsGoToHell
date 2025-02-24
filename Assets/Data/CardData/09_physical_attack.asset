@@ -20,6 +20,15 @@ MonoBehaviour:
   cardLoveLanguageType: 4
   usableWithoutTarget: 0
   exhaustAfterPlay: 0
-  cardActionDataList: []
+  cardActionDataList:
+  - actionTargetType: 3
+    cardActionType: 5
+    buffType: 0
+    debuffType: 0
+    damageAmt: 3
+    healAmt: 0
+    blockAmt: 1
+    drawCardAmt: 0
+    energyGainAmt: 0
   dialogueOptions:
-  - hey
+  - You twirl your hair and try to remember when you last washed it.
