@@ -104,20 +104,20 @@ namespace AGGtH.Runtime.Card
         public virtual void PlayableOnEndDrag()
         {
             Debug.Log(ReadyToBePlayed());
-            if (ReadyToBePlayed()) { PlayCard(); }
+            if (ReadyToBePlayed()) { Use(); }
             else transform.SetParent(parentAfterDrag);
         }
 
         #endregion
 
-        #region Play Methods
-        void PlayCard(Transform target = null)
+        #region Card Methods
+        public virtual void Use(Transform target = null)
         {
             Debug.Log("play card");
             UIManager.SetDialogueBoxText(GetRandomDialogueOption());
             GameManager.SubtractFromCurrentEnergy(CardData.EnergyCost);
 
-            EncounterManager.MoveCardToDiscardPile(this);
+            //EncounterManager.MoveCardToDiscardPile(this);
         }
         private bool ReadyToBePlayed()
         {
@@ -128,7 +128,22 @@ namespace AGGtH.Runtime.Card
 
             return ready;
         }
+        public virtual void Discard()
+        {
 
+        }
+        public virtual void Exhaust(bool destroy=true)
+        {
+
+        }
+        protected virtual void SpendEnergy(int value)
+        {
+
+        }
+        public virtual void UpdateCardText()
+        {
+
+        }
         private string GetRandomDialogueOption()
         {
             var rand = UnityEngine.Random.Range(0, CardData.DialogueOptions.Count - 1);

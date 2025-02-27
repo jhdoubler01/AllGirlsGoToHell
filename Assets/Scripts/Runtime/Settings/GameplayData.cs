@@ -20,20 +20,21 @@ namespace AGGtH.Runtime.Settings
         [SerializeField] private List<CardData> allCardsList;
         [SerializeField] private CardBase cardPrefab;
 
+
         //[Header("Customization Settings")]
         //[SerializeField] private string defaultName = "Nue";
         //[SerializeField] private bool useStageSystem;
 
-        //[Header("Modifiers")]
-        //[SerializeField] private bool isRandomHand = false;
-        //[SerializeField] private int randomCardCount;
+        [Header("Modifiers")]
+        [SerializeField] private bool isRandomHand = false;
+        [SerializeField] private int randomCardCount;
 
         #region Encapsulation
         public int DrawCount => drawCount;
         public int MaxEnergy => maxEnergy;
-        //public bool IsRandomHand => isRandomHand;
+        public bool IsRandomHand => isRandomHand;
         public DeckData StarterDeck => initalDeck;
-        //public int RandomCardCount => randomCardCount;
+        public int RandomCardCount => randomCardCount;
         public int MaxCardOnHand => maxCardOnHand;
         public List<CardData> AllCardsList => allCardsList;
         public CardBase CardPrefab => cardPrefab;

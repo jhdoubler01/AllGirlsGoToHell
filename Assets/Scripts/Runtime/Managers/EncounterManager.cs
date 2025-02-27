@@ -14,13 +14,12 @@ namespace AGGtH.Runtime.Managers
         private EncounterManager() { }
         public static EncounterManager Instance { get; private set; }
 
+        protected UIManager UIManager => UIManager.Instance;
         protected GameManager GameManager => GameManager.Instance;
+        protected CardCollectionManager CardCollectionManager => CardCollectionManager.Instance;
 
         //redo this part later,, its just for now -- these should be in collectionmanager and ui manager
-        public List<CardData> drawPile;
-        public List<CardData> playerHandData;
-        public List<CardBase> playerHand;
-        public List<CardData> discardPile;
+
         [SerializeField] private TMP_Text drawPileText;
         [SerializeField] private TMP_Text discardPileText;
 
@@ -38,17 +37,21 @@ namespace AGGtH.Runtime.Managers
         public List<Transform> EnemyPosList => enemyPosList;
 
         //public EnemyEncounter CurrentEncounter { get; private set; }
-        #endregion
-        private CombatStateType _currentCombatStateType;
+        private CombatStateType currentCombatStateType;
 
         public CombatStateType CurrentCombatStateType
         {
-            get => _currentCombatStateType;
+            get => currentCombatStateType;
             private set
             {
-
+                //ExecuteCombatState(value);
+                //currentCombatStateType = value;
             }
         }
+
+
+        #endregion
+
 
         #region Setup
         private void Awake()
@@ -65,41 +68,41 @@ namespace AGGtH.Runtime.Managers
             }
         }
 
-        //all of these card methods and stuff should be in cardCollectionManager im just being lazy rn
-        private void SetUpDrawPile()
-        {
-            //drawPile = GameManager.GameplayData.StarterDeck.CardList;
-            foreach(CardData card in GameManager.GameplayData.StarterDeck.CardList)
-            {
-                drawPile.Add(card);
-            }
-        }
-        private void RefillDrawPile()
-        {
-            if(drawPile.Count != 0) { return; }
-            drawPile = discardPile;
-            discardPile.Clear();
-        }
-        private void DrawCards(int numCards)
-        {
-            int rand = 0;
-            for(var i = 0; i < numCards; i++)
-            {
-                if (drawPile.Count == 0) { RefillDrawPile(); }
-                rand = UnityEngine.Random.Range(0,drawPile.Count-1);
-                Debug.Log(rand);
-                playerHandData.Add(drawPile[rand]);
-                drawPile.RemoveAt(rand);
-            }
-            playerHand = GameManager.InitializePlayerHand(playerHandData);
-        }
-        public void MoveCardToDiscardPile(CardBase card)
-        {
-            CardData cardData = card.CardData;
-            discardPile.Add(cardData);
-            playerHand.Remove(card);
-            Destroy(card.gameObject);
-        }
+        ////all of these card methods and stuff should be in cardCollectionManager im just being lazy rn
+        //private void SetUpDrawPile()
+        //{
+        //    //drawPile = GameManager.GameplayData.StarterDeck.CardList;
+        //    foreach(CardData card in GameManager.GameplayData.StarterDeck.CardList)
+        //    {
+        //        drawPile.Add(card);
+        //    }
+        //}
+        //private void RefillDrawPile()
+        //{
+        //    if(drawPile.Count != 0) { return; }
+        //    drawPile = discardPile;
+        //    discardPile.Clear();
+        //}
+        //private void DrawCards(int numCards)
+        //{
+        //    int rand = 0;
+        //    for(var i = 0; i < numCards; i++)
+        //    {
+        //        if (drawPile.Count == 0) { RefillDrawPile(); }
+        //        rand = UnityEngine.Random.Range(0,drawPile.Count-1);
+        //        Debug.Log(rand);
+        //        playerHandData.Add(drawPile[rand]);
+        //        drawPile.RemoveAt(rand);
+        //    }
+        //    playerHand = GameManager.InitializePlayerHand(playerHandData);
+        //}
+        //public void MoveCardToDiscardPile(CardBase card)
+        //{
+        //    CardData cardData = card.CardData;
+        //    discardPile.Add(cardData);
+        //    playerHand.Remove(card);
+        //    Destroy(card.gameObject);
+        //}
 
         private void Start()
         {
@@ -108,24 +111,24 @@ namespace AGGtH.Runtime.Managers
         }
         public void StartCombat()
         {
-            SetUpDrawPile();
+            //SetUpDrawPile();
         }
         private void StartPlayerTurn()
         {
-            DrawCards(GameManager.GameplayData.DrawCount);
+            //DrawCards(GameManager.GameplayData.DrawCount);
             GameManager.ResetPlayerEnergy();
         }
         public void EndPlayerTurn()
         {
-            if(playerHand.Count > 0)
-            {
-                int num = playerHand.Count;
-                for(var i=num-1; i>=0;i--)
-                {
-                    MoveCardToDiscardPile(playerHand[i]);
-                }
-            }
-            StartCoroutine(EnemyTurnDelay());
+            //if(playerHand.Count > 0)
+            //{
+            //    int num = playerHand.Count;
+            //    for(var i=num-1; i>=0;i--)
+            //    {
+            //        MoveCardToDiscardPile(playerHand[i]);
+            //    }
+            //}
+            //StartCoroutine(EnemyTurnDelay());
         }
         private void EndEnemyTurn()
         {
@@ -137,6 +140,13 @@ namespace AGGtH.Runtime.Managers
             Debug.Log("enemy turn- pretend smth happens here");
             yield return new WaitForSeconds(3);
             StartPlayerTurn();
+        }
+        #endregion
+
+        #region Runtime
+        void FixedUpdate()
+        {
+
         }
         #endregion
     }

@@ -22,13 +22,16 @@ namespace AGGtH.Runtime.Managers
         public int PlayerCurrentEnergy => playerCurrentEnergy;
 
         public GameplayData GameplayData => gameplayData;
+        public PersistentGameplayData PersistentGameplayData { get; private set; }
 
+        // spawn card object in game and set its stats to a target CardData
         public CardBase BuildAndGetCard(CardData targetData, Transform parent)
         {
             var clone = Instantiate(GameplayData.CardPrefab, parent);
             clone.SetCard(targetData);
             return clone;
         }
+        // spawn cards in players hand
         public List<CardBase> InitializePlayerHand(List<CardData> handData)
         {
             List<CardBase> deck = new List<CardBase>();
@@ -43,12 +46,13 @@ namespace AGGtH.Runtime.Managers
             playerCurrentEnergy = GameplayData.MaxEnergy;
             UIManager.SetEnergyBoxText(playerCurrentEnergy);
         }
-
+        //takes how much energy a card costs and returns true if the player has enough energy to play it
         public bool IsEnoughEnergyToPlayCard(int energyToPlayCard)
         {
             if(energyToPlayCard <= playerCurrentEnergy) { return true; }
             return false;
         }
+        //subtracts card cost from player total energy
         public void SubtractFromCurrentEnergy(int amtToSubtract)
         {
             playerCurrentEnergy -= amtToSubtract;

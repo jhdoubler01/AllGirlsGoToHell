@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using AGGtH.Runtime.UI;
 
 namespace AGGtH.Runtime.Managers
 {
@@ -9,6 +10,13 @@ namespace AGGtH.Runtime.Managers
         [SerializeField] private TMP_Text energyBox;
         public UIManager() { }
         public static UIManager Instance { get; private set; }
+
+        [Header("Canvases")]
+        [SerializeField] private CombatCanvas combatCanvas;
+
+        #region Cache
+        public CombatCanvas CombatCanvas => combatCanvas;
+        #endregion
 
         public void SetDialogueBoxText(string dialogue)
         {
