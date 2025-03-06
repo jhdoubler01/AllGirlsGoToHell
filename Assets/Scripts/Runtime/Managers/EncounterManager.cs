@@ -68,42 +68,6 @@ namespace AGGtH.Runtime.Managers
             }
         }
 
-        ////all of these card methods and stuff should be in cardCollectionManager im just being lazy rn
-        //private void SetUpDrawPile()
-        //{
-        //    //drawPile = GameManager.GameplayData.StarterDeck.CardList;
-        //    foreach(CardData card in GameManager.GameplayData.StarterDeck.CardList)
-        //    {
-        //        drawPile.Add(card);
-        //    }
-        //}
-        //private void RefillDrawPile()
-        //{
-        //    if(drawPile.Count != 0) { return; }
-        //    drawPile = discardPile;
-        //    discardPile.Clear();
-        //}
-        //private void DrawCards(int numCards)
-        //{
-        //    int rand = 0;
-        //    for(var i = 0; i < numCards; i++)
-        //    {
-        //        if (drawPile.Count == 0) { RefillDrawPile(); }
-        //        rand = UnityEngine.Random.Range(0,drawPile.Count-1);
-        //        Debug.Log(rand);
-        //        playerHandData.Add(drawPile[rand]);
-        //        drawPile.RemoveAt(rand);
-        //    }
-        //    playerHand = GameManager.InitializePlayerHand(playerHandData);
-        //}
-        //public void MoveCardToDiscardPile(CardBase card)
-        //{
-        //    CardData cardData = card.CardData;
-        //    discardPile.Add(cardData);
-        //    playerHand.Remove(card);
-        //    Destroy(card.gameObject);
-        //}
-
         private void Start()
         {
             StartCombat();
