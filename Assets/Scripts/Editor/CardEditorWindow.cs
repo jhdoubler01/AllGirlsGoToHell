@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using AGGtH.Runtime.Card;
 using AGGtH.Runtime.Enums;
 
-namespace AGGtH.Editor
+namespace AGGtH.Editor.CardEditor
 {
     public class CardEditorWindow : EditorWindow
     {
@@ -18,6 +18,7 @@ namespace AGGtH.Editor
         private bool exhaustAfterPlay;
         private CardActionType cardActionType;
         private List<CardActionData> cardActionDataList = new List<CardActionData>();
+
 
 
         [MenuItem("Window/Card Creator")]

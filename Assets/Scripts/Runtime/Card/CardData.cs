@@ -24,6 +24,9 @@ namespace AGGtH.Runtime.Card
         [SerializeField] private bool exhaustAfterPlay;
         [SerializeField] private List<CardActionData> cardActionDataList = new List<CardActionData>();
 
+        [Header("Dialogue")]
+        [SerializeField] private List<string> dialogueOptions = new List<string>();
+
         #region Cache
         public string Id { get => id; set => id = value; }
         public string CardName { get => cardName; set => cardName = value; }
@@ -35,6 +38,7 @@ namespace AGGtH.Runtime.Card
         public RarityType Rarity { get => rarity; set => rarity = value; }
         public CardLoveLanguageType CardLoveLanguageType { get => cardLoveLanguageType; set => cardLoveLanguageType = value; }
         public CardActionType CardActionType { get; set; }
+        public List<string> DialogueOptions { get => dialogueOptions; set => dialogueOptions = value; }
 
         #endregion
     }
