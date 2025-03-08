@@ -5,7 +5,7 @@ using UnityEngine;
 using Random = UnityEngine.Random;
 
 
-namespace AGGtH.Editor.Extensions
+namespace AGGtH.Runtime.Extensions
 {
     public static class ListExtensions
     {

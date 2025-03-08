@@ -71,39 +71,44 @@ namespace AGGtH.Runtime.Managers
         private void Start()
         {
             StartCombat();
-            StartPlayerTurn();
         }
         public void StartCombat()
         {
             //SetUpDrawPile();
         }
-        private void StartPlayerTurn()
+        private void PlayerTurn()
         {
-            //DrawCards(GameManager.GameplayData.DrawCount);
-            GameManager.ResetPlayerEnergy();
-        }
-        public void EndPlayerTurn()
-        {
-            //if(playerHand.Count > 0)
-            //{
-            //    int num = playerHand.Count;
-            //    for(var i=num-1; i>=0;i--)
-            //    {
-            //        MoveCardToDiscardPile(playerHand[i]);
-            //    }
-            //}
-            //StartCoroutine(EnemyTurnDelay());
-        }
-        private void EndEnemyTurn()
-        {
+            OnPlayerTurnStarted?.Invoke();
+            GameManager.PersistentGameplayData.CurrentEnergy = GameManager.PersistentGameplayData.MaxEnergy;
+            CardCollectionManager.DrawCards(GameManager.PersistentGameplayData.DrawCount);
+            GameManager.PersistentGameplayData.CanSelectCards = true;
 
         }
-
-        private IEnumerator EnemyTurnDelay()
+        private void EnemyTurn()
         {
-            Debug.Log("enemy turn- pretend smth happens here");
-            yield return new WaitForSeconds(3);
-            StartPlayerTurn();
+            OnEnemyTurnStarted?.Invoke();
+            CardCollectionManager.DiscardHand();
+            GameManager.PersistentGameplayData.CanSelectCards = false;
+
+        }
+        private void ExecuteCombatState(CombatStateType targetStateType)
+        {
+            switch (targetStateType)
+            {
+                case CombatStateType.PrepareCombat:
+                    break;
+                case CombatStateType.PlayerTurn:
+                    PlayerTurn();
+                    break;
+                case CombatStateType.EnemyTurn:
+                    EnemyTurn();
+                    break;
+                case CombatStateType.EndCombat:
+                    GameManager.PersistentGameplayData.CanSelectCards = false;
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(targetStateType), targetStateType, null);
+            }
         }
         #endregion
 

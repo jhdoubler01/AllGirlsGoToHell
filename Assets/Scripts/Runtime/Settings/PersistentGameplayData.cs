@@ -13,7 +13,7 @@ namespace AGGtH.Runtime.Settings
         [SerializeField] private int currentGold;
         [SerializeField] private int drawCount;
         [SerializeField] private int maxEnergy;
-        [SerializeField] private int currentMana;
+        [SerializeField] private int currentEnergy;
         [SerializeField] private bool canUseCards;
         [SerializeField] private bool canSelectCards;
         [SerializeField] private bool isRandomHand;
@@ -52,7 +52,7 @@ namespace AGGtH.Runtime.Settings
         {
             DrawCount = _gameplayData.DrawCount;
             MaxEnergy = _gameplayData.MaxEnergy;
-            CurrentMana = MaxEnergy;
+            CurrentEnergy = MaxEnergy;
             CanUseCards = true;
             CanSelectCards = true;
             IsRandomHand = _gameplayData.IsRandomHand;
@@ -79,10 +79,10 @@ namespace AGGtH.Runtime.Settings
             set => maxEnergy = value;
         }
 
-        public int CurrentMana
+        public int CurrentEnergy
         {
-            get => currentMana;
-            set => currentMana = value;
+            get => currentEnergy;
+            set => currentEnergy = value;
         }
 
         public bool CanUseCards
