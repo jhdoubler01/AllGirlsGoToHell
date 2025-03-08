@@ -10,7 +10,7 @@ namespace AGGtH.Runtime.Enums
         Block = 1 << 2,
         Buff = 1 << 3, //positive effect (boosts stats)
         Debuff = 1 << 4, //negative effect (lowers stats)
-        DrawCard = 1 << 5,
+        Draw = 1 << 5,
         GainEnergy = 1 << 6,
         Exhaust = 1 << 7,
     }
