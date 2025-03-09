@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using AGGtH.Runtime.Enums;
 using AGGtH.Runtime.Card;
 using AGGtH.Runtime.Characters;
+using AGGtH.Runtime.Characters.Enemy;
 using TMPro;
 
 namespace AGGtH.Runtime.Managers
