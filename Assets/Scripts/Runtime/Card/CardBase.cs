@@ -222,7 +222,7 @@ namespace AGGtH.Runtime.Card
         }
         public virtual void Discard()
         {
-
+        
         }
         public virtual void Exhaust(bool destroy=true)
         {
