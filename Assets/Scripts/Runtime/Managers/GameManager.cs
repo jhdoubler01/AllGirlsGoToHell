@@ -70,12 +70,9 @@ namespace AGGtH.Runtime.Managers
             }
             else
             {
+                transform.parent = null;
                 Instance = this;
             }
-        }
-        void Start()
-        {
-            ResetPlayerEnergy();
         }
 
     }

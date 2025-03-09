@@ -75,6 +75,9 @@ namespace AGGtH.Runtime.Managers
         public void StartCombat()
         {
             //SetUpDrawPile();
+            CardCollectionManager.SetGameDeck();
+
+            CurrentCombatStateType = CombatStateType.PlayerTurn;
         }
         private void PlayerTurn()
         {
