@@ -29,7 +29,7 @@ namespace AGGtH.Runtime.Managers
         [SerializeField] private List<Transform> enemyPosList;
 
         #region Cache
-        public List<EnemyBase> CurrentEnemiesList { get; private set; } 
+        public List<EnemyBase> CurrentEnemiesList { get; private set; } = new List<EnemyBase>();
         public PlayerBase Player { get; private set; }
 
         public Action OnPlayerTurnStarted;
