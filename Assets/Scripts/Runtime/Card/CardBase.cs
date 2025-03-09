@@ -192,8 +192,21 @@ namespace AGGtH.Runtime.Card
                     break;
                 
                 case CardActionType.Gamble:
-                    // Implement gamble logic here
-                    Debug.Log($"{CardData.CardName} initiated a gamble");
+                    int roll = UnityEngine.Random.Range(0, 100);
+                    if (roll < 50)
+                    {
+                        playerHandParent.Instance>gain(action.EnergyGainAmt);
+                        Debug.Log($"{CardData.CardName} gained {action.EnergyGainAmt} energy from gamble");
+                    }
+                    else
+                    {
+                        playerHandParent.Instance>lose(action.EnergyLossAmt);
+                        Debug.Log($"{CardData.CardName} lost {action.EnergyLossAmt} energy from gamble");
+                    }
+                    break;
+                
+                default:
+                    Debug.LogWarning($"Unknown action type: {action.CardActionType}");
                     break;
             }
         }
