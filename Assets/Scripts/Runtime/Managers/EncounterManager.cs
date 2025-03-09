@@ -18,12 +18,6 @@ namespace AGGtH.Runtime.Managers
         protected GameManager GameManager => GameManager.Instance;
         protected CardCollectionManager CardCollectionManager => CardCollectionManager.Instance;
 
-        //redo this part later,, its just for now -- these should be in collectionmanager and ui manager
-
-        [SerializeField] private TMP_Text drawPileText;
-        [SerializeField] private TMP_Text discardPileText;
-
-
         [Header("References")]
         [SerializeField] private List<Transform> enemyPosList;
 
@@ -44,8 +38,8 @@ namespace AGGtH.Runtime.Managers
             get => currentCombatStateType;
             private set
             {
-                //ExecuteCombatState(value);
-                //currentCombatStateType = value;
+                ExecuteCombatState(value);
+                currentCombatStateType = value;
             }
         }
 

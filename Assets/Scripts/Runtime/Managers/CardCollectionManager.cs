@@ -70,7 +70,7 @@ namespace AGGtH.Runtime.Managers
                 PlayerHandData.Add(randomCard);
                 DrawPile.Remove(randomCard);
                 currentDrawCount++;
-                UIManager.CombatCanvas.SetPileTexts();
+                //UIManager.CombatCanvas.SetPileTexts();
             }
 
             foreach (var cardObject in HandController.hand)
