@@ -113,12 +113,91 @@ namespace AGGtH.Runtime.Card
         #region Card Methods
         public virtual void Use(Transform target = null)
         {
-            Debug.Log("play card");
+            Debug.Log($"Playing Card: {CardData.CardName}");
+
             UIManager.SetDialogueBoxText(GetRandomDialogueOption());
+
+            if (!GameManager.IsEnoughEnergyToPlayCard(CardData.EnergyCost)) 
+            { 
+                Debug.Log("not enough energy"); 
+                return; 
+            }
+        
             GameManager.SubtractFromCurrentEnergy(CardData.EnergyCost);
 
-            //EncounterManager.MoveCardToDiscardPile(this);
+            foreach (var action in CardData.CardActionDataList)
+            {
+                ApplyAction(action, target);
+            }
+
+            EncounterManager.MoveCardToDiscardPile(this);
         }
+
+        private void ApplyAction(CardActionData action, Transform target)
+        {
+            switch (action.CardActionType)
+            {
+                case CardActionType.Attack:
+                    if (target != null && target.TryGetComponent(out Enemy enemy))
+                    {
+                        enemy.TakeDamage(action.DamageAmt);
+                        Debug.Log($"{CardData.CardName} dealt {action.DamageAmt} damage to {enemy.name}");
+                    }
+                    else
+                    {
+                        Debug.Log("Attack card used without a valid target!");
+                    }
+                    break;
+                
+                case CardActionType.Heal:
+                    playerHandParent.Instance>heal(action.HealAmt);
+                    Debug.Log($"{CardData.CardName} healed {action.HealAmt} health");
+                    break;
+
+                case CardActionType.Block:
+                    playerHandParent.Instance>block(action.BlockAmt);
+                    Debug.Log($"{CardData.CardName} provided {action.BlockAmt} block");
+                    break;
+                
+                case CardActionType.Buff:
+                    playerHandParent.Instance>buff(action.BuffType);
+                    Debug.Log($"{CardData.CardName} applied buff: {action.BuffType}");
+                    break;
+
+                case CardActionType.Debuff:
+                    if (target != null && target.TryGetComponent(out Enemy enemy))
+                    {
+                        enemy.ApplyDebuff(action.DebuffType);
+                        Debug.Log($"{CardData.CardName} applied debuff: {action.DebuffType} to {enemy.name}");
+                    }
+                    else
+                    {
+                        Debug.Log("Debuff card used without a valid target!");
+                    }
+                    break;
+                
+                case CardActionType.Draw:
+                    playerHandParent.Instance>draw(action.DrawCardAmt);
+                    Debug.Log($"{CardData.CardName} allowed drawing {action.DrawCardAmt} cards");
+                    break;
+                
+                case CardActionType.GainEnergy:
+                    GameManager.AddToCurrentEnergy(action.EnergyGainAmt);
+                    Debug.Log($"{CardData.CardName} provided {action.EnergyGainAmt} energy");
+                    break;
+                
+                case CardActionType.Exhaust:
+                    Exhaust();
+                    Debug.Log($"{CardData.CardName} was exhausted");
+                    break;
+                
+                case CardActionType.Gamble:
+                    // Implement gamble logic here
+                    Debug.Log($"{CardData.CardName} initiated a gamble");
+                    break;
+            }
+        }
+
         private bool ReadyToBePlayed()
         {
             bool ready = true;
