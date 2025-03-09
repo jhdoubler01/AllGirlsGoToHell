@@ -71,6 +71,7 @@ namespace AGGtH.Runtime.Managers
             else
             {
                 Instance = this;
+                PersistentGameplayData = new PersistentGameplayData();
             }
         }
         void Start()
