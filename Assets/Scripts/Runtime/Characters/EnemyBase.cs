@@ -1,6 +1,7 @@
 using UnityEngine;
 using Systems.Collections.Generic;
 using AGGtH.Runtime.Enums;
+using AGGtH.Runtime.Characters.EnemyData;
 
 namespace AGGtH.Runtime.Characters.Enemy
 {
