@@ -14,14 +14,14 @@ namespace AGGtH.Runtime.Managers
         [SerializeField] private CardBase cardPrefab;
         [SerializeField] private Transform cardParentTransform;
         [SerializeField] private CardCollectionManager cardCollectionManager;
-        [SerializeField] private GameplayData gameplayData;
+        [SerializeField] private EncounterData encounterData;
 
         protected UIManager UIManager => UIManager.Instance;
 
         private int playerCurrentEnergy;
         public int PlayerCurrentEnergy => playerCurrentEnergy;
 
-        public GameplayData GameplayData => gameplayData;
+        public EncounterData EncounterData => encounterData;
         public PersistentGameplayData PersistentGameplayData { get; private set; }
 
         // spawn card object in game and set its stats to a target CardData
@@ -43,7 +43,7 @@ namespace AGGtH.Runtime.Managers
         }
         public void ResetPlayerEnergy()
         {
-            playerCurrentEnergy = GameplayData.MaxEnergy;
+            playerCurrentEnergy = EncounterData.MaxEnergy;
             UIManager.SetEnergyBoxText(playerCurrentEnergy);
         }
         //takes how much energy a card costs and returns true if the player has enough energy to play it

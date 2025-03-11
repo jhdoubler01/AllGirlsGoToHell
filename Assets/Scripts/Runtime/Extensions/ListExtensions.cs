@@ -17,13 +17,16 @@ namespace AGGtH.Runtime.Extensions
         /// <typeparam name="T"></typeparam>
         /// <param name="list"></param>
         /// <returns></returns>
+        
+        private static System.Random random = new System.Random();
         public static T RandomItem<T>(this List<T> list)
         {
-            if (list.Count == 0)
-                throw new IndexOutOfRangeException("List is Empty");
-
-            var randomIndex = Random.Range(0, list.Count);
-            return list[randomIndex];
+            if (list.Count == 0 || list == null)
+            {
+                Debug.LogError("List is empty or null");
+                return default;
+            }
+            return list[random.Next(0, list.Count)];
         }
 
 #if UNITY_EDITOR

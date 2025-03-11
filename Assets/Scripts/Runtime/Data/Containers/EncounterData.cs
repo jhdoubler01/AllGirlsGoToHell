@@ -22,6 +22,7 @@ namespace AGGtH.Runtime
 
         public EnemyEncounter GetEnemyEncounter(int stageId = 0, int encounterId = 0, bool isFinal = false)
         {
+            //this needs better error handling but dont think is urgent
             var selectedStage = EnemyEncounterList.First(x => x.StageId == stageId);
             if (isFinal) return selectedStage.BossEncounterList.RandomItem();
 
