@@ -88,14 +88,14 @@ namespace AGGtH.Runtime.Managers
         {
             PlayerHandData.Remove(targetCard.CardData);
             DiscardPile.Add(targetCard.CardData);
-            UIManager.CombatCanvas.SetPileTexts();
+            //UIManager.CombatCanvas.SetPileTexts();
         }
 
         public void OnCardExhausted(CardBase targetCard)
         {
             PlayerHandData.Remove(targetCard.CardData);
             ExhaustPile.Add(targetCard.CardData);
-            UIManager.CombatCanvas.SetPileTexts();
+            //UIManager.CombatCanvas.SetPileTexts();
         }
         public void OnCardPlayed(CardBase targetCard)
         {

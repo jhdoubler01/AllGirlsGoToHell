@@ -55,6 +55,7 @@ namespace AGGtH.Runtime.Card
         [SerializeField] private int blockAmt;
         [SerializeField] private int drawCardAmt;
         [SerializeField] private int energyGainAmt;
+        [SerializeField] private float actionDelay;
 
         public ActionTargetType ActionTargetType { get => actionTargetType; set => actionTargetType = value; }
         public CardActionType CardActionType { get => cardActionType; set => cardActionType = value; }
@@ -65,6 +66,7 @@ namespace AGGtH.Runtime.Card
         public int BlockAmt { get => blockAmt; set => blockAmt = value; }
         public int DrawCardAmt { get => drawCardAmt; set => drawCardAmt = value; }
         public int EnergyGainAmt { get => energyGainAmt; set => energyGainAmt = value; }
+        public float ActionDelay { get => actionDelay; set => actionDelay = value; }
     }
 }
 
