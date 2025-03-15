@@ -115,7 +115,7 @@ namespace AGGtH.Runtime.Managers
             GameManager.Instance.spendEnergy(cardData.EnergyCost);
             
             ApplyCardAction(targetCard);
-            
+
             if (targetCard.CardData.ExhaustAfterPlay)
                 targetCard.Exhaust();
             else
@@ -141,6 +141,31 @@ namespace AGGtH.Runtime.Managers
         #endregion
 
         #region Private Methods
+        private void ApplyCardAction(CardData cardData)
+        {
+            switch (cardData.CardActionType)
+            {
+                case CardActionType.Damage:
+                    ApplyDamageToEnemy(cardData);
+                    break;
+                
+                case CardActionType.Heal:
+                    ApplyHealToPlayer(cardData);
+                    break;
+                
+                case CardActionType.GainEnergy:
+                    GameManager.Instance.GainEnergy(cardData.EnergyGainAmt);
+                    break;
+                
+                case CardActionType.Draw:
+                    DrawCards(cardData.DrawCardAmt);
+                    break;
+                
+                default:
+                    Debug.LogError($"Card action type {cardData.CardActionType} not implemented");
+                    break;
+            }
+        }
         private void ReshuffleDiscardPile()
         {
             foreach (var i in DiscardPile)
