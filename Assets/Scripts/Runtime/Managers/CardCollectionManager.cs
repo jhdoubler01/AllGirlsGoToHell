@@ -143,39 +143,42 @@ namespace AGGtH.Runtime.Managers
         #region Private Methods
         private void ApplyCardAction(CardData cardData)
         {
-            switch (cardData.CardActionType)
+            foreach(var action in cardData.CardActionDataList)
             {
+                switch (action.CardActionType)
+                {
                 case CardActionType.Damage:
-                    ApplyDamageToEnemy(cardData);
+                    ApplyDamageToEnemy(action);
                     break;
                 
                 case CardActionType.Heal:
-                    ApplyHealToPlayer(cardData);
+                    ApplyHealToPlayer(action);
                     break;
                 
                 case CardActionType.Block:
-                    GameManager.Instance.Player.Block += cardData.BlockAmt;
+                    GameManager.Instance.Player.Block += action.BlockAmt;
                     break;
                 
                 case CardActionType.Buff:
-                    GameManager.Instance.Player.BuffList.Add(new Buff(cardData.BuffType));
+                    GameManager.Instance.Player.BuffList.Add(new Buff(action.BuffType));
                     break;
                 
                 case CardActionType.Debuff:
-                    GameManager.Instance.Player.DebuffList.Add(new Debuff(cardData.DebuffType));
+                    GameManager.Instance.Player.DebuffList.Add(new Debuff(action.DebuffType));
                     break;
                 
                 case CardActionType.GainEnergy:
-                    GameManager.Instance.GainEnergy(cardData.EnergyGainAmt);
+                    GameManager.Instance.GainEnergy(action.EnergyGainAmt);
                     break;
                 
                 case CardActionType.Draw:
-                    DrawCards(cardData.DrawCardAmt);
+                    DrawCards(action.DrawCardAmt);
                     break;
                 
                 default:
                     Debug.LogError($"Card action type {cardData.CardActionType} not implemented");
                     break;
+                }
             }
         }
 
