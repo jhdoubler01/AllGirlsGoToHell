@@ -2,7 +2,7 @@ using UnityEngine;
 using AGGtH.Runtime.Card;
 using AGGtH.Runtime.Settings;
 using System.Collections.Generic;
-
+using AGGtH.Runtime.Extensions;
 
 namespace AGGtH.Runtime.Managers
 {
@@ -14,16 +14,22 @@ namespace AGGtH.Runtime.Managers
         [SerializeField] private CardBase cardPrefab;
         [SerializeField] private Transform cardParentTransform;
         [SerializeField] private CardCollectionManager cardCollectionManager;
-        [SerializeField] private EncounterData encounterData;
+        [SerializeField] private GameplayData gameplayData;
 
         protected UIManager UIManager => UIManager.Instance;
 
         private int playerCurrentEnergy;
         public int PlayerCurrentEnergy => playerCurrentEnergy;
 
-        public EncounterData EncounterData => encounterData;
+        public GameplayData GameplayData => gameplayData;
         public PersistentGameplayData PersistentGameplayData { get; private set; }
 
+
+        #region Public Methods
+        public void InitGameplayData()
+        {
+            PersistentGameplayData = new PersistentGameplayData(gameplayData);
+        }
         // spawn card object in game and set its stats to a target CardData
         public CardBase BuildAndGetCard(CardData targetData, Transform parent)
         {
@@ -32,18 +38,29 @@ namespace AGGtH.Runtime.Managers
             return clone;
         }
         // spawn cards in players hand
-        public List<CardBase> InitializePlayerHand(List<CardData> handData)
+        public void InitPlayerHand()
         {
-            List<CardBase> deck = new List<CardBase>();
-            foreach(CardData cardData in handData)
+            PersistentGameplayData.CurrentCardsList.Clear();
+
+            if (PersistentGameplayData.IsRandomHand)
             {
-                deck.Add(BuildAndGetCard(cardData, cardParentTransform));
+                for(int i = 0; i < GameplayData.RandomCardCount; i++)
+                {
+                    PersistentGameplayData.CurrentCardsList.Add(GameplayData.AllCardsList.RandomItem());
+                }
+
             }
-            return deck;
+            else
+            {
+                foreach (var cardData in GameplayData.InitialDeck.CardList)
+                {
+                    PersistentGameplayData.CurrentCardsList.Add(cardData);
+                }
+            }
         }
         public void ResetPlayerEnergy()
         {
-            playerCurrentEnergy = EncounterData.MaxEnergy;
+            playerCurrentEnergy = GameplayData.MaxEnergy;
             UIManager.SetEnergyBoxText(playerCurrentEnergy);
         }
         //takes how much energy a card costs and returns true if the player has enough energy to play it
@@ -61,6 +78,7 @@ namespace AGGtH.Runtime.Managers
             UIManager.SetEnergyBoxText(playerCurrentEnergy);
 
         }
+        #endregion
         private void Awake()
         {
             if (Instance)
@@ -70,13 +88,12 @@ namespace AGGtH.Runtime.Managers
             }
             else
             {
+                transform.parent = null;
                 Instance = this;
-                PersistentGameplayData = new PersistentGameplayData();
+                DontDestroyOnLoad(gameObject);
+                InitGameplayData();
+                InitPlayerHand();
             }
-        }
-        void Start()
-        {
-            ResetPlayerEnergy();
         }
 
     }

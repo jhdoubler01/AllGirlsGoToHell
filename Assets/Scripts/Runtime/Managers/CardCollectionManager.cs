@@ -66,11 +66,11 @@ namespace AGGtH.Runtime.Managers
 
                 var randomCard = DrawPile[UnityEngine.Random.Range(0, DrawPile.Count)];
                 var clone = GameManager.BuildAndGetCard(randomCard, HandController.drawTransform);
-                //HandController.AddCardToHand(clone);
+                HandController.AddCardToHand(clone);
                 PlayerHandData.Add(randomCard);
                 DrawPile.Remove(randomCard);
                 currentDrawCount++;
-                UIManager.CombatCanvas.SetPileTexts();
+                //UIManager.CombatCanvas.SetPileTexts();
             }
 
             foreach (var cardObject in HandController.hand)
@@ -78,10 +78,10 @@ namespace AGGtH.Runtime.Managers
         }
         public void DiscardHand()
         {
-            //foreach (var cardBase in HandController.hand)
-            //    cardBase.Discard();
+            foreach (var cardBase in HandController.hand)
+                cardBase.Discard();
 
-            //HandController.hand.Clear();
+            HandController.hand.Clear();
         }
 
         public void OnCardDiscarded(CardBase targetCard)
