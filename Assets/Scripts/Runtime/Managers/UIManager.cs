@@ -26,6 +26,22 @@ namespace AGGtH.Runtime.Managers
         {
             energyBox.text = energy.ToString();
         }
+
+        public void UpdateEnergyDisplay(int startEnergy, int targetEnergy, float duration){
+            StopAllCoroutines("AnimateEnergyDisplay");
+            StartCoroutine(AnimateEnergyDisplay(startEnergy, targetEnergy, duration));
+        }
+        private IEnumerator AnimateEnergyDisplay(int startEnergy, int targetEnergy, float duration){
+            float elapsed = 0f;
+
+            while(elapsed < duration){
+                elapsed += Time.deltaTime;
+                int newEnergy = (int)Mathf.Lerp(startEnergy, targetEnergy, elapsed / duration);
+                energyBox.text = newEnergy.ToString();
+                yield return null;
+            }
+            energyBox.text = targetEnergy.ToString();
+        }
         private void Awake()
         {
             if (Instance)
