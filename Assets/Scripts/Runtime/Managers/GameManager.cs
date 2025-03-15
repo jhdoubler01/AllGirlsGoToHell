@@ -72,10 +72,15 @@ namespace AGGtH.Runtime.Managers
         //subtracts card cost from player total energy
         public void SubtractFromCurrentEnergy(int amtToSubtract)
         {
+            int oldEnergy = playerCurrentEnergy;
             playerCurrentEnergy -= amtToSubtract;
             Debug.Log("Current Energy: " + playerCurrentEnergy);
-            if(playerCurrentEnergy < 0) { Debug.LogError("Player energy cannot be negative"); }
-            UIManager.SetEnergyBoxText(playerCurrentEnergy);
+            if (playerCurrentEnergy < 0) 
+            { 
+                Debug.LogError("Not enough energy to play card");
+                playerCurrentEnergy = 0; 
+            }
+            UIManager.UpdateEnergyDisplay(oldEnergy, playerCurrentEnergy, GameplayData.EnergyUpdateDuration);
 
         }
         public void GainEnergy(int amtToGain)
@@ -85,7 +90,7 @@ namespace AGGtH.Runtime.Managers
             if (playerCurrentEnergy > GameplayData.MaxEnergy) { playerCurrentEnergy = GameplayData.MaxEnergy; }
             UIManager.SetEnergyBoxText(playerCurrentEnergy);
         }
-        
+
         #endregion
         private void Awake()
         {
