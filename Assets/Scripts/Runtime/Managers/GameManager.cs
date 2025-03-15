@@ -60,8 +60,9 @@ namespace AGGtH.Runtime.Managers
         }
         public void ResetPlayerEnergy()
         {
+            int oldEnergy = playerCurrentEnergy;
             playerCurrentEnergy = GameplayData.MaxEnergy;
-            UIManager.SetEnergyBoxText(playerCurrentEnergy);
+            UIManager.Instance.UpdateEnergyDisplay(oldEnergy, playerCurrentEnergy, GameplayData.EnergyUpdateDuration);
         }
         //takes how much energy a card costs and returns true if the player has enough energy to play it
         public bool IsEnoughEnergyToPlayCard(int energyToPlayCard)
