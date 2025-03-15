@@ -99,6 +99,23 @@ namespace AGGtH.Runtime.Managers
         }
         public void OnCardPlayed(CardBase targetCard)
         {
+            if(targetCard == null || targetCard.CardData == null)
+            {
+                Debug.LogError("Invalid card played");
+                return;
+            }
+            var cardData = targetCard.CardData;
+
+            if(!GameManager.Instance.IsEnoughEnergy(cardData.EnergyCost))
+            {
+                Debug.LogError("Not enough energy to play card");
+                return;
+            }
+
+            GameManager.Instance.spendEnergy(cardData.EnergyCost);
+            
+            ApplyCardAction(targetCard);
+            
             if (targetCard.CardData.ExhaustAfterPlay)
                 targetCard.Exhaust();
             else
