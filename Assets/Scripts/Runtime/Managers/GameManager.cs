@@ -78,6 +78,14 @@ namespace AGGtH.Runtime.Managers
             UIManager.SetEnergyBoxText(playerCurrentEnergy);
 
         }
+        public void GainEnergy(int amtToGain)
+        {
+            playerCurrentEnergy += amtToGain;
+            Debug.Log("Current Energy: " + playerCurrentEnergy);
+            if (playerCurrentEnergy > GameplayData.MaxEnergy) { playerCurrentEnergy = GameplayData.MaxEnergy; }
+            UIManager.SetEnergyBoxText(playerCurrentEnergy);
+        }
+        
         #endregion
         private void Awake()
         {
