@@ -166,6 +166,29 @@ namespace AGGtH.Runtime.Managers
                     break;
             }
         }
+
+        private void ApplyDamageToEnemy(CardData cardData)
+        {
+            var targetEnemy = EncounterManager.GetCurrentEnemy();
+            if (targetEnemy == null)
+            {
+                Debug.LogError("No enemy to apply damage to");
+                return;
+            }
+
+            targetEnemy.Health -= cardData.DamageAmt;
+            if (targetEnemy.Health <= 0)
+                targetEnemy.Die();
+        }
+
+        private void ApplyHealToPlayer(CardData cardData)
+        {
+            GameManager.Instance.Player.Health += cardData.HealAmt;
+            if (GameManager.Instance.Player.Health > GameManager.Instance.Player.MaxHealth)
+                GameManager.Instance.Player.Health = GameManager.Instance.Player.MaxHealth;
+        }
+
+        
         private void ReshuffleDiscardPile()
         {
             foreach (var i in DiscardPile)
