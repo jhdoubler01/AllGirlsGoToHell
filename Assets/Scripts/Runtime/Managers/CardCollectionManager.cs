@@ -153,6 +153,18 @@ namespace AGGtH.Runtime.Managers
                     ApplyHealToPlayer(cardData);
                     break;
                 
+                case CardActionType.Block:
+                    GameManager.Instance.Player.Block += cardData.BlockAmt;
+                    break;
+                
+                case CardActionType.Buff:
+                    GameManager.Instance.Player.BuffList.Add(new Buff(cardData.BuffType));
+                    break;
+                
+                case CardActionType.Debuff:
+                    GameManager.Instance.Player.DebuffList.Add(new Debuff(cardData.DebuffType));
+                    break;
+                
                 case CardActionType.GainEnergy:
                     GameManager.Instance.GainEnergy(cardData.EnergyGainAmt);
                     break;
@@ -188,7 +200,7 @@ namespace AGGtH.Runtime.Managers
                 GameManager.Instance.Player.Health = GameManager.Instance.Player.MaxHealth;
         }
 
-        
+
         private void ReshuffleDiscardPile()
         {
             foreach (var i in DiscardPile)
