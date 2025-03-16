@@ -99,6 +99,23 @@ namespace AGGtH.Runtime.Managers
         }
         public void OnCardPlayed(CardBase targetCard)
         {
+            if(targetCard == null || targetCard.CardData == null)
+            {
+                Debug.LogError("Invalid card played");
+                return;
+            }
+            var cardData = targetCard.CardData;
+
+            if(!GameManager.Instance.IsEnoughEnergy(cardData.EnergyCost))
+            {
+                Debug.LogError("Not enough energy to play card");
+                return;
+            }
+
+            GameManager.Instance.spendEnergy(cardData.EnergyCost);
+            
+            ApplyCardAction(targetCard);
+
             if (targetCard.CardData.ExhaustAfterPlay)
                 targetCard.Exhaust();
             else
@@ -124,6 +141,69 @@ namespace AGGtH.Runtime.Managers
         #endregion
 
         #region Private Methods
+        private void ApplyCardAction(CardData cardData)
+        {
+            foreach(var action in cardData.CardActionDataList)
+            {
+                switch (action.CardActionType)
+                {
+                case CardActionType.Damage:
+                    ApplyDamageToEnemy(action);
+                    break;
+                
+                case CardActionType.Heal:
+                    ApplyHealToPlayer(action);
+                    break;
+                
+                case CardActionType.Block:
+                    GameManager.Instance.Player.Block += action.BlockAmt;
+                    break;
+                
+                case CardActionType.Buff:
+                    GameManager.Instance.Player.BuffList.Add(new Buff(action.BuffType));
+                    break;
+                
+                case CardActionType.Debuff:
+                    GameManager.Instance.Player.DebuffList.Add(new Debuff(action.DebuffType));
+                    break;
+                
+                case CardActionType.GainEnergy:
+                    GameManager.Instance.GainEnergy(action.EnergyGainAmt);
+                    break;
+                
+                case CardActionType.Draw:
+                    DrawCards(action.DrawCardAmt);
+                    break;
+                
+                default:
+                    Debug.LogError($"Card action type {cardData.CardActionType} not implemented");
+                    break;
+                }
+            }
+        }
+
+        private void ApplyDamageToEnemy(CardData cardData)
+        {
+            var targetEnemy = EncounterManager.GetCurrentEnemy();
+            if (targetEnemy == null)
+            {
+                Debug.LogError("No enemy to apply damage to");
+                return;
+            }
+
+            targetEnemy.Health -= cardData.DamageAmt;
+            if (targetEnemy.Health <= 0)
+                targetEnemy.Die();
+        }
+
+        private void ApplyHealToPlayer(CardData cardData)
+        {
+            GameManager.Instance.Player.Health += cardData.HealAmt;
+            if (GameManager.Instance.Player.Health > GameManager.Instance.Player.MaxHealth)
+                GameManager.Instance.Player.Health = GameManager.Instance.Player.MaxHealth;
+        }
+
+
         private void ReshuffleDiscardPile()
         {
             foreach (var i in DiscardPile)

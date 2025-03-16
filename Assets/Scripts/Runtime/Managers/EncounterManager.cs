@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using AGGtH.Runtime.Enums;
 using AGGtH.Runtime.Card;
 using AGGtH.Runtime.Characters;
+using AGGtH.Runtime.Characters.Enemy;
 using TMPro;
 
 namespace AGGtH.Runtime.Managers
@@ -22,7 +23,7 @@ namespace AGGtH.Runtime.Managers
         [SerializeField] private List<Transform> enemyPosList;
 
         #region Cache
-        public List<EnemyBase> CurrentEnemiesList { get; private set; } 
+        public List<EnemyBase> CurrentEnemiesList { get; private set; } = new List<EnemyBase>();
         public PlayerBase Player { get; private set; }
 
         public Action OnPlayerTurnStarted;

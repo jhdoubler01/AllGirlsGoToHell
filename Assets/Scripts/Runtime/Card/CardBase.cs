@@ -7,8 +7,6 @@ using AGGtH.Runtime.Enums;
 using AGGtH.Runtime.Managers;
 using TMPro; //textmesh pro
 using UnityEngine.EventSystems;
-using AGGtH.Runtime.Extensions;
-using AGGtH.Runtime.Characters;
 
 namespace AGGtH.Runtime.Card
 {
@@ -27,8 +25,6 @@ namespace AGGtH.Runtime.Card
         #region Cache
         public CardData CardData { get; private set; }
         public bool IsInactive { get; protected set; }
-        protected Transform CachedTransform { get; set; }
-        protected WaitForEndOfFrame CachedWaitFrame { get; set; }
         public bool IsPlayable { get; protected set; } = true;
         protected EncounterManager EncounterManager => EncounterManager.Instance;
         protected GameManager GameManager => GameManager.Instance;
@@ -37,11 +33,6 @@ namespace AGGtH.Runtime.Card
         #endregion
 
         #region Setup Methods
-        protected virtual void Awake()
-        {
-            CachedTransform = transform;
-            CachedWaitFrame = new WaitForEndOfFrame();
-        }
         private void SetCardNameText()
         {
             cardNameText.text = CardData.CardName;
@@ -112,76 +103,134 @@ namespace AGGtH.Runtime.Card
 
         public virtual void PlayableOnEndDrag()
         {
-            Debug.Log(IsPlayable);
-            //if (IsPlayable) { Use(); }
-            //else transform.SetParent(parentAfterDrag);
+            Debug.Log(ReadyToBePlayed());
+            if (ReadyToBePlayed()) { Use(); }
+            else transform.SetParent(parentAfterDrag);
         }
 
         #endregion
 
         #region Card Methods
-        public virtual void Use(CharacterBase self, CharacterBase target, List<EnemyBase> allEnemies, PlayerBase player)
+        public virtual void Use(Transform target = null)
         {
-            if (!IsPlayable) { return; }
-            StartCoroutine(CardUseRoutine(self, target, allEnemies, player));
+            Debug.Log($"Playing Card: {CardData.CardName}");
 
-        }
-        private IEnumerator CardUseRoutine(CharacterBase self, CharacterBase target, List<EnemyBase> allEnemies, PlayerBase player)
-        {
-            SpendEnergy(CardData.EnergyCost);
-            foreach(var playerAction in CardData.CardActionDataList)
-            {
-                yield return new WaitForSeconds(playerAction.ActionDelay);
-                var targetList = DetermineTargets(target, allEnemies, player, playerAction);
-                foreach(var tar in targetList)
-                {
-                    
-                }
+            UIManager.SetDialogueBoxText(GetRandomDialogueOption());
+
+            if (!GameManager.IsEnoughEnergyToPlayCard(CardData.EnergyCost)) 
+            { 
+                Debug.Log("not enough energy"); 
+                return; 
             }
-        }
-        private static List<CharacterBase> DetermineTargets(CharacterBase target, List<EnemyBase> allEnemies, PlayerBase player, CardActionData playerAction)
-        {
-            List<CharacterBase> targetList = new List<CharacterBase>();
-            switch (playerAction.ActionTargetType)
+        
+            GameManager.SubtractFromCurrentEnergy(CardData.EnergyCost);
+
+            foreach (var action in CardData.CardActionDataList)
             {
-                case ActionTargetType.Enemy:
-                    targetList.Add(target);
+                ApplyAction(action, target);
+            }
+
+            EncounterManager.MoveCardToDiscardPile(this);
+        }
+
+        private void ApplyAction(CardActionData action, Transform target)
+        {
+            switch (action.CardActionType)
+            {
+                case CardActionType.Attack:
+                    if (target != null && target.TryGetComponent(out Enemy enemy))
+                    {
+                        enemy.TakeDamage(action.DamageAmt);
+                        Debug.Log($"{CardData.CardName} dealt {action.DamageAmt} damage to {enemy.name}");
+                    }
+                    else
+                    {
+                        Debug.Log("Attack card used without a valid target!");
+                    }
                     break;
-                case ActionTargetType.Player:
-                    targetList.Add(target);
+                
+                case CardActionType.Heal:
+                    playerHandParent.Instance>heal(action.HealAmt);
+                    Debug.Log($"{CardData.CardName} healed {action.HealAmt} health");
                     break;
-                case ActionTargetType.AllEnemies:
-                    foreach (var enemyBase in allEnemies)
-                        targetList.Add(enemyBase);
+
+                case CardActionType.Block:
+                    playerHandParent.Instance>block(action.BlockAmt);
+                    Debug.Log($"{CardData.CardName} provided {action.BlockAmt} block");
                     break;
-                case ActionTargetType.RandomEnemy:
-                    if (allEnemies.Count > 0)
-                        targetList.Add(allEnemies.RandomItem());
+                
+                case CardActionType.Buff:
+                    playerHandParent.Instance>buff(action.BuffType);
+                    Debug.Log($"{CardData.CardName} applied buff: {action.BuffType}");
                     break;
+
+                case CardActionType.Debuff:
+                    if (target != null && target.TryGetComponent(out Enemy enemy))
+                    {
+                        enemy.ApplyDebuff(action.DebuffType);
+                        Debug.Log($"{CardData.CardName} applied debuff: {action.DebuffType} to {enemy.name}");
+                    }
+                    else
+                    {
+                        Debug.Log("Debuff card used without a valid target!");
+                    }
+                    break;
+                
+                case CardActionType.Draw:
+                    playerHandParent.Instance>draw(action.DrawCardAmt);
+                    Debug.Log($"{CardData.CardName} allowed drawing {action.DrawCardAmt} cards");
+                    break;
+                
+                case CardActionType.GainEnergy:
+                    GameManager.AddToCurrentEnergy(action.EnergyGainAmt);
+                    Debug.Log($"{CardData.CardName} provided {action.EnergyGainAmt} energy");
+                    break;
+                
+                case CardActionType.Exhaust:
+                    Exhaust();
+                    Debug.Log($"{CardData.CardName} was exhausted");
+                    break;
+                
+                case CardActionType.Gamble:
+                    int roll = UnityEngine.Random.Range(0, 100);
+                    if (roll < 50)
+                    {
+                        playerHandParent.Instance>gain(action.EnergyGainAmt);
+                        Debug.Log($"{CardData.CardName} gained {action.EnergyGainAmt} energy from gamble");
+                    }
+                    else
+                    {
+                        playerHandParent.Instance>lose(action.EnergyLossAmt);
+                        Debug.Log($"{CardData.CardName} lost {action.EnergyLossAmt} energy from gamble");
+                    }
+                    break;
+                
                 default:
-                    throw new ArgumentOutOfRangeException();
+                    Debug.LogWarning($"Unknown action type: {action.CardActionType}");
+                    break;
             }
-            return targetList;
+        }
+
+        private bool ReadyToBePlayed()
+        {
+            bool ready = true;
+
+            if (!GameManager.IsEnoughEnergyToPlayCard(CardData.EnergyCost)) { Debug.Log("not enough energy"); ready = false; }
+            if(!CardData.UsableWithoutTarget && !hoverOverTarget) { Debug.Log("need to target an enemy"); ready = false; }
+
+            return ready;
         }
         public virtual void Discard()
         {
-            if (IsExhausted) return;
-            if (!IsPlayable) return;
-            //CardCollectionManager.OnCardDiscarded(this);
-            Destroy(gameObject);
+        
         }
         public virtual void Exhaust(bool destroy=true)
         {
-            if (IsExhausted) return;
-            if (!IsPlayable) return;
-            //CardCollectionManager.OnCardExhausted(this);
-            Destroy(gameObject);
-        }
-        protected virtual void SpendEnergy(int energyCost)
-        {
-            if (!IsPlayable) { return; }
 
-            GameManager.PersistentGameplayData.CurrentEnergy -= energyCost;
+        }
+        protected virtual void SpendEnergy(int value)
+        {
+
         }
         public virtual void UpdateCardText()
         {
@@ -193,9 +242,7 @@ namespace AGGtH.Runtime.Card
             return CardData.DialogueOptions[rand];
         }
         #endregion
-        #region Routines
 
-        #endregion
         #region Runtime
         void Start()
         {
