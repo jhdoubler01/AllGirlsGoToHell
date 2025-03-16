@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System.Collections;
 using AGGtH.Runtime.UI;
 
 namespace AGGtH.Runtime.Managers
@@ -28,7 +29,7 @@ namespace AGGtH.Runtime.Managers
         }
 
         public void UpdateEnergyDisplay(int startEnergy, int targetEnergy, float duration){
-            StopAllCoroutines("AnimateEnergyDisplay");
+            StopAllCoroutines();
             StartCoroutine(AnimateEnergyDisplay(startEnergy, targetEnergy, duration));
         }
         private IEnumerator AnimateEnergyDisplay(int startEnergy, int targetEnergy, float duration){
