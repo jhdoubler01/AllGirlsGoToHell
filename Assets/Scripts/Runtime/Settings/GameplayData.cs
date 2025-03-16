@@ -11,6 +11,7 @@ namespace AGGtH.Runtime.Settings
         [Header("Gameplay Settings")]
         [SerializeField] private int drawCount = 4;
         [SerializeField] private int maxEnergy = 3;
+        [SerializeField] private PlayerBase player;
         [SerializeField] private float energyUpdateDuration = 2f;
 
         [Header("Decks")]
@@ -33,6 +34,7 @@ namespace AGGtH.Runtime.Settings
         #region Encapsulation
         public int DrawCount => drawCount;
         public int MaxEnergy => maxEnergy;
+        public PlayerBase Player => player;
         public bool IsRandomHand => isRandomHand;
         public DeckData InitialDeck => initalDeck;
         public int RandomCardCount => randomCardCount;

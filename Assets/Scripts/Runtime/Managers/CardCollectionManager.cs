@@ -106,7 +106,7 @@ namespace AGGtH.Runtime.Managers
             }
             var cardData = targetCard.CardData;
 
-            if(!GameManager.Instance.IsEnoughEnergy(cardData.EnergyCost))
+            if(!GameManager.Instance.IsEnoughEnergyToPlayCard(cardData.EnergyCost))
             {
                 Debug.LogError("Not enough energy to play card");
                 return;
@@ -114,7 +114,7 @@ namespace AGGtH.Runtime.Managers
 
             GameManager.Instance.spendEnergy(cardData.EnergyCost);
             
-            ApplyCardAction(targetCard);
+            ApplyCardAction(targetCard.CardData);
 
             if (targetCard.CardData.ExhaustAfterPlay)
                 targetCard.Exhaust();

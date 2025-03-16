@@ -17,6 +17,7 @@ namespace AGGtH.Runtime.Settings
         [SerializeField] private bool canUseCards;
         [SerializeField] private bool canSelectCards;
         [SerializeField] private bool isRandomHand;
+        [SerializeField] private PlayerBase player;
         //[SerializeField] private List<AllyBase> allyList;
         [SerializeField] private int currentStageId;
         [SerializeField] private int currentEncounterId;
@@ -56,6 +57,7 @@ namespace AGGtH.Runtime.Settings
             CanUseCards = true;
             CanSelectCards = true;
             IsRandomHand = _gameplayData.IsRandomHand;
+            Player = _gameplayData.Player;
             //AllyList = new List<AllyBase>(_gameplayData.InitalAllyList);
             CurrentEncounterId = 0;
             CurrentStageId = 0;
@@ -102,7 +104,11 @@ namespace AGGtH.Runtime.Settings
             get => isRandomHand;
             set => isRandomHand = value;
         }
-
+        public PlayerBase Player
+        {
+            get => player;
+            set => player = value;
+        }
         //public List<AllyBase> AllyList
         //{
         //    get => allyList;
@@ -132,6 +138,7 @@ namespace AGGtH.Runtime.Settings
             get => currentCardsList;
             set => currentCardsList = value;
         }
+
 
         //public List<AllyHealthData> AllyHealthDataList
         //{
