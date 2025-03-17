@@ -47,7 +47,7 @@ namespace AGGtH.Runtime.Characters.Enemy
         private void Die()
         {
             Debug.Log($"{enemyData.EnemyName} has been defeated.");
-            Destroy(gameObject);
+            Destroy(this);
         }
 
         /* public void AttackPlayer()

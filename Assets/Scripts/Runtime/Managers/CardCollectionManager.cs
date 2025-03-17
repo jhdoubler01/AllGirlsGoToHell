@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using AGGtH.Runtime.Card;
 using AGGtH.Runtime.Enums;
+using AGGtH.Runtime.Extensions;
 using AGGtH.Runtime.Characters;
 
 
@@ -112,7 +113,6 @@ namespace AGGtH.Runtime.Managers
                 return;
             }
 
-            GameManager.Instance.spendEnergy(cardData.EnergyCost);
             
             ApplyCardAction(targetCard.CardData);
 
@@ -143,11 +143,12 @@ namespace AGGtH.Runtime.Managers
         #region Private Methods
         private void ApplyCardAction(CardData cardData)
         {
+            //this needs to be fixed,, it uses enum flags so idk how to do rn will report back later lol
             foreach(var action in cardData.CardActionDataList)
             {
                 switch (action.CardActionType)
                 {
-                case CardActionType.Damage:
+                case CardActionType.Attack:
                     ApplyDamageToEnemy(action);
                     break;
                 

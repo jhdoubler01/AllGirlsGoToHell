@@ -26,6 +26,7 @@ namespace AGGtH.Runtime.Card
         public CardData CardData { get; private set; }
         public bool IsInactive { get; protected set; }
         public bool IsPlayable { get; protected set; } = true;
+        protected CardCollectionManager CardCollectionManager => CardCollectionManager.Instance;
         protected EncounterManager EncounterManager => EncounterManager.Instance;
         protected GameManager GameManager => GameManager.Instance;
         protected UIManager UIManager => UIManager.Instance;
@@ -122,15 +123,15 @@ namespace AGGtH.Runtime.Card
                 Debug.Log("not enough energy"); 
                 return; 
             }
-        
-            GameManager.SubtractFromCurrentEnergy(CardData.EnergyCost);
+
+            SpendEnergy(CardData.EnergyCost);
 
             foreach (var action in CardData.CardActionDataList)
             {
                 ApplyAction(action, target);
             }
 
-            EncounterManager.MoveCardToDiscardPile(this);
+            CardCollectionManager.OnCardPlayed(this);
         }
 
         private void ApplyAction(CardActionData action, Transform target)
@@ -230,7 +231,8 @@ namespace AGGtH.Runtime.Card
         }
         protected virtual void SpendEnergy(int value)
         {
-
+            if (!IsPlayable) return;
+            GameManager.PersistentGameplayData.CurrentEnergy -= value;
         }
         public virtual void UpdateCardText()
         {
