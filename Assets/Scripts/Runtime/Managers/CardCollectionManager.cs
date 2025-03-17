@@ -144,8 +144,9 @@ namespace AGGtH.Runtime.Managers
         private void ApplyCardAction(CardData cardData)
         {
             //this needs to be fixed,, it uses enum flags so idk how to do rn will report back later lol
-            foreach(var action in cardData.CardActionDataList)
-            {
+            //also need to change some of the logic but i have to finish making characterbase and playerbase first
+            //foreach(var action in cardData.CardActionDataList)
+            //{
                 switch (action.CardActionType)
                 {
                 case CardActionType.Attack:
@@ -180,7 +181,7 @@ namespace AGGtH.Runtime.Managers
                     Debug.LogError($"Card action type {cardData.CardActionType} not implemented");
                     break;
                 }
-            }
+            //}
         }
 
         private void ApplyDamageToEnemy(CardData cardData)

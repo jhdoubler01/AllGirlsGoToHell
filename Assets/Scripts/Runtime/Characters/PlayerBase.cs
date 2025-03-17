@@ -1,19 +1,19 @@
 using UnityEngine;
+using AGGtH.Runtime.Data.Characters;
+
 
 namespace AGGtH.Runtime.Characters
 {
     public class PlayerBase : CharacterBase
     {
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
-        {
-        
-        }
+        [Header("Player Base Settings")]
+        [SerializeField] private PlayerCharacterData playerCharacterData;
+        public PlayerCharacterData PlayerCharacterData => playerCharacterData;
 
-        // Update is called once per frame
-        void Update()
+        public override void BuildCharacter()
         {
-        
+            base.BuildCharacter();
+            CharacterStats = new CharacterStats(playerCharacterData.MaxHealth);
         }
     }
 }
