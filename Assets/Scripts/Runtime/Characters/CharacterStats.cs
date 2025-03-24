@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using AGGtH.Runtime.Enums;
+using AGGtH.Runtime.UI;
 
 namespace AGGtH.Runtime.Characters
 {
