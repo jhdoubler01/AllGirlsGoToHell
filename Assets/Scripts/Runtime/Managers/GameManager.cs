@@ -1,6 +1,7 @@
 using UnityEngine;
 using AGGtH.Runtime.Card;
 using AGGtH.Runtime.Settings;
+using AGGtH.Runtime.Data.Containers;
 using System.Collections.Generic;
 using AGGtH.Runtime.Extensions;
 
@@ -11,19 +12,37 @@ namespace AGGtH.Runtime.Managers
         public GameManager() { }
         public static GameManager Instance { get; private set; }
 
-        [SerializeField] private CardBase cardPrefab;
-        [SerializeField] private Transform cardParentTransform;
-        [SerializeField] private CardCollectionManager cardCollectionManager;
+        [Header("Settings")]
         [SerializeField] private GameplayData gameplayData;
+        [SerializeField] private EncounterData encounterData;
+        //[SerializeField] private SceneData sceneData;
 
-        protected UIManager UIManager => UIManager.Instance;
-
-        private int playerCurrentEnergy;
-        public int PlayerCurrentEnergy => playerCurrentEnergy;
-
+        #region Cache
+        //public SceneData SceneData => sceneData;
+        public EncounterData EncounterData => encounterData;
         public GameplayData GameplayData => gameplayData;
         public PersistentGameplayData PersistentGameplayData { get; private set; }
+        protected UIManager UIManager => UIManager.Instance;
+        #endregion
 
+        #region Setup
+        private void Awake()
+        {
+            if (Instance)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            else
+            {
+                transform.parent = null;
+                Instance = this;
+                DontDestroyOnLoad(gameObject);
+                InitGameplayData();
+                InitPlayerHand();
+            }
+        }
+        #endregion
 
         #region Public Methods
         public void InitGameplayData()
@@ -58,43 +77,17 @@ namespace AGGtH.Runtime.Managers
                 }
             }
         }
-        public void ResetPlayerEnergy()
+        public void NextEncounter()
         {
-            playerCurrentEnergy = GameplayData.MaxEnergy;
-            UIManager.SetEnergyBoxText(playerCurrentEnergy);
-        }
-        //takes how much energy a card costs and returns true if the player has enough energy to play it
-        public bool IsEnoughEnergyToPlayCard(int energyToPlayCard)
-        {
-            if(energyToPlayCard <= playerCurrentEnergy) { return true; }
-            return false;
-        }
-        //subtracts card cost from player total energy
-        public void SubtractFromCurrentEnergy(int amtToSubtract)
-        {
-            playerCurrentEnergy -= amtToSubtract;
-            Debug.Log("Current Energy: " + playerCurrentEnergy);
-            if(playerCurrentEnergy < 0) { Debug.LogError("Player energy cannot be negative"); }
-            UIManager.SetEnergyBoxText(playerCurrentEnergy);
-
+            PersistentGameplayData.CurrentEncounterId++;
+            //if (PersistentGameplayData.CurrentEncounterId >= EncounterData.EnemyEncounterList[PersistentGameplayData.CurrentStageId].EnemyEncounterList.Count)
+            //{
+            //    PersistentGameplayData.CurrentEncounterId = Random.Range(0,
+            //        EncounterData.EnemyEncounterList[PersistentGameplayData.CurrentStageId].EnemyEncounterList.Count);
+            //}
         }
         #endregion
-        private void Awake()
-        {
-            if (Instance)
-            {
-                Destroy(gameObject);
-                return;
-            }
-            else
-            {
-                transform.parent = null;
-                Instance = this;
-                DontDestroyOnLoad(gameObject);
-                InitGameplayData();
-                InitPlayerHand();
-            }
-        }
+
 
     }
 }

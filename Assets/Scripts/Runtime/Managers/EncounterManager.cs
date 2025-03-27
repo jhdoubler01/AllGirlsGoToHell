@@ -4,6 +4,7 @@ using System.Collections;
 using System.Collections.Generic;
 using AGGtH.Runtime.Enums;
 using AGGtH.Runtime.Card;
+using AGGtH.Runtime.Data.Containers;
 using AGGtH.Runtime.Characters;
 using TMPro;
 
@@ -14,12 +15,15 @@ namespace AGGtH.Runtime.Managers
         private EncounterManager() { }
         public static EncounterManager Instance { get; private set; }
 
-        protected UIManager UIManager => UIManager.Instance;
+        protected FxManager FxManager => FxManager.Instance;
+        protected AudioManager AudioManager => AudioManager.Instance;
         protected GameManager GameManager => GameManager.Instance;
+        protected UIManager UIManager => UIManager.Instance;
         protected CardCollectionManager CardCollectionManager => CardCollectionManager.Instance;
 
         [Header("References")]
         [SerializeField] private List<Transform> enemyPosList;
+        [SerializeField] private Transform playerPos;
 
         #region Cache
         public List<EnemyBase> CurrentEnemiesList { get; private set; } 
@@ -30,7 +34,7 @@ namespace AGGtH.Runtime.Managers
 
         public List<Transform> EnemyPosList => enemyPosList;
 
-        //public EnemyEncounter CurrentEncounter { get; private set; }
+        public EnemyEncounter CurrentEncounter { get; private set; }
         private CombatStateType currentCombatStateType;
 
         public CombatStateType CurrentCombatStateType
@@ -68,26 +72,37 @@ namespace AGGtH.Runtime.Managers
         }
         public void StartCombat()
         {
-            //SetUpDrawPile();
+            BuildEnemies();
+            BuildPlayer();
             CardCollectionManager.SetGameDeck();
 
             CurrentCombatStateType = CombatStateType.PlayerTurn;
         }
-        private void PlayerTurn()
+
+        void PlayerTurn()
         {
             OnPlayerTurnStarted?.Invoke();
+            if (Player.CharacterStats.IsStunned)
+            {
+                EndTurn();
+                return;
+            }
             GameManager.PersistentGameplayData.CurrentEnergy = GameManager.PersistentGameplayData.MaxEnergy;
             CardCollectionManager.DrawCards(GameManager.PersistentGameplayData.DrawCount);
             GameManager.PersistentGameplayData.CanSelectCards = true;
-
         }
-        private void EnemyTurn()
+        void EnemyTurn()
         {
-            OnEnemyTurnStarted?.Invoke();
-            CardCollectionManager.DiscardHand();
-            GameManager.PersistentGameplayData.CanSelectCards = false;
 
+            OnEnemyTurnStarted?.Invoke();
+
+            CardCollectionManager.DiscardHand();
+
+            StartCoroutine(nameof(EnemyTurnRoutine));
+
+            GameManager.PersistentGameplayData.CanSelectCards = false;
         }
+
         private void ExecuteCombatState(CombatStateType targetStateType)
         {
             switch (targetStateType)
@@ -109,10 +124,88 @@ namespace AGGtH.Runtime.Managers
         }
         #endregion
 
-        #region Runtime
-        void FixedUpdate()
+        #region Public Methods
+        public void EndTurn()
+        {
+            CurrentCombatStateType = CombatStateType.EnemyTurn;
+        }
+        public void OnPlayerDeath(PlayerBase player)
+        {
+            LoseCombat();
+        }
+        public void OnEnemyDeath(EnemyBase targetEnemy)
+        {
+            CurrentEnemiesList.Remove(targetEnemy);
+            if (CurrentEnemiesList.Count <= 0) WinCombat();
+        }
+        public void DeactivateCardHighlights()
         {
 
+        }
+        public void IncreaseEnergy(int target)
+        {
+            GameManager.PersistentGameplayData.CurrentEnergy += target;
+        }
+        public void HighlightCardTarget(ActionTargetType targetType)
+        {
+
+        }
+        #endregion
+        #region Private Methods
+        private void BuildEnemies()
+        {
+
+        }
+        private void BuildPlayer()
+        {
+            var player = Instantiate(GameManager.PersistentGameplayData.Player);
+            player.BuildCharacter();
+            Player = player;
+        }
+        private void LoseCombat()
+        {
+            if (CurrentCombatStateType == CombatStateType.EndCombat) return;
+
+            CurrentCombatStateType = CombatStateType.EndCombat;
+
+            CardCollectionManager.DiscardHand();
+            CardCollectionManager.DiscardPile.Clear();
+            CardCollectionManager.DrawPile.Clear();
+            CardCollectionManager.HandPile.Clear();
+            CardCollectionManager.HandController.hand.Clear();
+
+        }
+        private void WinCombat()
+        {
+            if (CurrentCombatStateType == CombatStateType.EndCombat) return;
+            CurrentCombatStateType = CombatStateType.EndCombat;
+            GameManager.PersistentGameplayData.SetPlayerHealthData(Player.PlayerCharacterData.CharacterID, Player.CharacterStats.CurrentHealth, Player.CharacterStats.MaxHealth);
+            CardCollectionManager.ClearPiles();
+
+            if (GameManager.PersistentGameplayData.IsFinalEncounter)
+            {
+                //show win screen
+            }
+            else
+            {
+                Player.CharacterStats.ClearAllStatus();
+                GameManager.PersistentGameplayData.CurrentEncounterId++;
+                //show rewards screen
+            }
+        }
+        #endregion
+        #region Routines
+        private IEnumerator EnemyTurnRoutine()
+        {
+            var waitDelay = new WaitForSeconds(0.1f);
+            foreach(var currentEnemy in CurrentEnemiesList)
+            {
+                //yield return currentEnemy.StartCoroutine(nameof(EnemyExample.ActionRoutine));
+                yield return waitDelay;
+            }
+
+            if (CurrentCombatStateType != CombatStateType.EndCombat)
+                CurrentCombatStateType = CombatStateType.PlayerTurn;
         }
         #endregion
     }

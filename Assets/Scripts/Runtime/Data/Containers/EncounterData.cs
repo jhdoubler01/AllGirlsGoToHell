@@ -6,9 +6,10 @@ using AGGtH.Runtime.Managers;
 using AGGtH.Runtime.Card;
 using AGGtH.Runtime.Characters;
 using AGGtH.Runtime.Enums;
+using AGGtH.Runtime.Data.Characters;
 using AGGtH.Runtime.Extensions;
 
-namespace AGGtH.Runtime
+namespace AGGtH.Runtime.Data.Containers
 {
     [CreateAssetMenu(fileName = "EncounterData", menuName = "Assets/Data/EncounterData")]
     public class EncounterData : ScriptableObject
@@ -50,8 +51,8 @@ namespace AGGtH.Runtime
     [Serializable]
     public class EnemyEncounter : EncounterBase
     {
-        //[SerializeField] private List<EnemyCharacterData> enemyList;
-        //public List<EnemyCharacterData> EnemyList => enemyList;
+        [SerializeField] private List<EnemyCharacterData> enemyList;
+        public List<EnemyCharacterData> EnemyList => enemyList;
     }
 
     [Serializable]
