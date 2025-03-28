@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Gameplay Data
   m_EditorClassIdentifier: 
   drawCount: 4
-  maxMana: 3
+  maxEnergy: 3
+  player: {fileID: 8543076526228792882, guid: 2d97c576193387e4397779b6672a7213, type: 3}
   initalDeck: {fileID: 11400000, guid: 51d8422dd091071428eaab0c8194ee64, type: 2}
   maxCardOnHand: 5
   allCardsList:
@@ -29,3 +30,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 537dc3c39b264d74d852d89b855a41ed, type: 2}
   - {fileID: 11400000, guid: 001d7cb199c184f4c8c4fae8132d19bf, type: 2}
   cardPrefab: {fileID: 2705994997709893964, guid: df369d82bd1a82844b451cfaeee163a3, type: 3}
+  isRandomHand: 0
+  randomCardCount: 0

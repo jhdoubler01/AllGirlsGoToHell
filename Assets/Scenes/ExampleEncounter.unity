@@ -1527,7 +1527,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.000061035156, y: 0.000022888184}
+  m_AnchoredPosition: {x: 0.000061035156, y: 0.0009266086}
   m_SizeDelta: {x: 0, y: 300}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &981488141
@@ -2470,6 +2470,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyPosList: []
+  playerPos: {fileID: 0}
 --- !u!1 &1567754260
 GameObject:
   m_ObjectHideFlags: 0
@@ -2923,10 +2924,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c28ec0006076dab409dc6ff0e7c39c6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardPrefab: {fileID: 0}
-  cardParentTransform: {fileID: 981488140}
-  cardCollectionManager: {fileID: 0}
   gameplayData: {fileID: 11400000, guid: 96af78c6937dd8247b9de40fa08ceff5, type: 2}
+  encounterData: {fileID: 0}
 --- !u!1 &1863103005
 GameObject:
   m_ObjectHideFlags: 0
