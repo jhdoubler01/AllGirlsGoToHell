@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 713b529c508c1134caf661f9215ef630, type: 3}
+  m_Name: stare
+  m_EditorClassIdentifier: 
+  id: stare
+  cardName: Stare
+  energyCost: 0
+  cardSprite: {fileID: 0}
+  rarity: 0
+  cardLoveLanguageType: 0
+  usableWithoutTarget: 0
+  exhaustAfterPlay: 0
+  cardActionDataList:
+  - actionTargetType: 0
+    cardActionType: 1
+    buffType: 0
+    debuffType: 0
+    damageAmt: 1
+    healAmt: 0
+    blockAmt: 0
+    drawCardAmt: 0
+    energyGainAmt: 0
+    actionDelay: 0
+  dialogueOptions:
+  - You stare deeply into her eyes.

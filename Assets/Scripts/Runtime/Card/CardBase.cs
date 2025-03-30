@@ -21,7 +21,7 @@ namespace AGGtH.Runtime.Card
         [SerializeField] private Image cardTypeIcon;
 
         private Transform playerHandParent;
-        private bool hoverOverTarget;
+        private bool overValidTarget;
         private Transform parentAfterDrag;
 
         #region Cache
@@ -30,9 +30,12 @@ namespace AGGtH.Runtime.Card
         protected Transform CachedTransform { get; set; }
         protected WaitForEndOfFrame CachedWaitFrame { get; set; }
         public bool IsPlayable { get; protected set; } = true;
+        protected AudioManager AudioManager => AudioManager.Instance;
+        protected FxManager FxManager => FxManager.Instance;
         protected EncounterManager EncounterManager => EncounterManager.Instance;
         protected GameManager GameManager => GameManager.Instance;
         protected UIManager UIManager => UIManager.Instance;
+        protected CardCollectionManager CardCollectionManager => CardCollectionManager.Instance;
         public bool IsExhausted { get; private set;}
         #endregion
 
@@ -41,6 +44,7 @@ namespace AGGtH.Runtime.Card
         {
             CachedTransform = transform;
             CachedWaitFrame = new WaitForEndOfFrame();
+            playerHandParent = CardCollectionManager.HandPileTransform;
         }
         private void SetCardNameText()
         {
@@ -93,19 +97,19 @@ namespace AGGtH.Runtime.Card
             {
                 Debug.Log("enemy collision");
                 //parentAfterDrag = collision.transform;
-                hoverOverTarget = true;
+                overValidTarget = true;
             }
         }
         public virtual void PlayableTriggerExit(Collider2D collision)
         {
-            if (hoverOverTarget)
+            if (overValidTarget)
             {
                 parentAfterDrag = transform.parent;
             }
         }
         public virtual void PlayableOnBeginDrag()
         {
-            parentAfterDrag = transform.parent;
+            parentAfterDrag = playerHandParent;
             transform.SetParent(transform.root);
             transform.SetAsLastSibling();
         }
@@ -163,18 +167,27 @@ namespace AGGtH.Runtime.Card
             }
             return targetList;
         }
+        //private static List<CharacterBase> DetermineTargetsForMultipleActions(CharacterBase target, List<EnemyBase> allEnemies, PlayerBase player, CardData myCardData)
+        //{
+        //    List<CharacterBase> totalTargetList = new List<CharacterBase>();
+        //    foreach(CardActionData playerAction in myCardData.CardActionDataList)
+        //    {
+        //        totalTargetList.AddRange(DetermineTargets(target, allEnemies, player, playerAction));
+        //    }
+        //    return totalTargetList;
+        //}
         public virtual void Discard()
         {
             if (IsExhausted) return;
             if (!IsPlayable) return;
-            //CardCollectionManager.OnCardDiscarded(this);
+            CardCollectionManager.OnCardDiscarded(this);
             Destroy(gameObject);
         }
         public virtual void Exhaust(bool destroy=true)
         {
             if (IsExhausted) return;
             if (!IsPlayable) return;
-            //CardCollectionManager.OnCardExhausted(this);
+            CardCollectionManager.OnCardExhausted(this);
             Destroy(gameObject);
         }
         protected virtual void SpendEnergy(int energyCost)

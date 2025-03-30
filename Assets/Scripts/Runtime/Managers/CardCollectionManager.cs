@@ -22,6 +22,10 @@ namespace AGGtH.Runtime.Managers
         public List<CardData> DiscardPile { get; private set; } = new List<CardData>();
         public List<CardData> ExhaustPile { get; private set; } = new List<CardData>();
 
+        public Transform HandPileTransform;
+        public Transform DrawPileTransform;
+        public Transform DiscardPileTransform;
+
         public HandController HandController => handController;
         protected GameManager GameManager => GameManager.Instance;
         protected EncounterManager EncounterManager => EncounterManager.Instance;

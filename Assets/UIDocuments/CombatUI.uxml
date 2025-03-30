@@ -1,4 +1,8 @@
 <engine:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:engine="UnityEngine.UIElements" xmlns:editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UIDocuments/CombatStyle.uss?fileID=7433441132597879392&amp;guid=4bced5b432461a248a5ccf9b43af6bfc&amp;type=3#CombatStyle" />
-    <engine:ListView style="height: 764px; width: 927px;" />
+    <engine:VisualElement name="CombatUIContainer" style="flex-grow: 1;">
+        <engine:VisualElement name="CardPanel" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0.8); width: 412px;">
+            <engine:ListView style="height: 1080px; width: 585px;" />
+        </engine:VisualElement>
+    </engine:VisualElement>
 </engine:UXML>
