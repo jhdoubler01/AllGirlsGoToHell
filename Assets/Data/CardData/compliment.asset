@@ -22,14 +22,10 @@ MonoBehaviour:
   exhaustAfterPlay: 0
   cardActionDataList:
   - actionTargetType: 0
-    cardActionType: 0
+    cardActionType: 1
     buffType: 0
     debuffType: 0
-    damageAmt: 2
-    healAmt: 0
-    blockAmt: 0
-    drawCardAmt: 0
-    energyGainAmt: 0
+    actionValue: 2
     actionDelay: 0
   dialogueOptions:
   - Your horns are cool.

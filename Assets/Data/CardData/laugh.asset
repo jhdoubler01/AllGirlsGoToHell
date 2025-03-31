@@ -21,15 +21,17 @@ MonoBehaviour:
   usableWithoutTarget: 1
   exhaustAfterPlay: 0
   cardActionDataList:
-  - actionTargetType: 3
-    cardActionType: 5
+  - actionTargetType: 1
+    cardActionType: 3
     buffType: 0
     debuffType: 0
-    damageAmt: 2
-    healAmt: 0
-    blockAmt: 2
-    drawCardAmt: 0
-    energyGainAmt: 0
+    actionValue: 2
+    actionDelay: 0
+  - actionTargetType: 3
+    cardActionType: 1
+    buffType: 0
+    debuffType: 0
+    actionValue: 2
     actionDelay: 0
   dialogueOptions:
   - You laugh at nothing. She seems confused but charmed nonetheless.

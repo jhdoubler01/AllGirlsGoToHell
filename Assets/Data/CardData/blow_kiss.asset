@@ -21,16 +21,11 @@ MonoBehaviour:
   usableWithoutTarget: 1
   exhaustAfterPlay: 0
   cardActionDataList:
-  - numActions: 0
-    actionTargetType: 2
+  - actionTargetType: 2
     cardActionType: 1
     buffType: 0
     debuffType: 0
-    damageAmt: 2
-    healAmt: 0
-    blockAmt: 0
-    drawCardAmt: 0
-    energyGainAmt: 0
+    actionValue: 1
     actionDelay: 0
   dialogueOptions:
   - You blow a little kiss and hope you didn't spray any spit on her. Unless she'd

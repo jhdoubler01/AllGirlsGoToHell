@@ -16,11 +16,11 @@ namespace AGGtH.Runtime.Card
         public LayerMask targetLayer;
         public Camera cam = null;
         public Transform handParentTransform;
-        [HideInInspector] public List<CardBase> hand; // Cards currently in hand
+        public List<CardBase> Hand = new List<CardBase>(); // Cards currently in hand
 
         #region Cache
-        //protected FxManager FxManager => FxManager.Instance;
-        //protected AudioManager AudioManager => AudioManager.Instance;
+        protected FxManager FxManager => FxManager.Instance;
+        protected AudioManager AudioManager => AudioManager.Instance;
         protected GameManager GameManager => GameManager.Instance;
         protected EncounterManager EncounterManager => EncounterManager.Instance;
         protected CardCollectionManager CardCollectionManager => CardCollectionManager.Instance;
@@ -32,11 +32,11 @@ namespace AGGtH.Runtime.Card
         {
             if (index < 0)
             {
-                hand.Add(card);
+                Hand.Add(card);
             }
             else
             {
-                hand.Insert(index, card);
+                Hand.Insert(index, card);
             }
             card.transform.SetParent(handParentTransform);
         }

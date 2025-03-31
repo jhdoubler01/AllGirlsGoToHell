@@ -59,9 +59,7 @@ namespace AGGtH.Editor.CardEditor
                 cardActionDataList[i] = new CardActionData()
                 {
                     CardActionType = (CardActionType)EditorGUILayout.EnumPopup("Action Type", cardActionDataList[i].CardActionType),
-                    DamageAmt = EditorGUILayout.IntField("Damage Amount", cardActionDataList[i].DamageAmt),
-                    HealAmt = EditorGUILayout.IntField("Heal Amount", cardActionDataList[i].HealAmt),
-                    BlockAmt = EditorGUILayout.IntField("Block", cardActionDataList[i].BlockAmt),
+                    ActionValue  = EditorGUILayout.IntField("Action Value", cardActionDataList[i].ActionValue),
                 };
 
                 if (GUILayout.Button("Remove"))

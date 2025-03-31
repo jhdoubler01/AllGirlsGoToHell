@@ -25,11 +25,7 @@ MonoBehaviour:
     cardActionType: 2
     buffType: 0
     debuffType: 0
-    damageAmt: 0
-    healAmt: 2
-    blockAmt: 0
-    drawCardAmt: 0
-    energyGainAmt: 0
+    actionValue: 2
     actionDelay: 0
   dialogueOptions:
   - You inhale and exhale deeply to calm your rapid heartbeat.

@@ -25,11 +25,7 @@ MonoBehaviour:
     cardActionType: 1
     buffType: 0
     debuffType: 0
-    damageAmt: 1
-    healAmt: 0
-    blockAmt: 0
-    drawCardAmt: 0
-    energyGainAmt: 0
+    actionValue: 1
     actionDelay: 0
   dialogueOptions:
   - You stare deeply into her eyes.

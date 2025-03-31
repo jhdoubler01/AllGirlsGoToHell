@@ -21,15 +21,17 @@ MonoBehaviour:
   usableWithoutTarget: 0
   exhaustAfterPlay: 0
   cardActionDataList:
-  - actionTargetType: 0
-    cardActionType: 3
+  - actionTargetType: 1
+    cardActionType: 2
     buffType: 0
     debuffType: 0
-    damageAmt: 1
-    healAmt: 2
-    blockAmt: 0
-    drawCardAmt: 0
-    energyGainAmt: 0
+    actionValue: 2
+    actionDelay: 0
+  - actionTargetType: 0
+    cardActionType: 1
+    buffType: 0
+    debuffType: 0
+    actionValue: 1
     actionDelay: 0
   dialogueOptions:
   - You flash a quick smile. Fake it till you make it!

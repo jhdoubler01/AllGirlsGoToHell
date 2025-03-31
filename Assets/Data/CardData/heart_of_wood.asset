@@ -22,14 +22,10 @@ MonoBehaviour:
   exhaustAfterPlay: 0
   cardActionDataList:
   - actionTargetType: 1
-    cardActionType: 4
+    cardActionType: 3
     buffType: 0
     debuffType: 0
-    damageAmt: 0
-    healAmt: 0
-    blockAmt: 3
-    drawCardAmt: 0
-    energyGainAmt: 0
+    actionValue: 3
     actionDelay: 0
   dialogueOptions:
   - You think about the state of the world, temporarily taking you out of the moment.

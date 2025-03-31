@@ -12,17 +12,19 @@ using AGGtH.Runtime.Characters;
 
 namespace AGGtH.Runtime.Card
 {
-    public class CardBase : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+    public class CardBase : MonoBehaviour/*, IBeginDragHandler, IDragHandler, IEndDragHandler*/
     {
         [Header("Card Objects")]
         [SerializeField] private TMP_Text cardNameText;
         [SerializeField] private TMP_Text cardDescText;
         [SerializeField] private TMP_Text energyCostText;
-        [SerializeField] private Image cardTypeIcon;
+        [SerializeField] private TMP_Text actionAmtText;
 
         private Transform playerHandParent;
         private bool overValidTarget;
         private Transform parentAfterDrag;
+
+        private int enemyTargetLayer;
 
         #region Cache
         public CardData CardData { get; private set; }
@@ -37,6 +39,8 @@ namespace AGGtH.Runtime.Card
         protected UIManager UIManager => UIManager.Instance;
         protected CardCollectionManager CardCollectionManager => CardCollectionManager.Instance;
         public bool IsExhausted { get; private set;}
+        public bool IsSelected = false;
+
         #endregion
 
         #region Setup Methods
@@ -45,6 +49,7 @@ namespace AGGtH.Runtime.Card
             CachedTransform = transform;
             CachedWaitFrame = new WaitForEndOfFrame();
             playerHandParent = CardCollectionManager.HandPileTransform;
+            enemyTargetLayer = LayerMask.NameToLayer("Enemies");
         }
         private void SetCardNameText()
         {
@@ -61,65 +66,71 @@ namespace AGGtH.Runtime.Card
             IsPlayable = isPlayable;
             cardNameText.text = CardData.CardName;
             //cardDescText.text = CardData.MyDescription;
-            //energyCostText.text = CardData.EnergyCost.ToString();
+            energyCostText.text = CardData.EnergyCost.ToString();
+            actionAmtText.text = CardData.CardActionDataList[0].ActionValue.ToString();
             //cardTypeIcon.sprite = CardData.CardSprite;
 
         }
         #endregion
 
         #region UI Event Handlers
-        public void OnBeginDrag(PointerEventData eventData)
+        public void OnCardSelected()
         {
-            PlayableOnBeginDrag();
+            IsSelected = !IsSelected;
+            EncounterManager.SelectedCard(this, IsSelected);
         }
-        public void OnDrag(PointerEventData eventData)
-        {
-            transform.position = Input.mousePosition;
+        //public void OnBeginDrag(PointerEventData eventData)
+        //{
+        //    PlayableOnBeginDrag();
+        //}
+        //public void OnDrag(PointerEventData eventData)
+        //{
+        //    transform.position = Input.mousePosition;
 
-        }
-        public void OnEndDrag(PointerEventData eventData)
-        {
-            PlayableOnEndDrag();
-        }
-        private void OnTriggerEnter2D(Collider2D collision)
-        {
-            Debug.Log("trigger enter");
-            PlayableTriggerEnter(collision);
-        }
-        private void OnTriggerExit2D(Collider2D collision)
-        {
-            PlayableTriggerExit(collision);
-        }
-        public virtual void PlayableTriggerEnter(Collider2D collision)
-        {
-            Debug.Log("trigger");
-            if (collision.gameObject.CompareTag("Enemy"))
-            {
-                Debug.Log("enemy collision");
-                //parentAfterDrag = collision.transform;
-                overValidTarget = true;
-            }
-        }
-        public virtual void PlayableTriggerExit(Collider2D collision)
-        {
-            if (overValidTarget)
-            {
-                parentAfterDrag = transform.parent;
-            }
-        }
-        public virtual void PlayableOnBeginDrag()
-        {
-            parentAfterDrag = playerHandParent;
-            transform.SetParent(transform.root);
-            transform.SetAsLastSibling();
-        }
+        //}
+        //public void OnEndDrag(PointerEventData eventData)
+        //{
+        //    PlayableOnEndDrag();
+        //}
+        //private void OnTriggerEnter2D(Collider2D collision)
+        //{
+        //    Debug.Log("trigger enter");
+        //    PlayableTriggerEnter(collision);
+        //}
+        //private void OnTriggerExit2D(Collider2D collision)
+        //{
+        //    PlayableTriggerExit(collision);
+        //}
+        //public virtual void PlayableTriggerEnter(Collider2D collision)
+        //{
+        //    Debug.Log("trigger");
+        //    if (collision.gameObject.CompareTag("Enemy"))
+        //    {
+        //        Debug.Log("enemy collision");
+        //        //parentAfterDrag = collision.transform;
+        //        overValidTarget = true;
+        //    }
+        //}
+        //public virtual void PlayableTriggerExit(Collider2D collision)
+        //{
+        //    if (overValidTarget)
+        //    {
+        //        parentAfterDrag = transform.parent;
+        //    }
+        //}
+        //public virtual void PlayableOnBeginDrag()
+        //{
+        //    parentAfterDrag = playerHandParent;
+        //    transform.SetParent(transform.root);
+        //    transform.SetAsLastSibling();
+        //}
 
-        public virtual void PlayableOnEndDrag()
-        {
-            Debug.Log(IsPlayable);
-            //if (IsPlayable) { Use(); }
-            //else transform.SetParent(parentAfterDrag);
-        }
+        //public virtual void PlayableOnEndDrag()
+        //{
+        //    Debug.Log(IsPlayable);
+        //    //if (IsPlayable) { Use(); }
+        //    //else transform.SetParent(parentAfterDrag);
+        //}
 
         #endregion
 
@@ -139,8 +150,12 @@ namespace AGGtH.Runtime.Card
                 var targetList = DetermineTargets(target, allEnemies, player, playerAction);
                 foreach(var tar in targetList)
                 {
-                    
+                    CardActionProcessor.GetAction(playerAction.CardActionType)
+                        .DoAction(new CardActionParameters(playerAction.ActionValue,
+                            target, self, CardData, this));
                 }
+                CardCollectionManager.OnCardPlayed(this);
+
             }
         }
         private static List<CharacterBase> DetermineTargets(CharacterBase target, List<EnemyBase> allEnemies, PlayerBase player, CardActionData playerAction)

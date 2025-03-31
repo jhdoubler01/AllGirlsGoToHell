@@ -29,6 +29,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 99e29060a80bd8e49ac76025f84e193c, type: 2}
   - {fileID: 11400000, guid: 537dc3c39b264d74d852d89b855a41ed, type: 2}
   - {fileID: 11400000, guid: 001d7cb199c184f4c8c4fae8132d19bf, type: 2}
-  cardPrefab: {fileID: 2705994997709893964, guid: df369d82bd1a82844b451cfaeee163a3, type: 3}
+  cardPrefab: {fileID: 5457826409759552142, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
   isRandomHand: 0
   randomCardCount: 0

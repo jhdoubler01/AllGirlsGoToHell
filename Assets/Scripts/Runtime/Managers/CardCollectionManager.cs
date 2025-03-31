@@ -49,6 +49,7 @@ namespace AGGtH.Runtime.Managers
         #endregion
 
         #region Public Methods
+
         public void DrawCards(int targetDrawCount)
         {
             var currentDrawCount = 0;
@@ -77,15 +78,15 @@ namespace AGGtH.Runtime.Managers
                 //UIManager.CombatCanvas.SetPileTexts();
             }
 
-            foreach (var cardObject in HandController.hand)
+            foreach (var cardObject in HandController.Hand)
                 cardObject.UpdateCardText();
         }
         public void DiscardHand()
         {
-            foreach (var cardBase in HandController.hand)
+            foreach (var cardBase in HandController.Hand)
                 cardBase.Discard();
 
-            HandController.hand.Clear();
+            HandController.Hand.Clear();
         }
 
         public void OnCardDiscarded(CardBase targetCard)
@@ -108,7 +109,7 @@ namespace AGGtH.Runtime.Managers
             else
                 targetCard.Discard();
 
-            foreach (var cardObject in HandController.hand)
+            foreach (var cardObject in HandController.Hand)
                 cardObject.UpdateCardText();
         }
         public void SetGameDeck()
@@ -123,7 +124,7 @@ namespace AGGtH.Runtime.Managers
             DrawPile.Clear();
             HandPile.Clear();
             ExhaustPile.Clear();
-            HandController.hand.Clear();
+            HandController.Hand.Clear();
         }
         #endregion
 

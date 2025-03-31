@@ -22,14 +22,10 @@ MonoBehaviour:
   exhaustAfterPlay: 0
   cardActionDataList:
   - actionTargetType: 0
-    cardActionType: 0
+    cardActionType: 1
     buffType: 0
     debuffType: 0
-    damageAmt: 3
-    healAmt: 0
-    blockAmt: 0
-    drawCardAmt: 0
-    energyGainAmt: 0
+    actionValue: 3
     actionDelay: 0
   dialogueOptions:
   - She says she's bound to purgatory forever. You laugh nervously.

@@ -50,22 +50,24 @@ namespace AGGtH.Runtime.Card
         [SerializeField] private CardActionType cardActionType;
         [SerializeField] private BuffType buffType;
         [SerializeField] private DebuffType debuffType;
-        [SerializeField] private int damageAmt;
-        [SerializeField] private int healAmt;
-        [SerializeField] private int blockAmt;
-        [SerializeField] private int drawCardAmt;
-        [SerializeField] private int energyGainAmt;
+        //[SerializeField] private int damageAmt;
+        //[SerializeField] private int healAmt;
+        //[SerializeField] private int blockAmt;
+        //[SerializeField] private int drawCardAmt;
+        //[SerializeField] private int energyGainAmt;
+        [SerializeField] private int actionValue;
         [SerializeField] private float actionDelay;
 
         public ActionTargetType ActionTargetType { get => actionTargetType; set => actionTargetType = value; }
         public CardActionType CardActionType { get => cardActionType; set => cardActionType = value; }
         public BuffType BuffType { get => buffType; set => buffType = value; }
         public DebuffType DebuffType { get => debuffType; set => debuffType = value; }
-        public int DamageAmt { get => damageAmt; set => damageAmt = value; }
-        public int HealAmt { get => healAmt; set => healAmt = value; }
-        public int BlockAmt { get => blockAmt; set => blockAmt = value; }
-        public int DrawCardAmt { get => drawCardAmt; set => drawCardAmt = value; }
-        public int EnergyGainAmt { get => energyGainAmt; set => energyGainAmt = value; }
+        public int ActionValue { get => actionValue; set => actionValue = value; }
+        //public int DamageAmt { get => damageAmt; set => damageAmt = value; }
+        //public int HealAmt { get => healAmt; set => healAmt = value; }
+        //public int BlockAmt { get => blockAmt; set => blockAmt = value; }
+        //public int DrawCardAmt { get => drawCardAmt; set => drawCardAmt = value; }
+        //public int EnergyGainAmt { get => energyGainAmt; set => energyGainAmt = value; }
         public float ActionDelay { get => actionDelay; set => actionDelay = value; }
     }
 }
