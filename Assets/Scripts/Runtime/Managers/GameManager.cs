@@ -4,6 +4,7 @@ using AGGtH.Runtime.Settings;
 using AGGtH.Runtime.Data.Containers;
 using System.Collections.Generic;
 using AGGtH.Runtime.Extensions;
+using AGGtH.Runtime.EnemyBehavior;
 
 namespace AGGtH.Runtime.Managers
 {
@@ -38,6 +39,8 @@ namespace AGGtH.Runtime.Managers
                 transform.parent = null;
                 Instance = this;
                 DontDestroyOnLoad(gameObject);
+                CardActionProcessor.Initialize();
+                EnemyActionProcessor.Initialize();
                 InitGameplayData();
                 InitPlayerHand();
             }

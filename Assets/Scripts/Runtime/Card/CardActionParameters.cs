@@ -1,4 +1,5 @@
 using AGGtH.Runtime.Characters;
+using AGGtH.Runtime.Data;
 using AGGtH.Runtime.Enums;
 using AGGtH.Runtime.Managers;
 
