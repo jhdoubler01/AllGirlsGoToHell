@@ -4,10 +4,9 @@ using UnityEngine;
 
 namespace AGGtH.Runtime.Card.CardActions
 {
-    public class HealAction : CardActionBase
+    public class BlockAction : CardActionBase
     {
-        public override CardActionType ActionType => CardActionType.Heal;
-
+        public override CardActionType ActionType => CardActionType.Block;
         public override void DoAction(CardActionParameters actionParameters)
         {
             var newTarget = actionParameters.TargetCharacter
@@ -16,10 +15,12 @@ namespace AGGtH.Runtime.Card.CardActions
 
             if (!newTarget) return;
 
-            newTarget.CharacterStats.Heal(Mathf.RoundToInt(actionParameters.Value));
+            newTarget.CharacterStats.ApplyStatus(StatusType.Block,
+                Mathf.RoundToInt(actionParameters.Value + actionParameters.SelfCharacter.CharacterStats
+                    .StatusDict[StatusType.Dexterity].StatusValue));
 
             //if (FxManager != null)
-                //FxManager.PlayFx(newTarget.transform, FxType.Heal);
+                //FxManager.PlayFx(newTarget.transform, FxType.Block);
 
             //if (AudioManager != null)
                 //AudioManager.PlayOneShot(actionParameters.CardData.AudioType);

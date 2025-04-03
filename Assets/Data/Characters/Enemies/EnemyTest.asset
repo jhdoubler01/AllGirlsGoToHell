@@ -15,7 +15,7 @@ MonoBehaviour:
   characterID: 
   characterName: 
   characterDescription: 
-  maxHealth: 0
+  maxHealth: 10
   enemyPrefab: {fileID: 0}
   followAbilityPattern: 0
   enemyAbilityList: []

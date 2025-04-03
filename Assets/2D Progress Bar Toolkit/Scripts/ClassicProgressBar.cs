@@ -56,4 +56,13 @@ public class ClassicProgressBar : MonoBehaviour {
 	private float ConvertFragmentToWidth(float fragment) {
 		return m_RectTransform.sizeDelta.x * fragment;
 	}
+
+	public void SetNewFillAmount(float newFill)
+	{
+		m_FillAmount = newFill;
+	}
+	public void SetNewMaxHealth(int newMaxHealth)
+	{
+		m_NumberOfSegments = newMaxHealth;
+	}
 }

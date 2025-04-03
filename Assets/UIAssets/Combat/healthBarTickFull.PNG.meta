@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7c3b42b79801a1a4c925ebb36916f6e5
+guid: 8e0b99b65df662246bb360b02d25a3d9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6440935873100982532
-    second: battery4_0
+      213: -5310196135872321690
+    second: healthBarTick_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: battery4_0
+      name: healthBarTick_0
       rect:
         serializedVersion: 2
-        x: 103
-        y: 99
-        width: 205
-        height: 79
+        x: 175
+        y: 173
+        width: 46
+        height: 35
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cf6debee2f23d96a0800000000000000
-      internalID: -6440935873100982532
+      spriteID: 667ada1cfb46e46b0800000000000000
+      internalID: -5310196135872321690
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      battery4_0: -6440935873100982532
+      healthBarTick_0: -5310196135872321690
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

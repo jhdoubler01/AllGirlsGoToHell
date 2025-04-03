@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using AGGtH.Runtime.Enums;
+using UnityEngine;
 
 namespace AGGtH.Runtime.Characters
 {
@@ -110,6 +111,7 @@ namespace AGGtH.Runtime.Characters
             CurrentHealth += value;
             if (CurrentHealth > MaxHealth) CurrentHealth = MaxHealth;
             OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
+            Debug.Log("Healed character: " + CurrentHealth + "/" + MaxHealth);
         }
 
         public void Damage(int value, bool canPierceArmor = false)

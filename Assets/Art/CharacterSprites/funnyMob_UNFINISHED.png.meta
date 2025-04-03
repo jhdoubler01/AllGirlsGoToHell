@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8e0b99b65df662246bb360b02d25a3d9
+guid: 819aceb801e128447b87bec523495617
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5310196135872321690
-    second: healthBarTick_0
+      213: 5101903436819336884
+    second: cutesyMob_UNFINISHED_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: healthBarTick_0
+      name: cutesyMob_UNFINISHED_0
       rect:
         serializedVersion: 2
-        x: 175
-        y: 173
-        width: 46
-        height: 35
+        x: 1219
+        y: 0
+        width: 1438
+        height: 2515
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 667ada1cfb46e46b0800000000000000
-      internalID: -5310196135872321690
+      spriteID: 4be06fd052a9dc640800000000000000
+      internalID: 5101903436819336884
       vertices: []
       indices: 
       edges: []
@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cutesyMob_UNFINISHED_0: 5101903436819336884
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
