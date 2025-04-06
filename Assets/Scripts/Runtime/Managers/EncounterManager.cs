@@ -30,7 +30,7 @@ namespace AGGtH.Runtime.Managers
         [SerializeField] private Transform playerPos;
 
         #region Cache
-        public List<EnemyBase> CurrentEnemiesList { get; private set; } 
+        public List<EnemyBase> CurrentEnemiesList { get; private set; } = new List<EnemyBase>();
         public PlayerBase Player { get; private set; }
 
 
@@ -106,6 +106,7 @@ namespace AGGtH.Runtime.Managers
                 return;
             }
             GameManager.PersistentGameplayData.CurrentEnergy = GameManager.PersistentGameplayData.MaxEnergy;
+            Debug.Log("Player energy: " + GameManager.PersistentGameplayData.CurrentEnergy);
             CardCollectionManager.DrawCards(GameManager.PersistentGameplayData.DrawCount);
             GameManager.PersistentGameplayData.CanSelectCards = true;
         }
@@ -186,7 +187,18 @@ namespace AGGtH.Runtime.Managers
         #region Private Methods
         private void BuildEnemies()
         {
+            CurrentEncounter = GameManager.EncounterData.GetEnemyEncounter(
+                GameManager.PersistentGameplayData.CurrentStageId,
+                GameManager.PersistentGameplayData.CurrentEncounterId,
+                GameManager.PersistentGameplayData.IsFinalEncounter);
 
+            var enemyList = CurrentEncounter.EnemyList;
+            for (var i = 0; i < enemyList.Count; i++)
+            {
+                var clone = Instantiate(enemyList[i].EnemyPrefab, EnemyPosList.Count >= i ? EnemyPosList[i] : EnemyPosList[0]);
+                clone.BuildCharacter();
+                CurrentEnemiesList.Add(clone);
+            }
         }
         private void BuildPlayer()
         {
@@ -253,7 +265,6 @@ namespace AGGtH.Runtime.Managers
             }
 
             if (backToHand) // Cannot use card / Not enough mana! Return card to hand!
-                Debug.Log("Not enough energy!");
             selectedCard = null;
         }
         private bool CheckPlayOnCharacter(Ray mainRay, bool _canUse, ref CharacterBase selfCharacter,
@@ -289,7 +300,7 @@ namespace AGGtH.Runtime.Managers
             var waitDelay = new WaitForSeconds(0.1f);
             foreach(var currentEnemy in CurrentEnemiesList)
             {
-                //yield return currentEnemy.StartCoroutine(nameof(EnemyExample.ActionRoutine));
+                yield return currentEnemy.StartCoroutine(nameof(currentEnemy.ActionRoutine));
                 yield return waitDelay;
             }
 

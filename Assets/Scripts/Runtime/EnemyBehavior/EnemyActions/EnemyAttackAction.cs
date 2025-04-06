@@ -1,19 +1,28 @@
 using UnityEngine;
+using AGGtH.Runtime.Managers;
+using AGGtH.Runtime.Enums;
 
-namespace AGGtH.Runtime
+namespace AGGtH.Runtime.EnemyBehavior.EnemyActions
 {
-    public class EnemyAttackAction : MonoBehaviour
+    public class EnemyAttackAction : EnemyActionBase
     {
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
-        {
-        
-        }
+        public override EnemyActionType ActionType => EnemyActionType.Attack;
 
-        // Update is called once per frame
-        void Update()
+        public override void DoAction(EnemyActionParameters actionParameters)
         {
-        
+            if (!actionParameters.TargetCharacter) return;
+            var value = Mathf.RoundToInt(actionParameters.Value +
+                                         actionParameters.SelfCharacter.CharacterStats.StatusDict[StatusType.Strength]
+                                             .StatusValue);
+            actionParameters.TargetCharacter.CharacterStats.Damage(value);
+            //if (FxManager != null)
+            //{
+            //    FxManager.PlayFx(actionParameters.TargetCharacter.transform, FxType.Attack);
+            //    FxManager.SpawnFloatingText(actionParameters.TargetCharacter.TextSpawnRoot, value.ToString());
+            //}
+
+            //if (AudioManager != null)
+            //    AudioManager.PlayOneShot(AudioActionType.Attack);
         }
     }
 }

@@ -17,6 +17,7 @@ namespace AGGtH.Runtime.Card.CardActions
             var value = actionParameters.Value + selfCharacter.CharacterStats.StatusDict[StatusType.Strength].StatusValue;
 
             targetCharacter.CharacterStats.Damage(Mathf.RoundToInt(value));
+            Debug.Log("Enemy health: " + targetCharacter.CharacterStats.CurrentHealth + "/" + targetCharacter.CharacterStats.MaxHealth);
 
             if (FxManager != null)
             {

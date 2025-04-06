@@ -1,6 +1,7 @@
 using UnityEngine;
 using AGGtH.Runtime.Managers;
 using AGGtH.Runtime.Enums;
+using AGGtH.Runtime.Extensions;
 using TMPro;
 
 namespace AGGtH.Runtime.UI
@@ -8,6 +9,24 @@ namespace AGGtH.Runtime.UI
     public class CombatCanvas : CanvasBase
     {
         [SerializeField] private SpritesheetHandler playerEnergyBar;
+        [SerializeField] private ClassicProgressBar playerHealthBar;
+        [Header("Texts")]
+        [SerializeField] private TextMeshProUGUI drawPileTextField;
+        [SerializeField] private TextMeshProUGUI discardPileTextField;
+        [SerializeField] private TextMeshProUGUI exhaustPileTextField;
+        [SerializeField] private TextMeshProUGUI energyTextTextField;
+
+        [Header("Panels")]
+        [SerializeField] private GameObject combatWinPanel;
+        [SerializeField] private GameObject combatLosePanel;
+
+        public TextMeshProUGUI DrawPileTextField => drawPileTextField;
+        public TextMeshProUGUI DiscardPileTextField => discardPileTextField;
+        public TextMeshProUGUI ManaTextTextField => energyTextTextField;
+        public GameObject CombatWinPanel => combatWinPanel;
+        public GameObject CombatLosePanel => combatLosePanel;
+
+        public TextMeshProUGUI ExhaustPileTextField => exhaustPileTextField;
 
         private void Awake()
         {
@@ -20,7 +39,7 @@ namespace AGGtH.Runtime.UI
             //DiscardPileTextField.text = $"{CollectionManager.DiscardPile.Count.ToString()}";
             //ExhaustPileTextField.text = $"{CollectionManager.ExhaustPile.Count.ToString()}";
             //ManaTextTextField.text = $"{GameManager.PersistentGameplayData.CurrentMana.ToString()}/{GameManager.PersistentGameplayData.MaxMana}";
-            playerEnergyBar.SetNewImage(GameManager.PersistentGameplayData.CurrentEnergy);
+            //playerEnergyBar.SetNewImage(GameManager.PersistentGameplayData.CurrentEnergy);
         }
         #endregion
     }

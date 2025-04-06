@@ -9,6 +9,8 @@ namespace AGGtH.Runtime.UI
         protected CardCollectionManager CardCollectionManager => CardCollectionManager.Instance;
         protected GameManager GameManager => GameManager.Instance;
         protected UIManager UIManager => UIManager.Instance;
+        protected FxManager FxManager => FxManager.Instance;
+        protected AudioManager AudioManager => AudioManager.Instance;
         public virtual void OpenCanvas()
         {
             gameObject.SetActive(true);

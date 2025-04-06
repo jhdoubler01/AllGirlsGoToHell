@@ -9,10 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dcdb4bc47705d3d46b4f337637a1d7da, type: 3}
-  m_Name: StarterPlayer
+  m_Script: {fileID: 11500000, guid: ab10d3d33242dde4da1dff7f08613a8c, type: 3}
+  m_Name: AttackEnemyIntention
   m_EditorClassIdentifier: 
-  characterID: starter_player
-  characterName: Dillon
-  characterDescription: A loser lesbian who can't flirt to save her life.
-  maxHealth: 20
+  enemyIntentionType: 0
+  intentionSprite: {fileID: 21300000, guid: ae05a2ebf8fd34ccc9b3475ac2f870b6, type: 3}

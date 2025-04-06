@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   drawCount: 4
   maxEnergy: 3
-  player: {fileID: 8543076526228792882, guid: 2d97c576193387e4397779b6672a7213, type: 3}
+  player: {fileID: 3940589192941665186, guid: 2d97c576193387e4397779b6672a7213, type: 3}
   initalDeck: {fileID: 11400000, guid: 51d8422dd091071428eaab0c8194ee64, type: 2}
   maxCardOnHand: 5
   allCardsList:

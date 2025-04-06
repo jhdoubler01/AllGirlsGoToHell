@@ -144,6 +144,7 @@ namespace AGGtH.Runtime.Card
         private IEnumerator CardUseRoutine(CharacterBase self, CharacterBase target, List<EnemyBase> allEnemies, PlayerBase player)
         {
             SpendEnergy(CardData.EnergyCost);
+            Debug.Log("Player energy: " + GameManager.PersistentGameplayData.CurrentEnergy);
             foreach(var playerAction in CardData.CardActionDataList)
             {
                 yield return new WaitForSeconds(playerAction.ActionDelay);
@@ -196,7 +197,7 @@ namespace AGGtH.Runtime.Card
             if (IsExhausted) return;
             if (!IsPlayable) return;
             CardCollectionManager.OnCardDiscarded(this);
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
         public virtual void Exhaust(bool destroy=true)
         {
