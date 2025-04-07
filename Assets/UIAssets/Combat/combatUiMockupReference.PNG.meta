@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      combatUiMockupReference_0: 8696824814216847066
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

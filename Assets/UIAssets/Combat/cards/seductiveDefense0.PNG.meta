@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      seductiveDefense0_0: 4011867180344598846
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

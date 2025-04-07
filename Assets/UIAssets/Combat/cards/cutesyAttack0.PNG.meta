@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      cutesyAttack0_0: 4427931808246087284
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
