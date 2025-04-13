@@ -37,6 +37,7 @@ namespace AGGtH.Runtime.Settings
             newData.CharacterId = id;
             newData.CurrentHealth = newCurrentHealth;
             newData.MaxHealth = newMaxHealth;
+            PlayerHealthData = newData;
 
         }
         private void InitData()
@@ -53,7 +54,6 @@ namespace AGGtH.Runtime.Settings
             CurrentGold = 0;
             CurrentCardsList = new List<CardData>();
             IsFinalEncounter = false;
-            PlayerHealthData = new PlayerHealthData();
         }
 
         #region Encapsulation

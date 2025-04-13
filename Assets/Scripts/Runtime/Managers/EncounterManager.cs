@@ -73,16 +73,16 @@ namespace AGGtH.Runtime.Managers
         }
         void Update()
         {
-            if (GameManager.PersistentGameplayData.CanSelectCards)
-            {
-                if (selectedCard != null)
-                {
-                    if (Input.GetMouseButtonDown(0))
-                    {
-                        PlayCard(Input.mousePosition);
-                    }
-                }
-            }
+            //if (GameManager.PersistentGameplayData.CanSelectCards)
+            //{
+            //    if (selectedCard != null)
+            //    {
+            //        if (Input.GetMouseButtonDown(0))
+            //        {
+            //            PlayCard(Input.mousePosition);
+            //        }
+            //    }
+            //}
         }
         private void Start()
         {
@@ -202,7 +202,7 @@ namespace AGGtH.Runtime.Managers
         }
         private void BuildPlayer()
         {
-            var player = Instantiate(GameManager.PersistentGameplayData.Player);
+            var player = Instantiate(GameManager.PersistentGameplayData.Player, playerPos);
             player.BuildCharacter();
             Player = player;
         }
@@ -237,62 +237,62 @@ namespace AGGtH.Runtime.Managers
                 //show rewards screen
             }
         }
-        private void PlayCard(Vector2 mousePos)
-        {
-            // Use Card
-            //var mouseButtonUp = Input.GetMouseButtonUp(0);
-            //if (!mouseButtonUp) return;
+        //private void PlayCard(Vector2 mousePos)
+        //{
+        //    // Use Card
+        //    //var mouseButtonUp = Input.GetMouseButtonUp(0);
+        //    //if (!mouseButtonUp) return;
 
-            //Remove highlights
-            //CombatManager.DeactivateCardHighlights();
-            bool backToHand = true;
+        //    //Remove highlights
+        //    //CombatManager.DeactivateCardHighlights();
+        //    bool backToHand = true;
 
-            if (GameManager.PersistentGameplayData.CanUseCards && GameManager.PersistentGameplayData.CurrentEnergy >= selectedCard.CardData.EnergyCost)
-            {
-                RaycastHit hit;
-                var mainRay = Camera.main.ScreenPointToRay(mousePos);
-                var _canUse = false;
-                CharacterBase selfCharacter = Player;
-                CharacterBase targetCharacter = null;
+        //    if (GameManager.PersistentGameplayData.CanUseCards && GameManager.PersistentGameplayData.CurrentEnergy >= selectedCard.CardData.EnergyCost)
+        //    {
+        //        RaycastHit hit;
+        //        var mainRay = Camera.main.ScreenPointToRay(mousePos);
+        //        var _canUse = false;
+        //        CharacterBase selfCharacter = Player;
+        //        CharacterBase targetCharacter = null;
 
-                _canUse = selectedCard.CardData.UsableWithoutTarget || CheckPlayOnCharacter(mainRay, _canUse, ref selfCharacter, ref targetCharacter);
+        //        _canUse = selectedCard.CardData.UsableWithoutTarget || CheckPlayOnCharacter(mainRay, _canUse, ref selfCharacter, ref targetCharacter);
 
-                if (_canUse)
-                {
-                    backToHand = false;
-                    selectedCard.Use(selfCharacter, targetCharacter, CurrentEnemiesList, Player);
-                }
-            }
+        //        if (_canUse)
+        //        {
+        //            backToHand = false;
+        //            selectedCard.Use(selfCharacter, targetCharacter, CurrentEnemiesList, Player);
+        //        }
+        //    }
 
-            if (backToHand) // Cannot use card / Not enough mana! Return card to hand!
-            selectedCard = null;
-        }
-        private bool CheckPlayOnCharacter(Ray mainRay, bool _canUse, ref CharacterBase selfCharacter,
-            ref CharacterBase targetCharacter)
-        {
-            RaycastHit hit;
-            if (Physics.Raycast(mainRay, out hit, 1000, targetLayer))
-            {
-                var character = hit.collider.gameObject.GetComponent<ICharacter>();
+        //    if (backToHand) // Cannot use card / Not enough mana! Return card to hand!
+        //    selectedCard = null;
+        //}
+        //private bool CheckPlayOnCharacter(Ray mainRay, bool _canUse, ref CharacterBase selfCharacter,
+        //    ref CharacterBase targetCharacter)
+        //{
+        //    RaycastHit hit;
+        //    if (Physics.Raycast(mainRay, out hit, 1000, targetLayer))
+        //    {
+        //        var character = hit.collider.gameObject.GetComponent<ICharacter>();
 
-                if (character != null)
-                {
-                    var checkEnemy = (selectedCard.CardData.CardActionDataList[0].ActionTargetType == ActionTargetType.Enemy &&
-                                      character.GetCharacterType() == CharacterType.Enemy);
-                    var checkAlly = (selectedCard.CardData.CardActionDataList[0].ActionTargetType == ActionTargetType.Player &&
-                                     character.GetCharacterType() == CharacterType.Player);
+        //        if (character != null)
+        //        {
+        //            var checkEnemy = (selectedCard.CardData.CardActionDataList[0].ActionTargetType == ActionTargetType.Enemy &&
+        //                              character.GetCharacterType() == CharacterType.Enemy);
+        //            var checkAlly = (selectedCard.CardData.CardActionDataList[0].ActionTargetType == ActionTargetType.Player &&
+        //                             character.GetCharacterType() == CharacterType.Player);
 
-                    if (checkEnemy || checkAlly)
-                    {
-                        _canUse = true;
-                        selfCharacter = Player;
-                        targetCharacter = character.GetCharacterBase();
-                    }
-                }
-            }
+        //            if (checkEnemy || checkAlly)
+        //            {
+        //                _canUse = true;
+        //                selfCharacter = Player;
+        //                targetCharacter = character.GetCharacterBase();
+        //            }
+        //        }
+        //    }
 
-            return _canUse;
-        }
+        //    return _canUse;
+        //}
         #endregion
         #region Routines
         private IEnumerator EnemyTurnRoutine()

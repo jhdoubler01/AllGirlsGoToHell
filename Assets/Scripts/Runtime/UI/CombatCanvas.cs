@@ -8,8 +8,10 @@ namespace AGGtH.Runtime.UI
 {
     public class CombatCanvas : CanvasBase
     {
+        [Header("Info Bars")]
         [SerializeField] private SpritesheetHandler playerEnergyBar;
         [SerializeField] private ClassicProgressBar playerHealthBar;
+
         [Header("Texts")]
         [SerializeField] private TextMeshProUGUI drawPileTextField;
         [SerializeField] private TextMeshProUGUI discardPileTextField;
@@ -19,6 +21,7 @@ namespace AGGtH.Runtime.UI
         [Header("Panels")]
         [SerializeField] private GameObject combatWinPanel;
         [SerializeField] private GameObject combatLosePanel;
+
 
         public TextMeshProUGUI DrawPileTextField => drawPileTextField;
         public TextMeshProUGUI DiscardPileTextField => discardPileTextField;

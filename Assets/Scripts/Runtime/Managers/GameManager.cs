@@ -51,6 +51,8 @@ namespace AGGtH.Runtime.Managers
         public void InitGameplayData()
         {
             PersistentGameplayData = new PersistentGameplayData(gameplayData);
+            Debug.Log("init gameplay data");
+
         }
         // spawn card object in game and set its stats to a target CardData
         public CardBase BuildAndGetCard(CardData targetData, Transform parent)

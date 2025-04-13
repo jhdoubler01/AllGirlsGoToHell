@@ -12,7 +12,7 @@ using AGGtH.Runtime.Characters;
 
 namespace AGGtH.Runtime.Card
 {
-    public class CardBase : MonoBehaviour/*, IBeginDragHandler, IDragHandler, IEndDragHandler*/
+    public class CardBase : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
     {
         [Header("Card Objects")]
         [SerializeField] private TMP_Text cardNameText;
@@ -23,6 +23,7 @@ namespace AGGtH.Runtime.Card
         private Transform playerHandParent;
         private bool overValidTarget;
         private Transform parentAfterDrag;
+        private EnemyBase enemyTarget;
 
         private int enemyTargetLayer;
 
@@ -79,65 +80,77 @@ namespace AGGtH.Runtime.Card
             IsSelected = !IsSelected;
             EncounterManager.SelectedCard(this, IsSelected);
         }
-        //public void OnBeginDrag(PointerEventData eventData)
-        //{
-        //    PlayableOnBeginDrag();
-        //}
-        //public void OnDrag(PointerEventData eventData)
-        //{
-        //    transform.position = Input.mousePosition;
+        public void OnBeginDrag(PointerEventData eventData)
+        {
+            PlayableOnBeginDrag();
+        }
+        public void OnDrag(PointerEventData eventData)
+        {
+            if (!GameManager.PersistentGameplayData.CanSelectCards) { return; }
 
-        //}
-        //public void OnEndDrag(PointerEventData eventData)
-        //{
-        //    PlayableOnEndDrag();
-        //}
-        //private void OnTriggerEnter2D(Collider2D collision)
-        //{
-        //    Debug.Log("trigger enter");
-        //    PlayableTriggerEnter(collision);
-        //}
-        //private void OnTriggerExit2D(Collider2D collision)
-        //{
-        //    PlayableTriggerExit(collision);
-        //}
-        //public virtual void PlayableTriggerEnter(Collider2D collision)
-        //{
-        //    Debug.Log("trigger");
-        //    if (collision.gameObject.CompareTag("Enemy"))
-        //    {
-        //        Debug.Log("enemy collision");
-        //        //parentAfterDrag = collision.transform;
-        //        overValidTarget = true;
-        //    }
-        //}
-        //public virtual void PlayableTriggerExit(Collider2D collision)
-        //{
-        //    if (overValidTarget)
-        //    {
-        //        parentAfterDrag = transform.parent;
-        //    }
-        //}
-        //public virtual void PlayableOnBeginDrag()
-        //{
-        //    parentAfterDrag = playerHandParent;
-        //    transform.SetParent(transform.root);
-        //    transform.SetAsLastSibling();
-        //}
+            transform.position = Input.mousePosition;
 
-        //public virtual void PlayableOnEndDrag()
-        //{
-        //    Debug.Log(IsPlayable);
-        //    //if (IsPlayable) { Use(); }
-        //    //else transform.SetParent(parentAfterDrag);
-        //}
+        }
+        public void OnEndDrag(PointerEventData eventData)
+        {
+            PlayableOnEndDrag();
+        }
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            Debug.Log("trigger enter");
+            PlayableTriggerEnter(collision);
+        }
+        private void OnTriggerExit2D(Collider2D collision)
+        {
+            PlayableTriggerExit(collision);
+        }
+        public virtual void PlayableTriggerEnter(Collider2D collision)
+        {
+            Debug.Log("trigger");
+            if (collision.gameObject.layer == LayerMask.NameToLayer("Enemies"))
+            {
+                Debug.Log("enemy collision");
+                parentAfterDrag = collision.transform;
+                enemyTarget = collision.gameObject.GetComponent<EnemyBase>();
+                overValidTarget = true;
+            }
+            else if(collision.gameObject.transform == playerHandParent)
+            {
+                overValidTarget = false;
+                parentAfterDrag = playerHandParent;
+            }
+        }
+        public virtual void PlayableTriggerExit(Collider2D collision)
+        {
+            if (overValidTarget)
+            {
+                parentAfterDrag = playerHandParent;
+                overValidTarget = false;
+                enemyTarget = null;
+            }
+        }
+        public virtual void PlayableOnBeginDrag()
+        {
+            parentAfterDrag = playerHandParent;
+            transform.SetParent(transform.root);
+            transform.SetAsLastSibling();
+            if (CardData.UsableWithoutTarget) { overValidTarget = true; }
+            Debug.Log(overValidTarget);
+        }
+
+        public virtual void PlayableOnEndDrag()
+        {
+            Debug.Log(IsPlayable);
+            if (IsPlayable && overValidTarget) { Use(EncounterManager.Player, enemyTarget, EncounterManager.CurrentEnemiesList, EncounterManager.Player); }
+            else transform.SetParent(parentAfterDrag);
+        }
 
         #endregion
 
         #region Card Methods
         public virtual void Use(CharacterBase self, CharacterBase target, List<EnemyBase> allEnemies, PlayerBase player)
         {
-            if (!IsPlayable) { return; }
+            if (!IsPlayable || !GameManager.PersistentGameplayData.CanUseCards) { return; }
             StartCoroutine(CardUseRoutine(self, target, allEnemies, player));
 
         }
@@ -168,7 +181,7 @@ namespace AGGtH.Runtime.Card
                     targetList.Add(target);
                     break;
                 case ActionTargetType.Player:
-                    targetList.Add(target);
+                    targetList.Add(player);
                     break;
                 case ActionTargetType.AllEnemies:
                     foreach (var enemyBase in allEnemies)
@@ -183,21 +196,13 @@ namespace AGGtH.Runtime.Card
             }
             return targetList;
         }
-        //private static List<CharacterBase> DetermineTargetsForMultipleActions(CharacterBase target, List<EnemyBase> allEnemies, PlayerBase player, CardData myCardData)
-        //{
-        //    List<CharacterBase> totalTargetList = new List<CharacterBase>();
-        //    foreach(CardActionData playerAction in myCardData.CardActionDataList)
-        //    {
-        //        totalTargetList.AddRange(DetermineTargets(target, allEnemies, player, playerAction));
-        //    }
-        //    return totalTargetList;
-        //}
+
         public virtual void Discard()
         {
             if (IsExhausted) return;
             if (!IsPlayable) return;
             CardCollectionManager.OnCardDiscarded(this);
-            //Destroy(gameObject);
+            Destroy(gameObject);
         }
         public virtual void Exhaust(bool destroy=true)
         {

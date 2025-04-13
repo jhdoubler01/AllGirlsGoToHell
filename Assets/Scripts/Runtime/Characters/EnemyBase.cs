@@ -13,6 +13,9 @@ namespace AGGtH.Runtime.Characters
 {
     public class EnemyBase : CharacterBase,IEnemy
     {
+        [Header("UI")]
+        [SerializeField] private Transform intentionIconContainer;
+
         [Header("Enemy Base References")]
         [SerializeField] protected EnemyCharacterData enemyCharacterData;
         protected EnemyAbilityData NextAbility;
@@ -25,7 +28,12 @@ namespace AGGtH.Runtime.Characters
             base.BuildCharacter();
             CharacterStats = new CharacterStats(EnemyCharacterData.MaxHealth);
             CharacterStats.OnDeath += OnDeath;
+            CharacterStats.OnHealthChanged += ChangeHealthBarFill;
+
             CharacterStats.SetCurrentHealth(CharacterStats.CurrentHealth);
+            SetHealthBarMaxHealth(CharacterStats.MaxHealth);
+
+
             EncounterManager.OnPlayerTurnStarted += ShowNextAbility;
             EncounterManager.OnEnemyTurnStarted += CharacterStats.TriggerAllStatus;
         }
