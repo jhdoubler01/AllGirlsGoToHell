@@ -12,7 +12,7 @@ using AGGtH.Runtime.Characters;
 
 namespace AGGtH.Runtime.Card
 {
-    public class CardBase : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+    public class CardBase : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler/*, I2DTooltipTarget, IPointerDownHandler, IPointerUpHandler*/
     {
         [Header("Card Objects")]
         [SerializeField] private TMP_Text cardNameText;
@@ -66,7 +66,7 @@ namespace AGGtH.Runtime.Card
             CardData = targetProfile;
             IsPlayable = isPlayable;
             cardNameText.text = CardData.CardName;
-            //cardDescText.text = CardData.MyDescription;
+            cardDescText.text = CardData.MyDescription;
             energyCostText.text = CardData.EnergyCost.ToString();
             actionAmtText.text = CardData.CardActionDataList[0].ActionValue.ToString();
             //cardTypeIcon.sprite = CardData.CardSprite;
@@ -74,7 +74,7 @@ namespace AGGtH.Runtime.Card
         }
         #endregion
 
-        #region UI Event Handlers
+        #region Card Drag Handlers
         public void OnCardSelected()
         {
             IsSelected = !IsSelected;
@@ -82,14 +82,13 @@ namespace AGGtH.Runtime.Card
         }
         public void OnBeginDrag(PointerEventData eventData)
         {
+            if (!GameManager.PersistentGameplayData.CanSelectCards) { return; }
+
             PlayableOnBeginDrag();
         }
         public void OnDrag(PointerEventData eventData)
         {
-            if (!GameManager.PersistentGameplayData.CanSelectCards) { return; }
-
             transform.position = Input.mousePosition;
-
         }
         public void OnEndDrag(PointerEventData eventData)
         {
@@ -97,7 +96,6 @@ namespace AGGtH.Runtime.Card
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            Debug.Log("trigger enter");
             PlayableTriggerEnter(collision);
         }
         private void OnTriggerExit2D(Collider2D collision)
@@ -106,7 +104,6 @@ namespace AGGtH.Runtime.Card
         }
         public virtual void PlayableTriggerEnter(Collider2D collision)
         {
-            Debug.Log("trigger");
             if (collision.gameObject.layer == LayerMask.NameToLayer("Enemies"))
             {
                 Debug.Log("enemy collision");
@@ -131,6 +128,7 @@ namespace AGGtH.Runtime.Card
         }
         public virtual void PlayableOnBeginDrag()
         {
+            CardCollectionManager.HandController.RemoveCardFromHand(this);
             parentAfterDrag = playerHandParent;
             transform.SetParent(transform.root);
             transform.SetAsLastSibling();
@@ -141,8 +139,11 @@ namespace AGGtH.Runtime.Card
         public virtual void PlayableOnEndDrag()
         {
             Debug.Log(IsPlayable);
-            if (IsPlayable && overValidTarget) { Use(EncounterManager.Player, enemyTarget, EncounterManager.CurrentEnemiesList, EncounterManager.Player); }
-            else transform.SetParent(parentAfterDrag);
+            transform.SetParent(parentAfterDrag);
+
+            if (IsPlayable && overValidTarget && GameManager.PersistentGameplayData.CurrentEnergy >= CardData.EnergyCost) { Use(EncounterManager.Player, enemyTarget, EncounterManager.CurrentEnemiesList, EncounterManager.Player); return; }
+
+            CardCollectionManager.HandController.AddCardToHand(this);
         }
 
         #endregion
@@ -227,6 +228,51 @@ namespace AGGtH.Runtime.Card
             return CardData.DialogueOptions[rand];
         }
         #endregion
+        //#region Pointer Events
+        //public virtual void OnPointerEnter(PointerEventData eventData)
+        //{
+        //    ShowTooltipInfo();
+        //}
+
+        //public virtual void OnPointerExit(PointerEventData eventData)
+        //{
+        //    HideTooltipInfo(TooltipManager.Instance);
+        //}
+
+        //public virtual void OnPointerDown(PointerEventData eventData)
+        //{
+        //    HideTooltipInfo(TooltipManager.Instance);
+        //}
+
+        //public virtual void OnPointerUp(PointerEventData eventData)
+        //{
+        //    ShowTooltipInfo();
+        //}
+        //#endregion
+        //#region Tooltip
+        //protected virtual void ShowTooltipInfo()
+        //{
+        //    if (!descriptionRoot) return;
+        //    if (CardData.KeywordsList.Count <= 0) return;
+
+        //    var tooltipManager = TooltipManager.Instance;
+        //    foreach (var cardDataSpecialKeyword in CardData.KeywordsList)
+        //    {
+        //        var specialKeyword = tooltipManager.SpecialKeywordData.SpecialKeywordBaseList.Find(x => x.SpecialKeyword == cardDataSpecialKeyword);
+        //        if (specialKeyword != null)
+        //            ShowTooltipInfo(tooltipManager, specialKeyword.GetContent(), specialKeyword.GetHeader(), descriptionRoot, CursorType.Default, CollectionManager ? CollectionManager.HandController.cam : Camera.main);
+        //    }
+        //}
+        //public virtual void ShowTooltipInfo(TooltipManager tooltipManager, string content, string header = "", Transform tooltipStaticTransform = null, CursorType targetCursor = CursorType.Default, Camera cam = null, float delayShow = 0)
+        //{
+        //    tooltipManager.ShowTooltip(content, header, tooltipStaticTransform, targetCursor, cam, delayShow);
+        //}
+
+        //public virtual void HideTooltipInfo(TooltipManager tooltipManager)
+        //{
+        //    tooltipManager.HideTooltip();
+        //}
+        //#endregion
         #region Routines
 
         #endregion

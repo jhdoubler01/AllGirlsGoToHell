@@ -93,6 +93,7 @@ namespace AGGtH.Runtime.Managers
         {
             HandPile.Remove(targetCard.CardData);
             DiscardPile.Add(targetCard.CardData);
+            //Destroy(targetCard.gameObject);
             //UIManager.CombatCanvas.SetPileTexts();
         }
 
@@ -100,6 +101,9 @@ namespace AGGtH.Runtime.Managers
         {
             HandPile.Remove(targetCard.CardData);
             ExhaustPile.Add(targetCard.CardData);
+
+            //Destroy(targetCard.gameObject);
+
             //UIManager.CombatCanvas.SetPileTexts();
         }
         public void OnCardPlayed(CardBase targetCard)

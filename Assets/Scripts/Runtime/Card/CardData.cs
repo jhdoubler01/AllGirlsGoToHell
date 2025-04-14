@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System;
 using System.Text;
 using System.Collections;
+using AGGtH.Runtime.Managers;
+using AGGtH.Runtime.Extensions;
 using AGGtH.Runtime.Enums;
 
 namespace AGGtH.Runtime.Card
@@ -24,6 +26,10 @@ namespace AGGtH.Runtime.Card
         [SerializeField] private bool exhaustAfterPlay;
         [SerializeField] private List<CardActionData> cardActionDataList = new List<CardActionData>();
 
+        [Header("Description")]
+        [SerializeField] private List<CardDescriptionData> cardDescriptionDataList;
+        [SerializeField] private List<SpecialKeywords> specialKeywordsList;
+
         [Header("Dialogue")]
         [SerializeField] private List<string> dialogueOptions = new List<string>();
 
@@ -38,8 +44,25 @@ namespace AGGtH.Runtime.Card
         public RarityType Rarity { get => rarity; set => rarity = value; }
         public CardLoveLanguageType CardLoveLanguageType { get => cardLoveLanguageType; set => cardLoveLanguageType = value; }
         public CardActionType CardActionType { get; set; }
+        public string MyDescription { get; set; }
         public List<string> DialogueOptions { get => dialogueOptions; set => dialogueOptions = value; }
 
+        #endregion
+
+        #region Methods
+        public void UpdateDescription()
+        {
+            var str = new StringBuilder();
+
+            foreach (var descriptionData in cardDescriptionDataList)
+            {
+                str.Append(descriptionData.UseModifier
+                    ? descriptionData.GetModifiedValue(this)
+                    : descriptionData.GetDescription());
+            }
+
+            MyDescription = str.ToString();
+        }
         #endregion
     }
 
@@ -50,11 +73,6 @@ namespace AGGtH.Runtime.Card
         [SerializeField] private CardActionType cardActionType;
         [SerializeField] private BuffType buffType;
         [SerializeField] private DebuffType debuffType;
-        //[SerializeField] private int damageAmt;
-        //[SerializeField] private int healAmt;
-        //[SerializeField] private int blockAmt;
-        //[SerializeField] private int drawCardAmt;
-        //[SerializeField] private int energyGainAmt;
         [SerializeField] private int actionValue;
         [SerializeField] private float actionDelay;
 
@@ -63,12 +81,151 @@ namespace AGGtH.Runtime.Card
         public BuffType BuffType { get => buffType; set => buffType = value; }
         public DebuffType DebuffType { get => debuffType; set => debuffType = value; }
         public int ActionValue { get => actionValue; set => actionValue = value; }
-        //public int DamageAmt { get => damageAmt; set => damageAmt = value; }
-        //public int HealAmt { get => healAmt; set => healAmt = value; }
-        //public int BlockAmt { get => blockAmt; set => blockAmt = value; }
-        //public int DrawCardAmt { get => drawCardAmt; set => drawCardAmt = value; }
-        //public int EnergyGainAmt { get => energyGainAmt; set => energyGainAmt = value; }
         public float ActionDelay { get => actionDelay; set => actionDelay = value; }
+    }
+    [Serializable]
+    public class CardDescriptionData
+    {
+        [Header("Text")]
+        [SerializeField] private string descriptionText;
+        [SerializeField] private bool enableOverrideColor;
+        [SerializeField] private Color overrideColor = Color.black;
+
+        [Header("Modifer")]
+        [SerializeField] private bool useModifier;
+        [SerializeField] private int modifiedActionValueIndex;
+        [SerializeField] private StatusType modiferStats;
+        [SerializeField] private bool usePrefixOnModifiedValue;
+        [SerializeField] private string modifiedValuePrefix = "*";
+        [SerializeField] private bool overrideColorOnValueScaled;
+
+        public string DescriptionText => descriptionText;
+        public bool EnableOverrideColor => enableOverrideColor;
+        public Color OverrideColor => overrideColor;
+        public bool UseModifier => useModifier;
+        public int ModifiedActionValueIndex => modifiedActionValueIndex;
+        public StatusType ModiferStats => modiferStats;
+        public bool UsePrefixOnModifiedValue => usePrefixOnModifiedValue;
+        public string ModifiedValuePrefix => modifiedValuePrefix;
+        public bool OverrideColorOnValueScaled => overrideColorOnValueScaled;
+
+        private EncounterManager EncounterManager => EncounterManager.Instance;
+
+        public string GetDescription()
+        {
+            var str = new StringBuilder();
+
+            str.Append(DescriptionText);
+
+            if (EnableOverrideColor && !string.IsNullOrEmpty(str.ToString()))
+                str.Replace(str.ToString(), ColorExtensions.ColorString(str.ToString(), OverrideColor));
+
+            return str.ToString();
+        }
+
+        public string GetModifiedValue(CardData cardData)
+        {
+            if (cardData.CardActionDataList.Count <= 0) return "";
+
+            if (ModifiedActionValueIndex >= cardData.CardActionDataList.Count)
+                modifiedActionValueIndex = cardData.CardActionDataList.Count - 1;
+
+            if (ModifiedActionValueIndex < 0)
+                modifiedActionValueIndex = 0;
+
+            var str = new StringBuilder();
+            var value = cardData.CardActionDataList[ModifiedActionValueIndex].ActionValue;
+            var modifer = 0;
+            if (EncounterManager)
+            {
+                var player = EncounterManager.Player;
+
+                if (player)
+                {
+                    modifer = player.CharacterStats.StatusDict[ModiferStats].StatusValue;
+                    value += modifer;
+
+                    if (modifer != 0)
+                    {
+                        if (usePrefixOnModifiedValue)
+                            str.Append(modifiedValuePrefix);
+                    }
+                }
+            }
+
+            str.Append(value);
+
+            if (EnableOverrideColor)
+            {
+                if (OverrideColorOnValueScaled)
+                {
+                    if (modifer != 0)
+                        str.Replace(str.ToString(), ColorExtensions.ColorString(str.ToString(), OverrideColor));
+                }
+                else
+                {
+                    str.Replace(str.ToString(), ColorExtensions.ColorString(str.ToString(), OverrideColor));
+                }
+
+            }
+
+            return str.ToString();
+        }
+
+        #region Editor
+#if UNITY_EDITOR
+        
+        public string GetDescriptionEditor()
+        {
+            var str = new StringBuilder();
+            
+            str.Append(DescriptionText);
+            
+            return str.ToString();
+        }
+
+        public string GetModifiedValueEditor(CardData cardData)
+        {
+            if (cardData.CardActionDataList.Count <= 0) return "";
+            
+            if (ModifiedActionValueIndex>=cardData.CardActionDataList.Count)
+                modifiedActionValueIndex = cardData.CardActionDataList.Count - 1;
+
+            if (ModifiedActionValueIndex<0)
+                modifiedActionValueIndex = 0;
+            
+            var str = new StringBuilder();
+            var value = cardData.CardActionDataList[ModifiedActionValueIndex].ActionValue;
+            if (EncounterManager)
+            {
+                var player = EncounterManager.Player;
+                if (player)
+                {
+                    var modifer =player.CharacterStats.StatusDict[ModiferStats].StatusValue;
+                    value += modifer;
+                
+                    if (modifer!= 0)
+                        str.Append("*");
+                }
+            }
+           
+            str.Append(value);
+          
+            return str.ToString();
+        }
+        
+        public void EditDescriptionText(string newText) => descriptionText = newText;
+        public void EditEnableOverrideColor(bool newStatus) => enableOverrideColor = newStatus;
+        public void EditOverrideColor(Color newColor) => overrideColor = newColor;
+        public void EditUseModifier(bool newStatus) => useModifier = newStatus;
+        public void EditModifiedActionValueIndex(int newIndex) => modifiedActionValueIndex = newIndex;
+        public void EditModiferStats(StatusType newStatusType) => modiferStats = newStatusType;
+        public void EditUsePrefixOnModifiedValues(bool newStatus) => usePrefixOnModifiedValue = newStatus;
+        public void EditPrefixOnModifiedValues(string newText) => modifiedValuePrefix = newText;
+        public void EditOverrideColorOnValueScaled(bool newStatus) => overrideColorOnValueScaled = newStatus;
+
+#endif
+        #endregion
     }
 }
 

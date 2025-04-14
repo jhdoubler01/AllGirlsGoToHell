@@ -8,6 +8,7 @@ using AGGtH.Runtime.EnemyBehavior;
 
 namespace AGGtH.Runtime.Managers
 {
+    [DefaultExecutionOrder(-10)]
     public class GameManager : MonoBehaviour
     {
         public GameManager() { }

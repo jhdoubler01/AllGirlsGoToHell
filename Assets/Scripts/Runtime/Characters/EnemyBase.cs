@@ -20,6 +20,8 @@ namespace AGGtH.Runtime.Characters
         [SerializeField] protected EnemyCharacterData enemyCharacterData;
         protected EnemyAbilityData NextAbility;
 
+        private float actionDelay = 2f;
+
         public EnemyCharacterData EnemyCharacterData => enemyCharacterData;
 
         #region Setup
@@ -86,7 +88,6 @@ namespace AGGtH.Runtime.Characters
                 yield return StartCoroutine(BuffRoutine(NextAbility));
             }
         }
-
         protected virtual IEnumerator AttackRoutine(EnemyAbilityData targetAbility)
         {
             var waitFrame = new WaitForEndOfFrame();
@@ -95,36 +96,38 @@ namespace AGGtH.Runtime.Characters
 
             var target = EncounterManager.Player;
 
-            var startPos = transform.position;
-            var endPos = target.transform.position;
+            //var startPos = transform.position;
+            //var endPos = target.transform.position;
 
-            var startRot = transform.localRotation;
-            var endRot = Quaternion.Euler(60, 0, 60);
+            //var startRot = transform.localRotation;
+            //var endRot = Quaternion.Euler(60, 0, 60);
 
-            yield return StartCoroutine(MoveToTargetRoutine(waitFrame, startPos, endPos, startRot, endRot, 5));
-
+            //yield return StartCoroutine(MoveToTargetRoutine(waitFrame, startPos, endPos, startRot, endRot, 5));
+            yield return new WaitForSeconds(actionDelay);
             targetAbility.ActionList.ForEach(x => EnemyActionProcessor.GetAction(x.ActionType).DoAction(new EnemyActionParameters(x.ActionValue, target, this)));
 
-            yield return StartCoroutine(MoveToTargetRoutine(waitFrame, endPos, startPos, endRot, startRot, 5));
+            //yield return StartCoroutine(MoveToTargetRoutine(waitFrame, endPos, startPos, endRot, startRot, 5));
         }
 
         protected virtual IEnumerator BuffRoutine(EnemyAbilityData targetAbility)
         {
             var waitFrame = new WaitForEndOfFrame();
 
+            if (EncounterManager == null) yield break;
+
             var target = EncounterManager.CurrentEnemiesList.RandomItem();
 
-            var startPos = transform.position;
-            var endPos = startPos + new Vector3(0, 0.2f, 0);
+            //var startPos = transform.position;
+            //var endPos = startPos + new Vector3(0, 0.2f, 0);
 
-            var startRot = transform.localRotation;
-            var endRot = transform.localRotation;
+            //var startRot = transform.localRotation;
+            //var endRot = transform.localRotation;
 
-            yield return StartCoroutine(MoveToTargetRoutine(waitFrame, startPos, endPos, startRot, endRot, 5));
-
+            //yield return StartCoroutine(MoveToTargetRoutine(waitFrame, startPos, endPos, startRot, endRot, 5));
+            yield return new WaitForSeconds(actionDelay);
             targetAbility.ActionList.ForEach(x => EnemyActionProcessor.GetAction(x.ActionType).DoAction(new EnemyActionParameters(x.ActionValue, target, this)));
 
-            yield return StartCoroutine(MoveToTargetRoutine(waitFrame, endPos, startPos, endRot, startRot, 5));
+            //yield return StartCoroutine(MoveToTargetRoutine(waitFrame, endPos, startPos, endRot, startRot, 5));
         }
         #endregion
 

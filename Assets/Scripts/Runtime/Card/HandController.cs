@@ -40,6 +40,10 @@ namespace AGGtH.Runtime.Card
             }
             card.transform.SetParent(handParentTransform);
         }
+        public void RemoveCardFromHand(CardBase card)
+        {
+            Hand.Remove(card);
+        }
         #endregion
 
     }
