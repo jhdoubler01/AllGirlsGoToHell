@@ -12,6 +12,7 @@ namespace AGGtH.Runtime.EnemyBehavior
         public abstract void DoAction(EnemyActionParameters actionParameters);
 
         protected FxManager FxManager => FxManager.Instance;
+        protected UIManager UIManager => UIManager.Instance;
         protected AudioManager AudioManager => AudioManager.Instance;
         protected GameManager GameManager => GameManager.Instance;
         protected EncounterManager EncounterManager => EncounterManager.Instance;
@@ -22,12 +23,14 @@ namespace AGGtH.Runtime.EnemyBehavior
         public readonly float Value;
         public readonly CharacterBase TargetCharacter;
         public readonly CharacterBase SelfCharacter;
+        public readonly string Dialogue;
 
-        public EnemyActionParameters(float value, CharacterBase target, CharacterBase self)
+        public EnemyActionParameters(float value, CharacterBase target, CharacterBase self, string dialogue = "")
         {
             Value = value;
             TargetCharacter = target;
             SelfCharacter = self;
+            Dialogue = dialogue;
         }
     }
 }

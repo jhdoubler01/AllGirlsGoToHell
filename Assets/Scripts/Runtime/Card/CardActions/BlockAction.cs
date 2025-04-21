@@ -18,6 +18,8 @@ namespace AGGtH.Runtime.Card.CardActions
             newTarget.CharacterStats.ApplyStatus(StatusType.Block,
                 Mathf.RoundToInt(actionParameters.Value + actionParameters.SelfCharacter.CharacterStats
                     .StatusDict[StatusType.Dexterity].StatusValue));
+            Debug.Log("block added to " + actionParameters.SelfCharacter + ": " + actionParameters.Value + ". Total block: " + actionParameters.SelfCharacter.CharacterStats
+                    .StatusDict[StatusType.Block].StatusValue);
 
             //if (FxManager != null)
                 //FxManager.PlayFx(newTarget.transform, FxType.Block);

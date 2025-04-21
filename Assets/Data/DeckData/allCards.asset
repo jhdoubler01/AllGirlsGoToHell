@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d13659253217e744ea4e59894e2ece4b, type: 3}
-  m_Name: StartingDeck
+  m_Name: allCards
   m_EditorClassIdentifier: 
-  deckId: 00_player_deck
-  deckName: Player Starting Deck
+  deckId: 99_player_deck
+  deckName: All cards
   cardList:
   - {fileID: 11400000, guid: 2119962b505d95c46bc012891523bf96, type: 2}
   - {fileID: 11400000, guid: 6b1c900b749e6ed48bf5333666a37cde, type: 2}

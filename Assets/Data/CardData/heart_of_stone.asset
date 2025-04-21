@@ -10,25 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 713b529c508c1134caf661f9215ef630, type: 3}
-  m_Name: stare
+  m_Name: heart_of_stone
   m_EditorClassIdentifier: 
-  id: stare
-  cardName: Stare
+  id: heart_of_stone
+  cardName: Heart of Stone
   energyCost: 1
   cardSprite: {fileID: 0}
   rarity: 0
   cardLoveLanguageType: 0
-  usableWithoutTarget: 0
+  usableWithoutTarget: 1
   exhaustAfterPlay: 0
   cardActionDataList:
-  - actionTargetType: 0
-    cardActionType: 1
+  - actionTargetType: 1
+    cardActionType: 3
     buffType: 0
     debuffType: 0
-    actionValue: 1
+    actionValue: 3
     actionDelay: 0
   cardDescriptionDataList:
-  - descriptionText: Deal
+  - descriptionText: Gain
     enableOverrideColor: 0
     overrideColor: {r: 0, g: 0, b: 0, a: 0}
     useModifier: 0
@@ -39,23 +39,23 @@ MonoBehaviour:
     overrideColorOnValueScaled: 0
   - descriptionText: 
     enableOverrideColor: 1
-    overrideColor: {r: 0.824, g: 0, b: 0.44391286, a: 1}
+    overrideColor: {r: 0.8235294, g: 0, b: 0.44313726, a: 1}
     useModifier: 1
     modifiedActionValueIndex: 0
-    modiferStats: 3
+    modiferStats: 0
     usePrefixOnModifiedValue: 1
     modifiedValuePrefix: '*'
     overrideColorOnValueScaled: 1
-  - descriptionText: damage
+  - descriptionText: block
     enableOverrideColor: 0
-    overrideColor: {r: 0.824, g: 0, b: 0.44391286, a: 0}
+    overrideColor: {r: 0, g: 0, b: 0, a: 0}
     useModifier: 0
     modifiedActionValueIndex: 0
     modiferStats: 0
     usePrefixOnModifiedValue: 0
     modifiedValuePrefix: 
     overrideColorOnValueScaled: 0
-  specialKeywordsList: 
+  specialKeywordsList: 00000000
   dialogueOptions:
-  - You stare deeply into her eyes.
-  - You look at her longingly.
+  - You think about the state of the world, temporarily taking you out of the moment.
+  - You stone your heart to oncoming advances.

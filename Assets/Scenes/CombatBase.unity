@@ -809,6 +809,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handController: {fileID: 1960672820}
+  CardSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  CardTooltipSprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   HandPileTransform: {fileID: 335737975}
   DrawPileTransform: {fileID: 0}
   DiscardPileTransform: {fileID: 0}
@@ -1699,7 +1709,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d807c3cfa90e1514e83220f62214476f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueBox: {fileID: 0}
+  dialogueBox: {fileID: 2072053534}
   energyBox: {fileID: 0}
   playerHealthBar: {fileID: 1927031571}
   combatCanvas: {fileID: 0}
@@ -2244,7 +2254,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Dialogue Text
+  m_text: ...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 147069dd89553b544b2bd1cc41f43cd5, type: 2}
   m_sharedMaterial: {fileID: -8381705443178017469, guid: 147069dd89553b544b2bd1cc41f43cd5, type: 2}

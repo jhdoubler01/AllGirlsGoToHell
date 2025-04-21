@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e73fb44671bb2b74b914c802b9e8b18c
+guid: f7d5e437ba4167e4ca04e082d2329574
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4011867180344598846
-    second: seductiveDefense0_0
+      213: -6012826969119280769
+    second: funnyTooltip_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: seductiveDefense0_0
+      name: funnyTooltip_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 40
-        width: 646
-        height: 116
+        x: 45
+        y: 30
+        width: 757
+        height: 261
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 223, y: 0, z: 341, w: 47}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e31ec7ad1f30da730800000000000000
-      internalID: 4011867180344598846
+      spriteID: f71b1c99ab52e8ca0800000000000000
+      internalID: -6012826969119280769
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: df6a40d115b38c64990130ad74630081
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      seductiveDefense0_0: 4011867180344598846
+      funnyTooltip_0: -6012826969119280769
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -19,6 +19,8 @@ namespace AGGtH.Runtime.Card
         [SerializeField] private TMP_Text cardDescText;
         [SerializeField] private TMP_Text energyCostText;
         [SerializeField] private TMP_Text actionAmtText;
+        [SerializeField] private Image cardImage;
+        [SerializeField] private Image cardTooltipImage;
 
         private Transform playerHandParent;
         private bool overValidTarget;
@@ -58,9 +60,19 @@ namespace AGGtH.Runtime.Card
         }
         private void SetCardDescriptionText()
         {
-            //cardDescText.text = CardData.description.
+            cardDescText.text = CardData.MyDescription;
         }
-
+        private void SetCardImages()
+        {
+            switch (CardData.CardLoveLanguageType)
+            {
+                case (CardLoveLanguageType.Neutral):
+                    //cardImage.sprite = Resources.Load("Assets/Resources/UIAssets/Combat/cards/neutralDefenseCard.png") as Sprite;
+                break;
+                default:
+                break;
+            }
+        }
         public virtual void SetCard(CardData targetProfile, bool isPlayable = true)
         {
             CardData = targetProfile;
@@ -69,6 +81,7 @@ namespace AGGtH.Runtime.Card
             cardDescText.text = CardData.MyDescription;
             energyCostText.text = CardData.EnergyCost.ToString();
             actionAmtText.text = CardData.CardActionDataList[0].ActionValue.ToString();
+            SetCardImages();
             //cardTypeIcon.sprite = CardData.CardSprite;
 
         }
@@ -153,6 +166,7 @@ namespace AGGtH.Runtime.Card
         {
             if (!IsPlayable || !GameManager.PersistentGameplayData.CanUseCards) { return; }
             StartCoroutine(CardUseRoutine(self, target, allEnemies, player));
+            UIManager.SetDialogueBoxText(CardData.DialogueOptions.RandomItem());
 
         }
         private IEnumerator CardUseRoutine(CharacterBase self, CharacterBase target, List<EnemyBase> allEnemies, PlayerBase player)

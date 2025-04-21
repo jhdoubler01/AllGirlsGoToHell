@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ad055615884f0ec4aa14834fbb4f2498
+guid: 8e6fd6e6288c1914b8414d7c81c96582
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3609261253569910260
-    second: cutesyDefense0_0
+      213: 4873365342778880566
+    second: physicalTooltip_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,23 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cutesyDefense0_0
+      name: physicalTooltip_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 40
-        width: 646
-        height: 116
+        x: 45
+        y: 30
+        width: 757
+        height: 261
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 223, y: 0, z: 341, w: 47}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4f59d98ccfba61230800000000000000
-      internalID: 3609261253569910260
+      spriteID: 632f80585fba1a340800000000000000
+      internalID: 4873365342778880566
       vertices: []
       indices: 
       edges: []
@@ -151,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9040bc063f4def14ba25dcc0cf80552d
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cutesyDefense0_0: 3609261253569910260
+      physicalTooltip_0: 4873365342778880566
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
