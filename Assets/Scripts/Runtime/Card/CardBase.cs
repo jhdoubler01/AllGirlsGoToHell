@@ -7,63 +7,101 @@ using AGGtH.Runtime.Enums;
 using AGGtH.Runtime.Managers;
 using TMPro; //textmesh pro
 using UnityEngine.EventSystems;
+using AGGtH.Runtime.Extensions;
+using AGGtH.Runtime.Characters;
 
 namespace AGGtH.Runtime.Card
 {
-    public class CardBase : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+    public class CardBase : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler/*, I2DTooltipTarget, IPointerDownHandler, IPointerUpHandler*/
     {
         [Header("Card Objects")]
         [SerializeField] private TMP_Text cardNameText;
         [SerializeField] private TMP_Text cardDescText;
         [SerializeField] private TMP_Text energyCostText;
-        [SerializeField] private Image cardTypeIcon;
+        [SerializeField] private TMP_Text actionAmtText;
+        [SerializeField] private Image cardImage;
+        [SerializeField] private Image cardTooltipImage;
 
         private Transform playerHandParent;
-        private bool hoverOverTarget;
+        private bool overValidTarget;
         private Transform parentAfterDrag;
+        private EnemyBase enemyTarget;
+
+        private int enemyTargetLayer;
 
         #region Cache
         public CardData CardData { get; private set; }
         public bool IsInactive { get; protected set; }
+        protected Transform CachedTransform { get; set; }
+        protected WaitForEndOfFrame CachedWaitFrame { get; set; }
         public bool IsPlayable { get; protected set; } = true;
-        protected CardCollectionManager CardCollectionManager => CardCollectionManager.Instance;
+        protected AudioManager AudioManager => AudioManager.Instance;
+        protected FxManager FxManager => FxManager.Instance;
         protected EncounterManager EncounterManager => EncounterManager.Instance;
         protected GameManager GameManager => GameManager.Instance;
         protected UIManager UIManager => UIManager.Instance;
+        protected CardCollectionManager CardCollectionManager => CardCollectionManager.Instance;
         public bool IsExhausted { get; private set;}
+        public bool IsSelected = false;
+
         #endregion
 
         #region Setup Methods
+        protected virtual void Awake()
+        {
+            CachedTransform = transform;
+            CachedWaitFrame = new WaitForEndOfFrame();
+            playerHandParent = CardCollectionManager.HandPileTransform;
+            enemyTargetLayer = LayerMask.NameToLayer("Enemies");
+        }
         private void SetCardNameText()
         {
             cardNameText.text = CardData.CardName;
         }
         private void SetCardDescriptionText()
         {
-            //cardDescText.text = CardData.description.
+            cardDescText.text = CardData.MyDescription;
         }
-
+        private void SetCardImages()
+        {
+            switch (CardData.CardLoveLanguageType)
+            {
+                case (CardLoveLanguageType.Neutral):
+                    //cardImage.sprite = Resources.Load("Assets/Resources/UIAssets/Combat/cards/neutralDefenseCard.png") as Sprite;
+                break;
+                default:
+                break;
+            }
+        }
         public virtual void SetCard(CardData targetProfile, bool isPlayable = true)
         {
             CardData = targetProfile;
             IsPlayable = isPlayable;
             cardNameText.text = CardData.CardName;
-            //cardDescText.text = CardData.MyDescription;
-            //energyCostText.text = CardData.EnergyCost.ToString();
+            cardDescText.text = CardData.MyDescription;
+            energyCostText.text = CardData.EnergyCost.ToString();
+            actionAmtText.text = CardData.CardActionDataList[0].ActionValue.ToString();
+            SetCardImages();
             //cardTypeIcon.sprite = CardData.CardSprite;
 
         }
         #endregion
 
-        #region UI Event Handlers
+        #region Card Drag Handlers
+        public void OnCardSelected()
+        {
+            IsSelected = !IsSelected;
+            EncounterManager.SelectedCard(this, IsSelected);
+        }
         public void OnBeginDrag(PointerEventData eventData)
         {
+            if (!GameManager.PersistentGameplayData.CanSelectCards) { return; }
+
             PlayableOnBeginDrag();
         }
         public void OnDrag(PointerEventData eventData)
         {
             transform.position = Input.mousePosition;
-
         }
         public void OnEndDrag(PointerEventData eventData)
         {
@@ -71,7 +109,6 @@ namespace AGGtH.Runtime.Card
         }
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            Debug.Log("trigger enter");
             PlayableTriggerEnter(collision);
         }
         private void OnTriggerExit2D(Collider2D collision)
@@ -80,159 +117,120 @@ namespace AGGtH.Runtime.Card
         }
         public virtual void PlayableTriggerEnter(Collider2D collision)
         {
-            Debug.Log("trigger");
-            if (collision.gameObject.CompareTag("Enemy"))
+            if (collision.gameObject.layer == LayerMask.NameToLayer("Enemies"))
             {
                 Debug.Log("enemy collision");
-                //parentAfterDrag = collision.transform;
-                hoverOverTarget = true;
+                parentAfterDrag = collision.transform;
+                enemyTarget = collision.gameObject.GetComponent<EnemyBase>();
+                overValidTarget = true;
+            }
+            else if(collision.gameObject.transform == playerHandParent)
+            {
+                overValidTarget = false;
+                parentAfterDrag = playerHandParent;
             }
         }
         public virtual void PlayableTriggerExit(Collider2D collision)
         {
-            if (hoverOverTarget)
+            if (overValidTarget)
             {
-                parentAfterDrag = transform.parent;
+                parentAfterDrag = playerHandParent;
+                overValidTarget = false;
+                enemyTarget = null;
             }
         }
         public virtual void PlayableOnBeginDrag()
         {
-            parentAfterDrag = transform.parent;
+            CardCollectionManager.HandController.RemoveCardFromHand(this);
+            parentAfterDrag = playerHandParent;
             transform.SetParent(transform.root);
             transform.SetAsLastSibling();
+            if (CardData.UsableWithoutTarget) { overValidTarget = true; }
+            Debug.Log(overValidTarget);
         }
 
         public virtual void PlayableOnEndDrag()
         {
-            Debug.Log(ReadyToBePlayed());
-            if (ReadyToBePlayed()) { Use(); }
-            else transform.SetParent(parentAfterDrag);
+            Debug.Log(IsPlayable);
+            transform.SetParent(parentAfterDrag);
+
+            if (IsPlayable && overValidTarget && GameManager.PersistentGameplayData.CurrentEnergy >= CardData.EnergyCost) { Use(EncounterManager.Player, enemyTarget, EncounterManager.CurrentEnemiesList, EncounterManager.Player); return; }
+
+            CardCollectionManager.HandController.AddCardToHand(this);
         }
 
         #endregion
 
         #region Card Methods
-        public virtual void Use(Transform target = null)
+        public virtual void Use(CharacterBase self, CharacterBase target, List<EnemyBase> allEnemies, PlayerBase player)
         {
-            Debug.Log($"Playing Card: {CardData.CardName}");
+            if (!IsPlayable || !GameManager.PersistentGameplayData.CanUseCards) { return; }
+            StartCoroutine(CardUseRoutine(self, target, allEnemies, player));
+            UIManager.SetDialogueBoxText(CardData.DialogueOptions.RandomItem());
 
-            UIManager.SetDialogueBoxText(GetRandomDialogueOption());
-
-            if (!GameManager.IsEnoughEnergyToPlayCard(CardData.EnergyCost)) 
-            { 
-                Debug.Log("not enough energy"); 
-                return; 
-            }
-
+        }
+        private IEnumerator CardUseRoutine(CharacterBase self, CharacterBase target, List<EnemyBase> allEnemies, PlayerBase player)
+        {
             SpendEnergy(CardData.EnergyCost);
-
-            foreach (var action in CardData.CardActionDataList)
+            Debug.Log("Player energy: " + GameManager.PersistentGameplayData.CurrentEnergy);
+            foreach(var playerAction in CardData.CardActionDataList)
             {
-                ApplyAction(action, target);
+                yield return new WaitForSeconds(playerAction.ActionDelay);
+                var targetList = DetermineTargets(target, allEnemies, player, playerAction);
+                foreach(var tar in targetList)
+                {
+                    CardActionProcessor.GetAction(playerAction.CardActionType)
+                        .DoAction(new CardActionParameters(playerAction.ActionValue,
+                            target, self, CardData, this));
+                }
+                CardCollectionManager.OnCardPlayed(this);
+
             }
-
-            CardCollectionManager.OnCardPlayed(this);
         }
-
-        private void ApplyAction(CardActionData action, Transform target)
+        private static List<CharacterBase> DetermineTargets(CharacterBase target, List<EnemyBase> allEnemies, PlayerBase player, CardActionData playerAction)
         {
-            switch (action.CardActionType)
+            List<CharacterBase> targetList = new List<CharacterBase>();
+            switch (playerAction.ActionTargetType)
             {
-                case CardActionType.Attack:
-                    if (target != null && target.TryGetComponent(out Enemy enemy))
-                    {
-                        enemy.TakeDamage(action.DamageAmt);
-                        Debug.Log($"{CardData.CardName} dealt {action.DamageAmt} damage to {enemy.name}");
-                    }
-                    else
-                    {
-                        Debug.Log("Attack card used without a valid target!");
-                    }
+                case ActionTargetType.Enemy:
+                    targetList.Add(target);
                     break;
-                
-                case CardActionType.Heal:
-                    playerHandParent.Instance>heal(action.HealAmt);
-                    Debug.Log($"{CardData.CardName} healed {action.HealAmt} health");
+                case ActionTargetType.Player:
+                    targetList.Add(player);
                     break;
-
-                case CardActionType.Block:
-                    playerHandParent.Instance>block(action.BlockAmt);
-                    Debug.Log($"{CardData.CardName} provided {action.BlockAmt} block");
+                case ActionTargetType.AllEnemies:
+                    foreach (var enemyBase in allEnemies)
+                        targetList.Add(enemyBase);
                     break;
-                
-                case CardActionType.Buff:
-                    playerHandParent.Instance>buff(action.BuffType);
-                    Debug.Log($"{CardData.CardName} applied buff: {action.BuffType}");
+                case ActionTargetType.RandomEnemy:
+                    if (allEnemies.Count > 0)
+                        targetList.Add(allEnemies.RandomItem());
                     break;
-
-                case CardActionType.Debuff:
-                    if (target != null && target.TryGetComponent(out Enemy enemy))
-                    {
-                        enemy.ApplyDebuff(action.DebuffType);
-                        Debug.Log($"{CardData.CardName} applied debuff: {action.DebuffType} to {enemy.name}");
-                    }
-                    else
-                    {
-                        Debug.Log("Debuff card used without a valid target!");
-                    }
-                    break;
-                
-                case CardActionType.Draw:
-                    playerHandParent.Instance>draw(action.DrawCardAmt);
-                    Debug.Log($"{CardData.CardName} allowed drawing {action.DrawCardAmt} cards");
-                    break;
-                
-                case CardActionType.GainEnergy:
-                    GameManager.AddToCurrentEnergy(action.EnergyGainAmt);
-                    Debug.Log($"{CardData.CardName} provided {action.EnergyGainAmt} energy");
-                    break;
-                
-                case CardActionType.Exhaust:
-                    Exhaust();
-                    Debug.Log($"{CardData.CardName} was exhausted");
-                    break;
-                
-                case CardActionType.Gamble:
-                    int roll = UnityEngine.Random.Range(0, 100);
-                    if (roll < 50)
-                    {
-                        playerHandParent.Instance>gain(action.EnergyGainAmt);
-                        Debug.Log($"{CardData.CardName} gained {action.EnergyGainAmt} energy from gamble");
-                    }
-                    else
-                    {
-                        playerHandParent.Instance>lose(action.EnergyLossAmt);
-                        Debug.Log($"{CardData.CardName} lost {action.EnergyLossAmt} energy from gamble");
-                    }
-                    break;
-                
                 default:
-                    Debug.LogWarning($"Unknown action type: {action.CardActionType}");
-                    break;
+                    throw new ArgumentOutOfRangeException();
             }
+            return targetList;
         }
 
-        private bool ReadyToBePlayed()
-        {
-            bool ready = true;
-
-            if (!GameManager.IsEnoughEnergyToPlayCard(CardData.EnergyCost)) { Debug.Log("not enough energy"); ready = false; }
-            if(!CardData.UsableWithoutTarget && !hoverOverTarget) { Debug.Log("need to target an enemy"); ready = false; }
-
-            return ready;
-        }
         public virtual void Discard()
         {
-        
+            if (IsExhausted) return;
+            if (!IsPlayable) return;
+            CardCollectionManager.OnCardDiscarded(this);
+            Destroy(gameObject);
         }
         public virtual void Exhaust(bool destroy=true)
         {
-
-        }
-        protected virtual void SpendEnergy(int value)
-        {
+            if (IsExhausted) return;
             if (!IsPlayable) return;
-            GameManager.PersistentGameplayData.CurrentEnergy -= value;
+            CardCollectionManager.OnCardExhausted(this);
+            Destroy(gameObject);
+        }
+        protected virtual void SpendEnergy(int energyCost)
+        {
+            if (!IsPlayable) { return; }
+
+            GameManager.PersistentGameplayData.CurrentEnergy -= energyCost;
         }
         public virtual void UpdateCardText()
         {
@@ -244,7 +242,54 @@ namespace AGGtH.Runtime.Card
             return CardData.DialogueOptions[rand];
         }
         #endregion
+        //#region Pointer Events
+        //public virtual void OnPointerEnter(PointerEventData eventData)
+        //{
+        //    ShowTooltipInfo();
+        //}
 
+        //public virtual void OnPointerExit(PointerEventData eventData)
+        //{
+        //    HideTooltipInfo(TooltipManager.Instance);
+        //}
+
+        //public virtual void OnPointerDown(PointerEventData eventData)
+        //{
+        //    HideTooltipInfo(TooltipManager.Instance);
+        //}
+
+        //public virtual void OnPointerUp(PointerEventData eventData)
+        //{
+        //    ShowTooltipInfo();
+        //}
+        //#endregion
+        //#region Tooltip
+        //protected virtual void ShowTooltipInfo()
+        //{
+        //    if (!descriptionRoot) return;
+        //    if (CardData.KeywordsList.Count <= 0) return;
+
+        //    var tooltipManager = TooltipManager.Instance;
+        //    foreach (var cardDataSpecialKeyword in CardData.KeywordsList)
+        //    {
+        //        var specialKeyword = tooltipManager.SpecialKeywordData.SpecialKeywordBaseList.Find(x => x.SpecialKeyword == cardDataSpecialKeyword);
+        //        if (specialKeyword != null)
+        //            ShowTooltipInfo(tooltipManager, specialKeyword.GetContent(), specialKeyword.GetHeader(), descriptionRoot, CursorType.Default, CollectionManager ? CollectionManager.HandController.cam : Camera.main);
+        //    }
+        //}
+        //public virtual void ShowTooltipInfo(TooltipManager tooltipManager, string content, string header = "", Transform tooltipStaticTransform = null, CursorType targetCursor = CursorType.Default, Camera cam = null, float delayShow = 0)
+        //{
+        //    tooltipManager.ShowTooltip(content, header, tooltipStaticTransform, targetCursor, cam, delayShow);
+        //}
+
+        //public virtual void HideTooltipInfo(TooltipManager tooltipManager)
+        //{
+        //    tooltipManager.HideTooltip();
+        //}
+        //#endregion
+        #region Routines
+
+        #endregion
         #region Runtime
         void Start()
         {

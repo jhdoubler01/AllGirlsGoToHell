@@ -12,7 +12,6 @@ namespace AGGtH.Runtime.Settings
         [SerializeField] private int drawCount = 4;
         [SerializeField] private int maxEnergy = 3;
         [SerializeField] private PlayerBase player;
-        [SerializeField] private float energyUpdateDuration = 2f;
 
         [Header("Decks")]
         [SerializeField] private DeckData initalDeck;
@@ -41,7 +40,6 @@ namespace AGGtH.Runtime.Settings
         public int MaxCardOnHand => maxCardOnHand;
         public List<CardData> AllCardsList => allCardsList;
         public CardBase CardPrefab => cardPrefab;
-        public float EnergyUpdateDuration => energyUpdateDuration;
         //public string DefaultName => defaultName;
         //public bool UseStageSystem => useStageSystem;
         #endregion

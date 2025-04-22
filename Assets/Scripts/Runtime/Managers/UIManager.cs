@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
-using System.Collections;
+using AGGtH.Runtime.Extensions;
 using AGGtH.Runtime.UI;
 
 namespace AGGtH.Runtime.Managers
@@ -9,6 +9,9 @@ namespace AGGtH.Runtime.Managers
     {
         [SerializeField] private TMP_Text dialogueBox;
         [SerializeField] private TMP_Text energyBox;
+        [SerializeField] private ClassicProgressBar playerHealthBar;
+
+        public ClassicProgressBar PlayerHealthBar => playerHealthBar;
         public UIManager() { }
         public static UIManager Instance { get; private set; }
 
@@ -26,22 +29,6 @@ namespace AGGtH.Runtime.Managers
         public void SetEnergyBoxText(int energy)
         {
             energyBox.text = energy.ToString();
-        }
-
-        public void UpdateEnergyDisplay(int startEnergy, int targetEnergy, float duration){
-            StopAllCoroutines();
-            StartCoroutine(AnimateEnergyDisplay(startEnergy, targetEnergy, duration));
-        }
-        private IEnumerator AnimateEnergyDisplay(int startEnergy, int targetEnergy, float duration){
-            float elapsed = 0f;
-
-            while(elapsed < duration){
-                elapsed += Time.deltaTime;
-                int newEnergy = (int)Mathf.Lerp(startEnergy, targetEnergy, elapsed / duration);
-                energyBox.text = newEnergy.ToString();
-                yield return null;
-            }
-            energyBox.text = targetEnergy.ToString();
         }
         private void Awake()
         {

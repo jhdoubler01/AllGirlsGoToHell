@@ -18,12 +18,11 @@ namespace AGGtH.Runtime.Settings
         [SerializeField] private bool canSelectCards;
         [SerializeField] private bool isRandomHand;
         [SerializeField] private PlayerBase player;
-        //[SerializeField] private List<AllyBase> allyList;
         [SerializeField] private int currentStageId;
         [SerializeField] private int currentEncounterId;
         [SerializeField] private bool isFinalEncounter;
         [SerializeField] private List<CardData> currentCardsList;
-        //[SerializeField] private List<AllyHealthData> allyHealthDataDataList;
+        [SerializeField] private PlayerHealthData playerHealthData;
 
         public PersistentGameplayData(GameplayData gameplayData)
         {
@@ -32,22 +31,14 @@ namespace AGGtH.Runtime.Settings
             InitData();
         }
 
-        public void SetAllyHealthData(string id, int newCurrentHealth, int newMaxHealth)
+        public void SetPlayerHealthData(string id, int newCurrentHealth, int newMaxHealth)
         {
-            //var data = allyHealthDataDataList.Find(x => x.CharacterId == id);
-            //var newData = new AllyHealthData();
-            //newData.CharacterId = id;
-            //newData.CurrentHealth = newCurrentHealth;
-            //newData.MaxHealth = newMaxHealth;
-            //if (data != null)
-            //{
-            //    allyHealthDataDataList.Remove(data);
-            //    allyHealthDataDataList.Add(newData);
-            //}
-            //else
-            //{
-            //    allyHealthDataDataList.Add(newData);
-            //}
+            var newData = new PlayerHealthData();
+            newData.CharacterId = id;
+            newData.CurrentHealth = newCurrentHealth;
+            newData.MaxHealth = newMaxHealth;
+            PlayerHealthData = newData;
+
         }
         private void InitData()
         {
@@ -58,13 +49,11 @@ namespace AGGtH.Runtime.Settings
             CanSelectCards = true;
             IsRandomHand = _gameplayData.IsRandomHand;
             Player = _gameplayData.Player;
-            //AllyList = new List<AllyBase>(_gameplayData.InitalAllyList);
             CurrentEncounterId = 0;
             CurrentStageId = 0;
             CurrentGold = 0;
             CurrentCardsList = new List<CardData>();
             IsFinalEncounter = false;
-            //allyHealthDataDataList = new List<AllyHealthData>();
         }
 
         #region Encapsulation
@@ -104,16 +93,12 @@ namespace AGGtH.Runtime.Settings
             get => isRandomHand;
             set => isRandomHand = value;
         }
+
         public PlayerBase Player
         {
             get => player;
             set => player = value;
         }
-        //public List<AllyBase> AllyList
-        //{
-        //    get => allyList;
-        //    set => allyList = value;
-        //}
 
         public int CurrentStageId
         {
@@ -139,12 +124,11 @@ namespace AGGtH.Runtime.Settings
             set => currentCardsList = value;
         }
 
-
-        //public List<AllyHealthData> AllyHealthDataList
-        //{
-        //    get => allyHealthDataDataList;
-        //    set => allyHealthDataDataList = value;
-        //}
+        public PlayerHealthData PlayerHealthData
+        {
+            get => playerHealthData;
+            set => playerHealthData = value;
+        }
         public int CurrentGold
         {
             get => currentGold;

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4166e483cbc288446965c543a0f0cf11, type: 3}
+  m_Name: EnemyTest
+  m_EditorClassIdentifier: 
+  characterID: mob1
+  characterName: Example
+  characterDescription: blah
+  maxHealth: 10
+  enemyPrefab: {fileID: 6800801379357834523, guid: 20734e66f748b0c4abb15cccb1455618, type: 3}
+  followAbilityPattern: 0
+  enemyAbilityList:
+  - name: Attack
+    intention: {fileID: 11400000, guid: ce9efe81464c5f342bf7bce4fc41ec36, type: 2}
+    hideActionValue: 0
+    actionList:
+    - actionType: 0
+      minActionValue: 2
+      maxActionValue: 4

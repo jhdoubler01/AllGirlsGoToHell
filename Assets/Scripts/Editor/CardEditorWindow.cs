@@ -3,7 +3,6 @@ using UnityEditor;
 using System.Collections.Generic;
 using AGGtH.Runtime.Card;
 using AGGtH.Runtime.Enums;
-using System.IO;
 
 namespace AGGtH.Editor.CardEditor
 {
@@ -20,7 +19,7 @@ namespace AGGtH.Editor.CardEditor
         private CardActionType cardActionType;
         private List<CardActionData> cardActionDataList = new List<CardActionData>();
 
-        private const string cardDataPath = "Assets/Data/CardData/";
+
 
         [MenuItem("Window/Card Creator")]
         public static void ShowWindow()
@@ -40,9 +39,9 @@ namespace AGGtH.Editor.CardEditor
             rarityType = (RarityType)EditorGUILayout.EnumPopup("Rarity Type", rarityType);
             usableWithoutTarget = EditorGUILayout.Toggle("Usable Without Target", usableWithoutTarget);
             exhaustAfterPlay = EditorGUILayout.Toggle("Exhaust After Play", exhaustAfterPlay);
-            //cardActionType = (CardActionType)EditorGUILayout.EnumPopup("Card Action Type", cardActionType);
+            cardActionType = (CardActionType)EditorGUILayout.EnumPopup("Card Action Type", cardActionType);
 
-            GUILayout.Label("Card Actions", EditorStyles.boldLabel);
+            GUILayout.Label("Card Action Type", EditorStyles.boldLabel);
 
             if (GUILayout.Button("Add Action"))
             {
@@ -51,45 +50,24 @@ namespace AGGtH.Editor.CardEditor
 
             for (int i = 0; i < cardActionDataList.Count; i++)
             {
-                GUILayout.BeginVertical("box");
-                GUILayout.Label($"Action {i + 1}", EditorStyles.miniBoldLabel);
-
-                cardActionDataList[i].CardActionType = (CardActionType)EditorGUILayout.EnumPopup("Action Type", cardActionDataList[i].CardActionType);
-                cardActionDataList[i].ActionTargetType = (ActionTargetType)EditorGUILayout.EnumPopup("Target", cardActionDataList[i].ActionTargetType); // 🔹 Added target selection
-
-                switch (cardActionDataList[i].CardActionType)
+                if (cardActionDataList[i] == null)
                 {
-                    case CardActionType.Attack:
-                        cardActionDataList[i].DamageAmt = EditorGUILayout.IntField("Damage Amount", cardActionDataList[i].DamageAmt);
-                        break;
-                    case CardActionType.Heal:
-                        cardActionDataList[i].HealAmt = EditorGUILayout.IntField("Heal Amount", cardActionDataList[i].HealAmt);
-                        break;
-                    case CardActionType.Block:
-                        cardActionDataList[i].BlockAmt = EditorGUILayout.IntField("Block Amount", cardActionDataList[i].BlockAmt);
-                        break;
-                    case CardActionType.Buff:
-                        cardActionDataList[i].BuffType = (BuffType)EditorGUILayout.EnumPopup("Buff Type", cardActionDataList[i].BuffType); // 🔹 Added buff selection
-                        break;
-                    case CardActionType.Debuff:
-                        cardActionDataList[i].DebuffType = (DebuffType)EditorGUILayout.EnumPopup("Debuff Type", cardActionDataList[i].DebuffType); // 🔹 Added debuff selection
-                        break;
-                    case CardActionType.Draw:
-                        cardActionDataList[i].DrawCardAmt = EditorGUILayout.IntField("Cards to Draw", cardActionDataList[i].DrawCardAmt);
-                        break;
-                    case CardActionType.GainEnergy:
-                        cardActionDataList[i].EnergyGainAmt = EditorGUILayout.IntField("Energy Gain Amount", cardActionDataList[i].EnergyGainAmt);
-                        break;
+                    cardActionDataList[i] = new CardActionData();
                 }
+
+                GUILayout.BeginHorizontal();
+                cardActionDataList[i] = new CardActionData()
+                {
+                    CardActionType = (CardActionType)EditorGUILayout.EnumPopup("Action Type", cardActionDataList[i].CardActionType),
+                    ActionValue  = EditorGUILayout.IntField("Action Value", cardActionDataList[i].ActionValue),
+                };
 
                 if (GUILayout.Button("Remove"))
                 {
                     cardActionDataList.RemoveAt(i);
                 }
-                GUILayout.EndVertical();
+                GUILayout.EndHorizontal();
             }
-
-            GUILayout.Space(10);
 
             if (GUILayout.Button("Create Card"))
             {
@@ -103,12 +81,6 @@ namespace AGGtH.Editor.CardEditor
             {
                 Debug.LogError("Card ID cannot be empty.");
                 return;
-            }
-
-            if (!Directory.Exists(cardDataPath))
-            {
-                Directory.CreateDirectory(cardDataPath);
-                AssetDatabase.Refresh();
             }
 
             string path = "Assets/Data/CardData/" + id + ".asset";
@@ -128,8 +100,7 @@ namespace AGGtH.Editor.CardEditor
             newCard.Rarity = rarityType;
             newCard.UsableWithoutTarget = usableWithoutTarget;
             newCard.ExhaustAfterPlay = exhaustAfterPlay;
-            //newCard.CardActionType = cardActionType;
-            newCard.CardActionDataList = new List<CardActionData>(cardActionDataList);
+            newCard.CardActionType = cardActionType;
 
             AssetDatabase.CreateAsset(newCard, path);
             AssetDatabase.SaveAssets();

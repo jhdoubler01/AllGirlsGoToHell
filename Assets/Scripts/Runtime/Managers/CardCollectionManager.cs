@@ -19,9 +19,13 @@ namespace AGGtH.Runtime.Managers
         private CardCollectionManager() { }
         public static CardCollectionManager Instance { get; private set; }
         public List<CardData> DrawPile { get; private set; } = new List<CardData>();
-        public List<CardData> PlayerHandData { get; private set; } = new List<CardData>();
+        public List<CardData> HandPile { get; private set; } = new List<CardData>();
         public List<CardData> DiscardPile { get; private set; } = new List<CardData>();
         public List<CardData> ExhaustPile { get; private set; } = new List<CardData>();
+
+        public Transform HandPileTransform;
+        public Transform DrawPileTransform;
+        public Transform DiscardPileTransform;
 
         public HandController HandController => handController;
         protected GameManager GameManager => GameManager.Instance;
@@ -46,13 +50,14 @@ namespace AGGtH.Runtime.Managers
         #endregion
 
         #region Public Methods
+
         public void DrawCards(int targetDrawCount)
         {
             var currentDrawCount = 0;
 
             for(int i = 0; i < targetDrawCount; i++)
             {
-                if (GameManager.GameplayData.MaxCardOnHand <= PlayerHandData.Count) { return; }
+                if (GameManager.GameplayData.MaxCardOnHand <= HandPile.Count) { return; }
                 if(DrawPile.Count <= 0)
                 {
                     var nDrawCount = targetDrawCount - currentDrawCount;
@@ -68,34 +73,38 @@ namespace AGGtH.Runtime.Managers
                 var randomCard = DrawPile[UnityEngine.Random.Range(0, DrawPile.Count)];
                 var clone = GameManager.BuildAndGetCard(randomCard, HandController.drawTransform);
                 HandController.AddCardToHand(clone);
-                PlayerHandData.Add(randomCard);
+                HandPile.Add(randomCard);
                 DrawPile.Remove(randomCard);
                 currentDrawCount++;
                 //UIManager.CombatCanvas.SetPileTexts();
             }
 
-            foreach (var cardObject in HandController.hand)
+            foreach (var cardObject in HandController.Hand)
                 cardObject.UpdateCardText();
         }
         public void DiscardHand()
         {
-            foreach (var cardBase in HandController.hand)
+            foreach (var cardBase in HandController.Hand)
                 cardBase.Discard();
 
-            HandController.hand.Clear();
+            HandController.Hand.Clear();
         }
 
         public void OnCardDiscarded(CardBase targetCard)
         {
-            PlayerHandData.Remove(targetCard.CardData);
+            HandPile.Remove(targetCard.CardData);
             DiscardPile.Add(targetCard.CardData);
+            //Destroy(targetCard.gameObject);
             //UIManager.CombatCanvas.SetPileTexts();
         }
 
         public void OnCardExhausted(CardBase targetCard)
         {
-            PlayerHandData.Remove(targetCard.CardData);
+            HandPile.Remove(targetCard.CardData);
             ExhaustPile.Add(targetCard.CardData);
+
+            //Destroy(targetCard.gameObject);
+
             //UIManager.CombatCanvas.SetPileTexts();
         }
         public void OnCardPlayed(CardBase targetCard)
@@ -121,7 +130,7 @@ namespace AGGtH.Runtime.Managers
             else
                 targetCard.Discard();
 
-            foreach (var cardObject in HandController.hand)
+            foreach (var cardObject in HandController.Hand)
                 cardObject.UpdateCardText();
         }
         public void SetGameDeck()
@@ -134,9 +143,9 @@ namespace AGGtH.Runtime.Managers
         {
             DiscardPile.Clear();
             DrawPile.Clear();
-            PlayerHandData.Clear();
+            HandPile.Clear();
             ExhaustPile.Clear();
-            HandController.hand.Clear();
+            HandController.Hand.Clear();
         }
         #endregion
 
