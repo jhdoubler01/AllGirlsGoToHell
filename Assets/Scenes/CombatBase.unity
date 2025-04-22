@@ -809,16 +809,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   handController: {fileID: 1960672820}
-  CardSprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  CardTooltipSprites:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   HandPileTransform: {fileID: 335737975}
   DrawPileTransform: {fileID: 0}
   DiscardPileTransform: {fileID: 0}
