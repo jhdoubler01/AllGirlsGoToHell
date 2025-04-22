@@ -40,7 +40,6 @@ namespace AGGtH.Runtime.Settings
         public int MaxCardOnHand => maxCardOnHand;
         public List<CardData> AllCardsList => allCardsList;
         public CardBase CardPrefab => cardPrefab;
-        public float EnergyUpdateDuration => energyUpdateDuration;
         //public string DefaultName => defaultName;
         //public bool UseStageSystem => useStageSystem;
         #endregion

@@ -7,7 +7,6 @@ using System;
 using System.Collections.Generic;
 
 namespace AGGtH.Runtime.Characters
-
 {
     public abstract class CharacterBase : MonoBehaviour, ICharacter
     {

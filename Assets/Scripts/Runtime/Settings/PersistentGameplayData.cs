@@ -124,7 +124,6 @@ namespace AGGtH.Runtime.Settings
             set => currentCardsList = value;
         }
 
-
         public PlayerHealthData PlayerHealthData
         {
             get => playerHealthData;

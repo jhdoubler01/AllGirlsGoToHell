@@ -9,7 +9,7 @@ using System.Collections;
 using AGGtH.Runtime.Interfaces;
 
 
-namespace AGGtH.Runtime.Characters.Enemy
+namespace AGGtH.Runtime.Characters
 {
     public class EnemyBase : CharacterBase,IEnemy
     {

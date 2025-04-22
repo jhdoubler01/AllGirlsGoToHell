@@ -92,7 +92,6 @@ namespace AGGtH.Runtime.Managers
             //        EncounterData.EnemyEncounterList[PersistentGameplayData.CurrentStageId].EnemyEncounterList.Count);
             //}
         }
-
         #endregion
 
 

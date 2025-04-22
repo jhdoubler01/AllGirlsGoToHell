@@ -7,6 +7,8 @@ using AGGtH.Runtime.Enums;
 using AGGtH.Runtime.Managers;
 using TMPro; //textmesh pro
 using UnityEngine.EventSystems;
+using AGGtH.Runtime.Extensions;
+using AGGtH.Runtime.Characters;
 
 namespace AGGtH.Runtime.Card
 {
@@ -30,10 +32,11 @@ namespace AGGtH.Runtime.Card
         #region Cache
         public CardData CardData { get; private set; }
         public bool IsInactive { get; protected set; }
+        protected Transform CachedTransform { get; set; }
+        protected WaitForEndOfFrame CachedWaitFrame { get; set; }
         public bool IsPlayable { get; protected set; } = true;
         protected AudioManager AudioManager => AudioManager.Instance;
         protected FxManager FxManager => FxManager.Instance;
-        protected CardCollectionManager CardCollectionManager => CardCollectionManager.Instance;
         protected EncounterManager EncounterManager => EncounterManager.Instance;
         protected GameManager GameManager => GameManager.Instance;
         protected UIManager UIManager => UIManager.Instance;
@@ -154,26 +157,20 @@ namespace AGGtH.Runtime.Card
             if (IsPlayable && overValidTarget && GameManager.PersistentGameplayData.CurrentEnergy >= CardData.EnergyCost) { Use(EncounterManager.Player, enemyTarget, EncounterManager.CurrentEnemiesList, EncounterManager.Player); return; }
 
             CardCollectionManager.HandController.AddCardToHand(this);
-            Debug.Log(ReadyToBePlayed());
-            if (ReadyToBePlayed()) { Use(); }
-            else transform.SetParent(parentAfterDrag);
         }
 
         #endregion
 
         #region Card Methods
-        public virtual void Use(Transform target = null)
+        public virtual void Use(CharacterBase self, CharacterBase target, List<EnemyBase> allEnemies, PlayerBase player)
         {
             if (!IsPlayable || !GameManager.PersistentGameplayData.CanUseCards) { return; }
             StartCoroutine(CardUseRoutine(self, target, allEnemies, player));
             UIManager.SetDialogueBoxText(CardData.DialogueOptions.RandomItem());
 
-            if (!GameManager.IsEnoughEnergyToPlayCard(CardData.EnergyCost)) 
-            { 
-                Debug.Log("not enough energy"); 
-                return; 
-            }
-
+        }
+        private IEnumerator CardUseRoutine(CharacterBase self, CharacterBase target, List<EnemyBase> allEnemies, PlayerBase player)
+        {
             SpendEnergy(CardData.EnergyCost);
             Debug.Log("Player energy: " + GameManager.PersistentGameplayData.CurrentEnergy);
             foreach(var playerAction in CardData.CardActionDataList)
@@ -201,40 +198,18 @@ namespace AGGtH.Runtime.Card
                 case ActionTargetType.Player:
                     targetList.Add(player);
                     break;
-                
-                case CardActionType.Exhaust:
-                    Exhaust();
-                    Debug.Log($"{CardData.CardName} was exhausted");
+                case ActionTargetType.AllEnemies:
+                    foreach (var enemyBase in allEnemies)
+                        targetList.Add(enemyBase);
                     break;
-                
-                case CardActionType.Gamble:
-                    int roll = UnityEngine.Random.Range(0, 100);
-                    if (roll < 50)
-                    {
-                        playerHandParent.Instance>gain(action.EnergyGainAmt);
-                        Debug.Log($"{CardData.CardName} gained {action.EnergyGainAmt} energy from gamble");
-                    }
-                    else
-                    {
-                        playerHandParent.Instance>lose(action.EnergyLossAmt);
-                        Debug.Log($"{CardData.CardName} lost {action.EnergyLossAmt} energy from gamble");
-                    }
+                case ActionTargetType.RandomEnemy:
+                    if (allEnemies.Count > 0)
+                        targetList.Add(allEnemies.RandomItem());
                     break;
-                
                 default:
-                    Debug.LogWarning($"Unknown action type: {action.CardActionType}");
-                    break;
+                    throw new ArgumentOutOfRangeException();
             }
-        }
-
-        private bool ReadyToBePlayed()
-        {
-            bool ready = true;
-
-            if (!GameManager.IsEnoughEnergyToPlayCard(CardData.EnergyCost)) { Debug.Log("not enough energy"); ready = false; }
-            if(!CardData.UsableWithoutTarget && !hoverOverTarget) { Debug.Log("need to target an enemy"); ready = false; }
-
-            return ready;
+            return targetList;
         }
 
         public virtual void Discard()
@@ -251,10 +226,11 @@ namespace AGGtH.Runtime.Card
             CardCollectionManager.OnCardExhausted(this);
             Destroy(gameObject);
         }
-        protected virtual void SpendEnergy(int value)
+        protected virtual void SpendEnergy(int energyCost)
         {
-            if (!IsPlayable) return;
-            GameManager.PersistentGameplayData.CurrentEnergy -= value;
+            if (!IsPlayable) { return; }
+
+            GameManager.PersistentGameplayData.CurrentEnergy -= energyCost;
         }
         public virtual void UpdateCardText()
         {
@@ -313,6 +289,7 @@ namespace AGGtH.Runtime.Card
         //#endregion
         #region Routines
 
+        #endregion
         #region Runtime
         void Start()
         {
