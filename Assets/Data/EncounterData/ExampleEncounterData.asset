@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 126cdd2465db80441ab1b806fe68186e, type: 3}
+  m_Name: ExampleEncounterData
+  m_EditorClassIdentifier: 
+  encounterRandomlyAtStage: 0
+  enemyEncounterList:
+  - name: example
+    stageId: 0
+    bossEncounterList: []
+    enemyEncounterList:
+    - enemyList:
+      - {fileID: 11400000, guid: 207ec2ead599d2745bd87c34d164fccf, type: 2}

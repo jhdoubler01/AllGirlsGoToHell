@@ -2,7 +2,8 @@ using UnityEngine;
 
 namespace AGGtH.Runtime.Data.Characters
 {
-    public abstract class CharacterDataBase : ScriptableObject
+    [CreateAssetMenu(fileName = "CharacterDataBase", menuName = "Scriptable Objects/CharacterDataBase")]
+    public class CharacterDataBase : ScriptableObject
     {
         [Header("Base")]
         [SerializeField] protected string characterID;

@@ -59,28 +59,15 @@ namespace AGGtH.Editor.CardEditor
 
                 switch (cardActionDataList[i].CardActionType)
                 {
-                    case CardActionType.Attack:
-                        cardActionDataList[i].DamageAmt = EditorGUILayout.IntField("Damage Amount", cardActionDataList[i].DamageAmt);
-                        break;
-                    case CardActionType.Heal:
-                        cardActionDataList[i].HealAmt = EditorGUILayout.IntField("Heal Amount", cardActionDataList[i].HealAmt);
-                        break;
-                    case CardActionType.Block:
-                        cardActionDataList[i].BlockAmt = EditorGUILayout.IntField("Block Amount", cardActionDataList[i].BlockAmt);
-                        break;
-                    case CardActionType.Buff:
-                        cardActionDataList[i].BuffType = (BuffType)EditorGUILayout.EnumPopup("Buff Type", cardActionDataList[i].BuffType); // 🔹 Added buff selection
-                        break;
-                    case CardActionType.Debuff:
-                        cardActionDataList[i].DebuffType = (DebuffType)EditorGUILayout.EnumPopup("Debuff Type", cardActionDataList[i].DebuffType); // 🔹 Added debuff selection
-                        break;
-                    case CardActionType.Draw:
-                        cardActionDataList[i].DrawCardAmt = EditorGUILayout.IntField("Cards to Draw", cardActionDataList[i].DrawCardAmt);
-                        break;
-                    case CardActionType.GainEnergy:
-                        cardActionDataList[i].EnergyGainAmt = EditorGUILayout.IntField("Energy Gain Amount", cardActionDataList[i].EnergyGainAmt);
-                        break;
+                    cardActionDataList[i] = new CardActionData();
                 }
+
+                GUILayout.BeginHorizontal();
+                cardActionDataList[i] = new CardActionData()
+                {
+                    CardActionType = (CardActionType)EditorGUILayout.EnumPopup("Action Type", cardActionDataList[i].CardActionType),
+                    ActionValue  = EditorGUILayout.IntField("Action Value", cardActionDataList[i].ActionValue),
+                };
 
                 if (GUILayout.Button("Remove"))
                 {

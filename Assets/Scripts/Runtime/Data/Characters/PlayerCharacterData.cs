@@ -2,9 +2,9 @@ using UnityEngine;
 
 namespace AGGtH.Runtime.Data.Characters
 {
-    [CreateAssetMenu(fileName = "Player Character Data", menuName = "Assets/Data/PlayerData")]
+    [CreateAssetMenu(fileName = "PlayerCharacterData", menuName = "Assets/Data/Characters/Player")]
     public class PlayerCharacterData : CharacterDataBase
     {
-
+    
     }
 }

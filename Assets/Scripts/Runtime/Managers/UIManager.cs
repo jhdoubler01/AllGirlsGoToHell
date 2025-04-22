@@ -1,6 +1,6 @@
 using UnityEngine;
 using TMPro;
-using System.Collections;
+using AGGtH.Runtime.Extensions;
 using AGGtH.Runtime.UI;
 
 namespace AGGtH.Runtime.Managers
@@ -9,6 +9,9 @@ namespace AGGtH.Runtime.Managers
     {
         [SerializeField] private TMP_Text dialogueBox;
         [SerializeField] private TMP_Text energyBox;
+        [SerializeField] private ClassicProgressBar playerHealthBar;
+
+        public ClassicProgressBar PlayerHealthBar => playerHealthBar;
         public UIManager() { }
         public static UIManager Instance { get; private set; }
 

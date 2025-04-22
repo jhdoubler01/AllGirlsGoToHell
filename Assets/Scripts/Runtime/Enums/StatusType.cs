@@ -1,19 +1,12 @@
-using UnityEngine;
-
-namespace AGGtH.Runtime
+namespace AGGtH.Runtime.Enums
 {
-    public class StatusType : MonoBehaviour
+    public enum StatusType
     {
-        // Start is called once before the first execution of Update after the MonoBehaviour is created
-        void Start()
-        {
-        
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
+        None = 0,
+        Block,
+        Poison,
+        Strength,
+        Dexterity,
+        Stun
     }
 }

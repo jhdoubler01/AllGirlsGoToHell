@@ -1,59 +1,155 @@
 using UnityEngine;
-using System.Collections.Generic;
-using System;
+using AGGtH.Runtime.Data.Characters;
+using AGGtH.Runtime.Data.Containers;
 using AGGtH.Runtime.Enums;
-using AGGtH.Runtime.Characters;
+using AGGtH.Runtime.Managers;
+using AGGtH.Runtime.Extensions;
+using AGGtH.Runtime.EnemyBehavior;
+using System.Collections;
+using AGGtH.Runtime.Interfaces;
+
 
 namespace AGGtH.Runtime.Characters.Enemy
 {
-    public class EnemyBase : CharacterBase
+    public class EnemyBase : CharacterBase,IEnemy
     {
-        [SerializeField] private EnemyData enemyData;
-        private int currentHealth;
-        private List<DebuffType> debuffList = new List<DebuffType>();
+        [Header("UI")]
+        [SerializeField] private Transform intentionIconContainer;
 
-        private void Start()
+        [Header("Enemy Base References")]
+        [SerializeField] protected EnemyCharacterData enemyCharacterData;
+        protected EnemyAbilityData NextAbility;
+
+        private float actionDelay = 2f;
+
+        public EnemyCharacterData EnemyCharacterData => enemyCharacterData;
+
+        #region Setup
+        public override void BuildCharacter()
         {
-            if(enemyData == null)
+            base.BuildCharacter();
+            CharacterStats = new CharacterStats(EnemyCharacterData.MaxHealth);
+            CharacterStats.OnDeath += OnDeath;
+            CharacterStats.OnHealthChanged += ChangeHealthBarFill;
+
+            CharacterStats.SetCurrentHealth(CharacterStats.CurrentHealth);
+            SetHealthBarMaxHealth(CharacterStats.MaxHealth);
+
+
+            EncounterManager.OnPlayerTurnStarted += ShowNextAbility;
+            EncounterManager.OnEnemyTurnStarted += CharacterStats.TriggerAllStatus;
+        }
+        protected override void OnDeath()
+        {
+            base.OnDeath();
+            EncounterManager.OnPlayerTurnStarted -= ShowNextAbility;
+            EncounterManager.OnEnemyTurnStarted -= CharacterStats.TriggerAllStatus;
+
+            EncounterManager.OnEnemyDeath(this);
+            //AudioManager.PlayOneShot(DeathSoundProfileData.GetRandomClip());
+            Destroy(gameObject);
+        }
+        #endregion
+        #region Private Methods
+
+        private int _usedAbilityCount;
+        private void ShowNextAbility()
+        {
+            NextAbility = EnemyCharacterData.GetAbility(_usedAbilityCount);
+            //EnemyCanvas.IntentImage.sprite = NextAbility.Intention.IntentionSprite;
+
+            if (NextAbility.HideActionValue)
             {
-                Debug.LogError("EnemyData is not assigned to asset.");
-                return;
+                //EnemyCanvas.NextActionValueText.gameObject.SetActive(false);
+            }
+            else
+            {
+                //EnemyCanvas.NextActionValueText.gameObject.SetActive(true);
+                //EnemyCanvas.NextActionValueText.text = NextAbility.ActionList[0].ActionValue.ToString();
             }
 
-            currentHealth = enemyData.HealthAmt;
-            Debug.Log($"{enemyData.EnemyName} has spawned with {currentHealth} health.");
+            _usedAbilityCount++;
+            //EnemyCanvas.IntentImage.gameObject.SetActive(true);
+        }
+        #endregion
+        #region Action Routines
+        public virtual IEnumerator ActionRoutine()
+        {
+            if (CharacterStats.IsStunned)
+                yield break;
+
+            //EnemyCanvas.IntentImage.gameObject.SetActive(false);
+            if (NextAbility.Intention.EnemyIntentionType == EnemyIntentionType.Attack || NextAbility.Intention.EnemyIntentionType == EnemyIntentionType.Debuff)
+            {
+                yield return StartCoroutine(AttackRoutine(NextAbility));
+            }
+            else
+            {
+                yield return StartCoroutine(BuffRoutine(NextAbility));
+            }
+        }
+        protected virtual IEnumerator AttackRoutine(EnemyAbilityData targetAbility)
+        {
+            var waitFrame = new WaitForEndOfFrame();
+
+            if (EncounterManager == null) yield break;
+
+            var target = EncounterManager.Player;
+
+            //var startPos = transform.position;
+            //var endPos = target.transform.position;
+
+            //var startRot = transform.localRotation;
+            //var endRot = Quaternion.Euler(60, 0, 60);
+
+            //yield return StartCoroutine(MoveToTargetRoutine(waitFrame, startPos, endPos, startRot, endRot, 5));
+            yield return new WaitForSeconds(actionDelay);
+            targetAbility.ActionList.ForEach(x => EnemyActionProcessor.GetAction(x.ActionType).DoAction(new EnemyActionParameters(x.ActionValue, target, this)));
+
+            //yield return StartCoroutine(MoveToTargetRoutine(waitFrame, endPos, startPos, endRot, startRot, 5));
         }
 
-        public void TakeDamage(int damage)
+        protected virtual IEnumerator BuffRoutine(EnemyAbilityData targetAbility)
         {
-            currentHealth -= damage;
-            Debug.Log($"{enemyData.EnemyName} took {damage} damage. Remaining health: {currentHealth}");
+            var waitFrame = new WaitForEndOfFrame();
 
-            if (currentHealth <= 0)
+            if (EncounterManager == null) yield break;
+
+            var target = EncounterManager.CurrentEnemiesList.RandomItem();
+
+            //var startPos = transform.position;
+            //var endPos = startPos + new Vector3(0, 0.2f, 0);
+
+            //var startRot = transform.localRotation;
+            //var endRot = transform.localRotation;
+
+            //yield return StartCoroutine(MoveToTargetRoutine(waitFrame, startPos, endPos, startRot, endRot, 5));
+            yield return new WaitForSeconds(actionDelay);
+            targetAbility.ActionList.ForEach(x => EnemyActionProcessor.GetAction(x.ActionType).DoAction(new EnemyActionParameters(x.ActionValue, target, this)));
+
+            //yield return StartCoroutine(MoveToTargetRoutine(waitFrame, endPos, startPos, endRot, startRot, 5));
+        }
+        #endregion
+
+        #region Other Routines
+        private IEnumerator MoveToTargetRoutine(WaitForEndOfFrame waitFrame, Vector3 startPos, Vector3 endPos, Quaternion startRot, Quaternion endRot, float speed)
+        {
+            var timer = 0f;
+            while (true)
             {
-                Die();
+                timer += Time.deltaTime * speed;
+
+                transform.position = Vector3.Lerp(startPos, endPos, timer);
+                transform.localRotation = Quaternion.Lerp(startRot, endRot, timer);
+                if (timer >= 1f)
+                {
+                    break;
+                }
+
+                yield return waitFrame;
             }
         }
 
-        public void ApplyDebuff(DebuffType debuff)
-        {
-            if (!debuffList.Contains(debuff))
-            {
-                debuffList.Add(debuff);
-                Debug.Log($"{enemyData.EnemyName} is affected by {debuff}");
-            }
-        }
-
-        private void Die()
-        {
-            Debug.Log($"{enemyData.EnemyName} has been defeated.");
-            Destroy(this);
-        }
-
-        /* public void AttackPlayer()
-        {
-            // Implement attack logic here
-            Debug.Log($"{enemyData.EnemyName} attacks the player!");
-        } */
+        #endregion
     }
 }

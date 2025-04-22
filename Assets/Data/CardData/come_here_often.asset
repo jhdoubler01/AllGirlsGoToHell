@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 713b529c508c1134caf661f9215ef630, type: 3}
+  m_Name: come_here_often
+  m_EditorClassIdentifier: 
+  id: come_here_often
+  cardName: Come Here Often?
+  energyCost: 2
+  cardSprite: {fileID: 0}
+  rarity: 0
+  cardLoveLanguageType: 0
+  usableWithoutTarget: 0
+  exhaustAfterPlay: 0
+  cardActionDataList:
+  - actionTargetType: 0
+    cardActionType: 1
+    buffType: 0
+    debuffType: 0
+    actionValue: 3
+    actionDelay: 0
+  cardDescriptionDataList:
+  - descriptionText: Deal
+    enableOverrideColor: 0
+    overrideColor: {r: 0, g: 0, b: 0, a: 0}
+    useModifier: 0
+    modifiedActionValueIndex: 0
+    modiferStats: 0
+    usePrefixOnModifiedValue: 0
+    modifiedValuePrefix: 
+    overrideColorOnValueScaled: 0
+  - descriptionText: 
+    enableOverrideColor: 1
+    overrideColor: {r: 0.824, g: 0, b: 0.44391286, a: 1}
+    useModifier: 1
+    modifiedActionValueIndex: 0
+    modiferStats: 3
+    usePrefixOnModifiedValue: 1
+    modifiedValuePrefix: '*'
+    overrideColorOnValueScaled: 1
+  - descriptionText: damage
+    enableOverrideColor: 0
+    overrideColor: {r: 0.824, g: 0, b: 0.44391286, a: 0}
+    useModifier: 0
+    modifiedActionValueIndex: 0
+    modiferStats: 0
+    usePrefixOnModifiedValue: 0
+    modifiedValuePrefix: 
+    overrideColorOnValueScaled: 0
+  specialKeywordsList: 
+  dialogueOptions:
+  - She says she's bound to purgatory forever. You laugh nervously.

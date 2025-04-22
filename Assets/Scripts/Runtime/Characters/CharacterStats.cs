@@ -2,12 +2,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using AGGtH.Runtime.Enums;
-using AGGtH.Runtime.UI;
+using UnityEngine;
 
 namespace AGGtH.Runtime.Characters
 {
     public class StatusStats
-    { 
+    {
         public StatusType StatusType { get; set; }
         public int StatusValue { get; set; }
         public bool DecreaseOverTurn { get; set; } // If true, decrease on turn end
@@ -15,9 +15,9 @@ namespace AGGtH.Runtime.Characters
         public bool IsActive { get; set; }
         public bool CanNegativeStack { get; set; }
         public bool ClearAtNextTurn { get; set; }
-        
+
         public Action OnTriggerAction;
-        public StatusStats(StatusType statusType,int statusValue,bool decreaseOverTurn = false, bool isPermanent = false,bool isActive = false,bool canNegativeStack = false,bool clearAtNextTurn = false)
+        public StatusStats(StatusType statusType, int statusValue, bool decreaseOverTurn = false, bool isPermanent = false, bool isActive = false, bool canNegativeStack = false, bool clearAtNextTurn = false)
         {
             StatusType = statusType;
             StatusValue = statusValue;
@@ -29,40 +29,40 @@ namespace AGGtH.Runtime.Characters
         }
     }
     public class CharacterStats
-    { 
+    {
         public int MaxHealth { get; set; }
         public int CurrentHealth { get; set; }
-        public bool IsStunned { get;  set; }
+        public bool IsStunned { get; set; }
         public bool IsDeath { get; private set; }
-       
+
         public Action OnDeath;
         public Action<int, int> OnHealthChanged;
-        private readonly Action<StatusType,int> OnStatusChanged;
+        private readonly Action<StatusType, int> OnStatusChanged;
         private readonly Action<StatusType, int> OnStatusApplied;
         private readonly Action<StatusType> OnStatusCleared;
         public Action OnHealAction;
         public Action OnTakeDamageAction;
         public Action OnShieldGained;
-        
+
         public readonly Dictionary<StatusType, StatusStats> StatusDict = new Dictionary<StatusType, StatusStats>();
-        
+
         #region Setup
-        public CharacterStats(int maxHealth, CharacterCanvas characterCanvas)
+        public CharacterStats(int maxHealth/*, CharacterCanvas characterCanvas*/)
         {
             MaxHealth = maxHealth;
             CurrentHealth = maxHealth;
             SetAllStatus();
-            
-            OnHealthChanged += characterCanvas.UpdateHealthText;
-            OnStatusChanged += characterCanvas.UpdateStatusText;
-            OnStatusApplied += characterCanvas.ApplyStatus;
-            OnStatusCleared += characterCanvas.ClearStatus;
+
+            //OnHealthChanged += characterCanvas.UpdateHealthText;
+            //OnStatusChanged += characterCanvas.UpdateStatusText;
+            //OnStatusApplied += characterCanvas.ApplyStatus;
+            //OnStatusCleared += characterCanvas.ClearStatus;
         }
-        
+
         private void SetAllStatus()
         {
             for (int i = 0; i < Enum.GetNames(typeof(StatusType)).Length; i++)
-                StatusDict.Add((StatusType) i, new StatusStats((StatusType) i, 0));
+                StatusDict.Add((StatusType)i, new StatusStats((StatusType)i, 0));
 
             StatusDict[StatusType.Poison].DecreaseOverTurn = true;
             StatusDict[StatusType.Poison].OnTriggerAction += DamagePoison;
@@ -71,21 +71,21 @@ namespace AGGtH.Runtime.Characters
 
             StatusDict[StatusType.Strength].CanNegativeStack = true;
             StatusDict[StatusType.Dexterity].CanNegativeStack = true;
-            
+
             StatusDict[StatusType.Stun].DecreaseOverTurn = true;
             StatusDict[StatusType.Stun].OnTriggerAction += CheckStunStatus;
-            
+
         }
         #endregion
-        
+
         #region Public Methods
-        public void ApplyStatus(StatusType targetStatus,int value)
+        public void ApplyStatus(StatusType targetStatus, int value)
         {
             if (StatusDict[targetStatus].IsActive)
             {
                 StatusDict[targetStatus].StatusValue += value;
                 OnStatusChanged?.Invoke(targetStatus, StatusDict[targetStatus].StatusValue);
-                
+
             }
             else
             {
@@ -97,33 +97,34 @@ namespace AGGtH.Runtime.Characters
         public void TriggerAllStatus()
         {
             for (int i = 0; i < Enum.GetNames(typeof(StatusType)).Length; i++)
-                TriggerStatus((StatusType) i);
+                TriggerStatus((StatusType)i);
         }
-        
+
         public void SetCurrentHealth(int targetCurrentHealth)
         {
-            CurrentHealth = targetCurrentHealth <=0 ? 1 : targetCurrentHealth;
-            OnHealthChanged?.Invoke(CurrentHealth,MaxHealth);
-        } 
-        
+            CurrentHealth = targetCurrentHealth <= 0 ? 1 : targetCurrentHealth;
+            OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
+        }
+
         public void Heal(int value)
         {
             CurrentHealth += value;
-            if (CurrentHealth>MaxHealth)  CurrentHealth = MaxHealth;
-            OnHealthChanged?.Invoke(CurrentHealth,MaxHealth);
+            if (CurrentHealth > MaxHealth) CurrentHealth = MaxHealth;
+            OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
+            Debug.Log("Healed character: " + CurrentHealth + "/" + MaxHealth);
         }
-        
+
         public void Damage(int value, bool canPierceArmor = false)
         {
             if (IsDeath) return;
             OnTakeDamageAction?.Invoke();
             var remainingDamage = value;
-            
+
             if (!canPierceArmor)
             {
                 if (StatusDict[StatusType.Block].IsActive)
                 {
-                    ApplyStatus(StatusType.Block,-value);
+                    ApplyStatus(StatusType.Block, -value);
 
                     remainingDamage = 0;
                     if (StatusDict[StatusType.Block].StatusValue <= 0)
@@ -133,22 +134,22 @@ namespace AGGtH.Runtime.Characters
                     }
                 }
             }
-            
+
             CurrentHealth -= remainingDamage;
-            
+            Debug.Log("took " + remainingDamage + " damage. health: " + CurrentHealth + "/" + MaxHealth);
             if (CurrentHealth <= 0)
             {
                 CurrentHealth = 0;
                 OnDeath?.Invoke();
                 IsDeath = true;
             }
-            OnHealthChanged?.Invoke(CurrentHealth,MaxHealth);
+            OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
         }
-        
+
         public void IncreaseMaxHealth(int value)
         {
             MaxHealth += value;
-            OnHealthChanged?.Invoke(CurrentHealth,MaxHealth);
+            OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
         }
 
         public void ClearAllStatus()
@@ -156,7 +157,7 @@ namespace AGGtH.Runtime.Characters
             foreach (var status in StatusDict)
                 ClearStatus(status.Key);
         }
-           
+
         public void ClearStatus(StatusType targetStatus)
         {
             StatusDict[targetStatus].IsActive = false;
@@ -170,7 +171,7 @@ namespace AGGtH.Runtime.Characters
         private void TriggerStatus(StatusType targetStatus)
         {
             StatusDict[targetStatus].OnTriggerAction?.Invoke();
-            
+
             //One turn only statuses
             if (StatusDict[targetStatus].ClearAtNextTurn)
             {
@@ -178,7 +179,7 @@ namespace AGGtH.Runtime.Characters
                 OnStatusChanged?.Invoke(targetStatus, StatusDict[targetStatus].StatusValue);
                 return;
             }
-            
+
             //Check status
             if (StatusDict[targetStatus].StatusValue <= 0)
             {
@@ -193,24 +194,24 @@ namespace AGGtH.Runtime.Characters
                         ClearStatus(targetStatus);
                 }
             }
-            
-            if (StatusDict[targetStatus].DecreaseOverTurn) 
+
+            if (StatusDict[targetStatus].DecreaseOverTurn)
                 StatusDict[targetStatus].StatusValue--;
-            
+
             if (StatusDict[targetStatus].StatusValue == 0)
                 if (!StatusDict[targetStatus].IsPermanent)
                     ClearStatus(targetStatus);
-            
+
             OnStatusChanged?.Invoke(targetStatus, StatusDict[targetStatus].StatusValue);
         }
-        
-     
+
+
         private void DamagePoison()
         {
-            if (StatusDict[StatusType.Poison].StatusValue<=0) return;
-            Damage(StatusDict[StatusType.Poison].StatusValue,true);
+            if (StatusDict[StatusType.Poison].StatusValue <= 0) return;
+            Damage(StatusDict[StatusType.Poison].StatusValue, true);
         }
-        
+
         public void CheckStunStatus()
         {
             if (StatusDict[StatusType.Stun].StatusValue <= 0)
@@ -218,10 +219,10 @@ namespace AGGtH.Runtime.Characters
                 IsStunned = false;
                 return;
             }
-            
+
             IsStunned = true;
         }
-        
+
         #endregion
     }
 }
