@@ -33,7 +33,6 @@ namespace AGGtH.Runtime.Characters
             CharacterStats.OnHealthChanged += ChangeHealthBarFill;
 
             CharacterStats.SetCurrentHealth(CharacterStats.CurrentHealth);
-            SetHealthBarMaxHealth(CharacterStats.MaxHealth);
 
 
             EncounterManager.OnPlayerTurnStarted += ShowNextAbility;

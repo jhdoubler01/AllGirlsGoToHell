@@ -5,6 +5,7 @@ using AGGtH.Runtime.Interfaces;
 using AGGtH.Runtime.Extensions;
 using System;
 using System.Collections.Generic;
+using AGGtH.Runtime.UI;
 
 namespace AGGtH.Runtime.Characters
 {
@@ -12,13 +13,13 @@ namespace AGGtH.Runtime.Characters
     {
         [Header("Base settings")]
         [SerializeField] private CharacterType characterType;
-        [SerializeField] private ClassicProgressBar healthBar;
+        [SerializeField] private SegmentedHealthBar healthBar;
         [SerializeField] private Transform statusIconContainer;
 
         #region Cache
         public CharacterStats CharacterStats { get; protected set; }
         public CharacterType CharacterType => characterType;
-        public ClassicProgressBar HealthBar => healthBar;
+        public SegmentedHealthBar HealthBar => healthBar;
         protected FxManager FxManager => FxManager.Instance;
         protected AudioManager AudioManager => AudioManager.Instance;
         protected GameManager GameManager => GameManager.Instance;
@@ -36,27 +37,17 @@ namespace AGGtH.Runtime.Characters
         public virtual void BuildCharacter()
         {
         }
-
         protected virtual void OnDeath()
         {
 
         }
-        public virtual void SetHealthBarMaxHealth(int maxHealth)
+        public virtual void ChangeHealthBarFill(float currentHealth, float maxHealth)
         {
-            //each segment is worth 2hp so divide max health by two and make sure its an even number when setting number of segments
-            float num = maxHealth / 2;
-            if(num % 2 != 0) { num += 0.5f; }
-            HealthBar.SetNewMaxHealth((int)num);
+
         }
-        public virtual void ChangeHealthBarFill(int currentHealth, int maxHealth)
+        public virtual void SetHealthBar(SegmentedHealthBar newHealthBar)
         {
-            if(maxHealth <= 0)
-            {
-                Debug.Log("Error! Max health cannot be " + maxHealth);
-                return;
-            }
-            float fillAmt = currentHealth / maxHealth;
-            HealthBar.SetNewFillAmount(fillAmt);
+            healthBar = newHealthBar;
         }
         public CharacterBase GetCharacterBase()
         {
@@ -68,10 +59,7 @@ namespace AGGtH.Runtime.Characters
             return CharacterType;
         }
 
-        public void SetHealthBar(ClassicProgressBar newHealthBar)
-        {
-            healthBar = newHealthBar;
-        }
+
 
     }
 }

@@ -25,13 +25,9 @@ MonoBehaviour:
     cardActionType: 1
     buffType: 0
     debuffType: 0
-    actionValue: 2
+    actionValue: 1
     actionDelay: 0
-  - actionTargetType: 0
-    cardActionType: 0
-    buffType: 0
-    debuffType: 0
-    actionValue: 0
-    actionDelay: 0
+  cardDescriptionDataList: []
+  specialKeywordsList: 
   dialogueOptions:
   - '"Did you fall from heaven? Because you look like an angel. Wait did you actually?"'

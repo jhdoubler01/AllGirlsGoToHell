@@ -59,7 +59,7 @@ namespace AGGtH.Editor.CardEditor
                 cardActionDataList[i] = new CardActionData()
                 {
                     CardActionType = (CardActionType)EditorGUILayout.EnumPopup("Action Type", cardActionDataList[i].CardActionType),
-                    ActionValue  = EditorGUILayout.IntField("Action Value", cardActionDataList[i].ActionValue),
+                    ActionValue  = EditorGUILayout.FloatField("Action Value", cardActionDataList[i].ActionValue),
                 };
 
                 if (GUILayout.Button("Remove"))

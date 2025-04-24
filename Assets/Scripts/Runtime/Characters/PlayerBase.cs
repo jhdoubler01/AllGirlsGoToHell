@@ -74,16 +74,16 @@ namespace AGGtH.Runtime.Characters
     public class PlayerHealthData
     {
         [SerializeField] private string characterId;
-        [SerializeField] private int maxHealth;
-        [SerializeField] private int currentHealth;
+        [SerializeField] private float maxHealth;
+        [SerializeField] private float currentHealth;
 
-        public int MaxHealth
+        public float MaxHealth
         {
             get => maxHealth;
             set => maxHealth = value;
         }
 
-        public int CurrentHealth
+        public float CurrentHealth
         {
             get => currentHealth;
             set => currentHealth = value;

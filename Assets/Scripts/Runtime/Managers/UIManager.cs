@@ -9,9 +9,9 @@ namespace AGGtH.Runtime.Managers
     {
         [SerializeField] private TMP_Text dialogueBox;
         [SerializeField] private TMP_Text energyBox;
-        [SerializeField] private ClassicProgressBar playerHealthBar;
+        [SerializeField] private SegmentedHealthBar playerHealthBar;
 
-        public ClassicProgressBar PlayerHealthBar => playerHealthBar;
+        public SegmentedHealthBar PlayerHealthBar => playerHealthBar;
         public UIManager() { }
         public static UIManager Instance { get; private set; }
 
