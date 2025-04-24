@@ -332,7 +332,7 @@ MonoBehaviour:
   m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -15884,6 +15884,7 @@ MonoBehaviour:
   - {fileID: 1638661955}
   - {fileID: 336083217}
   - {fileID: 357084491}
+  currentFillTotal: 0
 --- !u!114 &1720267036
 MonoBehaviour:
   m_ObjectHideFlags: 0
