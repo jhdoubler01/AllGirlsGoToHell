@@ -1,6 +1,9 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
+using AGGtH.Runtime.Cards;
+using AGGtH.Runtime.Encounters;
+using AGGtH.Runtime.Enemies;
 
 namespace AGGtH.Runtime
 {
