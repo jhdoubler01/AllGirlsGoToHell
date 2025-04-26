@@ -35,7 +35,6 @@ namespace AGGtH.Runtime.Data.Characters
 
             return GetAbility();
         }
-
     }
     [Serializable]
     public class EnemyAbilityData
@@ -44,21 +43,24 @@ namespace AGGtH.Runtime.Data.Characters
         [SerializeField] private string name;
         [SerializeField] private EnemyIntentionData intention;
         [SerializeField] private bool hideActionValue;
+        [SerializeField] private List<string> dialogueList;
         [SerializeField] private List<EnemyActionData> actionList;
+
         public string Name => name;
         public EnemyIntentionData Intention => intention;
         public List<EnemyActionData> ActionList => actionList;
         public bool HideActionValue => hideActionValue;
+        public string Dialogue => dialogueList.RandomItem();
     }
 
     [Serializable]
     public class EnemyActionData
     {
         [SerializeField] private EnemyActionType actionType;
-        [SerializeField] private int minActionValue;
-        [SerializeField] private int maxActionValue;
+        [SerializeField] private float minActionValue;
+        [SerializeField] private float maxActionValue;
         public EnemyActionType ActionType => actionType;
-        public int ActionValue => Random.Range(minActionValue, maxActionValue);
+        public float ActionValue => Random.Range(minActionValue, maxActionValue);
 
     }
 }

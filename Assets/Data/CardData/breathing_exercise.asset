@@ -25,7 +25,9 @@ MonoBehaviour:
     cardActionType: 2
     buffType: 0
     debuffType: 0
-    actionValue: 2
+    actionValue: 1
     actionDelay: 0
+  cardDescriptionDataList: []
+  specialKeywordsList: 
   dialogueOptions:
   - You inhale and exhale deeply to calm your rapid heartbeat.

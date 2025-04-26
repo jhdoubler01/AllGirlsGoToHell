@@ -73,14 +73,14 @@ namespace AGGtH.Runtime.Card
         [SerializeField] private CardActionType cardActionType;
         [SerializeField] private BuffType buffType;
         [SerializeField] private DebuffType debuffType;
-        [SerializeField] private int actionValue;
+        [SerializeField] private float actionValue;
         [SerializeField] private float actionDelay;
 
         public ActionTargetType ActionTargetType { get => actionTargetType; set => actionTargetType = value; }
         public CardActionType CardActionType { get => cardActionType; set => cardActionType = value; }
         public BuffType BuffType { get => buffType; set => buffType = value; }
         public DebuffType DebuffType { get => debuffType; set => debuffType = value; }
-        public int ActionValue { get => actionValue; set => actionValue = value; }
+        public float ActionValue { get => actionValue; set => actionValue = value; }
         public float ActionDelay { get => actionDelay; set => actionDelay = value; }
     }
     [Serializable]
