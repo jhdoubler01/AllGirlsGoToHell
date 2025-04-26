@@ -41,8 +41,8 @@ namespace AGGtH.Runtime.Managers
                 currentEncounterId = pgd.CurrentEncounterId,
                 isFinalEncounter = pgd.IsFinalEncounter,
 
-                currentHealth = pgd.PlayerHealthData.CurrentHealth,
-                maxHealth = pgd.PlayerHealthData.MaxHealth,
+                currentHealth = (int)pgd.PlayerHealthData.CurrentHealth,
+                maxHealth = (int)pgd.PlayerHealthData.MaxHealth,
 
                 currentEnergy = pgd.CurrentEnergy,
                 maxEnergy = pgd.MaxEnergy,
@@ -57,11 +57,8 @@ namespace AGGtH.Runtime.Managers
                 volume = AudioListener.volume,
                 isFullScreen = Screen.fullScreen,
                 resolution = Screen.currentResolution.ToString(),
- 
-                lastSaveTime = DateTime.Now,
 
-                currentEncounter = EncounterManager.Instance.CurrentEncounter,
-                currentEnemiesList = EncounterManager.Instance.CurrentEnemiesList,
+                lastSaveTime = DateTime.Now,
 
                 canUseCards = pgd.CanUseCards,
                 canSelectCards = pgd.CanSelectCards,
@@ -87,7 +84,6 @@ namespace AGGtH.Runtime.Managers
 
             var pgd = GameManager.Instance.PersistentGameplayData;
             var cm = CardCollectionManager.Instance;
-            var em = EncounterManager.Instance;
 
             pgd.CurrentStageId = gameData.currentStageId;
             pgd.CurrentEncounterId = gameData.currentEncounterId;
@@ -116,11 +112,6 @@ namespace AGGtH.Runtime.Managers
             // Settings
             AudioListener.volume = gameData.volume;
             Screen.fullScreen = gameData.isFullScreen;
-
-            // Restore encounter and enemies
-            em.CurrentEncounter = gameData.currentEncounter;
-            em.CurrentEnemiesList.Clear();
-            em.CurrentEnemiesList.AddRange(gameData.currentEnemiesList);
 
             pgd.CanUseCards = gameData.canUseCards;
             pgd.CanSelectCards = gameData.canSelectCards;
