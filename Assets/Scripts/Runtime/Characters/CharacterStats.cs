@@ -35,6 +35,8 @@ namespace AGGtH.Runtime.Characters
         public bool IsStunned { get; set; }
         public bool IsDeath { get; private set; }
 
+        public CardLoveLanguageType LoveLanguageType { get; private set; }
+
         public Action OnDeath;
         public Action<float, float> OnHealthChanged;
         private readonly Action<StatusType, int> OnStatusChanged;
@@ -47,10 +49,11 @@ namespace AGGtH.Runtime.Characters
         public readonly Dictionary<StatusType, StatusStats> StatusDict = new Dictionary<StatusType, StatusStats>();
 
         #region Setup
-        public CharacterStats(float maxHealth/*, CharacterCanvas characterCanvas*/)
+        public CharacterStats(float maxHealth, CardLoveLanguageType loveLanguage)
         {
             MaxHealth = maxHealth;
             CurrentHealth = maxHealth;
+            LoveLanguageType = loveLanguage;
             SetAllStatus();
 
             //OnHealthChanged += characterCanvas.UpdateHealthText;

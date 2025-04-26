@@ -391,7 +391,7 @@ GameObject:
   - component: {fileID: 8056798817474622222}
   - component: {fileID: 8345401758580020951}
   - component: {fileID: 1490947439663250839}
-  - component: {fileID: 8239074308469293405}
+  - component: {fileID: 4503873170702924786}
   m_Layer: 5
   m_Name: enemyHealthBar
   m_TagString: Untagged
@@ -487,7 +487,7 @@ MonoBehaviour:
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
---- !u!114 &8239074308469293405
+--- !u!114 &4503873170702924786
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -496,17 +496,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 4773325842129685498}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31753a5750c65ec4aa32dc448fc03c4c, type: 3}
+  m_Script: {fileID: 11500000, guid: 03bd9800f3ddccc4fa11a790e1340acb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numSegments: 5
+  numSegments: 0
   segmentBase: {fileID: 5312405132901233591}
-  fillHearts:
+  FillHeartsList:
   - {fileID: 4359844731160846771}
   - {fileID: 8771722135599697103}
   - {fileID: 4550528473897139560}
   - {fileID: 3727287791228561455}
   - {fileID: 5042951948693501121}
+  ArmorList:
+  - {fileID: 7638556596998023006}
+  - {fileID: 6559038020783461614}
+  - {fileID: 6612634664677434232}
+  - {fileID: 140120633378281868}
+  - {fileID: 1682275883537810185}
   currentFillTotal: 0
 --- !u!1 &5312405132901233591
 GameObject:

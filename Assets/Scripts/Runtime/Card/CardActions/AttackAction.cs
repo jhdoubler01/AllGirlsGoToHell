@@ -14,7 +14,9 @@ namespace AGGtH.Runtime.Card.CardActions
             var targetCharacter = actionParameters.TargetCharacter;
             var selfCharacter = actionParameters.SelfCharacter;
 
-            var value = actionParameters.Value + selfCharacter.CharacterStats.StatusDict[StatusType.Strength].StatusValue;
+            float loveLanguageModifier = LoveLanguageComparison.CompareLoveLanguages(actionParameters.CardData.CardLoveLanguageType, targetCharacter.CharacterStats.LoveLanguageType);
+
+            var value = (actionParameters.Value * loveLanguageModifier) + selfCharacter.CharacterStats.StatusDict[StatusType.Strength].StatusValue;
 
             targetCharacter.CharacterStats.Damage(Mathf.RoundToInt(value));
             Debug.Log("Enemy health: " + targetCharacter.CharacterStats.CurrentHealth + "/" + targetCharacter.CharacterStats.MaxHealth);

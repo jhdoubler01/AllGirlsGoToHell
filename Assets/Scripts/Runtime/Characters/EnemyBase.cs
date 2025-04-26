@@ -28,7 +28,7 @@ namespace AGGtH.Runtime.Characters
         public override void BuildCharacter()
         {
             base.BuildCharacter();
-            CharacterStats = new CharacterStats(EnemyCharacterData.MaxHealth);
+            CharacterStats = new CharacterStats(EnemyCharacterData.MaxHealth, EnemyCharacterData.LoveLanguageType);
             CharacterStats.OnDeath += OnDeath;
             CharacterStats.OnHealthChanged += ChangeHealthBarFill;
 

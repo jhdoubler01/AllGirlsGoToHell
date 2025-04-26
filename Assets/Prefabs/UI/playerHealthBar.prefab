@@ -84,10 +84,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7670968113277565397}
-  - component: {fileID: 1037113646284197724}
   - component: {fileID: 163462541740569244}
   - component: {fileID: 7260924549952954243}
   - component: {fileID: 6618684465226764289}
+  - component: {fileID: 8281402481677330924}
   m_Layer: 5
   m_Name: playerHealthBar
   m_TagString: Untagged
@@ -119,27 +119,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1037113646284197724
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1417446860092666332}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31753a5750c65ec4aa32dc448fc03c4c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numSegments: 5
-  segmentBase: {fileID: 6153967761642136570}
-  fillHearts:
-  - {fileID: 3128001148974507152}
-  - {fileID: 4630442766450001221}
-  - {fileID: 2479114564195558514}
-  - {fileID: 6951678176902486306}
-  - {fileID: 7185817545814764924}
-  currentFillTotal: 0
 --- !u!222 &163462541740569244
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -204,6 +183,33 @@ MonoBehaviour:
   m_ChildScaleWidth: 1
   m_ChildScaleHeight: 1
   m_ReverseArrangement: 0
+--- !u!114 &8281402481677330924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417446860092666332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 499395380885a8c43814c8c3099d5b3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numSegments: 5
+  segmentBase: {fileID: 6153967761642136570}
+  FillHeartsList:
+  - {fileID: 5996349152778171118}
+  - {fileID: 8145967449172426651}
+  - {fileID: 8888061400075747224}
+  - {fileID: 7685699079501175145}
+  - {fileID: 5643057355709617897}
+  ArmorList:
+  - {fileID: 8596051721473711773}
+  - {fileID: 6662780623293135514}
+  - {fileID: 6781721219258283436}
+  - {fileID: 8775372882073306085}
+  - {fileID: 5561489028793091158}
+  currentFillTotal: 5
 --- !u!1 &2544821186839479315
 GameObject:
   m_ObjectHideFlags: 0

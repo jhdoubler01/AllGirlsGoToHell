@@ -1,18 +1,28 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using System.Collections;
 
 
 namespace AGGtH.Runtime.UI
 {
-    public class SegmentedHealthBar : MonoBehaviour
+    public abstract class SegmentedHealthBar : MonoBehaviour
     {
         [SerializeField] private int numSegments;
         [SerializeField] private GameObject segmentBase;
 
-        [SerializeField] private Image[] fillHearts;
+        public List<Image> FillHeartsList = new List<Image>();
+        public List<Image> ArmorList = new List<Image>();
 
         [SerializeField] private float currentFillTotal;
+
+        #region Cache
+        public int NumSegments => numSegments;
+        public GameObject SegmentBase => segmentBase;
+
+
+        public float CurrentFillTotal => currentFillTotal;
+        #endregion
 
         void Start()
         {
@@ -22,29 +32,35 @@ namespace AGGtH.Runtime.UI
         //makes sure all the hearts are at 100% fill
         void Setup()
         {
-            foreach(var heart in fillHearts)
+            foreach(var heart in FillHeartsList)
             {
                 heart.fillAmount = 1;
             }
+            numSegments = FillHeartsList.Count;
+            currentFillTotal = numSegments;
+        }
+        public virtual void AddNewSegments(int numToAdd = 1)
+        {
+
         }
         //NOTE damage taken should only be a whole number or end in .5
         public void TakeDamage(float damageTaken)
         {
             float diff = damageTaken;
-            for (int i = fillHearts.Length - 1; i >= 0; i--)
+            for (int i = FillHeartsList.Count - 1; i >= 0; i--)
             {
                 if (diff == 0) { break; }
-                if (fillHearts[i].fillAmount != 0)
+                if (FillHeartsList[i].fillAmount != 0)
                 {
                     if(diff == 0.5f)
                     {
-                        fillHearts[i].fillAmount -= diff;
+                        FillHeartsList[i].fillAmount -= diff;
                         diff = 0;
                     }
                     else
                     {
-                        diff -= fillHearts[i].fillAmount;
-                        fillHearts[i].fillAmount = 0;
+                        diff -= FillHeartsList[i].fillAmount;
+                        FillHeartsList[i].fillAmount = 0;
                     }
 
                 }
@@ -53,20 +69,20 @@ namespace AGGtH.Runtime.UI
         public void GainHealth(float healthGained)
         {
             float diff = healthGained;
-            for (int i = 0; i < fillHearts.Length; i++)
+            for (int i = 0; i < FillHeartsList.Count; i++)
             {
                 if (diff == 0) { break; }
-                if (fillHearts[i].fillAmount < 1)
+                if (FillHeartsList[i].fillAmount < 1)
                 {
                     if (diff == 0.5f)
                     {
-                        fillHearts[i].fillAmount += diff;
+                        FillHeartsList[i].fillAmount += diff;
                         diff = 0;
                     }
                     else
                     {
-                        diff -= 1 - fillHearts[i].fillAmount;
-                        fillHearts[i].fillAmount = 1;
+                        diff -= 1 - FillHeartsList[i].fillAmount;
+                        FillHeartsList[i].fillAmount = 1;
                     }
 
                 }
