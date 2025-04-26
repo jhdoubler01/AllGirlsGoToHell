@@ -1,11 +1,11 @@
 using UnityEngine;
 using System;
 using System.Collections.Generic;
-using AGGtH.Runtime.Cards;
-using AGGtH.Runtime.Encounters;
-using AGGtH.Runtime.Enemies;
+using AGGtH.Runtime.Card;
+using AGGtH.Runtime.Characters;
+using AGGtH.Runtime.Data.Containers;
 
-namespace AGGtH.Runtime
+namespace AGGtH.Runtime.Data.Save
 {
     public class GameData
     {
@@ -28,7 +28,7 @@ namespace AGGtH.Runtime
         public List<CardData> exhaustPile;
 
         //settings
-        public float volme;
+        public float volume;
         public bool isFullScreen;
         public string resolution;
         public List<string> unlockedAchievements;
