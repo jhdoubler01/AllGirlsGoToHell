@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.IO;
 using System.Collections.Generic;
-using UnityEditor.SceneManagement;
 
 namespace AGGtH.Runtime.Managers
 {
@@ -26,7 +25,7 @@ namespace AGGtH.Runtime.Managers
 
         public void SaveGame()
         {
-            var gameData = new GameData
+            var gameData = new GameData()
             {
                 currentStageId = GameManager.Instance.PersistentGameplayData.CurrentStageId,
                 currentEncounterId = GameManager.Instance.PersistentGameplayData.CurrentEncounterId,
