@@ -6,7 +6,7 @@ namespace AGGtH.Runtime
     public class MapData{
         public int width;
         public int height;
-        public int tiles[]; //length = width*height
+        //public int tiles[]; //length = width*height
     }
     public class MapManager : MonoBehaviour
     {
