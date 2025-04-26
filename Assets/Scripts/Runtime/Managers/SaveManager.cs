@@ -1,9 +1,9 @@
 using UnityEngine;
 using System.IO;
 using System.Collections.Generic;
-usinh UnityEditor.SceneManagement;
+using UnityEditor.SceneManagement;
 
-namespace AGGtH.Runtime
+namespace AGGtH.Runtime.Managers
 {
     public class SaveManager : MonoBehaviour
     {
