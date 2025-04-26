@@ -15,14 +15,19 @@ MonoBehaviour:
   characterID: mob1
   characterName: Example
   characterDescription: blah
-  maxHealth: 10
+  maxHealth: 5
   enemyPrefab: {fileID: 6800801379357834523, guid: 20734e66f748b0c4abb15cccb1455618, type: 3}
   followAbilityPattern: 0
+  loveLanguageType: 3
   enemyAbilityList:
   - name: Attack
     intention: {fileID: 11400000, guid: ce9efe81464c5f342bf7bce4fc41ec36, type: 2}
     hideActionValue: 0
+    dialogueList:
+    - I could eat you right up!
+    - I love your rings!
+    - You're such a cutie!
     actionList:
     - actionType: 0
-      minActionValue: 2
-      maxActionValue: 4
+      minActionValue: 0.5
+      maxActionValue: 1

@@ -27,6 +27,7 @@ namespace AGGtH.Runtime.Card
         public abstract CardActionType ActionType { get; }
         public abstract void DoAction(CardActionParameters actionParameters);
 
+
         protected FxManager FxManager => FxManager.Instance;
         protected AudioManager AudioManager => AudioManager.Instance;
         protected GameManager GameManager => GameManager.Instance;

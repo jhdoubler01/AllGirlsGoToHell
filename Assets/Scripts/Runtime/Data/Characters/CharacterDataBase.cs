@@ -1,4 +1,5 @@
 using UnityEngine;
+using AGGtH.Runtime.Enums;
 
 namespace AGGtH.Runtime.Data.Characters
 {
@@ -9,6 +10,7 @@ namespace AGGtH.Runtime.Data.Characters
         [SerializeField] protected string characterID;
         [SerializeField] protected string characterName;
         [SerializeField][TextArea] protected string characterDescription;
+        [SerializeField] protected CardLoveLanguageType loveLanguageType;
         [SerializeField] protected int maxHealth;
 
         public string CharacterID => characterID;
@@ -16,6 +18,8 @@ namespace AGGtH.Runtime.Data.Characters
         public string CharacterName => characterName;
 
         public string CharacterDescription => characterDescription;
+
+        public CardLoveLanguageType LoveLanguageType => loveLanguageType;
 
         public int MaxHealth => maxHealth;
 

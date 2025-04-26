@@ -25,13 +25,15 @@ MonoBehaviour:
     cardActionType: 3
     buffType: 0
     debuffType: 0
-    actionValue: 2
+    actionValue: 0.5
     actionDelay: 0
   - actionTargetType: 3
     cardActionType: 1
     buffType: 0
     debuffType: 0
-    actionValue: 2
+    actionValue: 0.5
     actionDelay: 0
+  cardDescriptionDataList: []
+  specialKeywordsList: 
   dialogueOptions:
   - You laugh at nothing. She seems confused but charmed nonetheless.
