@@ -6,6 +6,7 @@ using AGGtH.Runtime.Managers;
 using AGGtH.Runtime.Extensions;
 using AGGtH.Runtime.EnemyBehavior;
 using System.Collections;
+using AGGtH.Runtime.UI;
 using AGGtH.Runtime.Interfaces;
 
 
@@ -13,16 +14,17 @@ namespace AGGtH.Runtime.Characters
 {
     public class EnemyBase : CharacterBase,IEnemy
     {
-        [Header("UI")]
-        [SerializeField] private Transform intentionIconContainer;
-
         [Header("Enemy Base References")]
         [SerializeField] protected EnemyCharacterData enemyCharacterData;
+        [SerializeField] protected EnemyCanvas enemyCanvas;
+
         protected EnemyAbilityData NextAbility;
+
 
         private float actionDelay = 2f;
 
         public EnemyCharacterData EnemyCharacterData => enemyCharacterData;
+        public EnemyCanvas EnemyCanvas => enemyCanvas;
 
         #region Setup
         public override void BuildCharacter()
@@ -55,7 +57,7 @@ namespace AGGtH.Runtime.Characters
         private void ShowNextAbility()
         {
             NextAbility = EnemyCharacterData.GetAbility(_usedAbilityCount);
-            //EnemyCanvas.IntentImage.sprite = NextAbility.Intention.IntentionSprite;
+            EnemyCanvas.IntentImage.sprite = NextAbility.Intention.IntentionSprite;
 
             if (NextAbility.HideActionValue)
             {
@@ -68,7 +70,7 @@ namespace AGGtH.Runtime.Characters
             }
 
             _usedAbilityCount++;
-            //EnemyCanvas.IntentImage.gameObject.SetActive(true);
+            EnemyCanvas.IntentImage.gameObject.SetActive(true);
         }
         #endregion
         #region Action Routines

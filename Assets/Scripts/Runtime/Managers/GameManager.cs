@@ -56,9 +56,9 @@ namespace AGGtH.Runtime.Managers
 
         }
         // spawn card object in game and set its stats to a target CardData
-        public CardBase BuildAndGetCard(CardData targetData, Transform parent)
+        public CardBase BuildAndGetCard(CardData targetData, RectTransform parent)
         {
-            var clone = Instantiate(GameplayData.CardPrefab, parent);
+            var clone = Instantiate(GameplayData.CardPrefab, parent, false);
             clone.SetCard(targetData);
             return clone;
         }

@@ -9,7 +9,7 @@ namespace AGGtH.Runtime.Characters
     public class StatusStats
     {
         public StatusType StatusType { get; set; }
-        public int StatusValue { get; set; }
+        public float StatusValue { get; set; }
         public bool DecreaseOverTurn { get; set; } // If true, decrease on turn end
         public bool IsPermanent { get; set; } // If true, status can not be cleared during combat
         public bool IsActive { get; set; }
@@ -17,7 +17,7 @@ namespace AGGtH.Runtime.Characters
         public bool ClearAtNextTurn { get; set; }
 
         public Action OnTriggerAction;
-        public StatusStats(StatusType statusType, int statusValue, bool decreaseOverTurn = false, bool isPermanent = false, bool isActive = false, bool canNegativeStack = false, bool clearAtNextTurn = false)
+        public StatusStats(StatusType statusType, float statusValue, bool decreaseOverTurn = false, bool isPermanent = false, bool isActive = false, bool canNegativeStack = false, bool clearAtNextTurn = false)
         {
             StatusType = statusType;
             StatusValue = statusValue;
@@ -39,8 +39,8 @@ namespace AGGtH.Runtime.Characters
 
         public Action OnDeath;
         public Action<float, float> OnHealthChanged;
-        private readonly Action<StatusType, int> OnStatusChanged;
-        private readonly Action<StatusType, int> OnStatusApplied;
+        private readonly Action<StatusType, float> OnStatusChanged;
+        private readonly Action<StatusType, float> OnStatusApplied;
         private readonly Action<StatusType> OnStatusCleared;
         public Action OnHealAction;
         public Action OnTakeDamageAction;
@@ -67,13 +67,13 @@ namespace AGGtH.Runtime.Characters
             for (int i = 0; i < Enum.GetNames(typeof(StatusType)).Length; i++)
                 StatusDict.Add((StatusType)i, new StatusStats((StatusType)i, 0));
 
-            StatusDict[StatusType.Poison].DecreaseOverTurn = true;
-            StatusDict[StatusType.Poison].OnTriggerAction += DamagePoison;
+            StatusDict[StatusType.Tipsy].DecreaseOverTurn = true;
+            StatusDict[StatusType.Tipsy].OnTriggerAction += DamagePoison;
 
             StatusDict[StatusType.Block].ClearAtNextTurn = true;
 
-            StatusDict[StatusType.Strength].CanNegativeStack = true;
-            StatusDict[StatusType.Dexterity].CanNegativeStack = true;
+            StatusDict[StatusType.Shy].CanNegativeStack = true;
+            StatusDict[StatusType.Flustered].CanNegativeStack = true;
 
             StatusDict[StatusType.Stun].DecreaseOverTurn = true;
             StatusDict[StatusType.Stun].OnTriggerAction += CheckStunStatus;
@@ -82,7 +82,7 @@ namespace AGGtH.Runtime.Characters
         #endregion
 
         #region Public Methods
-        public void ApplyStatus(StatusType targetStatus, int value)
+        public void ApplyStatus(StatusType targetStatus, float value)
         {
             if (StatusDict[targetStatus].IsActive)
             {
@@ -117,11 +117,11 @@ namespace AGGtH.Runtime.Characters
             Debug.Log("Healed character: " + CurrentHealth + "/" + MaxHealth);
         }
 
-        public void Damage(int value, bool canPierceArmor = false)
+        public void Damage(float value, bool canPierceArmor = false)
         {
             if (IsDeath) return;
             OnTakeDamageAction?.Invoke();
-            var remainingDamage = value;
+            float remainingDamage = value;
 
             if (!canPierceArmor)
             {
@@ -211,8 +211,8 @@ namespace AGGtH.Runtime.Characters
 
         private void DamagePoison()
         {
-            if (StatusDict[StatusType.Poison].StatusValue <= 0) return;
-            Damage(StatusDict[StatusType.Poison].StatusValue, true);
+            if (StatusDict[StatusType.Tipsy].StatusValue <= 0) return;
+            Damage(StatusDict[StatusType.Tipsy].StatusValue, true);
         }
 
         public void CheckStunStatus()

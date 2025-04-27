@@ -71,15 +71,13 @@ namespace AGGtH.Runtime.Card
     {
         [SerializeField] private ActionTargetType actionTargetType;
         [SerializeField] private CardActionType cardActionType;
-        [SerializeField] private BuffType buffType;
-        [SerializeField] private DebuffType debuffType;
+        [SerializeField] private StatusType statusType;
         [SerializeField] private float actionValue;
         [SerializeField] private float actionDelay;
 
         public ActionTargetType ActionTargetType { get => actionTargetType; set => actionTargetType = value; }
         public CardActionType CardActionType { get => cardActionType; set => cardActionType = value; }
-        public BuffType BuffType { get => buffType; set => buffType = value; }
-        public DebuffType DebuffType { get => debuffType; set => debuffType = value; }
+        public StatusType StatusType { get => statusType; set => statusType = value; }
         public float ActionValue { get => actionValue; set => actionValue = value; }
         public float ActionDelay { get => actionDelay; set => actionDelay = value; }
     }
@@ -134,8 +132,8 @@ namespace AGGtH.Runtime.Card
                 modifiedActionValueIndex = 0;
 
             var str = new StringBuilder();
-            var value = cardData.CardActionDataList[ModifiedActionValueIndex].ActionValue;
-            var modifer = 0;
+            float value = cardData.CardActionDataList[ModifiedActionValueIndex].ActionValue;
+            float modifer = 0;
             if (EncounterManager)
             {
                 var player = EncounterManager.Player;

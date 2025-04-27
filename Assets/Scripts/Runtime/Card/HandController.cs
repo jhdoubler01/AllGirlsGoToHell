@@ -11,7 +11,7 @@ namespace AGGtH.Runtime.Card
         [Header("References")]
         public Transform discardTransform;
         public Transform exhaustTransform;
-        public Transform drawTransform;
+        public RectTransform drawTransform;
         public LayerMask selectableLayer;
         public LayerMask targetLayer;
         public Camera cam = null;
@@ -38,7 +38,7 @@ namespace AGGtH.Runtime.Card
             {
                 Hand.Insert(index, card);
             }
-            card.transform.SetParent(handParentTransform);
+            card.transform.SetParent(handParentTransform, false);
         }
         public void RemoveCardFromHand(CardBase card)
         {

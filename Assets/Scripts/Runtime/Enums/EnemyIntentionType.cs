@@ -3,9 +3,10 @@ namespace AGGtH.Runtime.Enums
     public enum EnemyIntentionType
     {
         Attack,
-        Defend,
-        Heal,
+        Block,
+        Buff,
         Debuff,
+        Heal,
         Special
     }
 }

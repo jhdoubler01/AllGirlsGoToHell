@@ -16,8 +16,9 @@ namespace AGGtH.Runtime.Card.CardActions
             if (!newTarget) return;
 
             newTarget.CharacterStats.ApplyStatus(StatusType.Block,
-                Mathf.RoundToInt(actionParameters.Value + actionParameters.SelfCharacter.CharacterStats
-                    .StatusDict[StatusType.Dexterity].StatusValue));
+                (actionParameters.Value + actionParameters.SelfCharacter.CharacterStats
+                    .StatusDict[StatusType.Nonchalant].StatusValue + actionParameters.SelfCharacter.CharacterStats
+                    .StatusDict[StatusType.Flustered].StatusValue));
             Debug.Log("block added to " + actionParameters.SelfCharacter + ": " + actionParameters.Value + ". Total block: " + actionParameters.SelfCharacter.CharacterStats
                     .StatusDict[StatusType.Block].StatusValue);
 

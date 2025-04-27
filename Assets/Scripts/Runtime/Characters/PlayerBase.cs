@@ -19,7 +19,7 @@ namespace AGGtH.Runtime.Characters
         public override void BuildCharacter()
         {
             base.BuildCharacter();
-            SetHealthBar(UIManager.PlayerHealthBar);
+            //SetHealthBar(UIManager.PlayerHealthBar);
             CharacterStats = new CharacterStats(PlayerCharacterData.MaxHealth, PlayerCharacterData.LoveLanguageType);
             Debug.Log("Player character Data max health: " + playerCharacterData.MaxHealth);
 

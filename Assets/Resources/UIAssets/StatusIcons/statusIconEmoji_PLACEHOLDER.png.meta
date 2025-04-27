@@ -1,0 +1,2801 @@
+fileFormatVersion: 2
+guid: d2c1eb45fe3b55d429302f66edf0f776
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2823847552055447871
+    second: statusIconEmoji_PLACEHOLDER_0
+  - first:
+      213: -5061733275183184742
+    second: statusIconEmoji_PLACEHOLDER_1
+  - first:
+      213: -1890654339538999158
+    second: statusIconEmoji_PLACEHOLDER_2
+  - first:
+      213: -9103291167224838403
+    second: statusIconEmoji_PLACEHOLDER_3
+  - first:
+      213: 8646381497458658438
+    second: statusIconEmoji_PLACEHOLDER_4
+  - first:
+      213: -5486873166219496790
+    second: statusIconEmoji_PLACEHOLDER_5
+  - first:
+      213: 7149125942845373041
+    second: statusIconEmoji_PLACEHOLDER_6
+  - first:
+      213: 7728353287537251267
+    second: statusIconEmoji_PLACEHOLDER_7
+  - first:
+      213: 8825155846761942084
+    second: statusIconEmoji_PLACEHOLDER_8
+  - first:
+      213: 3748166823816652962
+    second: statusIconEmoji_PLACEHOLDER_9
+  - first:
+      213: -373559543757402054
+    second: statusIconEmoji_PLACEHOLDER_10
+  - first:
+      213: 7552388250154477391
+    second: statusIconEmoji_PLACEHOLDER_11
+  - first:
+      213: -6041970857561898689
+    second: statusIconEmoji_PLACEHOLDER_12
+  - first:
+      213: -5036403150656727166
+    second: statusIconEmoji_PLACEHOLDER_13
+  - first:
+      213: -2301222301635402309
+    second: statusIconEmoji_PLACEHOLDER_14
+  - first:
+      213: 7574775671219481970
+    second: statusIconEmoji_PLACEHOLDER_15
+  - first:
+      213: -977344838933807544
+    second: statusIconEmoji_PLACEHOLDER_16
+  - first:
+      213: 568241093801435615
+    second: statusIconEmoji_PLACEHOLDER_17
+  - first:
+      213: 7609800934918399186
+    second: statusIconEmoji_PLACEHOLDER_18
+  - first:
+      213: 7078133895340689668
+    second: statusIconEmoji_PLACEHOLDER_19
+  - first:
+      213: -8246897773378340377
+    second: statusIconEmoji_PLACEHOLDER_20
+  - first:
+      213: 8729350338797764030
+    second: statusIconEmoji_PLACEHOLDER_21
+  - first:
+      213: -1060347424423682636
+    second: statusIconEmoji_PLACEHOLDER_22
+  - first:
+      213: -4650535795173929963
+    second: statusIconEmoji_PLACEHOLDER_23
+  - first:
+      213: -8348565971256363362
+    second: statusIconEmoji_PLACEHOLDER_24
+  - first:
+      213: -2253669588371942434
+    second: statusIconEmoji_PLACEHOLDER_25
+  - first:
+      213: -592698510360704633
+    second: statusIconEmoji_PLACEHOLDER_26
+  - first:
+      213: 1378992166964732019
+    second: statusIconEmoji_PLACEHOLDER_27
+  - first:
+      213: 682314007425288988
+    second: statusIconEmoji_PLACEHOLDER_28
+  - first:
+      213: -3693883265597475470
+    second: statusIconEmoji_PLACEHOLDER_29
+  - first:
+      213: -9085866589071296336
+    second: statusIconEmoji_PLACEHOLDER_30
+  - first:
+      213: 5809094483321997099
+    second: statusIconEmoji_PLACEHOLDER_31
+  - first:
+      213: -433611118214903910
+    second: statusIconEmoji_PLACEHOLDER_32
+  - first:
+      213: -6465022636134544464
+    second: statusIconEmoji_PLACEHOLDER_33
+  - first:
+      213: -7087105908223336165
+    second: statusIconEmoji_PLACEHOLDER_34
+  - first:
+      213: 7706729358693944182
+    second: statusIconEmoji_PLACEHOLDER_35
+  - first:
+      213: -5966212401932536865
+    second: statusIconEmoji_PLACEHOLDER_36
+  - first:
+      213: 3925206398968505389
+    second: statusIconEmoji_PLACEHOLDER_37
+  - first:
+      213: -1394014769725391661
+    second: statusIconEmoji_PLACEHOLDER_38
+  - first:
+      213: -3186813578504333795
+    second: statusIconEmoji_PLACEHOLDER_39
+  - first:
+      213: -3006317050051010296
+    second: statusIconEmoji_PLACEHOLDER_40
+  - first:
+      213: -6593282693530466229
+    second: statusIconEmoji_PLACEHOLDER_41
+  - first:
+      213: 811618784157461147
+    second: statusIconEmoji_PLACEHOLDER_42
+  - first:
+      213: -3465096845484034133
+    second: statusIconEmoji_PLACEHOLDER_43
+  - first:
+      213: 5567463924558829756
+    second: statusIconEmoji_PLACEHOLDER_44
+  - first:
+      213: -4694641564305724443
+    second: statusIconEmoji_PLACEHOLDER_45
+  - first:
+      213: -7201857731160156553
+    second: statusIconEmoji_PLACEHOLDER_46
+  - first:
+      213: -7160767642042627666
+    second: statusIconEmoji_PLACEHOLDER_47
+  - first:
+      213: -2027443260201930352
+    second: statusIconEmoji_PLACEHOLDER_48
+  - first:
+      213: 2603989236559475335
+    second: statusIconEmoji_PLACEHOLDER_49
+  - first:
+      213: -3555489160102328090
+    second: statusIconEmoji_PLACEHOLDER_50
+  - first:
+      213: -6558188324325466294
+    second: statusIconEmoji_PLACEHOLDER_51
+  - first:
+      213: 6527508463904916753
+    second: statusIconEmoji_PLACEHOLDER_52
+  - first:
+      213: 1049452880546661893
+    second: statusIconEmoji_PLACEHOLDER_53
+  - first:
+      213: -201577391601807244
+    second: statusIconEmoji_PLACEHOLDER_54
+  - first:
+      213: -9000734884684113366
+    second: statusIconEmoji_PLACEHOLDER_55
+  - first:
+      213: 4661906764160161452
+    second: statusIconEmoji_PLACEHOLDER_56
+  - first:
+      213: -5524088699555077151
+    second: statusIconEmoji_PLACEHOLDER_57
+  - first:
+      213: -541157465981910019
+    second: statusIconEmoji_PLACEHOLDER_58
+  - first:
+      213: -5450636091947974966
+    second: statusIconEmoji_PLACEHOLDER_59
+  - first:
+      213: 2620814812363488187
+    second: statusIconEmoji_PLACEHOLDER_60
+  - first:
+      213: -4333426721164696539
+    second: statusIconEmoji_PLACEHOLDER_61
+  - first:
+      213: 4168555534805299045
+    second: statusIconEmoji_PLACEHOLDER_62
+  - first:
+      213: 7632028979537441535
+    second: statusIconEmoji_PLACEHOLDER_63
+  - first:
+      213: -1227199658165142411
+    second: statusIconEmoji_PLACEHOLDER_64
+  - first:
+      213: 789417081460857402
+    second: statusIconEmoji_PLACEHOLDER_65
+  - first:
+      213: -3652586433497284077
+    second: statusIconEmoji_PLACEHOLDER_66
+  - first:
+      213: 3579789316801375423
+    second: statusIconEmoji_PLACEHOLDER_67
+  - first:
+      213: 2415287923252006022
+    second: statusIconEmoji_PLACEHOLDER_68
+  - first:
+      213: 5447906419799660625
+    second: statusIconEmoji_PLACEHOLDER_69
+  - first:
+      213: 3587044201488594517
+    second: statusIconEmoji_PLACEHOLDER_70
+  - first:
+      213: -6815949310409345295
+    second: statusIconEmoji_PLACEHOLDER_71
+  - first:
+      213: 4929650979017587531
+    second: statusIconEmoji_PLACEHOLDER_72
+  - first:
+      213: -6233574800993939944
+    second: statusIconEmoji_PLACEHOLDER_73
+  - first:
+      213: 3327794546108695003
+    second: statusIconEmoji_PLACEHOLDER_74
+  - first:
+      213: -5516547509488142614
+    second: statusIconEmoji_PLACEHOLDER_75
+  - first:
+      213: -7851680040213580864
+    second: statusIconEmoji_PLACEHOLDER_76
+  - first:
+      213: -8813693508035703580
+    second: statusIconEmoji_PLACEHOLDER_77
+  - first:
+      213: 1123761590222455607
+    second: statusIconEmoji_PLACEHOLDER_78
+  - first:
+      213: -565635511436727536
+    second: statusIconEmoji_PLACEHOLDER_79
+  - first:
+      213: -713333116791979436
+    second: statusIconEmoji_PLACEHOLDER_80
+  - first:
+      213: -4428842451294000207
+    second: statusIconEmoji_PLACEHOLDER_81
+  - first:
+      213: -7749753170028655241
+    second: statusIconEmoji_PLACEHOLDER_82
+  - first:
+      213: 6223030798437903805
+    second: statusIconEmoji_PLACEHOLDER_83
+  - first:
+      213: 7761008331904990952
+    second: statusIconEmoji_PLACEHOLDER_84
+  - first:
+      213: -5645157077407618642
+    second: statusIconEmoji_PLACEHOLDER_85
+  - first:
+      213: -7044963157053777423
+    second: statusIconEmoji_PLACEHOLDER_86
+  - first:
+      213: 816289767823792732
+    second: statusIconEmoji_PLACEHOLDER_87
+  - first:
+      213: 8595875312882396169
+    second: statusIconEmoji_PLACEHOLDER_88
+  - first:
+      213: 1884623886482435943
+    second: statusIconEmoji_PLACEHOLDER_89
+  - first:
+      213: -7801305251056388864
+    second: statusIconEmoji_PLACEHOLDER_90
+  - first:
+      213: 2731399874077959832
+    second: statusIconEmoji_PLACEHOLDER_91
+  - first:
+      213: -1240501812074905918
+    second: statusIconEmoji_PLACEHOLDER_92
+  - first:
+      213: -7742041377164738016
+    second: statusIconEmoji_PLACEHOLDER_93
+  - first:
+      213: 972268875357548375
+    second: statusIconEmoji_PLACEHOLDER_94
+  - first:
+      213: -5192831527355691137
+    second: statusIconEmoji_PLACEHOLDER_95
+  - first:
+      213: 4937495471947486664
+    second: statusIconEmoji_PLACEHOLDER_96
+  - first:
+      213: 5565037835424141876
+    second: statusIconEmoji_PLACEHOLDER_97
+  - first:
+      213: -6952245153309711199
+    second: statusIconEmoji_PLACEHOLDER_98
+  - first:
+      213: -3451390215287716603
+    second: statusIconEmoji_PLACEHOLDER_99
+  - first:
+      213: 362525426089580601
+    second: statusIconEmoji_PLACEHOLDER_100
+  - first:
+      213: 1063237839474477823
+    second: statusIconEmoji_PLACEHOLDER_101
+  - first:
+      213: -1612987075643344819
+    second: statusIconEmoji_PLACEHOLDER_102
+  - first:
+      213: 1546242120689120173
+    second: statusIconEmoji_PLACEHOLDER_103
+  - first:
+      213: -5021661466311335508
+    second: statusIconEmoji_PLACEHOLDER_104
+  - first:
+      213: -1105522897165818610
+    second: statusIconEmoji_PLACEHOLDER_105
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_0
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 3946
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1cee0efdc9dafc8d0800000000000000
+      internalID: -2823847552055447871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_1
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 3946
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a948ee8876c11c9b0800000000000000
+      internalID: -5061733275183184742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_2
+      rect:
+        serializedVersion: 2
+        x: 2290
+        y: 3946
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a882ab235eb03c5e0800000000000000
+      internalID: -1890654339538999158
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_3
+      rect:
+        serializedVersion: 2
+        x: 3165
+        y: 3946
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df6cc9a2aec9aa180800000000000000
+      internalID: -9103291167224838403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_4
+      rect:
+        serializedVersion: 2
+        x: 4040
+        y: 3946
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68c8884592e1ef770800000000000000
+      internalID: 8646381497458658438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_5
+      rect:
+        serializedVersion: 2
+        x: 4915
+        y: 3946
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa23ddf0de5bad3b0800000000000000
+      internalID: -5486873166219496790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_6
+      rect:
+        serializedVersion: 2
+        x: 5769
+        y: 3946
+        width: 649
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 17af3d5da2cc63360800000000000000
+      internalID: 7149125942845373041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_7
+      rect:
+        serializedVersion: 2
+        x: 6665
+        y: 3946
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3c351625e50a04b60800000000000000
+      internalID: 7728353287537251267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_8
+      rect:
+        serializedVersion: 2
+        x: 7540
+        y: 3946
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 44c05b52c70497a70800000000000000
+      internalID: 8825155846761942084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_9
+      rect:
+        serializedVersion: 2
+        x: 8415
+        y: 3946
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a8ee7c1ed9240430800000000000000
+      internalID: 3748166823816652962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_10
+      rect:
+        serializedVersion: 2
+        x: 9289
+        y: 3946
+        width: 608
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3012ebf299d0daf0800000000000000
+      internalID: -373559543757402054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_11
+      rect:
+        serializedVersion: 2
+        x: 10165
+        y: 3946
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f47aa4869197fc860800000000000000
+      internalID: 7552388250154477391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_12
+      rect:
+        serializedVersion: 2
+        x: 11040
+        y: 3946
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f31c2cb448b962ca0800000000000000
+      internalID: -6041970857561898689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_13
+      rect:
+        serializedVersion: 2
+        x: 11915
+        y: 3934
+        width: 607
+        height: 632
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 287927bb40a1b1ab0800000000000000
+      internalID: -5036403150656727166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_14
+      rect:
+        serializedVersion: 2
+        x: 12790
+        y: 3915
+        width: 607
+        height: 659
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bb5a0d1528a6010e0800000000000000
+      internalID: -2301222301635402309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_15
+      rect:
+        serializedVersion: 2
+        x: 13665
+        y: 3946
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27dee4017520f1960800000000000000
+      internalID: 7574775671219481970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_16
+      rect:
+        serializedVersion: 2
+        x: 14540
+        y: 3946
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84ef9441c06cf62f0800000000000000
+      internalID: -977344838933807544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_Nonchalant
+      rect:
+        serializedVersion: 2
+        x: 15419
+        y: 3942
+        width: 599
+        height: 607
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd160de934cc2e700800000000000000
+      internalID: 568241093801435615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_18
+      rect:
+        serializedVersion: 2
+        x: 16290
+        y: 3946
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d42f31c1a17b9960800000000000000
+      internalID: 7609800934918399186
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_19
+      rect:
+        serializedVersion: 2
+        x: 17168
+        y: 3942
+        width: 601
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4090f68b6459a3260800000000000000
+      internalID: 7078133895340689668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_Calculating
+      rect:
+        serializedVersion: 2
+        x: 18049
+        y: 3945
+        width: 590
+        height: 607
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e9f2d64b222d8d80800000000000000
+      internalID: -8246897773378340377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_21
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 3071
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebdf9ff02e1e42970800000000000000
+      internalID: 8729350338797764030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_22
+      rect:
+        serializedVersion: 2
+        x: 1415
+        y: 3071
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bdd9bca2a3e841f0800000000000000
+      internalID: -1060347424423682636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_23
+      rect:
+        serializedVersion: 2
+        x: 2290
+        y: 3071
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 51c4b69755af57fb0800000000000000
+      internalID: -4650535795173929963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_24
+      rect:
+        serializedVersion: 2
+        x: 3165
+        y: 3071
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e96b9535b7fe32c80800000000000000
+      internalID: -8348565971256363362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_25
+      rect:
+        serializedVersion: 2
+        x: 4040
+        y: 3071
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed35df7237b59b0e0800000000000000
+      internalID: -2253669588371942434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_26
+      rect:
+        serializedVersion: 2
+        x: 4915
+        y: 3071
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7890c0758df46c7f0800000000000000
+      internalID: -592698510360704633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_Bold
+      rect:
+        serializedVersion: 2
+        x: 5759
+        y: 3071
+        width: 670
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 370aaf3d11a232310800000000000000
+      internalID: 1378992166964732019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_28
+      rect:
+        serializedVersion: 2
+        x: 6665
+        y: 3071
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b8bd589f0187900800000000000000
+      internalID: 682314007425288988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_29
+      rect:
+        serializedVersion: 2
+        x: 7540
+        y: 3071
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2757d40bdb0bcbcc0800000000000000
+      internalID: -3693883265597475470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_30
+      rect:
+        serializedVersion: 2
+        x: 8415
+        y: 3071
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b8b0d9e97488e180800000000000000
+      internalID: -9085866589071296336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_31
+      rect:
+        serializedVersion: 2
+        x: 9290
+        y: 3071
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b27c61997ac0e9050800000000000000
+      internalID: 5809094483321997099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_32
+      rect:
+        serializedVersion: 2
+        x: 10165
+        y: 3071
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9704204cf08bf9f0800000000000000
+      internalID: -433611118214903910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_33
+      rect:
+        serializedVersion: 2
+        x: 11032
+        y: 3071
+        width: 623
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bb47546a20a746a0800000000000000
+      internalID: -6465022636134544464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_Shy
+      rect:
+        serializedVersion: 2
+        x: 11911
+        y: 3092
+        width: 611
+        height: 607
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b11a6ceb9ba85ad90800000000000000
+      internalID: -7087105908223336165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_35
+      rect:
+        serializedVersion: 2
+        x: 12786
+        y: 3045
+        width: 616
+        height: 651
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67bc60d058dc3fa60800000000000000
+      internalID: 7706729358693944182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_36
+      rect:
+        serializedVersion: 2
+        x: 13665
+        y: 3071
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd3f7484e61c33da0800000000000000
+      internalID: -5966212401932536865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_37
+      rect:
+        serializedVersion: 2
+        x: 14540
+        y: 3071
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d24ab985c62297630800000000000000
+      internalID: 3925206398968505389
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_38
+      rect:
+        serializedVersion: 2
+        x: 15415
+        y: 3071
+        width: 607
+        height: 609
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dcbed6e3f677ace0800000000000000
+      internalID: -1394014769725391661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_Flustered
+      rect:
+        serializedVersion: 2
+        x: 16290
+        y: 3071
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d169bdf4fe926c3d0800000000000000
+      internalID: -3186813578504333795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_40
+      rect:
+        serializedVersion: 2
+        x: 17165
+        y: 3071
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8016285329a6746d0800000000000000
+      internalID: -3006317050051010296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_41
+      rect:
+        serializedVersion: 2
+        x: 18020
+        y: 3087
+        width: 648
+        height: 619
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b48c26ca254ff74a0800000000000000
+      internalID: -6593282693530466229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_42
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 2196
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9a6dbaebf2734b00800000000000000
+      internalID: 811618784157461147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_43
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 2196
+        width: 669
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba7f89427c089efc0800000000000000
+      internalID: -3465096845484034133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_44
+      rect:
+        serializedVersion: 2
+        x: 2287
+        y: 2196
+        width: 612
+        height: 617
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb8912311fa934d40800000000000000
+      internalID: 5567463924558829756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_45
+      rect:
+        serializedVersion: 2
+        x: 3149
+        y: 2196
+        width: 638
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ebe5cbde5849deb0800000000000000
+      internalID: -4694641564305724443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_46
+      rect:
+        serializedVersion: 2
+        x: 4040
+        y: 2196
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7765c43fc8cdd0c90800000000000000
+      internalID: -7201857731160156553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_47
+      rect:
+        serializedVersion: 2
+        x: 4907
+        y: 2188
+        width: 624
+        height: 624
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea900f8d4c7df9c90800000000000000
+      internalID: -7160767642042627666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_48
+      rect:
+        serializedVersion: 2
+        x: 5769
+        y: 2196
+        width: 649
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0917761c8131dd3e0800000000000000
+      internalID: -2027443260201930352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_49
+      rect:
+        serializedVersion: 2
+        x: 6665
+        y: 2199
+        width: 607
+        height: 607
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78271140a6a332420800000000000000
+      internalID: 2603989236559475335
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_50
+      rect:
+        serializedVersion: 2
+        x: 7540
+        y: 2199
+        width: 607
+        height: 607
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e84959527d58aec0800000000000000
+      internalID: -3555489160102328090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_51
+      rect:
+        serializedVersion: 2
+        x: 8415
+        y: 2196
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a4f577e3772acf4a0800000000000000
+      internalID: -6558188324325466294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_52
+      rect:
+        serializedVersion: 2
+        x: 9290
+        y: 2196
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 115886b1d5e569a50800000000000000
+      internalID: 6527508463904916753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_Stun
+      rect:
+        serializedVersion: 2
+        x: 10165
+        y: 2174
+        width: 607
+        height: 646
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5068e79a5d7609e00800000000000000
+      internalID: 1049452880546661893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_54
+      rect:
+        serializedVersion: 2
+        x: 11034
+        y: 2196
+        width: 619
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47013da2e6ad33df0800000000000000
+      internalID: -201577391601807244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_55
+      rect:
+        serializedVersion: 2
+        x: 11915
+        y: 2188
+        width: 607
+        height: 616
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2adfe07f47f61380800000000000000
+      internalID: -9000734884684113366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_56
+      rect:
+        serializedVersion: 2
+        x: 12769
+        y: 2196
+        width: 649
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca6d1cd808b62b040800000000000000
+      internalID: 4661906764160161452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_57
+      rect:
+        serializedVersion: 2
+        x: 13665
+        y: 2196
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e3254b789e7653b0800000000000000
+      internalID: -5524088699555077151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_58
+      rect:
+        serializedVersion: 2
+        x: 14540
+        y: 2196
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: df30990e62c6d78f0800000000000000
+      internalID: -541157465981910019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_59
+      rect:
+        serializedVersion: 2
+        x: 15415
+        y: 2196
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ace74836a537b54b0800000000000000
+      internalID: -5450636091947974966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_60
+      rect:
+        serializedVersion: 2
+        x: 16290
+        y: 2196
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbbf109af210f5420800000000000000
+      internalID: 2620814812363488187
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_61
+      rect:
+        serializedVersion: 2
+        x: 17165
+        y: 2196
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 524eac84b539cd3c0800000000000000
+      internalID: -4333426721164696539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_62
+      rect:
+        serializedVersion: 2
+        x: 18040
+        y: 2196
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56fee864c2fa9d930800000000000000
+      internalID: 4168555534805299045
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_63
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1321
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff2f0d0bbe96ae960800000000000000
+      internalID: 7632028979537441535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_64
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 1311
+        width: 628
+        height: 628
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 57cf592b96c18fee0800000000000000
+      internalID: -1227199658165142411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_65
+      rect:
+        serializedVersion: 2
+        x: 2290
+        y: 1321
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3a991037a294fa00800000000000000
+      internalID: 789417081460857402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_66
+      rect:
+        serializedVersion: 2
+        x: 3134
+        y: 1301
+        width: 671
+        height: 647
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 312cbffadf76f4dc0800000000000000
+      internalID: -3652586433497284077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_67
+      rect:
+        serializedVersion: 2
+        x: 4040
+        y: 1321
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fbc2fa6ca67fda130800000000000000
+      internalID: 3579789316801375423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_68
+      rect:
+        serializedVersion: 2
+        x: 4915
+        y: 1324
+        width: 607
+        height: 607
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68c0ab7c193d48120800000000000000
+      internalID: 2415287923252006022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_69
+      rect:
+        serializedVersion: 2
+        x: 5791
+        y: 1324
+        width: 607
+        height: 611
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1589ab9460ada9b40800000000000000
+      internalID: 5447906419799660625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_70
+      rect:
+        serializedVersion: 2
+        x: 6659
+        y: 1317
+        width: 620
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5563a5f32bdb7c130800000000000000
+      internalID: 3587044201488594517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_71
+      rect:
+        serializedVersion: 2
+        x: 7540
+        y: 1321
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f67bf1f632e861a0800000000000000
+      internalID: -6815949310409345295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_72
+      rect:
+        serializedVersion: 2
+        x: 8415
+        y: 1321
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4bfffe6273a96440800000000000000
+      internalID: 4929650979017587531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_73
+      rect:
+        serializedVersion: 2
+        x: 9290
+        y: 1321
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81e0ee1deb4ed79a0800000000000000
+      internalID: -6233574800993939944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_74
+      rect:
+        serializedVersion: 2
+        x: 10134
+        y: 1290
+        width: 670
+        height: 670
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd18a4e1283be2e20800000000000000
+      internalID: 3327794546108695003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_75
+      rect:
+        serializedVersion: 2
+        x: 11040
+        y: 1321
+        width: 607
+        height: 609
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae6b46e94494173b0800000000000000
+      internalID: -5516547509488142614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_76
+      rect:
+        serializedVersion: 2
+        x: 11915
+        y: 1313
+        width: 607
+        height: 616
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c37b097a9a390390800000000000000
+      internalID: -7851680040213580864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_77
+      rect:
+        serializedVersion: 2
+        x: 12790
+        y: 1321
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ec8d5e83787fa580800000000000000
+      internalID: -8813693508035703580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_78
+      rect:
+        serializedVersion: 2
+        x: 13665
+        y: 1321
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 733007d5637689f00800000000000000
+      internalID: 1123761590222455607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_79
+      rect:
+        serializedVersion: 2
+        x: 14540
+        y: 1321
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01ba77ccf757628f0800000000000000
+      internalID: -565635511436727536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_80
+      rect:
+        serializedVersion: 2
+        x: 15415
+        y: 1321
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45287174f4bb916f0800000000000000
+      internalID: -713333116791979436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_Tipsy
+      rect:
+        serializedVersion: 2
+        x: 16290
+        y: 1321
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bb637c61479982c0800000000000000
+      internalID: -4428842451294000207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_82
+      rect:
+        serializedVersion: 2
+        x: 17165
+        y: 1321
+        width: 610
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77d0c734d88537490800000000000000
+      internalID: -7749753170028655241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_83
+      rect:
+        serializedVersion: 2
+        x: 18040
+        y: 1321
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbde4374a85ac5650800000000000000
+      internalID: 6223030798437903805
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_84
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 446
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ee3b0255f3a4bb60800000000000000
+      internalID: 7761008331904990952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_85
+      rect:
+        serializedVersion: 2
+        x: 1418
+        y: 444
+        width: 602
+        height: 607
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea926d32c8f58a1b0800000000000000
+      internalID: -5645157077407618642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_86
+      rect:
+        serializedVersion: 2
+        x: 2290
+        y: 446
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1f95810a5534b3e90800000000000000
+      internalID: -7044963157053777423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_87
+      rect:
+        serializedVersion: 2
+        x: 3165
+        y: 446
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c5a5cec083b045b00800000000000000
+      internalID: 816289767823792732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_88
+      rect:
+        serializedVersion: 2
+        x: 4040
+        y: 446
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90ca7eddd0faa4770800000000000000
+      internalID: 8595875312882396169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_89
+      rect:
+        serializedVersion: 2
+        x: 4915
+        y: 446
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76f60098077872a10800000000000000
+      internalID: 1884623886482435943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_90
+      rect:
+        serializedVersion: 2
+        x: 5789
+        y: 449
+        width: 608
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 005f46e05323cb390800000000000000
+      internalID: -7801305251056388864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_91
+      rect:
+        serializedVersion: 2
+        x: 6665
+        y: 449
+        width: 607
+        height: 607
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 896a6f1c6b1e7e520800000000000000
+      internalID: 2731399874077959832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_92
+      rect:
+        serializedVersion: 2
+        x: 7540
+        y: 446
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2cefb04ac2ad8cee0800000000000000
+      internalID: -1240501812074905918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_93
+      rect:
+        serializedVersion: 2
+        x: 8415
+        y: 446
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02248b5f26ebe8490800000000000000
+      internalID: -7742041377164738016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_94
+      rect:
+        serializedVersion: 2
+        x: 9287
+        y: 428
+        width: 613
+        height: 648
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75feadd04613e7d00800000000000000
+      internalID: 972268875357548375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_95
+      rect:
+        serializedVersion: 2
+        x: 10144
+        y: 434
+        width: 649
+        height: 620
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7fc3891d3b5fe7b0800000000000000
+      internalID: -5192831527355691137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_Coolheaded
+      rect:
+        serializedVersion: 2
+        x: 11018
+        y: 446
+        width: 651
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c59785c8f1858440800000000000000
+      internalID: 4937495471947486664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_97
+      rect:
+        serializedVersion: 2
+        x: 11911
+        y: 818
+        width: 360
+        height: 218
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 432901e2d6cfa3d40800000000000000
+      internalID: 5565037835424141876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_98
+      rect:
+        serializedVersion: 2
+        x: 12182
+        y: 446
+        width: 339
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a42b8d1ed9a48f90800000000000000
+      internalID: -6952245153309711199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_99
+      rect:
+        serializedVersion: 2
+        x: 12791
+        y: 446
+        width: 605
+        height: 607
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 505448ca2e23a10d0800000000000000
+      internalID: -3451390215287716603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_100
+      rect:
+        serializedVersion: 2
+        x: 13665
+        y: 446
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 938dd1c44f2f70500800000000000000
+      internalID: 362525426089580601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_101
+      rect:
+        serializedVersion: 2
+        x: 14540
+        y: 446
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ffa41a58e2161ce00800000000000000
+      internalID: 1063237839474477823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_102
+      rect:
+        serializedVersion: 2
+        x: 15415
+        y: 432
+        width: 607
+        height: 623
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d487bf8fcc48d99e0800000000000000
+      internalID: -1612987075643344819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_103
+      rect:
+        serializedVersion: 2
+        x: 16290
+        y: 455
+        width: 607
+        height: 607
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da3fb64340b557510800000000000000
+      internalID: 1546242120689120173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_104
+      rect:
+        serializedVersion: 2
+        x: 17165
+        y: 446
+        width: 607
+        height: 608
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca1ee3690897f4ab0800000000000000
+      internalID: -5021661466311335508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: statusIconEmoji_PLACEHOLDER_105
+      rect:
+        serializedVersion: 2
+        x: 18040
+        y: 449
+        width: 607
+        height: 607
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e05ee5748c468a0f0800000000000000
+      internalID: -1105522897165818610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: f7f6413301e2bbe4eaae615269e5950e
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      statusIconEmoji_Bold: 1378992166964732019
+      statusIconEmoji_Calculating: -8246897773378340377
+      statusIconEmoji_Coolheaded: 4937495471947486664
+      statusIconEmoji_Flustered: -3186813578504333795
+      statusIconEmoji_Nonchalant: 568241093801435615
+      statusIconEmoji_Shy: -7087105908223336165
+      statusIconEmoji_Stun: 1049452880546661893
+      statusIconEmoji_Tipsy: -4428842451294000207
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

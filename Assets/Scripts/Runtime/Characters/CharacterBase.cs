@@ -13,13 +13,11 @@ namespace AGGtH.Runtime.Characters
     {
         [Header("Base settings")]
         [SerializeField] private CharacterType characterType;
-        [SerializeField] private SegmentedHealthBar healthBar;
-        [SerializeField] private Transform statusIconContainer;
 
         #region Cache
         public CharacterStats CharacterStats { get; protected set; }
         public CharacterType CharacterType => characterType;
-        public SegmentedHealthBar HealthBar => healthBar;
+        //public SegmentedHealthBar HealthBar => healthBar;
         protected FxManager FxManager => FxManager.Instance;
         protected AudioManager AudioManager => AudioManager.Instance;
         protected GameManager GameManager => GameManager.Instance;
@@ -45,10 +43,10 @@ namespace AGGtH.Runtime.Characters
         {
 
         }
-        public virtual void SetHealthBar(SegmentedHealthBar newHealthBar)
-        {
-            healthBar = newHealthBar;
-        }
+        //public virtual void SetHealthBar(SegmentedHealthBar newHealthBar)
+        //{
+        //    healthBar = newHealthBar;
+        //}
         public CharacterBase GetCharacterBase()
         {
             return this;

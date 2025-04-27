@@ -1,0 +1,4148 @@
+fileFormatVersion: 2
+guid: ff6416fc3fb31f24da2ac888e2c5432e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3228560207222611189
+    second: intentIcons_PLACEHOLDER_0
+  - first:
+      213: -3498449247255265721
+    second: intentIcons_PLACEHOLDER_1
+  - first:
+      213: 1050095289642136506
+    second: intentIcons_PLACEHOLDER_2
+  - first:
+      213: 5673124067615059673
+    second: intentIcons_PLACEHOLDER_3
+  - first:
+      213: 3620432042235457521
+    second: intentIcons_PLACEHOLDER_4
+  - first:
+      213: 3064325259170693179
+    second: intentIcons_PLACEHOLDER_5
+  - first:
+      213: -5785030916590973927
+    second: intentIcons_PLACEHOLDER_6
+  - first:
+      213: -6251662846535940895
+    second: intentIcons_PLACEHOLDER_7
+  - first:
+      213: 1773775600988512747
+    second: intentIcons_PLACEHOLDER_8
+  - first:
+      213: 3852677139528414573
+    second: intentIcons_PLACEHOLDER_9
+  - first:
+      213: 1893144296276190972
+    second: intentIcons_PLACEHOLDER_10
+  - first:
+      213: -2254842155664527446
+    second: intentIcons_PLACEHOLDER_11
+  - first:
+      213: 4037516250471056811
+    second: intentIcons_PLACEHOLDER_12
+  - first:
+      213: -1264708900995828481
+    second: intentIcons_PLACEHOLDER_13
+  - first:
+      213: -4128778706153833260
+    second: intentIcons_PLACEHOLDER_14
+  - first:
+      213: -8175263599522453524
+    second: intentIcons_PLACEHOLDER_15
+  - first:
+      213: 2708685347737626178
+    second: intentIcons_PLACEHOLDER_16
+  - first:
+      213: 3717382175544760786
+    second: intentIcons_PLACEHOLDER_17
+  - first:
+      213: -7299507555544473153
+    second: intentIcons_PLACEHOLDER_18
+  - first:
+      213: 7427219618789705510
+    second: intentIcons_PLACEHOLDER_19
+  - first:
+      213: -4841500763763412783
+    second: intentIcons_PLACEHOLDER_20
+  - first:
+      213: -4063750899007218618
+    second: intentIcons_PLACEHOLDER_21
+  - first:
+      213: -6756805325244902268
+    second: intentIcons_PLACEHOLDER_22
+  - first:
+      213: -813200374646789923
+    second: intentIcons_PLACEHOLDER_23
+  - first:
+      213: -3927011266678423061
+    second: intentIcons_PLACEHOLDER_24
+  - first:
+      213: 8941024249572467497
+    second: intentIcons_PLACEHOLDER_25
+  - first:
+      213: -4244118075164116767
+    second: intentIcons_PLACEHOLDER_26
+  - first:
+      213: 6042573153204012448
+    second: intentIcons_PLACEHOLDER_27
+  - first:
+      213: -6924332824136887050
+    second: intentIcons_PLACEHOLDER_28
+  - first:
+      213: -3745259854473478567
+    second: intentIcons_PLACEHOLDER_29
+  - first:
+      213: 986800872674218647
+    second: intentIcons_PLACEHOLDER_30
+  - first:
+      213: -8202727378042344581
+    second: intentIcons_PLACEHOLDER_31
+  - first:
+      213: 2135741612133764830
+    second: intentIcons_PLACEHOLDER_32
+  - first:
+      213: -8686281848085053946
+    second: intentIcons_PLACEHOLDER_33
+  - first:
+      213: 4253732351888803642
+    second: intentIcons_PLACEHOLDER_34
+  - first:
+      213: 8106927825354122122
+    second: intentIcons_PLACEHOLDER_35
+  - first:
+      213: 6641558278888882163
+    second: intentIcons_PLACEHOLDER_36
+  - first:
+      213: 5584344540411008772
+    second: intentIcons_PLACEHOLDER_37
+  - first:
+      213: -2305150104008618560
+    second: intentIcons_PLACEHOLDER_38
+  - first:
+      213: 7196875401594640205
+    second: intentIcons_PLACEHOLDER_39
+  - first:
+      213: 5326689975208475061
+    second: intentIcons_PLACEHOLDER_40
+  - first:
+      213: -2874203568654104552
+    second: intentIcons_PLACEHOLDER_41
+  - first:
+      213: -5938525222948273539
+    second: intentIcons_PLACEHOLDER_42
+  - first:
+      213: -1307143051007493720
+    second: intentIcons_PLACEHOLDER_43
+  - first:
+      213: 3349783744106136438
+    second: intentIcons_PLACEHOLDER_44
+  - first:
+      213: 7773189571502179126
+    second: intentIcons_PLACEHOLDER_45
+  - first:
+      213: -5827876798479440188
+    second: intentIcons_PLACEHOLDER_46
+  - first:
+      213: -3928574759835673326
+    second: intentIcons_PLACEHOLDER_47
+  - first:
+      213: 570931918981982802
+    second: intentIcons_PLACEHOLDER_48
+  - first:
+      213: 5955743368364814363
+    second: intentIcons_PLACEHOLDER_49
+  - first:
+      213: 2983544538962681038
+    second: intentIcons_PLACEHOLDER_50
+  - first:
+      213: 4294260766623832242
+    second: intentIcons_PLACEHOLDER_51
+  - first:
+      213: -8689773525334755813
+    second: intentIcons_PLACEHOLDER_52
+  - first:
+      213: 6894727721790625437
+    second: intentIcons_PLACEHOLDER_53
+  - first:
+      213: -563584419476044788
+    second: intentIcons_PLACEHOLDER_54
+  - first:
+      213: 3875326131491907815
+    second: intentIcons_PLACEHOLDER_55
+  - first:
+      213: -2463726987616259848
+    second: intentIcons_PLACEHOLDER_56
+  - first:
+      213: -94244809006225334
+    second: intentIcons_PLACEHOLDER_57
+  - first:
+      213: 1741408193921400131
+    second: intentIcons_PLACEHOLDER_58
+  - first:
+      213: -4066686424127914520
+    second: intentIcons_PLACEHOLDER_59
+  - first:
+      213: -5731855201790922177
+    second: intentIcons_PLACEHOLDER_60
+  - first:
+      213: 4485664890695270776
+    second: intentIcons_PLACEHOLDER_61
+  - first:
+      213: -5800133058009324684
+    second: intentIcons_PLACEHOLDER_62
+  - first:
+      213: -5799798914482057010
+    second: intentIcons_PLACEHOLDER_63
+  - first:
+      213: -5501053108597074506
+    second: intentIcons_PLACEHOLDER_64
+  - first:
+      213: 6414991062720411732
+    second: intentIcons_PLACEHOLDER_65
+  - first:
+      213: 7611621833178284367
+    second: intentIcons_PLACEHOLDER_66
+  - first:
+      213: 6130821671049097302
+    second: intentIcons_PLACEHOLDER_67
+  - first:
+      213: 6046617215599268701
+    second: intentIcons_PLACEHOLDER_68
+  - first:
+      213: 143011947468333569
+    second: intentIcons_PLACEHOLDER_69
+  - first:
+      213: -3890049323354180489
+    second: intentIcons_PLACEHOLDER_70
+  - first:
+      213: -7943450637604956520
+    second: intentIcons_PLACEHOLDER_71
+  - first:
+      213: 455781695605144794
+    second: intentIcons_PLACEHOLDER_72
+  - first:
+      213: 87243213765275913
+    second: intentIcons_PLACEHOLDER_73
+  - first:
+      213: 1548655925383350920
+    second: intentIcons_PLACEHOLDER_74
+  - first:
+      213: 1804836436671166796
+    second: intentIcons_PLACEHOLDER_75
+  - first:
+      213: -1324731677824392595
+    second: intentIcons_PLACEHOLDER_76
+  - first:
+      213: -7663505831782364200
+    second: intentIcons_PLACEHOLDER_77
+  - first:
+      213: 4151051744556503095
+    second: intentIcons_PLACEHOLDER_78
+  - first:
+      213: -7205127116298302938
+    second: intentIcons_PLACEHOLDER_79
+  - first:
+      213: 6422539616009810035
+    second: intentIcons_PLACEHOLDER_80
+  - first:
+      213: 6609971986576495611
+    second: intentIcons_PLACEHOLDER_81
+  - first:
+      213: 1983949683705562693
+    second: intentIcons_PLACEHOLDER_82
+  - first:
+      213: 2343293802946740412
+    second: intentIcons_PLACEHOLDER_83
+  - first:
+      213: -5987617903790431273
+    second: intentIcons_PLACEHOLDER_84
+  - first:
+      213: -8321053635182578912
+    second: intentIcons_PLACEHOLDER_85
+  - first:
+      213: 4850620708916785756
+    second: intentIcons_PLACEHOLDER_86
+  - first:
+      213: -9070581060104730862
+    second: intentIcons_PLACEHOLDER_87
+  - first:
+      213: 8655467017661250467
+    second: intentIcons_PLACEHOLDER_88
+  - first:
+      213: -1741571671549317444
+    second: intentIcons_PLACEHOLDER_89
+  - first:
+      213: -8593853266591960280
+    second: intentIcons_PLACEHOLDER_90
+  - first:
+      213: 5942245614697942379
+    second: intentIcons_PLACEHOLDER_91
+  - first:
+      213: 3265335994922875137
+    second: intentIcons_PLACEHOLDER_92
+  - first:
+      213: -8904448175468188499
+    second: intentIcons_PLACEHOLDER_93
+  - first:
+      213: 6415264414494931630
+    second: intentIcons_PLACEHOLDER_94
+  - first:
+      213: 1992012413418558320
+    second: intentIcons_PLACEHOLDER_95
+  - first:
+      213: -7456076380983953330
+    second: intentIcons_PLACEHOLDER_96
+  - first:
+      213: 6855802848342959052
+    second: intentIcons_PLACEHOLDER_97
+  - first:
+      213: 297685292929232400
+    second: intentIcons_PLACEHOLDER_98
+  - first:
+      213: -1518009085402444333
+    second: intentIcons_PLACEHOLDER_99
+  - first:
+      213: 5853885892482167431
+    second: intentIcons_PLACEHOLDER_100
+  - first:
+      213: 5911059880957817768
+    second: intentIcons_PLACEHOLDER_101
+  - first:
+      213: 5389924098726197108
+    second: intentIcons_PLACEHOLDER_102
+  - first:
+      213: 888027480890542034
+    second: intentIcons_PLACEHOLDER_103
+  - first:
+      213: -1302555225694719899
+    second: intentIcons_PLACEHOLDER_104
+  - first:
+      213: 8152275367763851581
+    second: intentIcons_PLACEHOLDER_105
+  - first:
+      213: 3690637684209332424
+    second: intentIcons_PLACEHOLDER_106
+  - first:
+      213: -6180003080317667414
+    second: intentIcons_PLACEHOLDER_107
+  - first:
+      213: 3592169773651999417
+    second: intentIcons_PLACEHOLDER_108
+  - first:
+      213: -2045120554869168574
+    second: intentIcons_PLACEHOLDER_109
+  - first:
+      213: 7406408716276949564
+    second: intentIcons_PLACEHOLDER_110
+  - first:
+      213: -6118909135835846867
+    second: intentIcons_PLACEHOLDER_111
+  - first:
+      213: -3335664358804020715
+    second: intentIcons_PLACEHOLDER_112
+  - first:
+      213: 5189677516172695566
+    second: intentIcons_PLACEHOLDER_113
+  - first:
+      213: -6352433591276588867
+    second: intentIcons_PLACEHOLDER_114
+  - first:
+      213: 49652631649778715
+    second: intentIcons_PLACEHOLDER_115
+  - first:
+      213: 2096837433503911506
+    second: intentIcons_PLACEHOLDER_116
+  - first:
+      213: 8669009760291884949
+    second: intentIcons_PLACEHOLDER_117
+  - first:
+      213: -779835585984165895
+    second: intentIcons_PLACEHOLDER_118
+  - first:
+      213: -8170605509252817989
+    second: intentIcons_PLACEHOLDER_119
+  - first:
+      213: -4137263688391608290
+    second: intentIcons_PLACEHOLDER_120
+  - first:
+      213: 5237188021562050185
+    second: intentIcons_PLACEHOLDER_121
+  - first:
+      213: -2116902931177283859
+    second: intentIcons_PLACEHOLDER_122
+  - first:
+      213: -4730344727401969347
+    second: intentIcons_PLACEHOLDER_123
+  - first:
+      213: -3998214782477561140
+    second: intentIcons_PLACEHOLDER_124
+  - first:
+      213: 2202290938121923781
+    second: intentIcons_PLACEHOLDER_125
+  - first:
+      213: -2889889569344035297
+    second: intentIcons_PLACEHOLDER_126
+  - first:
+      213: -564270881842700395
+    second: intentIcons_PLACEHOLDER_127
+  - first:
+      213: -3010643772095109258
+    second: intentIcons_PLACEHOLDER_128
+  - first:
+      213: 1605601601566846842
+    second: intentIcons_PLACEHOLDER_129
+  - first:
+      213: -5926410226416066139
+    second: intentIcons_PLACEHOLDER_130
+  - first:
+      213: 6906470347923107692
+    second: intentIcons_PLACEHOLDER_131
+  - first:
+      213: -6006384559642188961
+    second: intentIcons_PLACEHOLDER_132
+  - first:
+      213: -2884195451509571630
+    second: intentIcons_PLACEHOLDER_133
+  - first:
+      213: 650852772089810770
+    second: intentIcons_PLACEHOLDER_134
+  - first:
+      213: -3446001684466779692
+    second: intentIcons_PLACEHOLDER_135
+  - first:
+      213: -8603054655834671732
+    second: intentIcons_PLACEHOLDER_136
+  - first:
+      213: -364573490871809398
+    second: intentIcons_PLACEHOLDER_137
+  - first:
+      213: -6795429996788069580
+    second: intentIcons_PLACEHOLDER_138
+  - first:
+      213: -9103720212917208066
+    second: intentIcons_PLACEHOLDER_139
+  - first:
+      213: 7163763382529636944
+    second: intentIcons_PLACEHOLDER_140
+  - first:
+      213: 9171063996200009561
+    second: intentIcons_PLACEHOLDER_141
+  - first:
+      213: -916961998198906821
+    second: intentIcons_PLACEHOLDER_142
+  - first:
+      213: -8187472489886063993
+    second: intentIcons_PLACEHOLDER_143
+  - first:
+      213: 7430153671201208996
+    second: intentIcons_PLACEHOLDER_144
+  - first:
+      213: -540874875193515313
+    second: intentIcons_PLACEHOLDER_145
+  - first:
+      213: 7908721247339718474
+    second: intentIcons_PLACEHOLDER_146
+  - first:
+      213: -7167326861256752013
+    second: intentIcons_PLACEHOLDER_147
+  - first:
+      213: 5708162766727552582
+    second: intentIcons_PLACEHOLDER_148
+  - first:
+      213: -1791601498751412354
+    second: intentIcons_PLACEHOLDER_149
+  - first:
+      213: -4285889395958337198
+    second: intentIcons_PLACEHOLDER_150
+  - first:
+      213: -5123540339277420255
+    second: intentIcons_PLACEHOLDER_151
+  - first:
+      213: -8974510804808433832
+    second: intentIcons_PLACEHOLDER_152
+  - first:
+      213: 2056043569864235259
+    second: intentIcons_PLACEHOLDER_153
+  - first:
+      213: -8793535756430663284
+    second: intentIcons_PLACEHOLDER_154
+  - first:
+      213: -3032549215856598609
+    second: intentIcons_PLACEHOLDER_155
+  - first:
+      213: 3254434343506971257
+    second: intentIcons_PLACEHOLDER_156
+  - first:
+      213: -6618807311508455751
+    second: intentIcons_PLACEHOLDER_157
+  - first:
+      213: -3238982190729034433
+    second: intentIcons_PLACEHOLDER_158
+  - first:
+      213: 2749582908926063756
+    second: intentIcons_PLACEHOLDER_159
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2070
+        width: 6058
+        height: 406
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b03e880e899d133d0800000000000000
+      internalID: -3228560207222611189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_1
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 1814
+        width: 163
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74efd98f1f2037fc0800000000000000
+      internalID: -3498449247255265721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_Attack
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 1814
+        width: 212
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab33e6f2a10b29e00800000000000000
+      internalID: 1050095289642136506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_3
+      rect:
+        serializedVersion: 2
+        x: 670
+        y: 1814
+        width: 175
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9de2ae0384cfabe40800000000000000
+      internalID: 5673124067615059673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_4
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 1814
+        width: 210
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ffe2e2b2cb5e3230800000000000000
+      internalID: 3620432042235457521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_5
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 1816
+        width: 211
+        height: 208
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b304025769ba68a20800000000000000
+      internalID: 3064325259170693179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_6
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 1814
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91c41f1280177bfa0800000000000000
+      internalID: -5785030916590973927
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_7
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 1881
+        width: 144
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e4c7b883c1ad39a0800000000000000
+      internalID: -6251662846535940895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_8
+      rect:
+        serializedVersion: 2
+        x: 1931
+        y: 1881
+        width: 144
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be1ec20e287bd9810800000000000000
+      internalID: 1773775600988512747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_9
+      rect:
+        serializedVersion: 2
+        x: 1931
+        y: 1814
+        width: 144
+        height: 145
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d65fbdf2275777530800000000000000
+      internalID: 3852677139528414573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_10
+      rect:
+        serializedVersion: 2
+        x: 2189
+        y: 1814
+        width: 164
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf6691805bcc54a10800000000000000
+      internalID: 1893144296276190972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_11
+      rect:
+        serializedVersion: 2
+        x: 2470
+        y: 1832
+        width: 211
+        height: 176
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaf2a0f810135b0e0800000000000000
+      internalID: -2254842155664527446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_12
+      rect:
+        serializedVersion: 2
+        x: 2773
+        y: 1846
+        width: 210
+        height: 150
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba5c13c53a3280830800000000000000
+      internalID: 4037516250471056811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_13
+      rect:
+        serializedVersion: 2
+        x: 3076
+        y: 1817
+        width: 210
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff47edb84f9d27ee0800000000000000
+      internalID: -1264708900995828481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_14
+      rect:
+        serializedVersion: 2
+        x: 3378
+        y: 1814
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dcf08754a1a3b6c0800000000000000
+      internalID: -4128778706153833260
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_15
+      rect:
+        serializedVersion: 2
+        x: 3681
+        y: 1815
+        width: 211
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce768451211ab8e80800000000000000
+      internalID: -8175263599522453524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_16
+      rect:
+        serializedVersion: 2
+        x: 3988
+        y: 1814
+        width: 202
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 246e438f8fe279520800000000000000
+      internalID: 2708685347737626178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_17
+      rect:
+        serializedVersion: 2
+        x: 4287
+        y: 1814
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d9d6b3a46bc69330800000000000000
+      internalID: 3717382175544760786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_18
+      rect:
+        serializedVersion: 2
+        x: 4590
+        y: 1815
+        width: 211
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fb1ed7c7d80f2ba90800000000000000
+      internalID: -7299507555544473153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_19
+      rect:
+        serializedVersion: 2
+        x: 4905
+        y: 1814
+        width: 186
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 627c5c664e8c21760800000000000000
+      internalID: 7427219618789705510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_20
+      rect:
+        serializedVersion: 2
+        x: 5196
+        y: 1839
+        width: 211
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d0791ce4b88fccb0800000000000000
+      internalID: -4841500763763412783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_21
+      rect:
+        serializedVersion: 2
+        x: 5498
+        y: 1814
+        width: 212
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64c10098618aa97c0800000000000000
+      internalID: -4063750899007218618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_22
+      rect:
+        serializedVersion: 2
+        x: 5801
+        y: 1827
+        width: 212
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4845f441b510b32a0800000000000000
+      internalID: -6756805325244902268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_23
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 1512
+        width: 212
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd8a6f9519ee6b4f0800000000000000
+      internalID: -813200374646789923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_24
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 1527
+        width: 212
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: be10da42f047089c0800000000000000
+      internalID: -3927011266678423061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_25
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 1573
+        width: 62
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 923abe3fe26e41c70800000000000000
+      internalID: 8941024249572467497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_26
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1515
+        width: 211
+        height: 206
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e83701d81dd915c0800000000000000
+      internalID: -4244118075164116767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_27
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 1512
+        width: 210
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a5890694488bd350800000000000000
+      internalID: 6042573153204012448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_28
+      rect:
+        serializedVersion: 2
+        x: 1285
+        y: 1512
+        width: 156
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f45ebeabf3d7ef90800000000000000
+      internalID: -6924332824136887050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_29
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 1512
+        width: 211
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95eb39e610a260cc0800000000000000
+      internalID: -3745259854473478567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_30
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 1525
+        width: 211
+        height: 186
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 792dac75a22d1bd00800000000000000
+      internalID: 986800872674218647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_31
+      rect:
+        serializedVersion: 2
+        x: 2191
+        y: 1512
+        width: 162
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7b2a6ad8ee0a2e80800000000000000
+      internalID: -8202727378042344581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_32
+      rect:
+        serializedVersion: 2
+        x: 2470
+        y: 1512
+        width: 211
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: edec04b3eada3ad10800000000000000
+      internalID: 2135741612133764830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_33
+      rect:
+        serializedVersion: 2
+        x: 2773
+        y: 1512
+        width: 210
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 60e77f95ea0247780800000000000000
+      internalID: -8686281848085053946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_34
+      rect:
+        serializedVersion: 2
+        x: 3076
+        y: 1512
+        width: 210
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a374beb690b480b30800000000000000
+      internalID: 4253732351888803642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_Debuff
+      rect:
+        serializedVersion: 2
+        x: 3378
+        y: 1512
+        width: 211
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8366f1a7e7918070800000000000000
+      internalID: 8106927825354122122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_36
+      rect:
+        serializedVersion: 2
+        x: 3681
+        y: 1512
+        width: 211
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fff930f01e8b2c50800000000000000
+      internalID: 6641558278888882163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_Buff
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 1512
+        width: 211
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 407179ab5c39f7d40800000000000000
+      internalID: 5584344540411008772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_38
+      rect:
+        serializedVersion: 2
+        x: 4287
+        y: 1512
+        width: 211
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cd8c9091367200e0800000000000000
+      internalID: -2305150104008618560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_39
+      rect:
+        serializedVersion: 2
+        x: 4590
+        y: 1512
+        width: 211
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d479bcc0c0070e360800000000000000
+      internalID: 7196875401594640205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_40
+      rect:
+        serializedVersion: 2
+        x: 4941
+        y: 1512
+        width: 114
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b97fe87f443ce940800000000000000
+      internalID: 5326689975208475061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_41
+      rect:
+        serializedVersion: 2
+        x: 5268
+        y: 1512
+        width: 66
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 818463e1517cc18d0800000000000000
+      internalID: -2874203568654104552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_42
+      rect:
+        serializedVersion: 2
+        x: 5498
+        y: 1528
+        width: 212
+        height: 181
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d72887cf5ce169da0800000000000000
+      internalID: -5938525222948273539
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_43
+      rect:
+        serializedVersion: 2
+        x: 5826
+        y: 1512
+        width: 163
+        height: 211
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a9f31612581cdde0800000000000000
+      internalID: -1307143051007493720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_44
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1209
+        width: 167
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67303dd3192dc7e20800000000000000
+      internalID: 3349783744106136438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_45
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 1209
+        width: 151
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 633882d2bbaefdb60800000000000000
+      internalID: 7773189571502179126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_46
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 1209
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c664efdde83f1fa0800000000000000
+      internalID: -5827876798479440188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_47
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 1209
+        width: 180
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21ddd660216ea79c0800000000000000
+      internalID: -3928574759835673326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_48
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 1209
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25a6add2e8b5ce700800000000000000
+      internalID: 570931918981982802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_49
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 1223
+        width: 211
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b10f5c4e90d07a250800000000000000
+      internalID: 5955743368364814363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_50
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 1209
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecc5d6063fda76920800000000000000
+      internalID: 2983544538962681038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_51
+      rect:
+        serializedVersion: 2
+        x: 2191
+        y: 1209
+        width: 162
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b8928f4a67489b30800000000000000
+      internalID: 4294260766623832242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_52
+      rect:
+        serializedVersion: 2
+        x: 2470
+        y: 1217
+        width: 211
+        height: 195
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b16f3d3e409b76780800000000000000
+      internalID: -8689773525334755813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_53
+      rect:
+        serializedVersion: 2
+        x: 2773
+        y: 1209
+        width: 210
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d965e58455efeaf50800000000000000
+      internalID: 6894727721790625437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_54
+      rect:
+        serializedVersion: 2
+        x: 3076
+        y: 1213
+        width: 210
+        height: 205
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c048f2cd4febd28f0800000000000000
+      internalID: -563584419476044788
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_55
+      rect:
+        serializedVersion: 2
+        x: 3380
+        y: 1209
+        width: 205
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e82d50959ce7c530800000000000000
+      internalID: 3875326131491907815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_56
+      rect:
+        serializedVersion: 2
+        x: 3683
+        y: 1209
+        width: 205
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f0f69fab551fcdd0800000000000000
+      internalID: -2463726987616259848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_57
+      rect:
+        serializedVersion: 2
+        x: 3779
+        y: 1407
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a48624578dc21bef0800000000000000
+      internalID: -94244809006225334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_58
+      rect:
+        serializedVersion: 2
+        x: 3994
+        y: 1209
+        width: 189
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34db3a7a689ba2810800000000000000
+      internalID: 1741408193921400131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_59
+      rect:
+        serializedVersion: 2
+        x: 4295
+        y: 1209
+        width: 196
+        height: 210
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8edb3f45e3a3097c0800000000000000
+      internalID: -4066686424127914520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_60
+      rect:
+        serializedVersion: 2
+        x: 4387
+        y: 1408
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f32f649001c5470b0800000000000000
+      internalID: -5731855201790922177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_61
+      rect:
+        serializedVersion: 2
+        x: 4590
+        y: 1209
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8714557b378404e30800000000000000
+      internalID: 4485664890695270776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_62
+      rect:
+        serializedVersion: 2
+        x: 4905
+        y: 1209
+        width: 186
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 473aa53d6b9c18fa0800000000000000
+      internalID: -5800133058009324684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_63
+      rect:
+        serializedVersion: 2
+        x: 5196
+        y: 1209
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec0d99dad99f28fa0800000000000000
+      internalID: -5799798914482057010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_64
+      rect:
+        serializedVersion: 2
+        x: 5498
+        y: 1212
+        width: 212
+        height: 202
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b55383f75558a3b0800000000000000
+      internalID: -5501053108597074506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_65
+      rect:
+        serializedVersion: 2
+        x: 5826
+        y: 1209
+        width: 164
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45871ca2260a60950800000000000000
+      internalID: 6414991062720411732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_66
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 906
+        width: 212
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f41033baab9e1a960800000000000000
+      internalID: 7611621833178284367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_67
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 906
+        width: 212
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 650f52cc3dd051550800000000000000
+      internalID: 6130821671049097302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_68
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 906
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d535e8c3256e9e350800000000000000
+      internalID: 6046617215599268701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_69
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 906
+        width: 138
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 102ac77cb941cf100800000000000000
+      internalID: 143011947468333569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_70
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 906
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 774b9b230c4c30ac0800000000000000
+      internalID: -3890049323354180489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_71
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 906
+        width: 187
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 896d4b63bb133c190800000000000000
+      internalID: -7943450637604956520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_72
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 924
+        width: 211
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adc7bad8903435600800000000000000
+      internalID: 455781695605144794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_73
+      rect:
+        serializedVersion: 2
+        x: 2167
+        y: 906
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 901fa8d9d33f53100800000000000000
+      internalID: 87243213765275913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_74
+      rect:
+        serializedVersion: 2
+        x: 2470
+        y: 906
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88a47c7eb5eed7510800000000000000
+      internalID: 1548655925383350920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_75
+      rect:
+        serializedVersion: 2
+        x: 2773
+        y: 913
+        width: 210
+        height: 199
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c49777d3d211c0910800000000000000
+      internalID: 1804836436671166796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_76
+      rect:
+        serializedVersion: 2
+        x: 3076
+        y: 919
+        width: 210
+        height: 187
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d62e198ce8b9d9de0800000000000000
+      internalID: -1324731677824392595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_77
+      rect:
+        serializedVersion: 2
+        x: 3427
+        y: 906
+        width: 113
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8db4a7a8c02c5a590800000000000000
+      internalID: -7663505831782364200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_78
+      rect:
+        serializedVersion: 2
+        x: 3706
+        y: 906
+        width: 162
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7305e86819f7b9930800000000000000
+      internalID: 4151051744556503095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_79
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 906
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 62a4187ef0f320c90800000000000000
+      internalID: -7205127116298302938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_80
+      rect:
+        serializedVersion: 2
+        x: 4295
+        y: 906
+        width: 194
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3707320b0c1712950800000000000000
+      internalID: 6422539616009810035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_81
+      rect:
+        serializedVersion: 2
+        x: 4590
+        y: 906
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf3dc2b20865bbb50800000000000000
+      internalID: 6609971986576495611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_82
+      rect:
+        serializedVersion: 2
+        x: 4893
+        y: 906
+        width: 210
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 546c485d9b7688b10800000000000000
+      internalID: 1983949683705562693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_83
+      rect:
+        serializedVersion: 2
+        x: 5196
+        y: 906
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb0c3096c4d058020800000000000000
+      internalID: 2343293802946740412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_84
+      rect:
+        serializedVersion: 2
+        x: 5498
+        y: 906
+        width: 212
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7d36dc18d35b7eca0800000000000000
+      internalID: -5987617903790431273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_85
+      rect:
+        serializedVersion: 2
+        x: 5821
+        y: 906
+        width: 172
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02338fd3ecda58c80800000000000000
+      internalID: -8321053635182578912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_86
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 603
+        width: 114
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c527327c5ddd05340800000000000000
+      internalID: 4850620708916785756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_87
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 603
+        width: 212
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 21742167592de1280800000000000000
+      internalID: -9070581060104730862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_88
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 626
+        width: 211
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3abfec8d4656e1870800000000000000
+      internalID: 8655467017661250467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_Heal
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 631
+        width: 210
+        height: 158
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cbe6b6ebac1b4d7e0800000000000000
+      internalID: -1741571671549317444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_90
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 713
+        width: 65
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 823b4f87cff7cb880800000000000000
+      internalID: -8593853266591960280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_91
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 713
+        width: 65
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6d813837e8177250800000000000000
+      internalID: 5942245614697942379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_92
+      rect:
+        serializedVersion: 2
+        x: 1404
+        y: 713
+        width: 65
+        height: 61
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 109bca179cdc05d20800000000000000
+      internalID: 3265335994922875137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_93
+      rect:
+        serializedVersion: 2
+        x: 1579
+        y: 603
+        width: 175
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dace75cef8b0d6480800000000000000
+      internalID: -8904448175468188499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_94
+      rect:
+        serializedVersion: 2
+        x: 1900
+        y: 603
+        width: 138
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eaabc26def8970950800000000000000
+      internalID: 6415264414494931630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_95
+      rect:
+        serializedVersion: 2
+        x: 2167
+        y: 627
+        width: 211
+        height: 164
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0735bf16cbc05ab10800000000000000
+      internalID: 1992012413418558320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_96
+      rect:
+        serializedVersion: 2
+        x: 2496
+        y: 603
+        width: 157
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4875451902b68890800000000000000
+      internalID: -7456076380983953330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_97
+      rect:
+        serializedVersion: 2
+        x: 2773
+        y: 611
+        width: 210
+        height: 196
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc3e791fd54b42f50800000000000000
+      internalID: 6855802848342959052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_98
+      rect:
+        serializedVersion: 2
+        x: 3076
+        y: 603
+        width: 210
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01ea7eb5237912400800000000000000
+      internalID: 297685292929232400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_99
+      rect:
+        serializedVersion: 2
+        x: 3378
+        y: 603
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3dd85c297c2feeae0800000000000000
+      internalID: -1518009085402444333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_100
+      rect:
+        serializedVersion: 2
+        x: 3706
+        y: 603
+        width: 161
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 782f119343e2d3150800000000000000
+      internalID: 5853885892482167431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_101
+      rect:
+        serializedVersion: 2
+        x: 3996
+        y: 603
+        width: 187
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a3bd82c4ad480250800000000000000
+      internalID: 5911059880957817768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_102
+      rect:
+        serializedVersion: 2
+        x: 4299
+        y: 603
+        width: 186
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47774e6296bdcca40800000000000000
+      internalID: 5389924098726197108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_103
+      rect:
+        serializedVersion: 2
+        x: 4590
+        y: 603
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d70445f948e25c00800000000000000
+      internalID: 888027480890542034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_104
+      rect:
+        serializedVersion: 2
+        x: 4893
+        y: 603
+        width: 210
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56033286ce46cede0800000000000000
+      internalID: -1302555225694719899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_105
+      rect:
+        serializedVersion: 2
+        x: 5196
+        y: 603
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d393bbe1143b22170800000000000000
+      internalID: 8152275367763851581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_106
+      rect:
+        serializedVersion: 2
+        x: 5498
+        y: 603
+        width: 212
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c0b7f18b67c73330800000000000000
+      internalID: 3690637684209332424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_107
+      rect:
+        serializedVersion: 2
+        x: 5803
+        y: 603
+        width: 206
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa778d601f73c3aa0800000000000000
+      internalID: -6180003080317667414
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_108
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 644
+        width: 65
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ba3c638063f9d130800000000000000
+      internalID: 3592169773651999417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_109
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 644
+        width: 65
+        height: 62
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2466c2cd0b54e93e0800000000000000
+      internalID: -2045120554869168574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_110
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 325
+        width: 212
+        height: 165
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c326b039c79d8c660800000000000000
+      internalID: 7406408716276949564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_111
+      rect:
+        serializedVersion: 2
+        x: 373
+        y: 300
+        width: 163
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d27ac917f84451ba0800000000000000
+      internalID: -6118909135835846867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_112
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 300
+        width: 150
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5122e8350f655b1d0800000000000000
+      internalID: -3335664358804020715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_113
+      rect:
+        serializedVersion: 2
+        x: 986
+        y: 300
+        width: 150
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e081e427430750840800000000000000
+      internalID: 5189677516172695566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_114
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 300
+        width: 186
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db033bc2e4f97d7a0800000000000000
+      internalID: -6352433591276588867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_115
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 300
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b1cf5af2ec660b000800000000000000
+      internalID: 49652631649778715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_116
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 300
+        width: 194
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25e0eb74986791d10800000000000000
+      internalID: 2096837433503911506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_117
+      rect:
+        serializedVersion: 2
+        x: 2191
+        y: 300
+        width: 162
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59f879452728e4870800000000000000
+      internalID: 8669009760291884949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_118
+      rect:
+        serializedVersion: 2
+        x: 2494
+        y: 300
+        width: 162
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f784329aa77d25f0800000000000000
+      internalID: -779835585984165895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_119
+      rect:
+        serializedVersion: 2
+        x: 2785
+        y: 300
+        width: 186
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbbd22d349d2c9e80800000000000000
+      internalID: -8170605509252817989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_120
+      rect:
+        serializedVersion: 2
+        x: 3076
+        y: 300
+        width: 210
+        height: 175
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e18bb47789c7596c0800000000000000
+      internalID: -4137263688391608290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_121
+      rect:
+        serializedVersion: 2
+        x: 3082
+        y: 458
+        width: 77
+        height: 54
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 986032ff1ca3ea840800000000000000
+      internalID: 5237188021562050185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_122
+      rect:
+        serializedVersion: 2
+        x: 3378
+        y: 300
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deed13bffff3f92e0800000000000000
+      internalID: -2116902931177283859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_123
+      rect:
+        serializedVersion: 2
+        x: 3681
+        y: 312
+        width: 211
+        height: 188
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d39401a68807a5eb0800000000000000
+      internalID: -4730344727401969347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_124
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 300
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc295bab6dc7388c0800000000000000
+      internalID: -3998214782477561140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_125
+      rect:
+        serializedVersion: 2
+        x: 4287
+        y: 300
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cca1d2a0fb109e10800000000000000
+      internalID: 2202290938121923781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_126
+      rect:
+        serializedVersion: 2
+        x: 4602
+        y: 300
+        width: 185
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f16642b7fbc05e7d0800000000000000
+      internalID: -2889889569344035297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_Block
+      rect:
+        serializedVersion: 2
+        x: 4905
+        y: 300
+        width: 186
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 59f5ba26f9e4b28f0800000000000000
+      internalID: -564270881842700395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_128
+      rect:
+        serializedVersion: 2
+        x: 5196
+        y: 300
+        width: 211
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 677670bb07b0836d0800000000000000
+      internalID: -3010643772095109258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_129
+      rect:
+        serializedVersion: 2
+        x: 5498
+        y: 300
+        width: 212
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7fa038562e384610800000000000000
+      internalID: 1605601601566846842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_130
+      rect:
+        serializedVersion: 2
+        x: 5801
+        y: 300
+        width: 212
+        height: 212
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a16a3d6c4921cda0800000000000000
+      internalID: -5926410226416066139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_131
+      rect:
+        serializedVersion: 2
+        x: 4776
+        y: 414
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6fa9bb7036b8df50800000000000000
+      internalID: 6906470347923107692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_132
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 0
+        width: 163
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f53e222f01905aca0800000000000000
+      internalID: -6006384559642188961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_133
+      rect:
+        serializedVersion: 2
+        x: 652
+        y: 8
+        width: 211
+        height: 191
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2df79f9948749f7d0800000000000000
+      internalID: -2884195451509571630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_134
+      rect:
+        serializedVersion: 2
+        x: 1258
+        y: 23
+        width: 211
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 25fcd79d52b480900800000000000000
+      internalID: 650852772089810770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_135
+      rect:
+        serializedVersion: 2
+        x: 1561
+        y: 0
+        width: 211
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4d9b5f5c9b75d20d0800000000000000
+      internalID: -3446001684466779692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_136
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 15
+        width: 211
+        height: 178
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c8534b71f5fcb9880800000000000000
+      internalID: -8603054655834671732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_137
+      rect:
+        serializedVersion: 2
+        x: 2167
+        y: 0
+        width: 211
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8acf067756c0faf0800000000000000
+      internalID: -364573490871809398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_138
+      rect:
+        serializedVersion: 2
+        x: 2470
+        y: 0
+        width: 211
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43bc961fb68c1b1a0800000000000000
+      internalID: -6795429996788069580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_139
+      rect:
+        serializedVersion: 2
+        x: 2809
+        y: 0
+        width: 139
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efbb68e23b619a180800000000000000
+      internalID: -9103720212917208066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_140
+      rect:
+        serializedVersion: 2
+        x: 3134
+        y: 0
+        width: 94
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05a31a657dcca6360800000000000000
+      internalID: 7163763382529636944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_141
+      rect:
+        serializedVersion: 2
+        x: 3378
+        y: 0
+        width: 211
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95f30e93d1a264f70800000000000000
+      internalID: 9171063996200009561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_142
+      rect:
+        serializedVersion: 2
+        x: 3689
+        y: 154
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3062d0cbeb4643f0800000000000000
+      internalID: -916961998198906821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_143
+      rect:
+        serializedVersion: 2
+        x: 3718
+        y: 178
+        width: 16
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 782ee084621406e80800000000000000
+      internalID: -8187472489886063993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_144
+      rect:
+        serializedVersion: 2
+        x: 3839
+        y: 154
+        width: 45
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aa3386b5653d1760800000000000000
+      internalID: 7430153671201208996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_145
+      rect:
+        serializedVersion: 2
+        x: 3984
+        y: 0
+        width: 211
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc2282caa2d6e78f0800000000000000
+      internalID: -540874875193515313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_146
+      rect:
+        serializedVersion: 2
+        x: 4287
+        y: 10
+        width: 211
+        height: 185
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a47a44f721c61cd60800000000000000
+      internalID: 7908721247339718474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_147
+      rect:
+        serializedVersion: 2
+        x: 4614
+        y: 0
+        width: 162
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3740dad913a888c90800000000000000
+      internalID: -7167326861256752013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_148
+      rect:
+        serializedVersion: 2
+        x: 4893
+        y: 17
+        width: 210
+        height: 172
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e18ee0bc7773f40800000000000000
+      internalID: 5708162766727552582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_149
+      rect:
+        serializedVersion: 2
+        x: 5196
+        y: 0
+        width: 211
+        height: 209
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e775ddfdde3f227e0800000000000000
+      internalID: -1791601498751412354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_150
+      rect:
+        serializedVersion: 2
+        x: 5801
+        y: 27
+        width: 212
+        height: 152
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2513a4f4d467584c0800000000000000
+      internalID: -4285889395958337198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_151
+      rect:
+        serializedVersion: 2
+        x: 415
+        y: 126
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1292cf4053785e8b0800000000000000
+      internalID: -5123540339277420255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_152
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 132
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85ffc76d8f1247380800000000000000
+      internalID: -8974510804808433832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_153
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 126
+        width: 24
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf8db70cbb8888c10800000000000000
+      internalID: 2056043569864235259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_154
+      rect:
+        serializedVersion: 2
+        x: 956
+        y: 71
+        width: 64
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c812146d1d517f580800000000000000
+      internalID: -8793535756430663284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_155
+      rect:
+        serializedVersion: 2
+        x: 1029
+        y: 71
+        width: 64
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa16af82e883ae5d0800000000000000
+      internalID: -3032549215856598609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_156
+      rect:
+        serializedVersion: 2
+        x: 1102
+        y: 71
+        width: 64
+        height: 63
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97a809deac21a2d20800000000000000
+      internalID: 3254434343506971257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_157
+      rect:
+        serializedVersion: 2
+        x: 3681
+        y: 8
+        width: 211
+        height: 163
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9beb7c071d54524a0800000000000000
+      internalID: -6618807311508455751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_158
+      rect:
+        serializedVersion: 2
+        x: 5498
+        y: 58
+        width: 212
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f3587cfbbd2dc03d0800000000000000
+      internalID: -3238982190729034433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: intentIcons_PLACEHOLDER_159
+      rect:
+        serializedVersion: 2
+        x: 349
+        y: 46
+        width: 212
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c84f507761b782620800000000000000
+      internalID: 2749582908926063756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 1d6e4c896c97dfe44a7678c979dcc8a0
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      intentIcons_Attack: 1050095289642136506
+      intentIcons_Block: -564270881842700395
+      intentIcons_Buff: 5584344540411008772
+      intentIcons_Debuff: 8106927825354122122
+      intentIcons_Heal: -1741571671549317444
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

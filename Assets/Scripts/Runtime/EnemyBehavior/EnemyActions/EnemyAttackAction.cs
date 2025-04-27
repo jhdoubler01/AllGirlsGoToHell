@@ -11,8 +11,9 @@ namespace AGGtH.Runtime.EnemyBehavior.EnemyActions
         public override void DoAction(EnemyActionParameters actionParameters)
         {
             if (!actionParameters.TargetCharacter) return;
-            var value = Mathf.RoundToInt(actionParameters.Value +
-                                         actionParameters.SelfCharacter.CharacterStats.StatusDict[StatusType.Strength]
+            float value = (actionParameters.Value +
+                                         actionParameters.SelfCharacter.CharacterStats.StatusDict[StatusType.Bold]
+                                             .StatusValue + actionParameters.SelfCharacter.CharacterStats.StatusDict[StatusType.Shy]
                                              .StatusValue);
             actionParameters.TargetCharacter.CharacterStats.Damage(value);
             UIManager.SetDialogueBoxText(actionParameters.Dialogue);

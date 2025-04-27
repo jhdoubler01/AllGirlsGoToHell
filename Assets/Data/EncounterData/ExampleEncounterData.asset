@@ -19,4 +19,4 @@ MonoBehaviour:
     bossEncounterList: []
     enemyEncounterList:
     - enemyList:
-      - {fileID: 11400000, guid: 207ec2ead599d2745bd87c34d164fccf, type: 2}
+      - {fileID: 11400000, guid: 6ddc4ba696f483b4eb0f47d339ab03ba, type: 2}

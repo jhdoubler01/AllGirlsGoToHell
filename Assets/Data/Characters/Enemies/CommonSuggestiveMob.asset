@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4166e483cbc288446965c543a0f0cf11, type: 3}
+  m_Name: CommonSuggestiveMob
+  m_EditorClassIdentifier: 
+  characterID: common_suggestive_mob
+  characterName: Leila
+  characterDescription: 
+  loveLanguageType: 1
+  maxHealth: 5
+  enemyPrefab: {fileID: 7668587954984906221, guid: 19cf3fe5fb8122e42a0bce8e9b99d41b, type: 3}
+  followAbilityPattern: 0
+  enemyAbilityList:
+  - name: Flirt
+    intention: {fileID: 11400000, guid: ce9efe81464c5f342bf7bce4fc41ec36, type: 2}
+    hideActionValue: 0
+    dialogueList:
+    - Want me to show you around?
+    actionList:
+    - actionType: 0
+      minActionValue: 0.5
+      maxActionValue: 1
+  - name: Act Coy
+    intention: {fileID: 11400000, guid: ce9efe81464c5f342bf7bce4fc41ec36, type: 2}
+    hideActionValue: 0
+    dialogueList:
+    - I'm just waiting for my friends to get here.
+    actionList:
+    - actionType: 3
+      minActionValue: 1
+      maxActionValue: 1.5
