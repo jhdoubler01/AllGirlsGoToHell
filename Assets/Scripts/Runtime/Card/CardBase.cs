@@ -12,7 +12,7 @@ using AGGtH.Runtime.Characters;
 
 namespace AGGtH.Runtime.Card
 {
-    public class CardBase : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
+    public class CardBase : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ISelectHandler, IDeselectHandler
     {
         [Header("Card Objects")]
         [SerializeField] protected TMP_Text cardNameText;
@@ -44,7 +44,7 @@ namespace AGGtH.Runtime.Card
         public bool IsExhausted { get; private set;}
         public bool IsSelected = false;
 
-        public event Action<CardBase> OnCardClicked, OnHover;
+        public event Action<CardBase> OnCardSelected, OnCardDeselected, OnHover;
 
         #endregion
 
@@ -246,18 +246,34 @@ namespace AGGtH.Runtime.Card
         }
         #endregion
         #region Pointer Events
-        public virtual void OnPointerEnter(PointerEventData eventData)
+        public void OnPointerEnter(BaseEventData eventData)
         {
-            //ShowTooltipInfo();
+            PointerEventData pointerData = (PointerEventData)eventData;
+            OnHover?.Invoke(this);
         }
+        public void OnSelect(BaseEventData eventData)
+        {
+            if (!GameManager.PersistentGameplayData.CanSelectCards) { return; }
 
+            PointerEventData pointerData = (PointerEventData)eventData;
+            UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
+            eventData.selectedObject = gameObject;
+            OnCardSelected?.Invoke(this);
+
+            Debug.Log(eventData.selectedObject);
+        }
+        public void OnDeselect(BaseEventData eventData)
+        {
+            PointerEventData pointerData = (PointerEventData)eventData;
+            OnCardDeselected?.Invoke(this);
+            Debug.Log("deselected");
+        }
         public virtual void OnPointerExit(PointerEventData eventData)
         {
             //HideTooltipInfo(TooltipManager.Instance);
         }
-        public virtual void OnPointedClick(PointerEventData eventData)
+        public virtual void OnPointerClick(PointerEventData eventData)
         {
-            OnCardClicked?.Invoke(this);
         }
         public virtual void OnPointerDown(PointerEventData eventData)
         {
