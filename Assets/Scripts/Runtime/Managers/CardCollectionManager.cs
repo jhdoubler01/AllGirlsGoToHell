@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using AGGtH.Runtime.Card;
 using AGGtH.Runtime.Enums;
 using AGGtH.Runtime.Characters;
-
+using UnityEngine.UI;
 
 namespace AGGtH.Runtime.Managers
 {
@@ -80,6 +80,12 @@ namespace AGGtH.Runtime.Managers
 
             foreach (var cardObject in HandController.Hand)
                 cardObject.UpdateCardText();
+        }
+        public void ResetVerticalLayoutGroup()
+        {
+            Debug.Log("reset");
+            var ver = HandPileTransform.GetComponent<VerticalLayoutGroup>();
+            ver.childForceExpandHeight = !ver.childForceExpandHeight;
         }
         public void DiscardHand()
         {

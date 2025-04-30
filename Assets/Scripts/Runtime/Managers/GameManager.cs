@@ -5,6 +5,9 @@ using AGGtH.Runtime.Data.Containers;
 using System.Collections.Generic;
 using AGGtH.Runtime.Extensions;
 using AGGtH.Runtime.EnemyBehavior;
+using UnityEditor;
+using System;
+using AGGtH.Runtime.Enums;
 
 namespace AGGtH.Runtime.Managers
 {
@@ -58,7 +61,7 @@ namespace AGGtH.Runtime.Managers
         // spawn card object in game and set its stats to a target CardData
         public CardBase BuildAndGetCard(CardData targetData, RectTransform parent)
         {
-            var clone = Instantiate(GameplayData.CardPrefab, parent, false);
+            CardBase clone = Instantiate(SelectCardPrefab(targetData), parent, false);
             clone.SetCard(targetData);
             return clone;
         }
@@ -93,7 +96,14 @@ namespace AGGtH.Runtime.Managers
             //}
         }
         #endregion
-
+        #region Private Methods
+        private CardBase SelectCardPrefab(CardData data)
+        {
+            string type = Enum.GetName(typeof(CardLoveLanguageType), data.CardLoveLanguageType);
+            CardBase c = Resources.Load<CardBase>($"Prefabs/Cards/{type}_card");
+            return c;
+        }
+        #endregion
 
     }
 }

@@ -64,17 +64,7 @@ namespace AGGtH.Runtime.Card
         {
             cardDescText.text = CardData.MyDescription;
         }
-        private void SetCardImages()
-        {
-            switch (CardData.CardLoveLanguageType)
-            {
-                case (CardLoveLanguageType.Neutral):
-                    //cardImage.sprite = Resources.Load("Assets/Resources/UIAssets/Combat/cards/neutralDefenseCard.png") as Sprite;
-                break;
-                default:
-                break;
-            }
-        }
+
         public virtual void SetCard(CardData targetProfile, bool isPlayable = true)
         {
             CardData = targetProfile;
@@ -82,8 +72,7 @@ namespace AGGtH.Runtime.Card
             cardNameText.text = CardData.CardName;
             cardDescText.text = CardData.MyDescription;
             energyCostText.text = CardData.EnergyCost.ToString();
-            actionAmtText.text = CardData.CardActionDataList[0].ActionValue.ToString();
-            SetCardImages();
+            actionAmtText.text = (CardData.CardActionDataList[0].ActionValue * 2).ToString();
             //cardTypeIcon.sprite = CardData.CardSprite;
 
         }
@@ -270,7 +259,13 @@ namespace AGGtH.Runtime.Card
         }
         public virtual void OnPointerExit(PointerEventData eventData)
         {
+
             //HideTooltipInfo(TooltipManager.Instance);
+        }
+        public void ResetVerticalLayout()
+        {
+            CardCollectionManager.ResetVerticalLayoutGroup();
+
         }
         public virtual void OnPointerClick(PointerEventData eventData)
         {
