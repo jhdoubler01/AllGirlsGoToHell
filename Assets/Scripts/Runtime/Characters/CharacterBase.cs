@@ -13,11 +13,11 @@ namespace AGGtH.Runtime.Characters
     {
         [Header("Base settings")]
         [SerializeField] private CharacterType characterType;
+        [SerializeField] private SegmentedHealthBar healthBar;
 
         #region Cache
         public CharacterStats CharacterStats { get; protected set; }
         public CharacterType CharacterType => characterType;
-        //public SegmentedHealthBar HealthBar => healthBar;
         protected FxManager FxManager => FxManager.Instance;
         protected AudioManager AudioManager => AudioManager.Instance;
         protected GameManager GameManager => GameManager.Instance;
@@ -39,14 +39,14 @@ namespace AGGtH.Runtime.Characters
         {
 
         }
-        public virtual void ChangeHealthBarFill(float currentHealth, float maxHealth)
+        public virtual void ChangeHealthBarFill(float currentHealth, int maxHealth)
         {
-
+            healthBar.OnHealthChanged(currentHealth, maxHealth);
         }
-        //public virtual void SetHealthBar(SegmentedHealthBar newHealthBar)
-        //{
-        //    healthBar = newHealthBar;
-        //}
+        public virtual void SetHealthBar(SegmentedHealthBar newHealthBar)
+        {
+            healthBar = newHealthBar;
+        }
         public CharacterBase GetCharacterBase()
         {
             return this;

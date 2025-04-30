@@ -15,4 +15,5 @@ MonoBehaviour:
   characterID: starter_player
   characterName: Dillon
   characterDescription: A loser lesbian who can't flirt to save her life.
+  loveLanguageType: 0
   maxHealth: 5

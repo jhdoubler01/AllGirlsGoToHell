@@ -31,7 +31,7 @@ namespace AGGtH.Runtime.Settings
             InitData();
         }
 
-        public void SetPlayerHealthData(string id, float newCurrentHealth, float newMaxHealth)
+        public void SetPlayerHealthData(string id, float newCurrentHealth, int newMaxHealth)
         {
             var newData = new PlayerHealthData();
             newData.CharacterId = id;

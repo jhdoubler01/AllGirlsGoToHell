@@ -41,10 +41,32 @@ namespace AGGtH.Runtime.UI
         }
         public virtual void AddNewSegments(int numToAdd = 1)
         {
+            for(int i=0; i < numToAdd; i++)
+            {
+                var newSegment = Instantiate(segmentBase, transform, false);
+                newSegment.transform.SetAsFirstSibling();
+                FillHeartsList.Insert(0, newSegment.GetComponent<Image>());
+                ArmorList.Insert(0, newSegment.GetComponentInChildren<Image>());
+            }
+        }
+        public void OnHealthChanged(float currentHealth, int maxHealth)
+        {
+            if(maxHealth > numSegments)
+            {
+                AddNewSegments(maxHealth - numSegments);
+            }
 
+            float diff = currentFillTotal - currentHealth;
+            //if damage has been taken
+            if (diff == 0) return;
+            else if (diff > 0)
+            {
+                TakeDamage(diff);
+            }
+            else GainHealth(diff);
         }
         //NOTE damage taken should only be a whole number or end in .5
-        public void TakeDamage(float damageTaken)
+        private void TakeDamage(float damageTaken)
         {
             float diff = damageTaken;
             for (int i = FillHeartsList.Count - 1; i >= 0; i--)
@@ -66,7 +88,7 @@ namespace AGGtH.Runtime.UI
                 }
             }
         }
-        public void GainHealth(float healthGained)
+        private void GainHealth(float healthGained)
         {
             float diff = healthGained;
             for (int i = 0; i < FillHeartsList.Count; i++)

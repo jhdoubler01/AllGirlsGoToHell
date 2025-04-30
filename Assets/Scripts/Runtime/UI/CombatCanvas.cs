@@ -10,7 +10,7 @@ namespace AGGtH.Runtime.UI
     {
         [Header("Info Bars")]
         [SerializeField] private SpritesheetHandler playerEnergyBar;
-        [SerializeField] private ClassicProgressBar playerHealthBar;
+        [SerializeField] private SegmentedHealthBar playerHealthBar;
 
         [Header("Texts")]
         [SerializeField] private TextMeshProUGUI drawPileTextField;
@@ -22,7 +22,7 @@ namespace AGGtH.Runtime.UI
         [SerializeField] private GameObject combatWinPanel;
         [SerializeField] private GameObject combatLosePanel;
 
-
+        public SegmentedHealthBar PlayerHealthBar => playerHealthBar;
         public TextMeshProUGUI DrawPileTextField => drawPileTextField;
         public TextMeshProUGUI DiscardPileTextField => discardPileTextField;
         public TextMeshProUGUI ManaTextTextField => energyTextTextField;

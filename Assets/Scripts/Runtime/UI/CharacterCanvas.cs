@@ -21,7 +21,7 @@ namespace AGGtH.Runtime.UI
         #region Cache
         protected Dictionary<StatusType, StatusIconBase> StatusDict = new Dictionary<StatusType, StatusIconBase>();
         protected Canvas TargetCanvas;
-
+        public SegmentedHealthBar HealthBar => healthBar;
         protected EncounterManager EncounterManager => EncounterManager.Instance;
         protected CardCollectionManager CardCollectionManager => CardCollectionManager.Instance;
         protected GameManager GameManager => GameManager.Instance;

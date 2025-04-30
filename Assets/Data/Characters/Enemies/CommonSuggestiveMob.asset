@@ -16,7 +16,7 @@ MonoBehaviour:
   characterName: Leila
   characterDescription: 
   loveLanguageType: 1
-  maxHealth: 5
+  maxHealth: 10
   enemyPrefab: {fileID: 7668587954984906221, guid: 19cf3fe5fb8122e42a0bce8e9b99d41b, type: 3}
   followAbilityPattern: 0
   enemyAbilityList:

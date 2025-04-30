@@ -71,19 +71,7 @@ namespace AGGtH.Runtime.Managers
             }
             targetLayer = LayerMask.NameToLayer("Enemies");
         }
-        void Update()
-        {
-            //if (GameManager.PersistentGameplayData.CanSelectCards)
-            //{
-            //    if (selectedCard != null)
-            //    {
-            //        if (Input.GetMouseButtonDown(0))
-            //        {
-            //            PlayCard(Input.mousePosition);
-            //        }
-            //    }
-            //}
-        }
+
         private void Start()
         {
             StartCombat();
@@ -144,20 +132,20 @@ namespace AGGtH.Runtime.Managers
         #endregion
 
         #region Public Methods
-        public void SelectedCard(CardBase targetCard, bool isSelected)
-        {
-            if (!isSelected)
-            {
-                selectedCard = null;
-                return;
-            }
-            foreach(CardBase card in CardCollectionManager.HandController.Hand)
-            {
-                card.IsSelected = false;
-            }
-            selectedCard = targetCard;
-            targetCard.IsSelected = true;
-        }
+        //public void SelectedCard(CardBase targetCard, bool isSelected)
+        //{
+        //    if (!isSelected)
+        //    {
+        //        selectedCard = null;
+        //        return;
+        //    }
+        //    foreach(CardBase card in CardCollectionManager.HandController.Hand)
+        //    {
+        //        card.IsSelected = false;
+        //    }
+        //    selectedCard = targetCard;
+        //    targetCard.IsSelected = true;
+        //}
         public void EndTurn()
         {
             CurrentCombatStateType = CombatStateType.EnemyTurn;

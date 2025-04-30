@@ -4,6 +4,7 @@ using AGGtH.Runtime.Data.Characters;
 using AGGtH.Runtime.Interfaces;
 using AGGtH.Runtime.Extensions;
 using AGGtH.Runtime.Managers;
+using AGGtH.Runtime.UI;
 
 namespace AGGtH.Runtime.Characters
 {
@@ -11,6 +12,7 @@ namespace AGGtH.Runtime.Characters
     {
         [Header("UI")]
         [SerializeField] private ClassicProgressBar energyBar;
+        [SerializeField] private CombatCanvas combatCanvas;
 
         [Header("Player Base Settings")]
         [SerializeField] private PlayerCharacterData playerCharacterData;
@@ -19,7 +21,9 @@ namespace AGGtH.Runtime.Characters
         public override void BuildCharacter()
         {
             base.BuildCharacter();
-            //SetHealthBar(UIManager.PlayerHealthBar);
+            combatCanvas = UIManager.CombatCanvas;
+            SetHealthBar(UIManager.PlayerHealthBar);
+
             CharacterStats = new CharacterStats(PlayerCharacterData.MaxHealth, PlayerCharacterData.LoveLanguageType);
             Debug.Log("Player character Data max health: " + playerCharacterData.MaxHealth);
 
@@ -74,10 +78,10 @@ namespace AGGtH.Runtime.Characters
     public class PlayerHealthData
     {
         [SerializeField] private string characterId;
-        [SerializeField] private float maxHealth;
+        [SerializeField] private int maxHealth;
         [SerializeField] private float currentHealth;
 
-        public float MaxHealth
+        public int MaxHealth
         {
             get => maxHealth;
             set => maxHealth = value;

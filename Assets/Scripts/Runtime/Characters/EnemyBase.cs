@@ -30,6 +30,7 @@ namespace AGGtH.Runtime.Characters
         public override void BuildCharacter()
         {
             base.BuildCharacter();
+            SetHealthBar(EnemyCanvas.HealthBar);
             CharacterStats = new CharacterStats(EnemyCharacterData.MaxHealth, EnemyCharacterData.LoveLanguageType);
             CharacterStats.OnDeath += OnDeath;
             CharacterStats.OnHealthChanged += ChangeHealthBarFill;
