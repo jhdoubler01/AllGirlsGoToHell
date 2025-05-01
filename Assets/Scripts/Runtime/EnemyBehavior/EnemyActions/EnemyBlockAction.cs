@@ -21,6 +21,7 @@ namespace AGGtH.Runtime.EnemyBehavior.EnemyActions
                 (actionParameters.Value + actionParameters.SelfCharacter.CharacterStats
                     .StatusDict[StatusType.Nonchalant].StatusValue + actionParameters.SelfCharacter.CharacterStats
                     .StatusDict[StatusType.Flustered].StatusValue));
+            Debug.Log("enemy blocked");
 
             //if (FxManager != null)
             //    FxManager.PlayFx(newTarget.transform, FxType.Block);
