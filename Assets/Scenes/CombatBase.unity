@@ -525,6 +525,7 @@ GameObject:
   - component: {fileID: 334022580}
   - component: {fileID: 334022579}
   - component: {fileID: 334022583}
+  - component: {fileID: 334022584}
   m_Layer: 5
   m_Name: CombatCanvas
   m_TagString: Untagged
@@ -637,6 +638,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tipText: {fileID: 0}
   tipWindow: {fileID: 0}
+--- !u!114 &334022584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 334022578}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f880a59b3f06d074ba6abbefaa23805a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerEnergyBar: {fileID: 1769278062}
+  playerHealthBar: {fileID: 1216040794}
+  drawPileTextField: {fileID: 0}
+  discardPileTextField: {fileID: 0}
+  exhaustPileTextField: {fileID: 0}
+  energyTextTextField: {fileID: 0}
+  combatWinPanel: {fileID: 0}
+  combatLosePanel: {fileID: 0}
 --- !u!1 &335737974
 GameObject:
   m_ObjectHideFlags: 0
@@ -1854,6 +1875,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1216040794 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8281402481677330924, guid: 8ff5078dfdc620e41be19d143a568059, type: 3}
+  m_PrefabInstance: {fileID: 122118243}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 499395380885a8c43814c8c3099d5b3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1224783522
 GameObject:
   m_ObjectHideFlags: 0
@@ -1965,8 +1997,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueBox: {fileID: 2072053534}
   energyBox: {fileID: 0}
-  playerHealthBar: {fileID: 0}
-  combatCanvas: {fileID: 0}
+  playerHealthBar: {fileID: 1216040794}
+  combatCanvas: {fileID: 334022584}
 --- !u!4 &1605487156
 Transform:
   m_ObjectHideFlags: 0

@@ -8,7 +8,6 @@ namespace AGGtH.Runtime.UI
 {
     public abstract class SegmentedHealthBar : MonoBehaviour
     {
-        [SerializeField] private int numSegments;
         [SerializeField] private GameObject segmentBase;
 
         public List<Image> FillHeartsList = new List<Image>();
@@ -17,7 +16,6 @@ namespace AGGtH.Runtime.UI
         [SerializeField] private float currentFillTotal;
 
         #region Cache
-        public int NumSegments => numSegments;
         public GameObject SegmentBase => segmentBase;
 
 
@@ -36,27 +34,38 @@ namespace AGGtH.Runtime.UI
             {
                 heart.fillAmount = 1;
             }
-            numSegments = FillHeartsList.Count;
-            currentFillTotal = numSegments;
+            currentFillTotal = FillHeartsList.Count;
         }
         public virtual void AddNewSegments(int numToAdd = 1)
         {
-            for(int i=0; i < numToAdd; i++)
+            for (int i = 0; i <= numToAdd; i++)
             {
-                var newSegment = Instantiate(segmentBase, transform, false);
-                newSegment.transform.SetAsFirstSibling();
-                FillHeartsList.Insert(0, newSegment.GetComponent<Image>());
-                ArmorList.Insert(0, newSegment.GetComponentInChildren<Image>());
-            }
-        }
-        public void OnHealthChanged(float currentHealth, int maxHealth)
-        {
-            if(maxHealth > numSegments)
-            {
-                AddNewSegments(maxHealth - numSegments);
+                Transform newSegment = Instantiate(SegmentBase, transform).transform;
+                newSegment.SetAsFirstSibling();
+                FillHeartsList.Insert(0, newSegment.GetChild(0).GetComponent<Image>());
+                FillHeartsList[0].fillAmount = 1;
+                ArmorList.Insert(1, newSegment.GetChild(1).GetComponent<Image>());
             }
 
+        }
+        private float GetCurrentFillTotal()
+        {
+            float fill = 0;
+            foreach(var heart in FillHeartsList)
+            {
+                fill += heart.fillAmount;
+            }
+            return fill;
+        }
+        public virtual void OnHealthChanged(float currentHealth, int maxHealth)
+        {
+            if (maxHealth > FillHeartsList.Count)
+            {
+                AddNewSegments(maxHealth - FillHeartsList.Count);
+            }
+            currentFillTotal = GetCurrentFillTotal();
             float diff = currentFillTotal - currentHealth;
+            Debug.Log(diff);
             //if damage has been taken
             if (diff == 0) return;
             else if (diff > 0)
@@ -64,14 +73,16 @@ namespace AGGtH.Runtime.UI
                 TakeDamage(diff);
             }
             else GainHealth(diff);
+            currentFillTotal = GetCurrentFillTotal();
         }
         //NOTE damage taken should only be a whole number or end in .5
         private void TakeDamage(float damageTaken)
         {
+            Debug.Log("take damage");
             float diff = damageTaken;
             for (int i = FillHeartsList.Count - 1; i >= 0; i--)
             {
-                if (diff == 0) { break; }
+                if (diff <= 0) { break; }
                 if (FillHeartsList[i].fillAmount != 0)
                 {
                     if(diff == 0.5f)

@@ -230,7 +230,7 @@ namespace AGGtH.Runtime.Card
             if (IsExhausted) return;
             if (!IsPlayable) return;
             CardCollectionManager.OnCardDiscarded(this);
-            Destroy(gameObject);
+            //Destroy(gameObject);
         }
         public virtual void Exhaust(bool destroy=true)
         {
@@ -269,10 +269,7 @@ namespace AGGtH.Runtime.Card
             EncounterManager.OnCardSelected(this);
             if (UnityEngine.EventSystems.EventSystem.current.alreadySelecting == false) { 
                 eventData.selectedObject = gameObject;
-
             }
-
-
             OnCardSelected?.Invoke(this);
 
         }

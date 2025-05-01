@@ -195,14 +195,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 499395380885a8c43814c8c3099d5b3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numSegments: 5
   segmentBase: {fileID: 6153967761642136570}
   FillHeartsList:
-  - {fileID: 5996349152778171118}
-  - {fileID: 8145967449172426651}
-  - {fileID: 8888061400075747224}
-  - {fileID: 7685699079501175145}
-  - {fileID: 5643057355709617897}
+  - {fileID: 3128001148974507152}
+  - {fileID: 4630442766450001221}
+  - {fileID: 2479114564195558514}
+  - {fileID: 6951678176902486306}
+  - {fileID: 7185817545814764924}
   ArmorList:
   - {fileID: 8596051721473711773}
   - {fileID: 6662780623293135514}

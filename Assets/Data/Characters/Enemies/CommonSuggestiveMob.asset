@@ -16,7 +16,7 @@ MonoBehaviour:
   characterName: Leila
   characterDescription: 
   loveLanguageType: 1
-  maxHealth: 10
+  maxHealth: 5
   enemyPrefab: {fileID: 7668587954984906221, guid: 19cf3fe5fb8122e42a0bce8e9b99d41b, type: 3}
   followAbilityPattern: 0
   enemyAbilityList:
@@ -28,7 +28,7 @@ MonoBehaviour:
     actionList:
     - actionType: 0
       minActionValue: 0.5
-      maxActionValue: 1
+      maxActionValue: 0.5
   - name: Act Coy
     intention: {fileID: 11400000, guid: ce9efe81464c5f342bf7bce4fc41ec36, type: 2}
     hideActionValue: 0

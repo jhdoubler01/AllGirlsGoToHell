@@ -89,9 +89,11 @@ namespace AGGtH.Runtime.Managers
         }
         public void DiscardHand()
         {
-            foreach (var cardBase in HandController.Hand)
-                cardBase.Discard();
-
+            int count = HandController.Hand.Count;
+            for(int i=0; i< count; i++)
+            {
+                HandController.Hand[i].Discard();
+            }
             HandController.Hand.Clear();
         }
 
@@ -99,7 +101,8 @@ namespace AGGtH.Runtime.Managers
         {
             HandPile.Remove(targetCard.CardData);
             DiscardPile.Add(targetCard.CardData);
-            //Destroy(targetCard.gameObject);
+            //HandController.RemoveCardFromHand(targetCard);
+            Destroy(targetCard.gameObject);
             //UIManager.CombatCanvas.SetPileTexts();
         }
 
@@ -107,8 +110,9 @@ namespace AGGtH.Runtime.Managers
         {
             HandPile.Remove(targetCard.CardData);
             ExhaustPile.Add(targetCard.CardData);
+            //HandController.RemoveCardFromHand(targetCard);
 
-            //Destroy(targetCard.gameObject);
+            Destroy(targetCard.gameObject);
 
             //UIManager.CombatCanvas.SetPileTexts();
         }
@@ -119,6 +123,7 @@ namespace AGGtH.Runtime.Managers
             else
                 targetCard.Discard();
 
+            HandController.RemoveCardFromHand(targetCard);
             foreach (var cardObject in HandController.Hand)
                 cardObject.UpdateCardText();
         }
