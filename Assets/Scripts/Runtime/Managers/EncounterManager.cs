@@ -142,11 +142,11 @@ namespace AGGtH.Runtime.Managers
         }
         public void PlayCard(CharacterBase target)
         {
-            if (!(SelectedCard.CheckIfValidTarget(target))) { Debug.Log("Invalid target"); return; }
+            if (!(SelectedCard.CheckIfValidTarget(target))) { Debug.Log("Invalid target"); OnCardDeselected(); return; }
 
             //do not ask why it takes player twice,, if i take it out everything breaks
             SelectedCard.Use(Player, target, CurrentEnemiesList, Player);
-            OnCardDeselected();
+            //OnCardDeselected();
         }
         public void EndTurn()
         {

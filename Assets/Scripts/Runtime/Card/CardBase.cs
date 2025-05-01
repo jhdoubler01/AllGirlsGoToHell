@@ -268,7 +268,7 @@ namespace AGGtH.Runtime.Card
             PointerEventData pointerData = (PointerEventData)eventData;
             EncounterManager.OnCardSelected(this);
             if (UnityEngine.EventSystems.EventSystem.current.alreadySelecting == false) { 
-            UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(gameObject);
+                eventData.selectedObject = gameObject;
 
             }
 
@@ -281,7 +281,7 @@ namespace AGGtH.Runtime.Card
             PointerEventData pointerData = (PointerEventData)eventData;
             //UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
 
-            EncounterManager.OnCardDeselected();
+            //EncounterManager.OnCardDeselected();
 
             OnCardDeselected?.Invoke(this);
         }
