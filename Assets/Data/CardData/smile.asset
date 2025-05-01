@@ -23,15 +23,13 @@ MonoBehaviour:
   cardActionDataList:
   - actionTargetType: 1
     cardActionType: 2
-    buffType: 0
-    debuffType: 0
-    actionValue: 1
+    statusType: 0
+    actionValue: 0.5
     actionDelay: 0
   - actionTargetType: 0
     cardActionType: 1
-    buffType: 0
-    debuffType: 0
-    actionValue: 0.5
+    statusType: 0
+    actionValue: 1
     actionDelay: 0
   cardDescriptionDataList: []
   specialKeywordsList: 

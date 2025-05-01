@@ -5,11 +5,13 @@ using AGGtH.Runtime.Interfaces;
 using AGGtH.Runtime.Extensions;
 using System;
 using System.Collections.Generic;
+using UnityEngine.EventSystems;
+
 using AGGtH.Runtime.UI;
 
 namespace AGGtH.Runtime.Characters
 {
-    public abstract class CharacterBase : MonoBehaviour, ICharacter
+    public abstract class CharacterBase : MonoBehaviour, ICharacter, IPointerClickHandler
     {
         [Header("Base settings")]
         [SerializeField] private CharacterType characterType;
@@ -46,6 +48,12 @@ namespace AGGtH.Runtime.Characters
         public virtual void SetHealthBar(SegmentedHealthBar newHealthBar)
         {
             healthBar = newHealthBar;
+        }
+        public virtual void OnPointerClick(PointerEventData pointerEventData)
+        {
+            if(EncounterManager.SelectedCard == null) { Debug.Log("selected card null"); return; }
+
+            EncounterManager.PlayCard(this);
         }
         public CharacterBase GetCharacterBase()
         {

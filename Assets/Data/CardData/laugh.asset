@@ -21,16 +21,14 @@ MonoBehaviour:
   usableWithoutTarget: 1
   exhaustAfterPlay: 0
   cardActionDataList:
-  - actionTargetType: 1
-    cardActionType: 3
-    buffType: 0
-    debuffType: 0
-    actionValue: 0.5
-    actionDelay: 0
   - actionTargetType: 3
     cardActionType: 1
-    buffType: 0
-    debuffType: 0
+    statusType: 0
+    actionValue: 0.5
+    actionDelay: 0
+  - actionTargetType: 1
+    cardActionType: 3
+    statusType: 0
     actionValue: 0.5
     actionDelay: 0
   cardDescriptionDataList: []

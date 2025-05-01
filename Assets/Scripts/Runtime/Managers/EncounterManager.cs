@@ -33,7 +33,7 @@ namespace AGGtH.Runtime.Managers
         public List<EnemyBase> CurrentEnemiesList { get; private set; } = new List<EnemyBase>();
         public PlayerBase Player { get; private set; }
 
-
+        public CardBase SelectedCard => selectedCard;
         public Action OnPlayerTurnStarted;
         public Action OnEnemyTurnStarted;
 
@@ -132,20 +132,22 @@ namespace AGGtH.Runtime.Managers
         #endregion
 
         #region Public Methods
-        //public void SelectedCard(CardBase targetCard, bool isSelected)
-        //{
-        //    if (!isSelected)
-        //    {
-        //        selectedCard = null;
-        //        return;
-        //    }
-        //    foreach(CardBase card in CardCollectionManager.HandController.Hand)
-        //    {
-        //        card.IsSelected = false;
-        //    }
-        //    selectedCard = targetCard;
-        //    targetCard.IsSelected = true;
-        //}
+        public void OnCardSelected(CardBase targetCard)
+        {
+            selectedCard = targetCard;
+        }
+        public void OnCardDeselected()
+        {
+            selectedCard = null;
+        }
+        public void PlayCard(CharacterBase target)
+        {
+            if (!(SelectedCard.CheckIfValidTarget(target))) { Debug.Log("Invalid target"); return; }
+
+            //do not ask why it takes player twice,, if i take it out everything breaks
+            SelectedCard.Use(Player, target, CurrentEnemiesList, Player);
+            OnCardDeselected();
+        }
         public void EndTurn()
         {
             CurrentCombatStateType = CombatStateType.EnemyTurn;

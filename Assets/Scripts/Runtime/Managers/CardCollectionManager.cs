@@ -94,14 +94,7 @@ namespace AGGtH.Runtime.Managers
 
             HandController.Hand.Clear();
         }
-        public void OnCardSelected(CardBase targetCard)
-        {
 
-        }
-        public void OnCardDeselected()
-        {
-
-        }
         public void OnCardDiscarded(CardBase targetCard)
         {
             HandPile.Remove(targetCard.CardData);

@@ -156,6 +156,7 @@ namespace AGGtH.Runtime.Card
         #region Card Methods
         public virtual void Use(CharacterBase self, CharacterBase target, List<EnemyBase> allEnemies, PlayerBase player)
         {
+            if(GameManager.PersistentGameplayData.CurrentEnergy < CardData.EnergyCost) { Debug.Log("not enough energy!"); return; }
             if (!IsPlayable || !GameManager.PersistentGameplayData.CanUseCards) { return; }
             StartCoroutine(CardUseRoutine(self, target, allEnemies, player));
             UIManager.SetDialogueBoxText(CardData.DialogueOptions.RandomItem());
@@ -203,7 +204,27 @@ namespace AGGtH.Runtime.Card
             }
             return targetList;
         }
+        public bool CheckIfValidTarget(CharacterBase target)
+        {
+            if(target.CharacterType == CharacterType.Player)
+            {
+                foreach(var playerAction in CardData.CardActionDataList)
+                {
+                    if(playerAction.ActionTargetType == ActionTargetType.Player) { return true; }
+                }
+            }
+            else
+            {
+                foreach (var playerAction in CardData.CardActionDataList)
+                {
+                    if (playerAction.ActionTargetType == ActionTargetType.Enemy) { return true; }
+                    if (playerAction.ActionTargetType == ActionTargetType.AllEnemies) { return true; }
+                    if (playerAction.ActionTargetType == ActionTargetType.RandomEnemy) { return true; }
+                }
+            }
 
+            return false;
+        }
         public virtual void Discard()
         {
             if (IsExhausted) return;
@@ -245,17 +266,24 @@ namespace AGGtH.Runtime.Card
             if (!GameManager.PersistentGameplayData.CanSelectCards) { return; }
 
             PointerEventData pointerData = (PointerEventData)eventData;
-            UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
-            eventData.selectedObject = gameObject;
+            EncounterManager.OnCardSelected(this);
+            if (UnityEngine.EventSystems.EventSystem.current.alreadySelecting == false) { 
+            UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(gameObject);
+
+            }
+
+
             OnCardSelected?.Invoke(this);
 
-            Debug.Log(eventData.selectedObject);
         }
         public void OnDeselect(BaseEventData eventData)
         {
             PointerEventData pointerData = (PointerEventData)eventData;
+            //UnityEngine.EventSystems.EventSystem.current.SetSelectedGameObject(null);
+
+            EncounterManager.OnCardDeselected();
+
             OnCardDeselected?.Invoke(this);
-            Debug.Log("deselected");
         }
         public virtual void OnPointerExit(PointerEventData eventData)
         {
