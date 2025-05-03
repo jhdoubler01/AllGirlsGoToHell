@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: -5568224717670577805, guid: f2c2b82653d6d8a4692c5f62a4ea4bcf, type: 3}
-  m_Color: {r: 1, g: 0.6745098, b: 0.9968845, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -137,7 +137,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterType: 1
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 3884671272132070104}
+  spriteRoot: {fileID: 1518848506792805747}
   enemyCharacterData: {fileID: 11400000, guid: 6ddc4ba696f483b4eb0f47d339ab03ba, type: 2}
   enemyCanvas: {fileID: 6071288585243957716}
 --- !u!50 &6428227095447891089
@@ -263,6 +264,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8863123282754760866}
+  - component: {fileID: 8472787756673866522}
   m_Layer: 3
   m_Name: SpriteRoot
   m_TagString: Untagged
@@ -286,6 +288,87 @@ Transform:
   - {fileID: 3273045608091408076}
   m_Father: {fileID: 3199812844119847187}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8472787756673866522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1518848506792805747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5645c5a5179ee2646805f14c5d7e8ceb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Settings:
+  - showSettings: 1
+    Name: Shake01
+    nodePos: {x: 333.6, y: 238.6}
+    Outputs: []
+    spacing: 25
+    TargetType: 1
+    targetObj: {fileID: 32483953664017819}
+    RunAtStart: 0
+    Loop: 0
+    EffectType: 6
+    Delay: 0
+    Speed: 5
+    initialState: 0
+    startVector: {x: 0, y: 0, z: 0}
+    targetVector: {x: 0, y: 0, z: 0}
+    Duration: 1
+    color: {r: 1, g: 1, b: 1, a: 1}
+    RotationType: 0
+    RotationDirection: 2
+    FadeType: 0
+    ApplyToChildren: 0
+    startAlpha: 0
+    startColor: {r: 1, g: 1, b: 1, a: 1}
+    BrightnessDuration: 0
+    ShakeOrJellyDirection: 2
+    Amplitude: 1
+    running: 0
+    killed: 0
+    OnStart:
+      m_PersistentCalls:
+        m_Calls: []
+    OnFinished:
+      m_PersistentCalls:
+        m_Calls: []
+  - showSettings: 1
+    Name: Flash01
+    nodePos: {x: 581.60004, y: 358.6}
+    Outputs: []
+    spacing: 25
+    TargetType: 1
+    targetObj: {fileID: 32483953664017819}
+    RunAtStart: 0
+    Loop: 0
+    EffectType: 4
+    Delay: 0
+    Speed: 5
+    initialState: 0
+    startVector: {x: 0, y: 0, z: 0}
+    targetVector: {x: 0, y: 0, z: 0}
+    Duration: 1
+    color: {r: 0.8226415, g: 0.34147385, b: 0.34147385, a: 1}
+    RotationType: 0
+    RotationDirection: 2
+    FadeType: 0
+    ApplyToChildren: 0
+    startAlpha: 0
+    startColor: {r: 1, g: 1, b: 1, a: 1}
+    BrightnessDuration: 0
+    ShakeOrJellyDirection: 0
+    Amplitude: 1
+    running: 0
+    killed: 0
+    OnStart:
+      m_PersistentCalls:
+        m_Calls: []
+    OnFinished:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!1001 &6448273574119391004
 PrefabInstance:
   m_ObjectHideFlags: 0

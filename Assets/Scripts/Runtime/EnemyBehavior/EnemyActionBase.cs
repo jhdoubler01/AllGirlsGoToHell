@@ -23,13 +23,15 @@ namespace AGGtH.Runtime.EnemyBehavior
         public readonly float Value;
         public readonly CharacterBase TargetCharacter;
         public readonly CharacterBase SelfCharacter;
+        public readonly StatusType StatusType;
         public readonly string Dialogue;
 
-        public EnemyActionParameters(float value, CharacterBase target, CharacterBase self, string dialogue = "")
+        public EnemyActionParameters(float value, CharacterBase target, CharacterBase self, StatusType statusType, string dialogue = "")
         {
             Value = value;
             TargetCharacter = target;
             SelfCharacter = self;
+            StatusType = statusType;
             Dialogue = dialogue;
         }
     }

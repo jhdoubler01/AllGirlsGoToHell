@@ -99,7 +99,7 @@ namespace AGGtH.Runtime.Card
                 {
                     CardActionProcessor.GetAction(playerAction.CardActionType)
                         .DoAction(new CardActionParameters(playerAction.ActionValue,
-                            target, self, CardData, this));
+                            target, self, CardData, playerAction.StatusType, this));
                 }
                 CardCollectionManager.OnCardPlayed(this);
 

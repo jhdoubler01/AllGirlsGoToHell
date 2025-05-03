@@ -29,8 +29,8 @@ namespace AGGtH.Runtime.Characters
         #region Setup
         public override void BuildCharacter()
         {
-            base.BuildCharacter();
             SetHealthBar(EnemyCanvas.HealthBar);
+
             CharacterStats = new CharacterStats(EnemyCharacterData.MaxHealth, EnemyCharacterData.LoveLanguageType);
             CharacterStats.OnDeath += OnDeath;
             CharacterStats.OnHealthChanged += ChangeHealthBarFill;
@@ -40,6 +40,8 @@ namespace AGGtH.Runtime.Characters
 
             EncounterManager.OnPlayerTurnStarted += ShowNextAbility;
             EncounterManager.OnEnemyTurnStarted += CharacterStats.TriggerAllStatus;
+            base.BuildCharacter();
+
         }
         protected override void OnDeath()
         {
@@ -106,7 +108,7 @@ namespace AGGtH.Runtime.Characters
 
             //yield return StartCoroutine(MoveToTargetRoutine(waitFrame, startPos, endPos, startRot, endRot, 5));
             yield return new WaitForSeconds(actionDelay);
-            targetAbility.ActionList.ForEach(x => EnemyActionProcessor.GetAction(x.ActionType).DoAction(new EnemyActionParameters(x.ActionValue, target, this)));
+            targetAbility.ActionList.ForEach(x => EnemyActionProcessor.GetAction(x.ActionType).DoAction(new EnemyActionParameters(x.ActionValue, target, this, x.StatusType)));
 
             //yield return StartCoroutine(MoveToTargetRoutine(waitFrame, endPos, startPos, endRot, startRot, 5));
         }
@@ -127,7 +129,7 @@ namespace AGGtH.Runtime.Characters
 
             //yield return StartCoroutine(MoveToTargetRoutine(waitFrame, startPos, endPos, startRot, endRot, 5));
             yield return new WaitForSeconds(actionDelay);
-            targetAbility.ActionList.ForEach(x => EnemyActionProcessor.GetAction(x.ActionType).DoAction(new EnemyActionParameters(x.ActionValue, target, this)));
+            targetAbility.ActionList.ForEach(x => EnemyActionProcessor.GetAction(x.ActionType).DoAction(new EnemyActionParameters(x.ActionValue, target, this, x.StatusType)));
 
             //yield return StartCoroutine(MoveToTargetRoutine(waitFrame, endPos, startPos, endRot, startRot, 5));
         }

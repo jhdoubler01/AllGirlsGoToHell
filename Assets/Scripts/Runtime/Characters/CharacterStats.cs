@@ -44,7 +44,7 @@ namespace AGGtH.Runtime.Characters
         private readonly Action<StatusType> OnStatusCleared;
         public Action OnHealAction;
         public Action OnTakeDamageAction;
-        public Action OnShieldGained;
+        public Action<float> OnShieldGained;
 
         public readonly Dictionary<StatusType, StatusStats> StatusDict = new Dictionary<StatusType, StatusStats>();
 
@@ -71,6 +71,7 @@ namespace AGGtH.Runtime.Characters
             StatusDict[StatusType.Tipsy].OnTriggerAction += DamagePoison;
 
             StatusDict[StatusType.Block].ClearAtNextTurn = true;
+            //StatusDict[StatusType.Block].OnTriggerAction += OnShieldGained;
 
             StatusDict[StatusType.Shy].CanNegativeStack = true;
             StatusDict[StatusType.Flustered].CanNegativeStack = true;
@@ -114,7 +115,6 @@ namespace AGGtH.Runtime.Characters
             CurrentHealth += value;
             if (CurrentHealth > MaxHealth) CurrentHealth = MaxHealth;
             OnHealthChanged?.Invoke(CurrentHealth, MaxHealth);
-            Debug.Log("Healed character: " + CurrentHealth + "/" + MaxHealth);
         }
 
         public void Damage(float value, bool canPierceArmor = false)
@@ -186,7 +186,7 @@ namespace AGGtH.Runtime.Characters
             //Check status
             if (StatusDict[targetStatus].StatusValue <= 0)
             {
-                if (StatusDict[targetStatus].CanNegativeStack)
+                if (!StatusDict[targetStatus].CanNegativeStack)
                 {
                     if (StatusDict[targetStatus].StatusValue == 0 && !StatusDict[targetStatus].IsPermanent)
                         ClearStatus(targetStatus);
@@ -208,7 +208,14 @@ namespace AGGtH.Runtime.Characters
             OnStatusChanged?.Invoke(targetStatus, StatusDict[targetStatus].StatusValue);
         }
 
+        private void AddBlock(float amtToAdd)
+        {
+            //OnShieldGained?.Invoke(amtToAdd);
+        }
+        private void RemoveBlock()
+        {
 
+        }
         private void DamagePoison()
         {
             if (StatusDict[StatusType.Tipsy].StatusValue <= 0) return;

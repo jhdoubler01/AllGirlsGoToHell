@@ -60,6 +60,7 @@ namespace AGGtH.Runtime.Data.Characters
         [SerializeField] private float minActionValue;
         [SerializeField] private float maxActionValue;
         public EnemyActionType ActionType => actionType;
+        public StatusType StatusType;
         public float ActionValue => Random.Range(minActionValue, maxActionValue);
 
     }

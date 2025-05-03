@@ -4,6 +4,8 @@ namespace AGGtH.Runtime.Enums
     {
         Attack,
         Heal,
+        ApplyBuff,
+        ApplyDebuff,
         Poison,
         Block
     }

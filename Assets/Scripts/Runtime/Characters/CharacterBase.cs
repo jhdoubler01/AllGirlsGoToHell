@@ -6,7 +6,6 @@ using AGGtH.Runtime.Extensions;
 using System;
 using System.Collections.Generic;
 using UnityEngine.EventSystems;
-
 using AGGtH.Runtime.UI;
 
 namespace AGGtH.Runtime.Characters
@@ -16,10 +15,12 @@ namespace AGGtH.Runtime.Characters
         [Header("Base settings")]
         [SerializeField] private CharacterType characterType;
         [SerializeField] private SegmentedHealthBar healthBar;
+        //[SerializeField] private GameObject spriteRoot;
 
         #region Cache
         public CharacterStats CharacterStats { get; protected set; }
         public CharacterType CharacterType => characterType;
+        public SegmentedHealthBar HealthBar => healthBar;
         protected FxManager FxManager => FxManager.Instance;
         protected AudioManager AudioManager => AudioManager.Instance;
         protected GameManager GameManager => GameManager.Instance;
@@ -32,10 +33,13 @@ namespace AGGtH.Runtime.Characters
 
         public virtual void Awake()
         {
+            
+
         }
 
         public virtual void BuildCharacter()
         {
+            CharacterStats.OnShieldGained += OnBlockGained;
         }
         protected virtual void OnDeath()
         {
@@ -44,6 +48,14 @@ namespace AGGtH.Runtime.Characters
         public virtual void ChangeHealthBarFill(float currentHealth, int maxHealth)
         {
             healthBar.OnHealthChanged(currentHealth, maxHealth);
+        }
+        public virtual void OnBlockGained(float blockToAdd)
+        {
+            healthBar.AddBlock(blockToAdd);
+        }
+        public virtual void RemoveAllBlock()
+        {
+            healthBar.RemoveBlock(0, true);
         }
         public virtual void SetHealthBar(SegmentedHealthBar newHealthBar)
         {

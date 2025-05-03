@@ -12,13 +12,15 @@ namespace AGGtH.Runtime.Card
         public readonly CharacterBase SelfCharacter;
         public readonly CardData CardData;
         public readonly CardBase CardBase;
-        public CardActionParameters(float value, CharacterBase target, CharacterBase self, CardData cardData, CardBase cardBase)
+        public readonly StatusType StatusType;
+        public CardActionParameters(float value, CharacterBase target, CharacterBase self, CardData cardData, StatusType statusType, CardBase cardBase)
         {
             Value = value;
             TargetCharacter = target;
             SelfCharacter = self;
             CardData = cardData;
             CardBase = cardBase;
+            StatusType = statusType;
         }
     }
     public abstract class CardActionBase

@@ -14,6 +14,7 @@ namespace AGGtH.Runtime.UI
         public List<Image> ArmorList = new List<Image>();
 
         [SerializeField] private float currentFillTotal;
+        private float currentBlockAmt;
 
         #region Cache
         public GameObject SegmentBase => segmentBase;
@@ -34,8 +35,15 @@ namespace AGGtH.Runtime.UI
             {
                 heart.fillAmount = 1;
             }
+            foreach(var armor in ArmorList)
+            {
+                RemoveAllBlock();
+                armor.gameObject.SetActive(true);
+            }
             currentFillTotal = FillHeartsList.Count;
         }
+
+        #region Public Methods
         public virtual void AddNewSegments(int numToAdd = 1)
         {
             for (int i = 0; i <= numToAdd; i++)
@@ -48,15 +56,6 @@ namespace AGGtH.Runtime.UI
             }
 
         }
-        private float GetCurrentFillTotal()
-        {
-            float fill = 0;
-            foreach(var heart in FillHeartsList)
-            {
-                fill += heart.fillAmount;
-            }
-            return fill;
-        }
         public virtual void OnHealthChanged(float currentHealth, int maxHealth)
         {
             if (maxHealth > FillHeartsList.Count)
@@ -64,16 +63,87 @@ namespace AGGtH.Runtime.UI
                 AddNewSegments(maxHealth - FillHeartsList.Count);
             }
             currentFillTotal = GetCurrentFillTotal();
+
             float diff = currentFillTotal - currentHealth;
-            Debug.Log(diff);
             //if damage has been taken
             if (diff == 0) return;
+
             else if (diff > 0)
             {
+                if(currentBlockAmt > 0)
+                {
+                    diff = RemoveBlock(diff);
+                }
+                if(diff <= 0) { return; }
                 TakeDamage(diff);
             }
             else GainHealth(diff);
             currentFillTotal = GetCurrentFillTotal();
+        }
+        public virtual void AddBlock(float blockAmount)
+        {
+            float diff = blockAmount;
+            for(int i= ArmorList.Count - 1; i>= 0; i--)
+            {
+                if (diff <= 0) { break; }
+
+                ArmorList[i].fillAmount = FillHeartsList[i].fillAmount;
+                diff -= ArmorList[i].fillAmount;
+            }
+        }
+        //returns remainder if the amtToRemove is more than the currentBlockAmt so you take damage
+        public virtual float RemoveBlock(float amtToRemove, bool removeAll = false)
+        {
+            float remainder = amtToRemove - currentBlockAmt;
+
+            if(amtToRemove >= currentBlockAmt || removeAll) { RemoveAllBlock(); }
+            else
+            {
+                float diff = amtToRemove;
+
+                for (int i = ArmorList.Count - 1; i >= 0; i--)
+                {
+
+                    if (diff <= 0) { break; }
+                    if (ArmorList[i].fillAmount != 0)
+                    {
+                        if (diff == 0.5f)
+                        {
+                            ArmorList[i].fillAmount -= diff;
+                            diff = 0;
+                        }
+                        else
+                        {
+                            diff -= ArmorList[i].fillAmount;
+                            ArmorList[i].fillAmount = 0;
+                        }
+
+                    }
+                }
+                currentBlockAmt -= amtToRemove;
+            }
+
+            return remainder;
+        }
+        #endregion
+
+        #region Private Methods
+        private void RemoveAllBlock()
+        {
+            foreach(var armor in ArmorList)
+            {
+                armor.fillAmount = 0;
+            }
+            currentBlockAmt = 0;
+        }
+        private float GetCurrentFillTotal()
+        {
+            float fill = 0;
+            foreach (var heart in FillHeartsList)
+            {
+                fill += heart.fillAmount;
+            }
+            return fill;
         }
         //NOTE damage taken should only be a whole number or end in .5
         private void TakeDamage(float damageTaken)
@@ -121,5 +191,6 @@ namespace AGGtH.Runtime.UI
                 }
             }
         }
+        #endregion
     }
 }

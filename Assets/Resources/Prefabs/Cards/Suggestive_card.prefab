@@ -34,7 +34,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8160745034923771504, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
       propertyPath: m_Name
-      value: suggestive_card
+      value: Suggestive_card
       objectReference: {fileID: 0}
     - target: {fileID: 8221093176281264888, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
       propertyPath: m_Sprite
@@ -42,11 +42,11 @@ PrefabInstance:
       objectReference: {fileID: -3996441223564358448, guid: 6d58cfc2d951c20488834079caded3c9, type: 3}
     - target: {fileID: 8468303383886495464, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
       propertyPath: m_Pivot.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8468303383886495464, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
       propertyPath: m_Pivot.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8468303383886495464, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
       propertyPath: m_AnchorMax.x
@@ -54,7 +54,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8468303383886495464, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8468303383886495464, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
       propertyPath: m_AnchorMin.x
@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8468303383886495464, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8468303383886495464, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
       propertyPath: m_SizeDelta.x

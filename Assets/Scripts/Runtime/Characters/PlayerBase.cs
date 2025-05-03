@@ -20,7 +20,6 @@ namespace AGGtH.Runtime.Characters
 
         public override void BuildCharacter()
         {
-            base.BuildCharacter();
             combatCanvas = UIManager.CombatCanvas;
             SetHealthBar(UIManager.PlayerHealthBar);
 
@@ -60,6 +59,9 @@ namespace AGGtH.Runtime.Characters
 
             if (EncounterManager != null)
                 EncounterManager.OnPlayerTurnStarted += CharacterStats.TriggerAllStatus;
+
+            base.BuildCharacter();
+
         }
 
         protected override void OnDeath()
