@@ -71,7 +71,7 @@ namespace AGGtH.Runtime.Characters
             StatusDict[StatusType.Tipsy].OnTriggerAction += DamagePoison;
 
             StatusDict[StatusType.Block].ClearAtNextTurn = true;
-            //StatusDict[StatusType.Block].OnTriggerAction += OnShieldGained;
+            // StatusDict[StatusType.Block].OnTriggerAction += OnShieldGained;
 
             StatusDict[StatusType.Shy].CanNegativeStack = true;
             StatusDict[StatusType.Flustered].CanNegativeStack = true;
