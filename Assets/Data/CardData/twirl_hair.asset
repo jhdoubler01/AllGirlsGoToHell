@@ -23,13 +23,10 @@ MonoBehaviour:
   cardActionDataList:
   - actionTargetType: 3
     cardActionType: 5
-    buffType: 0
-    debuffType: 0
-    damageAmt: 3
-    healAmt: 0
-    blockAmt: 1
-    drawCardAmt: 0
-    energyGainAmt: 0
+    statusType: 0
+    actionValue: 1
     actionDelay: 0
+  cardDescriptionDataList: []
+  specialKeywordsList: 
   dialogueOptions:
   - You twirl your hair and try to remember when you last washed it.

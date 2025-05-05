@@ -86,15 +86,15 @@ namespace AGGtH.Runtime.Card
         #endregion
 
         #region Card Methods
-        public virtual void Use(CharacterBase self, CharacterBase target, List<EnemyBase> allEnemies, PlayerBase player)
+        public virtual void Use(PlayerBase self, CharacterBase target, List<EnemyBase> allEnemies, PlayerBase player)
         {
             if(GameManager.PersistentGameplayData.CurrentEnergy < CardData.EnergyCost) { Debug.Log("not enough energy!"); return; }
             if (!IsPlayable || !GameManager.PersistentGameplayData.CanUseCards) { return; }
             StartCoroutine(CardUseRoutine(self, target, allEnemies, player));
-            UIManager.SetDialogueBoxText(CardData.DialogueOptions.RandomItem());
+            UIManager.SetDialogueBoxText(CardData.DialogueOptions.RandomItem(), self.PlayerCharacterData.DialogueColor);
 
         }
-        private IEnumerator CardUseRoutine(CharacterBase self, CharacterBase target, List<EnemyBase> allEnemies, PlayerBase player)
+        private IEnumerator CardUseRoutine(PlayerBase self, CharacterBase target, List<EnemyBase> allEnemies, PlayerBase player)
         {
             SpendEnergy(CardData.EnergyCost);
             Debug.Log("Player energy: " + GameManager.PersistentGameplayData.CurrentEnergy);
@@ -191,10 +191,13 @@ namespace AGGtH.Runtime.Card
         public void OnPointerEnter(BaseEventData eventData)
         {
             PointerEventData pointerData = (PointerEventData)eventData;
+            if (IsRewardChoice) { return; }
             OnHover?.Invoke(this);
         }
         public void OnSelect(BaseEventData eventData)
         {
+            if (IsRewardChoice) { OnChoice(); }
+
             if (!GameManager.PersistentGameplayData.CanSelectCards) { return; }
 
             PointerEventData pointerData = (PointerEventData)eventData;
@@ -234,7 +237,6 @@ namespace AGGtH.Runtime.Card
 
         public virtual void OnPointerUp(PointerEventData eventData)
         {
-            if (IsRewardChoice) { OnChoice(); }
             //ShowTooltipInfo();
         }
         #endregion
@@ -277,6 +279,7 @@ namespace AGGtH.Runtime.Card
             SetCard(cardData);
             UpdateCardText();
             cardTooltipImage.gameObject.SetActive(true);
+            transform.localScale = new Vector3(0.64f, 0.64f, 0.64f);
         }
         private void OnChoice()
         {

@@ -17,6 +17,7 @@ MonoBehaviour:
   characterDescription: 
   loveLanguageType: 1
   maxHealth: 5
+  dialogueColor: {r: 1, g: 0.15294117, b: 0.50632286, a: 1}
   enemyPrefab: {fileID: 7668587954984906221, guid: 19cf3fe5fb8122e42a0bce8e9b99d41b, type: 3}
   followAbilityPattern: 0
   enemyAbilityList:
@@ -25,6 +26,7 @@ MonoBehaviour:
     hideActionValue: 0
     dialogueList:
     - Want me to show you around?
+    - You're hot.
     actionList:
     - actionType: 0
       minActionValue: 0.5
@@ -35,6 +37,7 @@ MonoBehaviour:
     hideActionValue: 0
     dialogueList:
     - I'm just waiting for my friends to get here.
+    - Oh, you're still here?
     actionList:
     - actionType: 5
       minActionValue: 1

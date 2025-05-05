@@ -76,8 +76,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: -5568224717670577805, guid: f2c2b82653d6d8a4692c5f62a4ea4bcf, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 4781316319618279520, guid: d454c997c52285249a83493b0b6ea518, type: 3}
+  m_Color: {r: 1, g: 0.8415094, b: 0.9755037, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -138,7 +138,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterType: 1
   healthBar: {fileID: 3884671272132070104}
-  spriteRoot: {fileID: 1518848506792805747}
   enemyCharacterData: {fileID: 11400000, guid: 6ddc4ba696f483b4eb0f47d339ab03ba, type: 2}
   enemyCanvas: {fileID: 6071288585243957716}
 --- !u!50 &6428227095447891089

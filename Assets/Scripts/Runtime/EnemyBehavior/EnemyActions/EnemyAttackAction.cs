@@ -16,7 +16,6 @@ namespace AGGtH.Runtime.EnemyBehavior.EnemyActions
                                              .StatusValue + actionParameters.SelfCharacter.CharacterStats.StatusDict[StatusType.Shy]
                                              .StatusValue);
             actionParameters.TargetCharacter.CharacterStats.Damage(value);
-            UIManager.SetDialogueBoxText(actionParameters.Dialogue);
             //if (FxManager != null)
             //{
             //    FxManager.PlayFx(actionParameters.TargetCharacter.transform, FxType.Attack);

@@ -17,3 +17,4 @@ MonoBehaviour:
   characterDescription: A loser lesbian who can't flirt to save her life.
   loveLanguageType: 0
   maxHealth: 5
+  dialogueColor: {r: 1, g: 1, b: 1, a: 1}

@@ -82,6 +82,7 @@ namespace AGGtH.Runtime.Characters
             if (CharacterStats.IsStunned)
                 yield break;
 
+            UIManager.SetDialogueBoxText(EnemyCharacterData.EnemyAbilityList[0].Dialogue, EnemyCharacterData.DialogueColor);
             //EnemyCanvas.IntentImage.gameObject.SetActive(false);
             if (NextAbility.Intention.EnemyIntentionType == EnemyIntentionType.Attack || NextAbility.Intention.EnemyIntentionType == EnemyIntentionType.Debuff)
             {

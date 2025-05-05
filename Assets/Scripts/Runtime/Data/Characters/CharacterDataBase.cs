@@ -12,6 +12,7 @@ namespace AGGtH.Runtime.Data.Characters
         [SerializeField][TextArea] protected string characterDescription;
         [SerializeField] protected CardLoveLanguageType loveLanguageType;
         [SerializeField] protected int maxHealth;
+        [SerializeField] private Color dialogueColor;
 
         public string CharacterID => characterID;
 
@@ -22,6 +23,8 @@ namespace AGGtH.Runtime.Data.Characters
         public CardLoveLanguageType LoveLanguageType => loveLanguageType;
 
         public int MaxHealth => maxHealth;
+
+        public Color DialogueColor => dialogueColor;
 
     }
 }

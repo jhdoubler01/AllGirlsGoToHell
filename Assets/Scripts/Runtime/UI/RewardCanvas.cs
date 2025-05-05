@@ -110,7 +110,7 @@ namespace AGGtH.Runtime.UI
 
                 CardData reward = _cardRewardList.RandomItem();
 
-                CardBase choice = Instantiate(GameManager.SelectCardPrefab(reward), spawnTransform);
+                CardBase choice = Instantiate(GameManager.SelectCardPrefab(reward), spawnTransform, false);
 
                 choice.BuildReward(reward);
                 choice.OnCardChose += ResetChoice;

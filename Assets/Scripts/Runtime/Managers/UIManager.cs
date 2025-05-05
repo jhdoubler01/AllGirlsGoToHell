@@ -24,9 +24,10 @@ namespace AGGtH.Runtime.Managers
         public RewardCanvas RewardCanvas => rewardCanvas;
         #endregion
 
-        public void SetDialogueBoxText(string dialogue)
+        public void SetDialogueBoxText(string dialogue, Color? color = null)
         {
             dialogueBox.text = dialogue;
+            dialogueBox.color = color ?? Color.white;
         }
         public void SetEnergyBoxText(int energy)
         {
