@@ -10,7 +10,7 @@ namespace AGGtH.Runtime.Settings
     public class PersistentGameplayData
     {
         private readonly GameplayData _gameplayData;
-        [SerializeField] private int currentGold;
+        [SerializeField] private int currentChips;
         [SerializeField] private int drawCount;
         [SerializeField] private int maxEnergy;
         [SerializeField] private int currentEnergy;
@@ -51,7 +51,7 @@ namespace AGGtH.Runtime.Settings
             Player = _gameplayData.Player;
             CurrentEncounterId = 0;
             CurrentStageId = 0;
-            CurrentGold = 0;
+            CurrentChips = 0;
             CurrentCardsList = new List<CardData>();
             IsFinalEncounter = false;
         }
@@ -129,10 +129,10 @@ namespace AGGtH.Runtime.Settings
             get => playerHealthData;
             set => playerHealthData = value;
         }
-        public int CurrentGold
+        public int CurrentChips
         {
-            get => currentGold;
-            set => currentGold = value;
+            get => currentChips;
+            set => currentChips = value;
         }
 
         #endregion

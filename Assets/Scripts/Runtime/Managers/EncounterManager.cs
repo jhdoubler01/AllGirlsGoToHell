@@ -224,65 +224,14 @@ namespace AGGtH.Runtime.Managers
             {
                 Player.CharacterStats.ClearAllStatus();
                 GameManager.PersistentGameplayData.CurrentEncounterId++;
+                UIManager.RewardCanvas.gameObject.SetActive(true);
+                UIManager.RewardCanvas.PrepareCanvas();
+                UIManager.RewardCanvas.BuildReward(RewardType.Chips);
+                UIManager.RewardCanvas.BuildReward(RewardType.NewMove);
                 //show rewards screen
             }
         }
-        //private void PlayCard(Vector2 mousePos)
-        //{
-        //    // Use Card
-        //    //var mouseButtonUp = Input.GetMouseButtonUp(0);
-        //    //if (!mouseButtonUp) return;
-
-        //    //Remove highlights
-        //    //CombatManager.DeactivateCardHighlights();
-        //    bool backToHand = true;
-
-        //    if (GameManager.PersistentGameplayData.CanUseCards && GameManager.PersistentGameplayData.CurrentEnergy >= selectedCard.CardData.EnergyCost)
-        //    {
-        //        RaycastHit hit;
-        //        var mainRay = Camera.main.ScreenPointToRay(mousePos);
-        //        var _canUse = false;
-        //        CharacterBase selfCharacter = Player;
-        //        CharacterBase targetCharacter = null;
-
-        //        _canUse = selectedCard.CardData.UsableWithoutTarget || CheckPlayOnCharacter(mainRay, _canUse, ref selfCharacter, ref targetCharacter);
-
-        //        if (_canUse)
-        //        {
-        //            backToHand = false;
-        //            selectedCard.Use(selfCharacter, targetCharacter, CurrentEnemiesList, Player);
-        //        }
-        //    }
-
-        //    if (backToHand) // Cannot use card / Not enough mana! Return card to hand!
-        //    selectedCard = null;
-        //}
-        //private bool CheckPlayOnCharacter(Ray mainRay, bool _canUse, ref CharacterBase selfCharacter,
-        //    ref CharacterBase targetCharacter)
-        //{
-        //    RaycastHit hit;
-        //    if (Physics.Raycast(mainRay, out hit, 1000, targetLayer))
-        //    {
-        //        var character = hit.collider.gameObject.GetComponent<ICharacter>();
-
-        //        if (character != null)
-        //        {
-        //            var checkEnemy = (selectedCard.CardData.CardActionDataList[0].ActionTargetType == ActionTargetType.Enemy &&
-        //                              character.GetCharacterType() == CharacterType.Enemy);
-        //            var checkAlly = (selectedCard.CardData.CardActionDataList[0].ActionTargetType == ActionTargetType.Player &&
-        //                             character.GetCharacterType() == CharacterType.Player);
-
-        //            if (checkEnemy || checkAlly)
-        //            {
-        //                _canUse = true;
-        //                selfCharacter = Player;
-        //                targetCharacter = character.GetCharacterBase();
-        //            }
-        //        }
-        //    }
-
-        //    return _canUse;
-        //}
+       
         #endregion
         #region Routines
         private IEnumerator EnemyTurnRoutine()

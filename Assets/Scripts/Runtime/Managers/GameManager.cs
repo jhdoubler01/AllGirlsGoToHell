@@ -47,6 +47,7 @@ namespace AGGtH.Runtime.Managers
                 EnemyActionProcessor.Initialize();
                 InitGameplayData();
                 InitPlayerHand();
+                SetUpRewards();
             }
         }
         #endregion
@@ -94,15 +95,22 @@ namespace AGGtH.Runtime.Managers
             //    PersistentGameplayData.CurrentEncounterId = Random.Range(0,
             //        EncounterData.EnemyEncounterList[PersistentGameplayData.CurrentStageId].EnemyEncounterList.Count);
             //}
+            SetUpRewards();
+        }
+        public CardBase SelectCardPrefab(CardData data)
+        {
+            string type = Enum.GetName(typeof(CardLoveLanguageType), data.CardLoveLanguageType);
+            string action = Enum.GetName(typeof(CardActionType), data.CardActionDataList[0].CardActionType);
+            CardBase c = Resources.Load<CardBase>($"Prefabs/Cards/{type}_{action}_card");
+            return c;
+        }
+        public void SetUpRewards()
+        {
+            UIManager.RewardCanvas.SetUpRewardData(EncounterData.EncounterRewards);
         }
         #endregion
         #region Private Methods
-        private CardBase SelectCardPrefab(CardData data)
-        {
-            string type = Enum.GetName(typeof(CardLoveLanguageType), data.CardLoveLanguageType);
-            CardBase c = Resources.Load<CardBase>($"Prefabs/Cards/{type}_card");
-            return c;
-        }
+
         #endregion
 
     }

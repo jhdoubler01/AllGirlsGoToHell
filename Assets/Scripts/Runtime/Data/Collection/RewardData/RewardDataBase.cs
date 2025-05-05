@@ -11,5 +11,11 @@ namespace AGGtH.Runtime.Data.Collection.RewardData
         public RewardType RewardType => rewardType;
         public Sprite RewardSprite => rewardSprite;
         public string RewardDescription => rewardDescription;
+
+
+        public virtual void SetRewardDescription(string newDesc)
+        {
+            rewardDescription = newDesc;
+        }
     }
 }

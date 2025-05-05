@@ -46,6 +46,9 @@ namespace AGGtH.Runtime.Card
         public bool IsExhausted { get; private set;}
         public bool IsSelected = false;
 
+        public bool IsRewardChoice = false;
+        public Action OnCardChose;
+
         public event Action<CardBase> OnCardSelected, OnCardDeselected, OnHover;
 
         #endregion
@@ -67,10 +70,11 @@ namespace AGGtH.Runtime.Card
             cardDescText.text = CardData.MyDescription;
         }
 
-        public virtual void SetCard(CardData targetProfile, bool isPlayable = true)
+        public virtual void SetCard(CardData targetProfile, bool isPlayable = true, bool isReward = false)
         {
             CardData = targetProfile;
             IsPlayable = isPlayable;
+            IsRewardChoice = isReward;
             cardNameText.text = CardData.CardName;
             cardDescText.text = CardData.MyDescription;
             energyCostText.text = CardData.EnergyCost.ToString();
@@ -230,6 +234,7 @@ namespace AGGtH.Runtime.Card
 
         public virtual void OnPointerUp(PointerEventData eventData)
         {
+            if (IsRewardChoice) { OnChoice(); }
             //ShowTooltipInfo();
         }
         #endregion
@@ -264,6 +269,26 @@ namespace AGGtH.Runtime.Card
         void Start()
         {
             playerHandParent = transform.root;
+        }
+        #endregion
+        #region Reward Methods
+        public void BuildReward(CardData cardData)
+        {
+            SetCard(cardData);
+            UpdateCardText();
+            cardTooltipImage.gameObject.SetActive(true);
+        }
+        private void OnChoice()
+        {
+            if(GameManager!= null)
+            {
+                GameManager.PersistentGameplayData.CurrentCardsList.Add(CardData);
+            }
+            if(UIManager != null)
+            {
+                UIManager.RewardCanvas.ChoicePanel.gameObject.SetActive(false);
+            }
+            OnCardChose?.Invoke();
         }
         #endregion
     }

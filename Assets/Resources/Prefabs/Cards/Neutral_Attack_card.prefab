@@ -338,7 +338,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8394778287153550827, guid: f4fb35e91b44cdd49af8f3e4c0064d2c, type: 3}
+  m_Sprite: {fileID: 3583844654182584228, guid: 735cf8e20df2ce84d86474b658f5eb74, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -419,7 +419,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5733855260636635024, guid: d3994924d96334c4ab9131e6403e98e6, type: 3}
+  m_Sprite: {fileID: 585807696631049398, guid: 75b4ea26f3cee334aac8a2ca7162cc51, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -829,7 +829,7 @@ GameObject:
   - component: {fileID: 7835464247262316292}
   - component: {fileID: 7275582555231898497}
   m_Layer: 5
-  m_Name: Neutral_card
+  m_Name: Neutral_Attack_card
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

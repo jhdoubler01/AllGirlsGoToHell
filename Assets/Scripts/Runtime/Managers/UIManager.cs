@@ -17,9 +17,11 @@ namespace AGGtH.Runtime.Managers
 
         [Header("Canvases")]
         [SerializeField] private CombatCanvas combatCanvas;
+        [SerializeField] private RewardCanvas rewardCanvas;
 
         #region Cache
         public CombatCanvas CombatCanvas => combatCanvas;
+        public RewardCanvas RewardCanvas => rewardCanvas;
         #endregion
 
         public void SetDialogueBoxText(string dialogue)
