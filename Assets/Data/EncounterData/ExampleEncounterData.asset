@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   encounterRandomlyAtStage: 0
   enemyEncounterList:
-  - name: example
+  - name: Common Suggestive
     stageId: 0
     bossEncounterList: []
     enemyEncounterList:
     - enemyList:
       - {fileID: 11400000, guid: 6ddc4ba696f483b4eb0f47d339ab03ba, type: 2}
+  encounterRewards: {fileID: 11400000, guid: 51f63e212977cd44b96ec27b3f569f5b, type: 2}

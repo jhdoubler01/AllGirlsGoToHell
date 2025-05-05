@@ -75,7 +75,7 @@ namespace AGGtH.Runtime.Managers
                 HandPile.Add(randomCard);
                 DrawPile.Remove(randomCard);
                 currentDrawCount++;
-                //UIManager.CombatCanvas.SetPileTexts();
+                UIManager.CombatCanvas.SetPileTexts();
             }
 
             foreach (var cardObject in HandController.Hand)
@@ -103,7 +103,7 @@ namespace AGGtH.Runtime.Managers
             DiscardPile.Add(targetCard.CardData);
             //HandController.RemoveCardFromHand(targetCard);
             Destroy(targetCard.gameObject);
-            //UIManager.CombatCanvas.SetPileTexts();
+            UIManager.CombatCanvas.SetPileTexts();
         }
 
         public void OnCardExhausted(CardBase targetCard)
@@ -114,7 +114,7 @@ namespace AGGtH.Runtime.Managers
 
             Destroy(targetCard.gameObject);
 
-            //UIManager.CombatCanvas.SetPileTexts();
+            UIManager.CombatCanvas.SetPileTexts();
         }
         public void OnCardPlayed(CardBase targetCard)
         {

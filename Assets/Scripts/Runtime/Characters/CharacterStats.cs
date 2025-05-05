@@ -38,13 +38,17 @@ namespace AGGtH.Runtime.Characters
         public CardLoveLanguageType LoveLanguageType { get; private set; }
 
         public Action OnDeath;
+        public Action<float> OnBlockChanged;
         public Action<float, int> OnHealthChanged;
         private readonly Action<StatusType, float> OnStatusChanged;
         private readonly Action<StatusType, float> OnStatusApplied;
         private readonly Action<StatusType> OnStatusCleared;
+
+
+
+
         public Action OnHealAction;
         public Action OnTakeDamageAction;
-        public Action<float> OnShieldGained;
 
         public readonly Dictionary<StatusType, StatusStats> StatusDict = new Dictionary<StatusType, StatusStats>();
 
@@ -71,7 +75,6 @@ namespace AGGtH.Runtime.Characters
             StatusDict[StatusType.Tipsy].OnTriggerAction += DamagePoison;
 
             StatusDict[StatusType.Block].ClearAtNextTurn = true;
-            // StatusDict[StatusType.Block].OnTriggerAction += OnShieldGained;
 
             StatusDict[StatusType.Shy].CanNegativeStack = true;
             StatusDict[StatusType.Flustered].CanNegativeStack = true;
@@ -89,6 +92,7 @@ namespace AGGtH.Runtime.Characters
             {
                 StatusDict[targetStatus].StatusValue += value;
                 OnStatusChanged?.Invoke(targetStatus, StatusDict[targetStatus].StatusValue);
+                
 
             }
             else
@@ -208,9 +212,9 @@ namespace AGGtH.Runtime.Characters
             OnStatusChanged?.Invoke(targetStatus, StatusDict[targetStatus].StatusValue);
         }
 
-        private void AddBlock(float amtToAdd)
+        public void AddBlock()
         {
-            //OnShieldGained?.Invoke(amtToAdd);
+
         }
         private void RemoveBlock()
         {

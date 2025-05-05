@@ -9,6 +9,7 @@ using TMPro; //textmesh pro
 using UnityEngine.EventSystems;
 using AGGtH.Runtime.Extensions;
 using AGGtH.Runtime.Characters;
+using AGGtH.Runtime.UI;
 
 namespace AGGtH.Runtime.Card
 {
@@ -21,6 +22,7 @@ namespace AGGtH.Runtime.Card
         [SerializeField] protected TMP_Text actionAmtText;
         [SerializeField] protected Image cardImage;
         [SerializeField] protected Image cardTooltipImage;
+        [SerializeField] protected BatteryBar batteryBar;
 
         private Transform playerHandParent;
         //private bool overValidTarget;
@@ -72,6 +74,7 @@ namespace AGGtH.Runtime.Card
             cardNameText.text = CardData.CardName;
             cardDescText.text = CardData.MyDescription;
             energyCostText.text = CardData.EnergyCost.ToString();
+            batteryBar.SetActiveTicks(CardData.EnergyCost);
             actionAmtText.text = (CardData.CardActionDataList[0].ActionValue * 2).ToString();
             //cardTypeIcon.sprite = CardData.CardSprite;
 

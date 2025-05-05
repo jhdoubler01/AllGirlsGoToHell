@@ -39,7 +39,7 @@ namespace AGGtH.Runtime.Characters
 
         public virtual void BuildCharacter()
         {
-            CharacterStats.OnShieldGained += OnBlockGained;
+
         }
         protected virtual void OnDeath()
         {
@@ -49,14 +49,11 @@ namespace AGGtH.Runtime.Characters
         {
             healthBar.OnHealthChanged(currentHealth, maxHealth);
         }
-        public virtual void OnBlockGained(float blockToAdd)
+        public virtual void OnBlockChanged(float block, bool clearAll)
         {
-            healthBar.AddBlock(blockToAdd);
+
         }
-        public virtual void RemoveAllBlock()
-        {
-            healthBar.RemoveBlock(0, true);
-        }
+
         public virtual void SetHealthBar(SegmentedHealthBar newHealthBar)
         {
             healthBar = newHealthBar;

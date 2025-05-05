@@ -17,9 +17,11 @@ namespace AGGtH.Runtime.Data.Containers
         [Header("Settings")]
         [SerializeField] private bool encounterRandomlyAtStage;
         [SerializeField] private List<EnemyEncounterStage> enemyEncounterList;
+        [SerializeField] private RewardContainerData encounterRewards;
 
         public bool EncounterRandomlyAtStage => encounterRandomlyAtStage;
         public List<EnemyEncounterStage> EnemyEncounterList => enemyEncounterList;
+        public RewardContainerData EncounterRewards => encounterRewards;
 
         public EnemyEncounter GetEnemyEncounter(int stageId = 0, int encounterId = 0, bool isFinal = false)
         {

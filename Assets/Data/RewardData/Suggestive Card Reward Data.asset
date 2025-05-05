@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14d9b6f4187db7b4f989dd342d18edb2, type: 3}
+  m_Name: Suggestive Card Reward Data
+  m_EditorClassIdentifier: 
+  rewardType: 1
+  rewardSprite: {fileID: 21300000, guid: 5dc59232ce0aa6b45ba4a0bb40171129, type: 3}
+  rewardDescription: Select new move -->
+  rewardCardList:
+  - {fileID: 11400000, guid: 537dc3c39b264d74d852d89b855a41ed, type: 2}
+  - {fileID: 11400000, guid: 99e29060a80bd8e49ac76025f84e193c, type: 2}
+  - {fileID: 11400000, guid: fc01d12d37f71c049b8a492f479d264b, type: 2}

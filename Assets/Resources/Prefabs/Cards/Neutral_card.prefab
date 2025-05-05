@@ -338,7 +338,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -2626483278652964173, guid: c6426d7d9042f7e4592a6bdb75cee50a, type: 3}
+  m_Sprite: {fileID: -8394778287153550827, guid: f4fb35e91b44cdd49af8f3e4c0064d2c, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -419,7 +419,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -8766823106419454317, guid: eb41d89f4256b3740927934e0e7a1f0b, type: 3}
+  m_Sprite: {fileID: 5733855260636635024, guid: d3994924d96334c4ab9131e6403e98e6, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -455,6 +455,7 @@ GameObject:
   - component: {fileID: 6700332071089443876}
   - component: {fileID: 7611869253898867504}
   - component: {fileID: 8501228893903520908}
+  - component: {fileID: 4052898791902526711}
   m_Layer: 5
   m_Name: battery
   m_TagString: Untagged
@@ -509,7 +510,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -1506444851193781377, guid: 91e0fb6ecd2cc044183df96e2ebef92d, type: 3}
+  m_Sprite: {fileID: 3815221108928849502, guid: 91e0fb6ecd2cc044183df96e2ebef92d, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -519,6 +520,26 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4052898791902526711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4678381398768148557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 497949e6a703d074a8e4f001cf22a866, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  energyTicks:
+  - {fileID: 3815221108928849502, guid: 91e0fb6ecd2cc044183df96e2ebef92d, type: 3}
+  - {fileID: 2176489477236696364, guid: 91e0fb6ecd2cc044183df96e2ebef92d, type: 3}
+  - {fileID: -5393960855477174819, guid: 91e0fb6ecd2cc044183df96e2ebef92d, type: 3}
+  - {fileID: -1506444851193781377, guid: 91e0fb6ecd2cc044183df96e2ebef92d, type: 3}
+  - {fileID: 7177175353717918941, guid: 91e0fb6ecd2cc044183df96e2ebef92d, type: 3}
+  - {fileID: -7776701157758425417, guid: 91e0fb6ecd2cc044183df96e2ebef92d, type: 3}
+  image: {fileID: 8501228893903520908}
 --- !u!1 &4982281264575786533
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,6 +881,7 @@ MonoBehaviour:
   actionAmtText: {fileID: 1702438502991613577}
   cardImage: {fileID: 8221093176281264888}
   cardTooltipImage: {fileID: 2842378252254525471}
+  batteryBar: {fileID: 4052898791902526711}
   IsSelected: 0
 --- !u!61 &6334441526093155428
 BoxCollider2D:

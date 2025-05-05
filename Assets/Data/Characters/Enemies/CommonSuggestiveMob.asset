@@ -29,12 +29,14 @@ MonoBehaviour:
     - actionType: 0
       minActionValue: 0.5
       maxActionValue: 0.5
+      StatusType: 0
   - name: Act Coy
     intention: {fileID: 11400000, guid: 328b8781b559c3d40ba5a5264a112ab0, type: 2}
     hideActionValue: 0
     dialogueList:
     - I'm just waiting for my friends to get here.
     actionList:
-    - actionType: 3
+    - actionType: 5
       minActionValue: 1
       maxActionValue: 1.5
+      StatusType: 0
