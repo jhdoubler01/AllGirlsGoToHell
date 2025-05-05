@@ -38,7 +38,7 @@ namespace AGGtH.Runtime.Characters
         public CardLoveLanguageType LoveLanguageType { get; private set; }
 
         public Action OnDeath;
-        public Action<float> OnBlockChanged;
+        public Action<float, bool> OnBlockChanged;
         public Action<float, int> OnHealthChanged;
         private readonly Action<StatusType, float> OnStatusChanged;
         private readonly Action<StatusType, float> OnStatusApplied;

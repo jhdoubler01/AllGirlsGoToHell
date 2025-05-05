@@ -39,7 +39,7 @@ namespace AGGtH.Runtime.Characters
 
         public virtual void BuildCharacter()
         {
-
+            CharacterStats.OnBlockChanged += OnBlockChanged;
         }
         protected virtual void OnDeath()
         {
@@ -51,6 +51,8 @@ namespace AGGtH.Runtime.Characters
         }
         public virtual void OnBlockChanged(float block, bool clearAll)
         {
+            if (clearAll) { healthBar.RemoveBlock(0, true); }
+
 
         }
 
