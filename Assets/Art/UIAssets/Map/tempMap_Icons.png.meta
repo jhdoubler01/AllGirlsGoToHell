@@ -1,25 +1,13 @@
 fileFormatVersion: 2
-guid: d454c997c52285249a83493b0b6ea518
+guid: 8b9a268176578a34f9313ce0b8a81b78
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4781316319618279520
-    second: SuggestiveMob1_0
+      213: -1736939580095477410
+    second: tempMap_Icons_0
   - first:
-      213: -3583906154599227853
-    second: SuggestiveMob1_1
-  - first:
-      213: -5038216350310350304
-    second: SuggestiveMob1_2
-  - first:
-      213: -7007937571891458581
-    second: SuggestiveMob1_3
-  - first:
-      213: 4427441695142246014
-    second: SuggestiveMob1_4
-  - first:
-      213: 149416554055861592
-    second: SuggestiveMob1_5
+      213: 8610580968099592489
+    second: tempMap_Icons_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -141,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SuggestiveMob1_0
+      name: tempMap_Icons_healing
       rect:
         serializedVersion: 2
-        x: 74
-        y: 0
-        width: 1549
-        height: 2514
+        x: 713
+        y: 1214
+        width: 314
+        height: 282
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -156,20 +144,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 06820a53cd5aa5240800000000000000
-      internalID: 4781316319618279520
+      spriteID: e59c71497a625e7e0800000000000000
+      internalID: -1736939580095477410
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SuggestiveMob1_talking
+      name: tempMap_Icons_gambling
       rect:
         serializedVersion: 2
-        x: 1812
-        y: 0
-        width: 1549
-        height: 2514
+        x: 407
+        y: 1986
+        width: 302
+        height: 212
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -178,96 +166,96 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 33ed6ca3758634ec0800000000000000
-      internalID: -3583906154599227853
+      spriteID: 929b05905cdee7770800000000000000
+      internalID: 8610580968099592489
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SuggestiveMob1_hit
+      name: tempMap_Icons_mob
       rect:
         serializedVersion: 2
-        x: 3550
-        y: 0
-        width: 1549
-        height: 2514
+        x: 733
+        y: 451
+        width: 269
+        height: 254
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 022cf2a4ce8a41ab0800000000000000
-      internalID: -5038216350310350304
+      spriteID: 632d15b1b2f7012489542ddacca942d4
+      internalID: 1863996089
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SuggestiveMob1_middle
+      name: tempMap_Icons_lounge
       rect:
         serializedVersion: 2
-        x: 5288
-        y: 0
-        width: 1549
-        height: 2514
+        x: 1320
+        y: 799
+        width: 296
+        height: 308
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: bedcb4378edcebe90800000000000000
-      internalID: -7007937571891458581
+      spriteID: 0f11d5dbac066934ebcf1549abc0aa01
+      internalID: -1743531482
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SuggestiveMob1_low
+      name: tempMap_Icons_boss
       rect:
         serializedVersion: 2
-        x: 7026
-        y: 0
-        width: 1549
-        height: 2514
+        x: 1030
+        y: 32
+        width: 294
+        height: 332
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e76f4be93ce617d30800000000000000
-      internalID: 4427441695142246014
+      spriteID: 138c75518f10ee240923ad689e788d5f
+      internalID: -1477639308
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SuggestiveMob1_surprise
+      name: tempMap_Icons_minibar
       rect:
         serializedVersion: 2
-        x: 8764
-        y: 0
-        width: 1549
-        height: 2514
+        x: 1034
+        y: 1545
+        width: 276
+        height: 342
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 85500147095d21200800000000000000
-      internalID: 149416554055861592
+      spriteID: 58a287e8fa69b314bb3d671d45e8609b
+      internalID: -568367587
       vertices: []
       indices: 
       edges: []
@@ -276,7 +264,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d5325ac8156a60a43bec5fa3ffe8c736
+    spriteID: 53437e2f22837724d88b5d48c6a44ff7
     internalID: 0
     vertices: []
     indices: 
@@ -286,11 +274,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SuggestiveMob1_hit: -5038216350310350304
-      SuggestiveMob1_low: 4427441695142246014
-      SuggestiveMob1_middle: -7007937571891458581
-      SuggestiveMob1_surprise: 149416554055861592
-      SuggestiveMob1_talking: -3583906154599227853
+      tempMap_Icons_boss: -1477639308
+      tempMap_Icons_gambling: 8610580968099592489
+      tempMap_Icons_healing: -1736939580095477410
+      tempMap_Icons_lounge: -1743531482
+      tempMap_Icons_minibar: -568367587
+      tempMap_Icons_mob: 1863996089
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

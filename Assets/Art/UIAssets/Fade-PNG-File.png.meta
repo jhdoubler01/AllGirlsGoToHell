@@ -1,25 +1,10 @@
 fileFormatVersion: 2
-guid: d454c997c52285249a83493b0b6ea518
+guid: 81acad4e7a120424c8473bbde0ba47f9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4781316319618279520
-    second: SuggestiveMob1_0
-  - first:
-      213: -3583906154599227853
-    second: SuggestiveMob1_1
-  - first:
-      213: -5038216350310350304
-    second: SuggestiveMob1_2
-  - first:
-      213: -7007937571891458581
-    second: SuggestiveMob1_3
-  - first:
-      213: 4427441695142246014
-    second: SuggestiveMob1_4
-  - first:
-      213: 149416554055861592
-    second: SuggestiveMob1_5
+      213: -4807530803021117220
+    second: Fade-PNG-File_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -141,133 +126,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SuggestiveMob1_0
+      name: Fade-PNG-File_0
       rect:
         serializedVersion: 2
-        x: 74
+        x: 0
         y: 0
-        width: 1549
-        height: 2514
+        width: 480
+        height: 300
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 06820a53cd5aa5240800000000000000
-      internalID: 4781316319618279520
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SuggestiveMob1_talking
-      rect:
-        serializedVersion: 2
-        x: 1812
-        y: 0
-        width: 1549
-        height: 2514
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 33ed6ca3758634ec0800000000000000
-      internalID: -3583906154599227853
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SuggestiveMob1_hit
-      rect:
-        serializedVersion: 2
-        x: 3550
-        y: 0
-        width: 1549
-        height: 2514
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 022cf2a4ce8a41ab0800000000000000
-      internalID: -5038216350310350304
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SuggestiveMob1_middle
-      rect:
-        serializedVersion: 2
-        x: 5288
-        y: 0
-        width: 1549
-        height: 2514
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: bedcb4378edcebe90800000000000000
-      internalID: -7007937571891458581
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SuggestiveMob1_low
-      rect:
-        serializedVersion: 2
-        x: 7026
-        y: 0
-        width: 1549
-        height: 2514
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e76f4be93ce617d30800000000000000
-      internalID: 4427441695142246014
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SuggestiveMob1_surprise
-      rect:
-        serializedVersion: 2
-        x: 8764
-        y: 0
-        width: 1549
-        height: 2514
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 85500147095d21200800000000000000
-      internalID: 149416554055861592
+      spriteID: cd88d2fb438384db0800000000000000
+      internalID: -4807530803021117220
       vertices: []
       indices: 
       edges: []
@@ -276,7 +151,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d5325ac8156a60a43bec5fa3ffe8c736
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -285,12 +160,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      SuggestiveMob1_hit: -5038216350310350304
-      SuggestiveMob1_low: 4427441695142246014
-      SuggestiveMob1_middle: -7007937571891458581
-      SuggestiveMob1_surprise: 149416554055861592
-      SuggestiveMob1_talking: -3583906154599227853
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

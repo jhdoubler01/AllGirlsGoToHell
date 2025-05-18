@@ -20,6 +20,12 @@ namespace AGGtH.Runtime.Characters
 
         protected EnemyAbilityData NextAbility;
 
+        //TEMPORARY FOR TRAILER PURPOSES
+        [SerializeField] private SpriteRenderer mySpriteRend;
+        [SerializeField] private Sprite hitSprite;
+        [SerializeField] private Sprite talkingSprite;
+        [SerializeField] private Sprite normalSprite;
+
 
         private float actionDelay = 2f;
 
@@ -34,12 +40,14 @@ namespace AGGtH.Runtime.Characters
             CharacterStats = new CharacterStats(EnemyCharacterData.MaxHealth, EnemyCharacterData.LoveLanguageType);
             CharacterStats.OnDeath += OnDeath;
             CharacterStats.OnHealthChanged += ChangeHealthBarFill;
+            CharacterStats.OnTakeDamageAction += OnHit;
 
             CharacterStats.SetCurrentHealth(CharacterStats.CurrentHealth);
 
 
             EncounterManager.OnPlayerTurnStarted += ShowNextAbility;
             EncounterManager.OnEnemyTurnStarted += CharacterStats.TriggerAllStatus;
+
             base.BuildCharacter();
 
         }
@@ -92,6 +100,8 @@ namespace AGGtH.Runtime.Characters
             {
                 yield return StartCoroutine(BuffRoutine(NextAbility));
             }
+            ResetSprite();
+
         }
         protected virtual IEnumerator AttackRoutine(EnemyAbilityData targetAbility)
         {
@@ -108,9 +118,9 @@ namespace AGGtH.Runtime.Characters
             //var endRot = Quaternion.Euler(60, 0, 60);
 
             //yield return StartCoroutine(MoveToTargetRoutine(waitFrame, startPos, endPos, startRot, endRot, 5));
+            OnTalk();
             yield return new WaitForSeconds(actionDelay);
             targetAbility.ActionList.ForEach(x => EnemyActionProcessor.GetAction(x.ActionType).DoAction(new EnemyActionParameters(x.ActionValue, target, this, x.StatusType)));
-
             //yield return StartCoroutine(MoveToTargetRoutine(waitFrame, endPos, startPos, endRot, startRot, 5));
         }
 
@@ -130,13 +140,25 @@ namespace AGGtH.Runtime.Characters
 
             //yield return StartCoroutine(MoveToTargetRoutine(waitFrame, startPos, endPos, startRot, endRot, 5));
             yield return new WaitForSeconds(actionDelay);
-            targetAbility.ActionList.ForEach(x => EnemyActionProcessor.GetAction(x.ActionType).DoAction(new EnemyActionParameters(x.ActionValue, target, this, x.StatusType)));
 
+            targetAbility.ActionList.ForEach(x => EnemyActionProcessor.GetAction(x.ActionType).DoAction(new EnemyActionParameters(x.ActionValue, target, this, x.StatusType)));
             //yield return StartCoroutine(MoveToTargetRoutine(waitFrame, endPos, startPos, endRot, startRot, 5));
         }
         #endregion
 
         #region Other Routines
+        private void OnHit()
+        {
+            mySpriteRend.sprite = hitSprite;
+        }
+        private void OnTalk()
+        {
+            mySpriteRend.sprite = talkingSprite;
+        }
+        private void ResetSprite()
+        {
+            mySpriteRend.sprite = normalSprite;
+        }
         private IEnumerator MoveToTargetRoutine(WaitForEndOfFrame waitFrame, Vector3 startPos, Vector3 endPos, Quaternion startRot, Quaternion endRot, float speed)
         {
             var timer = 0f;
