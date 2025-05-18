@@ -2,6 +2,7 @@ using UnityEngine;
 using TMPro;
 using AGGtH.Runtime.Extensions;
 using AGGtH.Runtime.UI;
+using UnityEngine.UI;
 
 namespace AGGtH.Runtime.Managers
 {
@@ -44,6 +45,17 @@ namespace AGGtH.Runtime.Managers
             {
                 Instance = this;
             }
+        }
+        public static void RefreshLayoutGroupsImmediateAndRecursive(GameObject root)
+        {
+            var componentsInChildren = root.GetComponentsInChildren<LayoutGroup>(true);
+            foreach (var layoutGroup in componentsInChildren)
+            {
+                LayoutRebuilder.ForceRebuildLayoutImmediate(layoutGroup.GetComponent<RectTransform>());
+            }
+            Debug.Log("refresh layout group");
+            var parent = root.GetComponent<LayoutGroup>();
+            LayoutRebuilder.ForceRebuildLayoutImmediate(parent.GetComponent<RectTransform>());
         }
     }
 }

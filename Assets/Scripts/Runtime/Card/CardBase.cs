@@ -13,7 +13,7 @@ using AGGtH.Runtime.UI;
 
 namespace AGGtH.Runtime.Card
 {
-    public class CardBase : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ISelectHandler, IDeselectHandler
+    public class CardBase : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, ISelectHandler, IDeselectHandler, IPointerEnterHandler, IPointerExitHandler
     {
         [Header("Card Objects")]
         [SerializeField] protected TMP_Text cardNameText;
@@ -188,10 +188,11 @@ namespace AGGtH.Runtime.Card
         }
         #endregion
         #region Pointer Events
-        public void OnPointerEnter(BaseEventData eventData)
+        public void OnPointerEnter(PointerEventData eventData)
         {
-            PointerEventData pointerData = (PointerEventData)eventData;
             if (IsRewardChoice) { return; }
+            Debug.Log("pointer enter");
+            ResetVerticalLayout();
             OnHover?.Invoke(this);
         }
         public void OnSelect(BaseEventData eventData)
@@ -221,6 +222,7 @@ namespace AGGtH.Runtime.Card
         {
 
             //HideTooltipInfo(TooltipManager.Instance);
+
         }
         public void ResetVerticalLayout()
         {

@@ -303,11 +303,11 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 469791886881916540}
-  m_Father: {fileID: 8095980377120187687}
+  m_Father: {fileID: 8468303383886495464}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 306.02655, y: -196.68922}
+  m_AnchoredPosition: {x: 305.52655, y: -196.68922}
   m_SizeDelta: {x: 612.0501, y: 240}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3142601291498323545
@@ -383,7 +383,6 @@ RectTransform:
   - {fileID: 7137884493374099487}
   - {fileID: 4998296203064707121}
   - {fileID: 1941273733720402173}
-  - {fileID: 6147432055162315213}
   m_Father: {fileID: 8468303383886495464}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
@@ -848,6 +847,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 8095980377120187687}
+  - {fileID: 6147432055162315213}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
@@ -883,6 +883,7 @@ MonoBehaviour:
   cardTooltipImage: {fileID: 2842378252254525471}
   batteryBar: {fileID: 4052898791902526711}
   IsSelected: 0
+  IsRewardChoice: 0
 --- !u!61 &6334441526093155428
 BoxCollider2D:
   m_ObjectHideFlags: 0

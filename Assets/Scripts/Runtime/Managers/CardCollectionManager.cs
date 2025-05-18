@@ -22,7 +22,7 @@ namespace AGGtH.Runtime.Managers
         public List<CardData> DiscardPile { get; private set; } = new List<CardData>();
         public List<CardData> ExhaustPile { get; private set; } = new List<CardData>();
 
-        public Transform HandPileTransform;
+        public RectTransform HandPileTransform;
         public Transform DrawPileTransform;
         public Transform DiscardPileTransform;
 
@@ -83,9 +83,8 @@ namespace AGGtH.Runtime.Managers
         }
         public void ResetVerticalLayoutGroup()
         {
-            Debug.Log("reset");
-            var ver = HandPileTransform.GetComponent<VerticalLayoutGroup>();
-            ver.childForceExpandHeight = !ver.childForceExpandHeight;
+            LayoutRebuilder.MarkLayoutForRebuild(HandPileTransform);
+            Canvas.ForceUpdateCanvases();
         }
         public void DiscardHand()
         {
