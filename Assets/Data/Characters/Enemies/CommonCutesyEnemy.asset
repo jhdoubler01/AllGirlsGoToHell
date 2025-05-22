@@ -18,7 +18,7 @@ MonoBehaviour:
   loveLanguageType: 3
   maxHealth: 5
   dialogueColor: {r: 1, g: 0.6150943, b: 0.90905434, a: 1}
-  enemyPrefab: {fileID: 0}
+  enemyPrefab: {fileID: 827506177075099063, guid: c4b0d858db8e5584bb5c80bb09f276f3, type: 3}
   followAbilityPattern: 0
   enemyAbilityList:
   - name: Blow Kiss

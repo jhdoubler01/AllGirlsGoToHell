@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      suggestiveMob_UNFINISHED_0: -5568224717670577805
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

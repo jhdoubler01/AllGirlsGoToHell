@@ -285,7 +285,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Contact_Money_0: -9034821937723186874
+      Contact_Money_1: -6890387979387871377
+      Contact_Money_2: -1684326373814738193
+      Contact_Money_3: -6279225548315406483
+      Contact_Money_4: -972151311454697394
+      Contact_Money_5: -4995968622285986545
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

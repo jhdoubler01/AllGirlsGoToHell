@@ -285,7 +285,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CutesyMob1_0: 867692638131020671
+      CutesyMob1_1: -5108489075644895111
+      CutesyMob1_2: -7127400765985004496
+      CutesyMob1_3: 5694225635835447476
+      CutesyMob1_4: -4597852330889826522
+      CutesyMob1_5: -2693627212648985146
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

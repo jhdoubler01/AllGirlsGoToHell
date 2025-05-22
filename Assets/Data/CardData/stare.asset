@@ -23,12 +23,11 @@ MonoBehaviour:
   cardActionDataList:
   - actionTargetType: 0
     cardActionType: 1
-    buffType: 0
-    debuffType: 0
+    statusType: 0
     actionValue: 0.5
     actionDelay: 0
   cardDescriptionDataList:
-  - descriptionText: Deal
+  - descriptionText: 'Deal '
     enableOverrideColor: 0
     overrideColor: {r: 0, g: 0, b: 0, a: 0}
     useModifier: 0
@@ -46,7 +45,7 @@ MonoBehaviour:
     usePrefixOnModifiedValue: 1
     modifiedValuePrefix: '*'
     overrideColorOnValueScaled: 1
-  - descriptionText: damage
+  - descriptionText: ' damage.'
     enableOverrideColor: 0
     overrideColor: {r: 0.824, g: 0, b: 0.44391286, a: 0}
     useModifier: 0

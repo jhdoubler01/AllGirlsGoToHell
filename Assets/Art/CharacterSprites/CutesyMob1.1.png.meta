@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 81acad4e7a120424c8473bbde0ba47f9
+guid: b9ed5599eb1a60744b0c9e01da24e02a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4807530803021117220
-    second: Fade-PNG-File_0
+      213: -6167289610953973083
+    second: CutesyMob1.1_0
+  - first:
+      213: 3104580842650009278
+    second: CutesyMob1.1_1
+  - first:
+      213: 7994217373768917490
+    second: CutesyMob1.1_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -126,23 +132,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fade-PNG-File_0
+      name: CutesyMob1.1_normal
       rect:
         serializedVersion: 2
-        x: 0
+        x: 96
         y: 0
-        width: 480
-        height: 300
+        width: 2595
+        height: 2406
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cd88d2fb438384db0800000000000000
-      internalID: -4807530803021117220
+      spriteID: 5a2a12846c2696aa0800000000000000
+      internalID: -6167289610953973083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutesyMob1.1_talking
+      rect:
+        serializedVersion: 2
+        x: 2878
+        y: 17
+        width: 2595
+        height: 2406
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebef2aed3dfa51b20800000000000000
+      internalID: 3104580842650009278
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CutesyMob1.1_hit
+      rect:
+        serializedVersion: 2
+        x: 5638
+        y: 0
+        width: 2595
+        height: 2406
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f1a0c4a85a21fe60800000000000000
+      internalID: 7994217373768917490
       vertices: []
       indices: 
       edges: []
@@ -151,7 +201,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0d8821ee8168746408adfdeb736ed3e7
     internalID: 0
     vertices: []
     indices: 
@@ -161,7 +211,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Fade-PNG-File_0: -4807530803021117220
+      CutesyMob1.1_hit: 7994217373768917490
+      CutesyMob1.1_normal: -6167289610953973083
+      CutesyMob1.1_talking: 3104580842650009278
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

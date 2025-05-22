@@ -160,7 +160,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      clubBG_blurred_0: -6909562129954974761
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

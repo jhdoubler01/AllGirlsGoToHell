@@ -41,5 +41,5 @@ MonoBehaviour:
     actionList:
     - actionType: 5
       minActionValue: 1
-      maxActionValue: 1.5
+      maxActionValue: 1
       StatusType: 0

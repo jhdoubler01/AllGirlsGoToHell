@@ -151,7 +151,7 @@ namespace AGGtH.Runtime.Card
                 }
             }
 
-            str.Append(value);
+            str.Append(value*2);
 
             if (EnableOverrideColor)
             {

@@ -67,6 +67,7 @@ namespace AGGtH.Runtime.Card
         }
         private void SetCardDescriptionText()
         {
+            CardData.UpdateDescription();
             cardDescText.text = CardData.MyDescription;
         }
 
@@ -76,7 +77,7 @@ namespace AGGtH.Runtime.Card
             IsPlayable = isPlayable;
             IsRewardChoice = isReward;
             cardNameText.text = CardData.CardName;
-            cardDescText.text = CardData.MyDescription;
+            SetCardDescriptionText();
             energyCostText.text = CardData.EnergyCost.ToString();
             batteryBar.SetActiveTicks(CardData.EnergyCost);
             actionAmtText.text = (CardData.CardActionDataList[0].ActionValue * 2).ToString();
@@ -192,7 +193,8 @@ namespace AGGtH.Runtime.Card
         {
             if (IsRewardChoice) { return; }
             Debug.Log("pointer enter");
-            ResetVerticalLayout();
+
+            cardTooltipImage.gameObject.SetActive(true);
             OnHover?.Invoke(this);
         }
         public void OnSelect(BaseEventData eventData)
@@ -220,6 +222,9 @@ namespace AGGtH.Runtime.Card
         }
         public virtual void OnPointerExit(PointerEventData eventData)
         {
+            //Invoke(SetRectSize(false), 0.01f);
+            cardTooltipImage.gameObject.SetActive(false);
+
 
             //HideTooltipInfo(TooltipManager.Instance);
 
@@ -241,6 +246,7 @@ namespace AGGtH.Runtime.Card
         {
             //ShowTooltipInfo();
         }
+
         #endregion
         #region Tooltip
         //protected virtual void ShowTooltipInfo()
