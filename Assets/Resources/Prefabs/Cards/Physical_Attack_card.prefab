@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2031684505841790222, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2842378252254525471, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
       propertyPath: m_Type
@@ -36,9 +36,13 @@ PrefabInstance:
       propertyPath: m_fontColor32.rgba
       value: 4283903750
       objectReference: {fileID: 0}
+    - target: {fileID: 8095980377120187687, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 114
+      objectReference: {fileID: 0}
     - target: {fileID: 8160745034923771504, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
       propertyPath: m_Name
-      value: Physical_card
+      value: Physical_Attack_card
       objectReference: {fileID: 0}
     - target: {fileID: 8221093176281264888, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
       propertyPath: m_Sprite

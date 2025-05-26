@@ -8,10 +8,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2031684505841790222, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2842378252254525471, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -8394778287153550827, guid: f4fb35e91b44cdd49af8f3e4c0064d2c, type: 3}
+    - target: {fileID: 8095980377120187687, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095980377120187687, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 116
+      objectReference: {fileID: 0}
     - target: {fileID: 8160745034923771504, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
       propertyPath: m_Name
       value: Neutral_Block_card

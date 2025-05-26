@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 07e5370963e28074da3695037150f2d9
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 306533
+  packageName: Scroll Carousel
+  packageVersion: 2.0
+  assetPath: Assets/ScrollCarousel/Demo/Scenes/ScrollCarouselDemo.unity
+  uploadId: 731011

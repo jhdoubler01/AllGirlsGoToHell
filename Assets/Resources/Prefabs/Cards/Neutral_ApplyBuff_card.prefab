@@ -12,9 +12,17 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -3046094855336552001, guid: 3726b768234b0274cb27502291114f82, type: 3}
+    - target: {fileID: 8095980377120187687, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 647
+      objectReference: {fileID: 0}
+    - target: {fileID: 8095980377120187687, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 116
+      objectReference: {fileID: 0}
     - target: {fileID: 8160745034923771504, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
       propertyPath: m_Name
-      value: Buff_card
+      value: Neutral_ApplyBuff_card
       objectReference: {fileID: 0}
     - target: {fileID: 8221093176281264888, guid: 7a48d0b0e0b799f4387d5307ae8c890c, type: 3}
       propertyPath: m_Sprite
