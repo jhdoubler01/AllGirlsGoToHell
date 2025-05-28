@@ -23,11 +23,37 @@ MonoBehaviour:
   cardActionDataList:
   - actionTargetType: 1
     cardActionType: 2
-    buffType: 0
-    debuffType: 0
+    statusType: 0
     actionValue: 1
     actionDelay: 0
-  cardDescriptionDataList: []
+  cardDescriptionDataList:
+  - descriptionText: Heal
+    enableOverrideColor: 0
+    overrideColor: {r: 0, g: 0, b: 0, a: 0}
+    useModifier: 0
+    modifiedActionValueIndex: 0
+    modiferStats: 0
+    usePrefixOnModifiedValue: 0
+    modifiedValuePrefix: 
+    overrideColorOnValueScaled: 0
+  - descriptionText: 
+    enableOverrideColor: 1
+    overrideColor: {r: 0.824, g: 0, b: 0.44391286, a: 1}
+    useModifier: 1
+    modifiedActionValueIndex: 0
+    modiferStats: 0
+    usePrefixOnModifiedValue: 1
+    modifiedValuePrefix: '*'
+    overrideColorOnValueScaled: 1
+  - descriptionText: health
+    enableOverrideColor: 0
+    overrideColor: {r: 0.824, g: 0, b: 0.44391286, a: 0}
+    useModifier: 0
+    modifiedActionValueIndex: 0
+    modiferStats: 0
+    usePrefixOnModifiedValue: 0
+    modifiedValuePrefix: 
+    overrideColorOnValueScaled: 0
   specialKeywordsList: 
   dialogueOptions:
   - You inhale and exhale deeply to calm your rapid heartbeat.

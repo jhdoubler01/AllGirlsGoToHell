@@ -93,6 +93,7 @@ namespace AGGtH.Runtime.Managers
                 EndTurn();
                 return;
             }
+            Player.gameObject.SetActive(false);
             GameManager.PersistentGameplayData.CurrentEnergy = GameManager.PersistentGameplayData.MaxEnergy;
             Debug.Log("Player energy: " + GameManager.PersistentGameplayData.CurrentEnergy);
             CardCollectionManager.DrawCards(GameManager.PersistentGameplayData.DrawCount);
@@ -102,6 +103,7 @@ namespace AGGtH.Runtime.Managers
         {
 
             OnEnemyTurnStarted?.Invoke();
+            Player.gameObject.SetActive(true);
 
             CardCollectionManager.DiscardHand();
 

@@ -102,6 +102,7 @@ namespace AGGtH.Runtime.Managers
             string type = Enum.GetName(typeof(CardLoveLanguageType), data.CardLoveLanguageType);
             string action = Enum.GetName(typeof(CardActionType), data.CardActionDataList[0].CardActionType);
             CardBase c = Resources.Load<CardBase>($"Prefabs/Cards/{type}_{action}_card");
+            if (c == null) c = gameplayData.DefaultCardPrefab;
             return c;
         }
         public void SetUpRewards()

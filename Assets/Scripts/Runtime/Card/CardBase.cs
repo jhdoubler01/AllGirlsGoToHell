@@ -223,7 +223,7 @@ namespace AGGtH.Runtime.Card
         public virtual void OnPointerExit(PointerEventData eventData)
         {
             //Invoke(SetRectSize(false), 0.01f);
-            cardTooltipImage.gameObject.SetActive(false);
+            //cardTooltipImage.gameObject.SetActive(false);
 
 
             //HideTooltipInfo(TooltipManager.Instance);

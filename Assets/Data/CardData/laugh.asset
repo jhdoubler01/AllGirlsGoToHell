@@ -31,7 +31,52 @@ MonoBehaviour:
     statusType: 0
     actionValue: 0.5
     actionDelay: 0
-  cardDescriptionDataList: []
+  cardDescriptionDataList:
+  - descriptionText: Deal
+    enableOverrideColor: 0
+    overrideColor: {r: 0, g: 0, b: 0, a: 0}
+    useModifier: 0
+    modifiedActionValueIndex: 0
+    modiferStats: 0
+    usePrefixOnModifiedValue: 0
+    modifiedValuePrefix: 
+    overrideColorOnValueScaled: 0
+  - descriptionText: 
+    enableOverrideColor: 1
+    overrideColor: {r: 0.824, g: 0, b: 0.44391286, a: 1}
+    useModifier: 1
+    modifiedActionValueIndex: 0
+    modiferStats: 1
+    usePrefixOnModifiedValue: 1
+    modifiedValuePrefix: '*'
+    overrideColorOnValueScaled: 1
+  - descriptionText: 'damage to a random enemy and gain '
+    enableOverrideColor: 0
+    overrideColor: {r: 0.824, g: 0, b: 0.44391286, a: 0}
+    useModifier: 0
+    modifiedActionValueIndex: 0
+    modiferStats: 0
+    usePrefixOnModifiedValue: 0
+    modifiedValuePrefix: 
+    overrideColorOnValueScaled: 0
+  - descriptionText: 
+    enableOverrideColor: 1
+    overrideColor: {r: 0.824, g: 0, b: 0.44391286, a: 0}
+    useModifier: 1
+    modifiedActionValueIndex: 0
+    modiferStats: 3
+    usePrefixOnModifiedValue: 1
+    modifiedValuePrefix: '*'
+    overrideColorOnValueScaled: 1
+  - descriptionText: ' block'
+    enableOverrideColor: 0
+    overrideColor: {r: 0.824, g: 0, b: 0.44391286, a: 0}
+    useModifier: 0
+    modifiedActionValueIndex: 0
+    modiferStats: 3
+    usePrefixOnModifiedValue: 0
+    modifiedValuePrefix: '*'
+    overrideColorOnValueScaled: 0
   specialKeywordsList: 
   dialogueOptions:
   - You laugh at nothing. She seems confused but charmed nonetheless.

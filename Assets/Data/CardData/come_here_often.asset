@@ -23,8 +23,7 @@ MonoBehaviour:
   cardActionDataList:
   - actionTargetType: 0
     cardActionType: 1
-    buffType: 0
-    debuffType: 0
+    statusType: 0
     actionValue: 1.5
     actionDelay: 0
   cardDescriptionDataList:
@@ -42,7 +41,7 @@ MonoBehaviour:
     overrideColor: {r: 0.824, g: 0, b: 0.44391286, a: 1}
     useModifier: 1
     modifiedActionValueIndex: 0
-    modiferStats: 3
+    modiferStats: 1
     usePrefixOnModifiedValue: 1
     modifiedValuePrefix: '*'
     overrideColorOnValueScaled: 1

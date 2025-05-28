@@ -19,7 +19,8 @@ namespace AGGtH.Runtime.Settings
 
         [Header("Card Settings")]
         [SerializeField] private List<CardData> allCardsList;
-        [SerializeField] private List<CardBase> cardPrefabs;
+        //[SerializeField] private List<CardBase> cardPrefabs;
+        [SerializeField] private CardBase defaultCardPrefab;
 
 
         //[Header("Customization Settings")]
@@ -39,7 +40,8 @@ namespace AGGtH.Runtime.Settings
         public int RandomCardCount => randomCardCount;
         public int MaxCardOnHand => maxCardOnHand;
         public List<CardData> AllCardsList => allCardsList;
-        public List<CardBase> CardPrefabs => cardPrefabs;
+        public CardBase DefaultCardPrefab => defaultCardPrefab;
+        //public List<CardBase> CardPrefabs => cardPrefabs;
         //public string DefaultName => defaultName;
         //public bool UseStageSystem => useStageSystem;
         #endregion

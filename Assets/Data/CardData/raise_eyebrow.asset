@@ -23,13 +23,37 @@ MonoBehaviour:
   cardActionDataList:
   - actionTargetType: 0
     cardActionType: 1
-    buffType: 0
-    debuffType: 0
-    damageAmt: 3
-    healAmt: 0
-    blockAmt: 0
-    drawCardAmt: 0
-    energyGainAmt: 0
+    statusType: 0
+    actionValue: 1
     actionDelay: 0
+  cardDescriptionDataList:
+  - descriptionText: 'Deal '
+    enableOverrideColor: 0
+    overrideColor: {r: 0, g: 0, b: 0, a: 0}
+    useModifier: 0
+    modifiedActionValueIndex: 0
+    modiferStats: 0
+    usePrefixOnModifiedValue: 0
+    modifiedValuePrefix: 
+    overrideColorOnValueScaled: 0
+  - descriptionText: 
+    enableOverrideColor: 1
+    overrideColor: {r: 0.76, g: 0.266, b: 0.30716676, a: 1}
+    useModifier: 1
+    modifiedActionValueIndex: 0
+    modiferStats: 1
+    usePrefixOnModifiedValue: 1
+    modifiedValuePrefix: '*'
+    overrideColorOnValueScaled: 1
+  - descriptionText: ' damage'
+    enableOverrideColor: 0
+    overrideColor: {r: 0, g: 0, b: 0, a: 0}
+    useModifier: 0
+    modifiedActionValueIndex: 0
+    modiferStats: 0
+    usePrefixOnModifiedValue: 0
+    modifiedValuePrefix: 
+    overrideColorOnValueScaled: 0
+  specialKeywordsList: 
   dialogueOptions:
   - You try your best to raise one eyebrow seductively.
