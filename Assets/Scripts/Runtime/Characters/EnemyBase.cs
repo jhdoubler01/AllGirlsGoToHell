@@ -8,7 +8,7 @@ using AGGtH.Runtime.EnemyBehavior;
 using System.Collections;
 using AGGtH.Runtime.UI;
 using AGGtH.Runtime.Interfaces;
-
+using DG.Tweening;
 
 namespace AGGtH.Runtime.Characters
 {
@@ -36,8 +36,8 @@ namespace AGGtH.Runtime.Characters
         public override void BuildCharacter()
         {
             SetHealthBar(EnemyCanvas.HealthBar);
-
-            CharacterStats = new CharacterStats(EnemyCharacterData.MaxHealth, EnemyCharacterData.LoveLanguageType);
+            EnemyCanvas.InitCanvas();
+            CharacterStats = new CharacterStats(EnemyCharacterData.MaxHealth, EnemyCharacterData.LoveLanguageType, EnemyCanvas);
             CharacterStats.OnDeath += OnDeath;
             CharacterStats.OnHealthChanged += ChangeHealthBarFill;
             CharacterStats.OnTakeDamageAction += OnHit;

@@ -58,10 +58,11 @@ namespace AGGtH.Runtime.Data.Characters
     {
         [SerializeField] private EnemyActionType actionType;
         [SerializeField] private float minActionValue;
-        [SerializeField] private float maxActionValue;
+        //[SerializeField] private float maxActionValue;
         public EnemyActionType ActionType => actionType;
         public StatusType StatusType;
-        public float ActionValue => Random.Range(minActionValue, maxActionValue);
+        //public float ActionValue => Random.Range(minActionValue, maxActionValue);
+        public float ActionValue => minActionValue;
 
     }
 }

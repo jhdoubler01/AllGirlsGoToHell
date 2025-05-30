@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using AGGtH.Runtime.Enums;
 using UnityEngine;
+using DG.Tweening;
+using AGGtH.Runtime.UI;
 
 namespace AGGtH.Runtime.Characters
 {
@@ -53,17 +55,16 @@ namespace AGGtH.Runtime.Characters
         public readonly Dictionary<StatusType, StatusStats> StatusDict = new Dictionary<StatusType, StatusStats>();
 
         #region Setup
-        public CharacterStats(int maxHealth, CardLoveLanguageType loveLanguage)
+        public CharacterStats(int maxHealth, CardLoveLanguageType loveLanguage, CharacterCanvas characterCanvas)
         {
             MaxHealth = maxHealth;
             CurrentHealth = maxHealth;
             LoveLanguageType = loveLanguage;
             SetAllStatus();
-
             //OnHealthChanged += characterCanvas.UpdateHealthText;
-            //OnStatusChanged += characterCanvas.UpdateStatusText;
-            //OnStatusApplied += characterCanvas.ApplyStatus;
-            //OnStatusCleared += characterCanvas.ClearStatus;
+            OnStatusChanged += characterCanvas.UpdateStatusText;
+            OnStatusApplied += characterCanvas.ApplyStatus;
+            OnStatusCleared += characterCanvas.ClearStatus;
         }
 
         private void SetAllStatus()

@@ -33,7 +33,7 @@ namespace AGGtH.Runtime.UI
         #region Setup
         public void InitCanvas()
         {
-            highlightRoot.gameObject.SetActive(false);
+            //highlightRoot.gameObject.SetActive(false);
 
             for (int i = 0; i < Enum.GetNames(typeof(StatusType)).Length; i++)
                 StatusDict.Add((StatusType)i, null);
@@ -50,6 +50,7 @@ namespace AGGtH.Runtime.UI
         {
             if (StatusDict[targetStatus] == null)
             {
+                if(targetStatus == StatusType.Block) { HealthBar.AddBlock(value); return; }
                 var targetData = statusIconsData.StatusIconList.FirstOrDefault(x => x.IconStatus == targetStatus);
 
                 if (targetData == null) return;
@@ -65,6 +66,7 @@ namespace AGGtH.Runtime.UI
         {
             if (StatusDict[targetStatus])
             {
+                if(targetStatus == StatusType.Block) { healthBar.RemoveAllBlock(); return; }
                 Destroy(StatusDict[targetStatus].gameObject);
             }
 
@@ -73,7 +75,7 @@ namespace AGGtH.Runtime.UI
         public void UpdateStatusText(StatusType targetStatus, float value)
         {
             if (StatusDict[targetStatus] == null) return;
-
+            if(targetStatus == StatusType.Block) { healthBar.AddBlock(value); return; }
             StatusDict[targetStatus].StatusValueText.text = $"{value}";
         }
         #endregion

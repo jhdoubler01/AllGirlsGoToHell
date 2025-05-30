@@ -13,8 +13,10 @@ namespace AGGtH.Runtime.Data.Containers
     {
         [SerializeField] private List<CardRewardData> cardRewardDataList;
         [SerializeField] private List<ChipsRewardData> chipsRewardDataList;
+        [SerializeField] private List<IngredientRewardData> ingredientRewardDataList;
         public List<CardRewardData> CardRewardDataList => cardRewardDataList;
         public List<ChipsRewardData> ChipsRewardDataList => chipsRewardDataList;
+        public List<IngredientRewardData> IngredientRewardDataList => ingredientRewardDataList;
 
         public List<CardData> GetRandomCardRewardList(out CardRewardData rewardData)
         {
@@ -33,6 +35,11 @@ namespace AGGtH.Runtime.Data.Containers
             var value = Random.Range(rewardData.MinChips, rewardData.MaxChips);
 
             return value;
+        }
+        public IngredientRewardData GetRandomIngredientReward(out IngredientRewardData rewardData)
+        {
+            rewardData = IngredientRewardDataList.RandomItem();
+            return rewardData;
         }
     }
 }

@@ -13,17 +13,21 @@ namespace AGGtH.Runtime.Characters
         [Header("UI")]
         [SerializeField] private ClassicProgressBar energyBar;
         [SerializeField] private CombatCanvas combatCanvas;
+        [SerializeField] private PlayerCanvas playerCanvas;
 
         [Header("Player Base Settings")]
         [SerializeField] private PlayerCharacterData playerCharacterData;
         public PlayerCharacterData PlayerCharacterData => playerCharacterData;
+        public PlayerCanvas PlayerCanvas => playerCanvas;
 
         public override void BuildCharacter()
         {
             combatCanvas = UIManager.CombatCanvas;
             SetHealthBar(UIManager.PlayerHealthBar);
+            playerCanvas = transform.parent.parent.gameObject.GetComponentInChildren<PlayerCanvas>();
+            playerCanvas.InitCanvas();
 
-            CharacterStats = new CharacterStats(PlayerCharacterData.MaxHealth, PlayerCharacterData.LoveLanguageType);
+            CharacterStats = new CharacterStats(PlayerCharacterData.MaxHealth, PlayerCharacterData.LoveLanguageType, playerCanvas);
             Debug.Log("Player character Data max health: " + playerCharacterData.MaxHealth);
 
 

@@ -12,7 +12,7 @@ TagManager:
   - Enemies
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
@@ -47,6 +47,9 @@ TagManager:
     locked: 0
   - name: CombatUI
     uniqueID: 2193572043
+    locked: 0
+  - name: Player
+    uniqueID: 4060198305
     locked: 0
   m_RenderingLayers:
   - Default

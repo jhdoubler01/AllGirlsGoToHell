@@ -16,3 +16,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4f47e80d20a05984590e1d9bb4d87e90, type: 2}
   chipsRewardDataList:
   - {fileID: 11400000, guid: ef6ceb88f415efd409a7c5a11f67aed2, type: 2}
+  ingredientRewardDataList:
+  - {fileID: 11400000, guid: 8cbbf4372c294cb4eb241cf8e1c122a1, type: 2}
+  - {fileID: 11400000, guid: bd4f9da1d16686941b3e4700f9c80654, type: 2}
+  - {fileID: 11400000, guid: d45296aacb161a849a6ad9badd3b6c44, type: 2}

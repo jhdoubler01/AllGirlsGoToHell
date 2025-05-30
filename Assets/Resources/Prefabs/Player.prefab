@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1835281576207076252}
   - component: {fileID: 3940589192941665186}
   - component: {fileID: 968957124696517024}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,11 +37,11 @@ RectTransform:
   - {fileID: 4176383760671193774}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 183, y: -60}
-  m_SizeDelta: {x: 664.94, y: 845.68}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0.49, y: 0.92248154}
+  m_AnchorMax: {x: 0.49, y: 0.92248154}
+  m_AnchoredPosition: {x: 5.701234, y: -127.41998}
+  m_SizeDelta: {x: 664.93994, y: 845.67993}
+  m_Pivot: {x: 0.48, y: 0.75}
 --- !u!222 &8854792114285302841
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -140,8 +140,8 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
+    m_Bits: 32
+  m_LayerOverridePriority: 10
   m_ForceSendLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -158,7 +158,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -36.822216, y: 238.95663}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -184,9 +184,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterType: 0
   healthBar: {fileID: 0}
-  spriteRoot: {fileID: 178547496655590827}
   energyBar: {fileID: 0}
   combatCanvas: {fileID: 0}
+  playerCanvas: {fileID: 0}
   playerCharacterData: {fileID: 11400000, guid: 23ee439f94ca44848840570f00195b95, type: 2}
 --- !u!114 &968957124696517024
 MonoBehaviour:
@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 4176383760671193774}
   - component: {fileID: 2590206517096922174}
   - component: {fileID: 64997428108128553}
-  m_Layer: 5
+  m_Layer: 6
   m_Name: text
   m_TagString: Untagged
   m_Icon: {fileID: 0}

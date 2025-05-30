@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4166e483cbc288446965c543a0f0cf11, type: 3}
+  m_Name: CommonCutesyMob2
+  m_EditorClassIdentifier: 
+  characterID: cutesyMob2
+  characterName: Elise
+  characterDescription: 
+  loveLanguageType: 3
+  maxHealth: 7
+  dialogueColor: {r: 0, g: 0.8792453, b: 0.6981559, a: 1}
+  enemyPrefab: {fileID: 5302619434231346848, guid: e99225d4c96109040be6e1d012222c64, type: 3}
+  followAbilityPattern: 0
+  enemyAbilityList:
+  - name: Compliment
+    intention: {fileID: 11400000, guid: 25622bb62b2ce9b43afcf0bef70e5d9e, type: 2}
+    hideActionValue: 0
+    dialogueList:
+    - Oh I love your jewelry! Can I see your rings?
+    - Your eyes are so deep, I feel like I could swim in them!
+    - You're making me heart flutter, hehe!
+    actionList:
+    - actionType: 0
+      minActionValue: 1
+      maxActionValue: 0
+      StatusType: 0
+    - actionType: 2
+      minActionValue: 1
+      maxActionValue: 0
+      StatusType: 4
+  - name: Condescend
+    intention: {fileID: 11400000, guid: 328b8781b559c3d40ba5a5264a112ab0, type: 2}
+    hideActionValue: 0
+    dialogueList:
+    - I could really go for a drink right now.
+    - She flutters her eyelashes and looks away.
+    - You're such a cutie!
+    actionList:
+    - actionType: 0
+      minActionValue: 1
+      maxActionValue: 0
+      StatusType: 0
+    - actionType: 5
+      minActionValue: 2
+      maxActionValue: 0
+      StatusType: 0

@@ -100,6 +100,7 @@ GameObject:
   - component: {fileID: 6428227095447891089}
   - component: {fileID: 7508192896281933220}
   - component: {fileID: 8033443898970347750}
+  - component: {fileID: 103649316023816160}
   m_Layer: 3
   m_Name: Suggestive_Mob
   m_TagString: Untagged
@@ -258,6 +259,35 @@ MonoBehaviour:
     m_DisabledTrigger: Disabled
   m_Interactable: 1
   m_TargetGraphic: {fileID: 177761824076582995}
+--- !u!114 &103649316023816160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585027009527653848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 8472787756673866522}
+          m_TargetAssemblyTypeName: UIEffectsManager, Assembly-CSharp
+          m_MethodName: Run
+          m_Mode: 5
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: Shake01
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1518848506792805747
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,16 +340,16 @@ MonoBehaviour:
     Outputs: []
     spacing: 25
     TargetType: 1
-    targetObj: {fileID: 32483953664017819}
+    targetObj: {fileID: 1518848506792805747}
     RunAtStart: 0
     Loop: 0
     EffectType: 6
     Delay: 0
-    Speed: 5
+    Speed: 1
     initialState: 0
     startVector: {x: 0, y: 0, z: 0}
     targetVector: {x: 0, y: 0, z: 0}
-    Duration: 1
+    Duration: 0.2
     color: {r: 1, g: 1, b: 1, a: 1}
     RotationType: 0
     RotationDirection: 2
@@ -328,8 +358,8 @@ MonoBehaviour:
     startAlpha: 0
     startColor: {r: 1, g: 1, b: 1, a: 1}
     BrightnessDuration: 0
-    ShakeOrJellyDirection: 2
-    Amplitude: 1
+    ShakeOrJellyDirection: 1
+    Amplitude: 0.05
     running: 0
     killed: 0
     OnStart:

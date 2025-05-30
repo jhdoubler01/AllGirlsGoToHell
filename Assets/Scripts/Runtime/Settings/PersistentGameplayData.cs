@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using AGGtH.Runtime.Characters;
 using AGGtH.Runtime.Card;
 using UnityEngine;
+using AGGtH.Runtime.Data.Collection.RewardData;
 
 namespace AGGtH.Runtime.Settings
 {
@@ -23,6 +24,7 @@ namespace AGGtH.Runtime.Settings
         [SerializeField] private bool isFinalEncounter;
         [SerializeField] private List<CardData> currentCardsList;
         [SerializeField] private PlayerHealthData playerHealthData;
+        [SerializeField] private Dictionary<int, IngredientRewardData> currentIngredientsDict = new Dictionary<int, IngredientRewardData>();
 
         public PersistentGameplayData(GameplayData gameplayData)
         {
@@ -134,7 +136,11 @@ namespace AGGtH.Runtime.Settings
             get => currentChips;
             set => currentChips = value;
         }
-
+        public Dictionary<int, IngredientRewardData> CurrentIngredientDict
+        {
+            get => currentIngredientsDict;
+            set => currentIngredientsDict = value;
+        }
         #endregion
     }
 }

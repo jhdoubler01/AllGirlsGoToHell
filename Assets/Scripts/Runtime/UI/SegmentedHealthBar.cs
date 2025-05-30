@@ -82,6 +82,7 @@ namespace AGGtH.Runtime.UI
         }
         public virtual void AddBlock(float blockAmount)
         {
+            RemoveAllBlock();
             float diff = blockAmount;
             for(int i= ArmorList.Count - 1; i>= 0; i--)
             {
@@ -125,17 +126,19 @@ namespace AGGtH.Runtime.UI
 
             return remainder;
         }
-        #endregion
-
-        #region Private Methods
-        private void RemoveAllBlock()
+        public void RemoveAllBlock()
         {
-            foreach(var armor in ArmorList)
+            Debug.Log("remove all block");
+            foreach (var armor in ArmorList)
             {
                 armor.fillAmount = 0;
             }
             currentBlockAmt = 0;
         }
+        #endregion
+
+        #region Private Methods
+
         private float GetCurrentFillTotal()
         {
             float fill = 0;

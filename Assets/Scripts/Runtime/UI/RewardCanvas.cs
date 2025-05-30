@@ -62,6 +62,9 @@ namespace AGGtH.Runtime.UI
                     break;
                 case RewardType.Relic:
                     break;
+                case RewardType.Ingredient:
+
+                    break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(rewardType), rewardType, null);
             }
