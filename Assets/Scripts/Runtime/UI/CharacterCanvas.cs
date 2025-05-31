@@ -66,7 +66,7 @@ namespace AGGtH.Runtime.UI
         {
             if (StatusDict[targetStatus])
             {
-                if(targetStatus == StatusType.Block) { healthBar.RemoveAllBlock(); return; }
+                if(targetStatus == StatusType.Block) { HealthBar.AddBlock(0); return; }
                 Destroy(StatusDict[targetStatus].gameObject);
             }
 
@@ -75,7 +75,7 @@ namespace AGGtH.Runtime.UI
         public void UpdateStatusText(StatusType targetStatus, float value)
         {
             if (StatusDict[targetStatus] == null) return;
-            if(targetStatus == StatusType.Block) { healthBar.AddBlock(value); return; }
+            if(targetStatus == StatusType.Block) { HealthBar.AddBlock(value); return; }
             StatusDict[targetStatus].StatusValueText.text = $"{value}";
         }
         #endregion

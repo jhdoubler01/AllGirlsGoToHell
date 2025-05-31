@@ -1228,7 +1228,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 0.000061035156, y: -82}
+  m_AnchoredPosition: {x: 0, y: -82}
   m_SizeDelta: {x: 700, y: 899.24}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &335737976
@@ -2419,7 +2419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameplayData: {fileID: 11400000, guid: 96af78c6937dd8247b9de40fa08ceff5, type: 2}
-  encounterData: {fileID: 11400000, guid: 92cd6a131f9ffd4428d2bdb4b9d68de7, type: 2}
+  encounterData: {fileID: 11400000, guid: e4589ea55cdb1a64d93188e9b34b742f, type: 2}
 --- !u!1 &1073478200
 GameObject:
   m_ObjectHideFlags: 0
@@ -3423,6 +3423,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 739644212}
+    - target: {fileID: 3837077153771938312, guid: 6c23eb3c77b27284aa73dcd4eb6ef511, type: 3}
+      propertyPath: m_Spacing
+      value: -45
+      objectReference: {fileID: 0}
     - target: {fileID: 3837077153771938312, guid: 6c23eb3c77b27284aa73dcd4eb6ef511, type: 3}
       propertyPath: m_ChildScaleWidth
       value: 0

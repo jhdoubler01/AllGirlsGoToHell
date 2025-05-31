@@ -51,7 +51,6 @@ namespace AGGtH.Runtime.Characters
         }
         public virtual void OnBlockChanged(float block, bool clearAll)
         {
-            if (clearAll) { healthBar.RemoveBlock(0, true); }
 
 
         }
