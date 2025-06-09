@@ -6,7 +6,7 @@ using AGGtH.Runtime.UI;
 
 namespace AGGtH.Runtime.Data.Containers
 {
-    [CreateAssetMenu(fileName = "Status Icons", menuName = "Assets/Data/Containers/StatusIconsData", order = 2)]
+    [CreateAssetMenu(fileName = "Status Icons", menuName = "AGGtH/Encounter/StatusIconsData", order = 2)]
     public class StatusIconsData : ScriptableObject
     {
         [SerializeField] private StatusIconBase statusIconBasePrefab;

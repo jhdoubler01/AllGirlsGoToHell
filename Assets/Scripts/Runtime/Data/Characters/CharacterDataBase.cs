@@ -3,7 +3,7 @@ using AGGtH.Runtime.Enums;
 
 namespace AGGtH.Runtime.Data.Characters
 {
-    [CreateAssetMenu(fileName = "CharacterDataBase", menuName = "Scriptable Objects/CharacterDataBase")]
+    [CreateAssetMenu(fileName = "CharacterDataBase", menuName = "AGGtH/Characters/CharacterDataBase")]
     public class CharacterDataBase : ScriptableObject
     {
         [Header("Base")]

@@ -11,7 +11,7 @@ using AGGtH.Runtime.Extensions;
 
 namespace AGGtH.Runtime.Data.Containers
 {
-    [CreateAssetMenu(fileName = "EncounterData", menuName = "Assets/Data/EncounterData")]
+    [CreateAssetMenu(fileName = "EncounterData", menuName = "AGGtH/Encounter/EncounterData")]
     public class EncounterData : ScriptableObject
     {
         [Header("Settings")]

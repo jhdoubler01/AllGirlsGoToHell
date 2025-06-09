@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace AGGtH.Runtime.Data.Containers
 {
-    [CreateAssetMenu(fileName = "Special Keyword", menuName = "Assets/Data/Containers/Special Keyword Data", order = 0)]
+    [CreateAssetMenu(fileName = "Special Keyword", menuName = "AGGtH/Card/Special Keyword Data")]
     public class SpecialKeywordData : ScriptableObject
     {
         [SerializeField] private List<SpecialKeywordBase> specialKeywordBaseList;

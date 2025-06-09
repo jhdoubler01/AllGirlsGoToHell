@@ -8,7 +8,7 @@ using AGGtH.Runtime.Card;
 
 namespace AGGtH.Runtime.Data.Containers
 {
-    [CreateAssetMenu(fileName = "RewardContainerData", menuName = "Scriptable Objects/RewardContainerData")]
+    [CreateAssetMenu(fileName = "RewardContainerData", menuName = "AGGtH/Rewards/RewardContainerData")]
     public class RewardContainerData : ScriptableObject
     {
         [SerializeField] private List<CardRewardData> cardRewardDataList;

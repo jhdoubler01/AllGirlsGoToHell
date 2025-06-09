@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace AGGtH.Runtime.Card
 {
-    [CreateAssetMenu(fileName = "Deck Data", menuName = "Assets/Data/DeckData", order = 1)]
+    [CreateAssetMenu(fileName = "Deck Data", menuName = "AGGtH/Card/DeckData", order = 1)]
 
     public class DeckData : ScriptableObject
     {

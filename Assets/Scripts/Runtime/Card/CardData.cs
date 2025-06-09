@@ -9,7 +9,7 @@ using AGGtH.Runtime.Enums;
 
 namespace AGGtH.Runtime.Card
 {
-    [CreateAssetMenu(fileName = "New Card", menuName = "Card/CardData")]
+    [CreateAssetMenu(fileName = "New Card", menuName = "AGGtH/Card/CardData")]
 
     public class CardData : ScriptableObject
     {

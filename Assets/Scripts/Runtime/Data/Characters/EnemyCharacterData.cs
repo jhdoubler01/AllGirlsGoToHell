@@ -9,7 +9,7 @@ using Random = UnityEngine.Random;
 
 namespace AGGtH.Runtime.Data.Characters
 {
-    [CreateAssetMenu(fileName = "EnemyCharacterData", menuName = "Assets/Data/Characters/Enemies")]
+    [CreateAssetMenu(fileName = "EnemyCharacterData", menuName = "AGGtH/Characters/Enemies/EnemyCharacterData")]
     public class EnemyCharacterData : CharacterDataBase
     {
         [Header("Enemy Defaults")]

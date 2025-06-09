@@ -4,7 +4,7 @@ using AGGtH.Runtime.Card;
 
 namespace AGGtH.Runtime.Data.Collection.RewardData
 {
-    [CreateAssetMenu(fileName = "Card Reward Data", menuName = "Assets/Data/RewardData/CardRW", order = 0)]
+    [CreateAssetMenu(fileName = "Card Reward Data", menuName = "AGGtH/Rewards/CardRW", order = 0)]
 
     public class CardRewardData : RewardDataBase
     {

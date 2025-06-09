@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace AGGtH.Runtime.Settings
 {
-    [CreateAssetMenu(fileName = "Gameplay Data", menuName = "Assets/Data/Settings/GameplayData", order = 0)]
+    [CreateAssetMenu(fileName = "Gameplay Data", menuName = "AGGtH/Settings/GameplayData", order = 0)]
     public class GameplayData : ScriptableObject
     {
         [Header("Gameplay Settings")]

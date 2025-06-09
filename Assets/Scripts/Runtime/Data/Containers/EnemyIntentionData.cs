@@ -3,7 +3,7 @@ using AGGtH.Runtime.Enums;
 
 namespace AGGtH.Runtime.Data.Containers
 {
-    [CreateAssetMenu(fileName = "EnemyIntentionData", menuName = "Assets/Data/EnemyIntentionData")]
+    [CreateAssetMenu(fileName = "EnemyIntentionData", menuName = "AGGtH/Characters/Enemies/EnemyIntentionData")]
     public class EnemyIntentionData : ScriptableObject
     {
         [SerializeField] private EnemyIntentionType enemyIntentionType;

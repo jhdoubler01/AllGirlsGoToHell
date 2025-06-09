@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace AGGtH.Runtime.Data.Collection.RewardData
 {
-    [CreateAssetMenu(fileName="Chips Reward Data", menuName = "Assets/Data/RewardData/ChipsRW", order=0)]
+    [CreateAssetMenu(fileName="Chips Reward Data", menuName = "AGGtH/Rewards/ChipsRW", order=0)]
     public class ChipsRewardData : RewardDataBase
     {
         [SerializeField] private int minChips;

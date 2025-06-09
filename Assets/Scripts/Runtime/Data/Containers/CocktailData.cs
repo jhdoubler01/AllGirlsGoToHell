@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace AGGtH.Runtime.Data.Containers
 {
-    [CreateAssetMenu(fileName = "CocktailData", menuName = "Scriptable Objects/CocktailData")]
+    [CreateAssetMenu(fileName = "Cocktail Data", menuName = "AGGtH/Items/CocktailData")]
     public class CocktailData : ScriptableObject
     {
         [Header("Base")]
