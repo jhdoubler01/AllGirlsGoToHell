@@ -22,38 +22,12 @@ MonoBehaviour:
   exhaustAfterPlay: 0
   cardActionDataList:
   - actionTargetType: 3
-    cardActionType: 5
+    cardActionType: 4
     statusType: 4
     actionValue: 1
     actionDelay: 0
-  cardDescriptionDataList:
-  - descriptionText: 'Apply '
-    enableOverrideColor: 0
-    overrideColor: {r: 0, g: 0, b: 0, a: 0}
-    useModifier: 0
-    modifiedActionValueIndex: 0
-    modiferStats: 0
-    usePrefixOnModifiedValue: 0
-    modifiedValuePrefix: 
-    overrideColorOnValueScaled: 0
-  - descriptionText: 
-    enableOverrideColor: 1
-    overrideColor: {r: 0.76, g: 0.266, b: 0.30716676, a: 1}
-    useModifier: 0
-    modifiedActionValueIndex: 0
-    modiferStats: 4
-    usePrefixOnModifiedValue: 0
-    modifiedValuePrefix: 
-    overrideColorOnValueScaled: 0
-  - descriptionText: ' flustered'
-    enableOverrideColor: 0
-    overrideColor: {r: 0.76, g: 0.266, b: 0.30716676, a: 1}
-    useModifier: 0
-    modifiedActionValueIndex: 0
-    modiferStats: 4
-    usePrefixOnModifiedValue: 0
-    modifiedValuePrefix: 
-    overrideColorOnValueScaled: 0
   specialKeywordsList: 00000000
+  positiveModifierColor: {r: 0.36675, g: 0.54, b: 0.243, a: 1}
+  negativeModifierColor: {r: 0.76, g: 0.266, b: 0.3071668, a: 1}
   dialogueOptions:
   - You twirl your hair and try to remember when you last washed it.

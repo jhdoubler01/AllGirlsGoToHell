@@ -46,6 +46,7 @@ namespace AGGtH.Runtime.Enums
         {
             if (_elementTable.ContainsKey(attackerLanguage) && _elementTable[attackerLanguage].ContainsKey(defenderLanguage))
             {
+                Debug.Log(attackerLanguage + " vs " + defenderLanguage + " = " + _elementTable[attackerLanguage][defenderLanguage]);
                 return _elementTable[attackerLanguage][defenderLanguage];
             }
             else

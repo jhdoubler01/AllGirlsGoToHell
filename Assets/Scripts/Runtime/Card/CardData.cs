@@ -27,8 +27,9 @@ namespace AGGtH.Runtime.Card
         [SerializeField] private List<CardActionData> cardActionDataList = new List<CardActionData>();
 
         [Header("Description")]
-        [SerializeField] private List<CardDescriptionData> cardDescriptionDataList;
         [SerializeField] private List<SpecialKeywords> specialKeywordsList;
+        [SerializeField] private Color positiveModifierColor = new Color(0.36675f, 0.54f, 0.243f);
+        [SerializeField] private Color negativeModifierColor = new Color(0.76f, 0.266f, 0.3071668f);
 
         [Header("Dialogue")]
         [SerializeField] private List<string> dialogueOptions = new List<string>();
@@ -47,21 +48,155 @@ namespace AGGtH.Runtime.Card
         public string MyDescription { get; set; }
         public List<string> DialogueOptions { get => dialogueOptions; set => dialogueOptions = value; }
 
+        private EncounterManager EncounterManager => EncounterManager.Instance;
+
+
         #endregion
 
         #region Methods
         public void UpdateDescription()
         {
-            var str = new StringBuilder();
-
-            foreach (var descriptionData in cardDescriptionDataList)
+            for(int i = 0; i< cardActionDataList.Count; i++)
             {
-                str.Append(descriptionData.UseModifier
-                    ? descriptionData.GetModifiedValue(this)
-                    : descriptionData.GetDescription());
+                if(i == 0)
+                {
+                    MyDescription = GetActionDescription(cardActionDataList[i]);
+                }
+                else
+                {
+                    MyDescription = MyDescription + " " + GetActionDescription(cardActionDataList[i]);
+                }
             }
 
-            MyDescription = str.ToString();
+        }
+        //public string GetModifiedValue(CardData cardData)
+        //{
+        //    if (cardData.CardActionDataList.Count <= 0) return "";
+
+        //    if (ModifiedActionValueIndex >= cardData.CardActionDataList.Count)
+        //        modifiedActionValueIndex = cardData.CardActionDataList.Count - 1;
+
+        //    if (ModifiedActionValueIndex < 0)
+        //        modifiedActionValueIndex = 0;
+
+        //    var str = new StringBuilder();
+        //    float value = cardData.CardActionDataList[ModifiedActionValueIndex].ActionValue;
+        //    float modifer = 0;
+        //    if (EncounterManager)
+        //    {
+        //        var player = EncounterManager.Player;
+
+        //        if (player)
+        //        {
+        //            modifer = player.CharacterStats.StatusDict[ModiferStats].StatusValue;
+        //            value += modifer;
+
+        //            if (modifer != 0)
+        //            {
+        //                if (usePrefixOnModifiedValue)
+        //                    str.Append(modifiedValuePrefix);
+        //            }
+        //        }
+        //    }
+
+        //    str.Append(value * 2);
+
+        //    if (EnableOverrideColor)
+        //    {
+        //        if (OverrideColorOnValueScaled)
+        //        {
+        //            if (modifer != 0)
+        //                str.Replace(str.ToString(), ColorExtensions.ColorString(str.ToString(), OverrideColor));
+        //        }
+        //        else
+        //        {
+        //            str.Replace(str.ToString(), ColorExtensions.ColorString(str.ToString(), OverrideColor));
+        //        }
+
+        //    }
+        //    Debug.Log("value is " + str.ToString());
+        //    return str.ToString();
+        //}
+        public string GetActionDescription(CardActionData actionData)
+        {
+            string MyDescription = string.Empty;
+            CardActionType actionType = actionData.CardActionType;
+            float value = actionData.ActionValue;
+            string valueStr = string.Empty;
+            StatusType statusEffect = actionData.StatusType;
+            ActionTargetType targetType = actionData.ActionTargetType;
+            if (EncounterManager)
+            {
+                var player = EncounterManager.Player;
+                if (player)
+                {
+                    float modifier = CardActionModifierStats.GetCardActionModifier(actionType, player);
+                    value += modifier;
+                    value *= 2;
+                    if (modifier > 0)
+                    {
+                        valueStr = ColorExtensions.ColorString(value.ToString(), positiveModifierColor);
+                    }
+                    else if (modifier < 0)
+                    {
+                        valueStr = ColorExtensions.ColorString(value.ToString(), negativeModifierColor);
+                    }
+                    else
+                    {
+                        valueStr = value.ToString();
+                    }
+                    //if modifier is less than zero text should be red, if it's more than zero it should be green
+                }
+            }
+            switch (actionType)
+            {
+                case CardActionType.Attack:
+                    MyDescription = $"Deal {valueStr} damage";
+                    break;
+                case CardActionType.Heal:
+                    MyDescription = $"Heal {valueStr} health";
+                    break;
+                case CardActionType.Block:
+                    MyDescription = $"Gain {valueStr} block";
+                    break;
+                case CardActionType.ApplyBuff:
+                    MyDescription = $"Apply a buff of {valueStr} {statusEffect}";
+                    break;
+                case CardActionType.ApplyDebuff:
+                    MyDescription = $"Apply a debuff of {valueStr} {statusEffect}";
+                    break;
+                case CardActionType.DrawCard:
+                    MyDescription = $"Draw {valueStr} cards.";
+                    break;
+                case CardActionType.GainEnergy:
+                    MyDescription = $"Gain {valueStr} energy.";
+                    break;
+                case CardActionType.Exhaust:
+                    MyDescription = "Exhaust this card.";
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(actionType), actionType, null);
+            }
+
+            switch (targetType)
+            {
+                case ActionTargetType.Player:
+                    MyDescription += " on yourself.";
+                    break;
+                case ActionTargetType.Enemy:
+                    MyDescription += " to a target.";
+                    break;
+                case ActionTargetType.AllEnemies:
+                    MyDescription += " to all targets.";
+                    break;
+                case ActionTargetType.RandomEnemy:
+                    MyDescription += " to a random target.";
+                    break;
+                default:
+                    throw new ArgumentOutOfRangeException(nameof(targetType), targetType, null);
+            }
+
+            return MyDescription;
         }
         #endregion
     }
@@ -80,150 +215,6 @@ namespace AGGtH.Runtime.Card
         public StatusType StatusType { get => statusType; set => statusType = value; }
         public float ActionValue { get => actionValue; set => actionValue = value; }
         public float ActionDelay { get => actionDelay; set => actionDelay = value; }
-    }
-    [Serializable]
-    public class CardDescriptionData
-    {
-        [Header("Text")]
-        [SerializeField] private string descriptionText;
-        [SerializeField] private bool enableOverrideColor;
-        [SerializeField] private Color overrideColor = Color.black;
-
-        [Header("Modifer")]
-        [SerializeField] private bool useModifier;
-        [SerializeField] private int modifiedActionValueIndex;
-        [SerializeField] private StatusType modiferStats;
-        [SerializeField] private bool usePrefixOnModifiedValue;
-        [SerializeField] private string modifiedValuePrefix = "*";
-        [SerializeField] private bool overrideColorOnValueScaled;
-
-        public string DescriptionText => descriptionText;
-        public bool EnableOverrideColor => enableOverrideColor;
-        public Color OverrideColor => overrideColor;
-        public bool UseModifier => useModifier;
-        public int ModifiedActionValueIndex => modifiedActionValueIndex;
-        public StatusType ModiferStats => modiferStats;
-        public bool UsePrefixOnModifiedValue => usePrefixOnModifiedValue;
-        public string ModifiedValuePrefix => modifiedValuePrefix;
-        public bool OverrideColorOnValueScaled => overrideColorOnValueScaled;
-
-        private EncounterManager EncounterManager => EncounterManager.Instance;
-
-        public string GetDescription()
-        {
-            var str = new StringBuilder();
-
-            str.Append(DescriptionText);
-
-            if (EnableOverrideColor && !string.IsNullOrEmpty(str.ToString()))
-                str.Replace(str.ToString(), ColorExtensions.ColorString(str.ToString(), OverrideColor));
-
-            return str.ToString();
-        }
-
-        public string GetModifiedValue(CardData cardData)
-        {
-            if (cardData.CardActionDataList.Count <= 0) return "";
-
-            if (ModifiedActionValueIndex >= cardData.CardActionDataList.Count)
-                modifiedActionValueIndex = cardData.CardActionDataList.Count - 1;
-
-            if (ModifiedActionValueIndex < 0)
-                modifiedActionValueIndex = 0;
-
-            var str = new StringBuilder();
-            float value = cardData.CardActionDataList[ModifiedActionValueIndex].ActionValue;
-            float modifer = 0;
-            if (EncounterManager)
-            {
-                var player = EncounterManager.Player;
-
-                if (player)
-                {
-                    modifer = player.CharacterStats.StatusDict[ModiferStats].StatusValue;
-                    value += modifer;
-
-                    if (modifer != 0)
-                    {
-                        if (usePrefixOnModifiedValue)
-                            str.Append(modifiedValuePrefix);
-                    }
-                }
-            }
-
-            str.Append(value*2);
-
-            if (EnableOverrideColor)
-            {
-                if (OverrideColorOnValueScaled)
-                {
-                    if (modifer != 0)
-                        str.Replace(str.ToString(), ColorExtensions.ColorString(str.ToString(), OverrideColor));
-                }
-                else
-                {
-                    str.Replace(str.ToString(), ColorExtensions.ColorString(str.ToString(), OverrideColor));
-                }
-
-            }
-
-            return str.ToString();
-        }
-
-        #region Editor
-#if UNITY_EDITOR
-        
-        public string GetDescriptionEditor()
-        {
-            var str = new StringBuilder();
-            
-            str.Append(DescriptionText);
-            
-            return str.ToString();
-        }
-
-        public string GetModifiedValueEditor(CardData cardData)
-        {
-            if (cardData.CardActionDataList.Count <= 0) return "";
-            
-            if (ModifiedActionValueIndex>=cardData.CardActionDataList.Count)
-                modifiedActionValueIndex = cardData.CardActionDataList.Count - 1;
-
-            if (ModifiedActionValueIndex<0)
-                modifiedActionValueIndex = 0;
-            
-            var str = new StringBuilder();
-            var value = cardData.CardActionDataList[ModifiedActionValueIndex].ActionValue;
-            if (EncounterManager)
-            {
-                var player = EncounterManager.Player;
-                if (player)
-                {
-                    var modifer =player.CharacterStats.StatusDict[ModiferStats].StatusValue;
-                    value += modifer;
-                
-                    if (modifer!= 0)
-                        str.Append("*");
-                }
-            }
-           
-            str.Append(value);
-          
-            return str.ToString();
-        }
-        
-        public void EditDescriptionText(string newText) => descriptionText = newText;
-        public void EditEnableOverrideColor(bool newStatus) => enableOverrideColor = newStatus;
-        public void EditOverrideColor(Color newColor) => overrideColor = newColor;
-        public void EditUseModifier(bool newStatus) => useModifier = newStatus;
-        public void EditModifiedActionValueIndex(int newIndex) => modifiedActionValueIndex = newIndex;
-        public void EditModiferStats(StatusType newStatusType) => modiferStats = newStatusType;
-        public void EditUsePrefixOnModifiedValues(bool newStatus) => usePrefixOnModifiedValue = newStatus;
-        public void EditPrefixOnModifiedValues(string newText) => modifiedValuePrefix = newText;
-        public void EditOverrideColorOnValueScaled(bool newStatus) => overrideColorOnValueScaled = newStatus;
-
-#endif
-        #endregion
     }
 }
 
